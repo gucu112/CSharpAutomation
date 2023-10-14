@@ -14,7 +14,7 @@ public class TestResult
         Assert.True(false);
     }
 
-    [Fact(Skip = "Test is skipped")]
+    [Fact(Skip = "Test is skipped using Fact")]
     public void TestIsSkipped()
     {
     }
@@ -22,6 +22,6 @@ public class TestResult
     [SkippableFact]
     public void TestIsSkippable()
     {
-        Skip.If(true, "Test is skipped");
+        Skip.If(true, "Test is skipped using SkippableFact");
     }
 }
