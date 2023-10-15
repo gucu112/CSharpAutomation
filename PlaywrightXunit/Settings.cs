@@ -37,6 +37,14 @@ public class Settings
         return element.Value;
     }
 
+    public int GetExpectTimeout()
+    {
+        var element = elements.First(element => element.Name == "Playwright").Elements()
+            .First(element => element.Name == "ExpectTimeout");
+
+        return Convert.ToInt32(element.Value);
+    }
+
     public BrowserNewContextOptions GetBrowserOptions()
     {
         var element = elements.First(element => element.Name == "Playwright").Elements()
@@ -51,5 +59,20 @@ public class Settings
             .First(element => element.Name == "LaunchOptions");
 
         return element.Deserialize<BrowserTypeLaunchOptions>() ?? new BrowserTypeLaunchOptions();
+    }
+
+    public IDictionary<string, string> GetTestParameters()
+    {
+        return elements.First(element => element.Name == "TestRunParameters").Elements()
+            .Where(element => !string.IsNullOrEmpty(element.Attribute("name")?.Value))
+            .ToDictionary(element => element.Attribute("name")?.Value ?? string.Empty,
+                element => element.Attribute("value")?.Value ?? string.Empty);
+    }
+
+    public string GetTestParameter(string name)
+    {
+        return elements.First(element => element.Name == "TestRunParameters").Elements()
+            .Single(element => element.Attribute("name")?.Value == name)
+            .Attribute("value")?.Value ?? string.Empty;
     }
 }

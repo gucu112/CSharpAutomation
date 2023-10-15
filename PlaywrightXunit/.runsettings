@@ -12,14 +12,14 @@
   <!-- Playwright Configuration -->
   <Playwright>
     <BrowserName>firefox</BrowserName>
-    <ExpectTimeout>10000</ExpectTimeout>
+    <ExpectTimeout>5000</ExpectTimeout>
     <BrowserOptions>
       <Offline>false</Offline>
     </BrowserOptions>
     <LaunchOptions>
       <Headless>false</Headless>
       <SlowMo>500</SlowMo>
-      <Timeout>20000</Timeout>
+      <Timeout>15000</Timeout>
     </LaunchOptions>
   </Playwright>
 

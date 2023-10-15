@@ -74,6 +74,19 @@ public class TestSettings
     }
 
     [Fact]
+    public void VerifyIfPlaywrightExpectedTimeoutLoadedCorrectly()
+    {
+        // Arrange
+        var settings = new Settings();
+
+        // Act
+        var timeout = settings.GetExpectTimeout();
+
+        // Assert
+        Assert.Equal(5000, timeout);
+    }
+
+    [Fact]
     public void VerifyIfPlaywrightBrowserOptionsLoadedCorrectly()
     {
         // Arrange
@@ -99,7 +112,33 @@ public class TestSettings
         // Assert
         Assert.False(options.Headless, "Headless mode is enabled");
         Assert.Equal(500, options.SlowMo);
-        Assert.Equal(20000, options.Timeout);
+        Assert.Equal(15000, options.Timeout);
         // TODO: Proxy
+    }
+
+    [Fact]
+    public void VerifyIfTestParametersLoadedCorrectly()
+    {
+        // Arrange
+        var settings = new Settings();
+
+        // Act
+        var parameters = settings.GetTestParameters();
+
+        // Assert
+        Assert.Equal(3, parameters.Count);
+    }
+
+    [Fact]
+    public void VerifyIfBaseUrlTestParameterLoadedCorrectly()
+    {
+        // Arrange
+        var settings = new Settings();
+
+        // Act
+        var baseUrl = settings.GetTestParameter("BaseURL");
+
+        // Assert
+        Assert.Contains("google.com", baseUrl);
     }
 }
