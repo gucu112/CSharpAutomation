@@ -1,10 +1,10 @@
-namespace Gucu112.PlaywrightXunit;
+namespace Gucu112.PlaywrightXunit.Tests;
 
-public class TestResult
+public class TestResults
 {
     private readonly ITestOutputHelper output;
 
-    public TestResult(ITestOutputHelper output)
+    public TestResults(ITestOutputHelper output)
     {
         this.output = output;
     }
@@ -20,7 +20,7 @@ public class TestResult
     public void TestFails()
     {
         output.WriteLine("Test is about to fail");
-        Assert.True(false);
+        Assert.Fail();
     }
 
     [Fact(Skip = "Test is skipped using Fact")]

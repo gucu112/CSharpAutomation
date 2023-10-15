@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <!-- Test Configuration -->
+  <RunConfiguration>
+    <MaxCpuCount>1</MaxCpuCount>
+    <ResultsDirectory>.\TestResults</ResultsDirectory>
+    <EnvironmentVariables>
+      <HEADED>1</HEADED>
+    </EnvironmentVariables>
+  </RunConfiguration>
+
+  <!-- Playwright Configuration -->
+  <Playwright>
+    <BrowserName>firefox</BrowserName>
+    <ExpectTimeout>10000</ExpectTimeout>
+    <BrowserOptions>
+      <Offline>false</Offline>
+    </BrowserOptions>
+    <LaunchOptions>
+      <Headless>false</Headless>
+      <SlowMo>500</SlowMo>
+      <Timeout>20000</Timeout>
+    </LaunchOptions>
+  </Playwright>
+
+  <!-- xUnit Configuration -->
+  <xUnit>
+    <AppDomain>denied</AppDomain>
+    <LongRunningTestSeconds>30</LongRunningTestSeconds>
+    <MaxParallelThreads>0</MaxParallelThreads>
+    <ParallelizeTestCollections>false</ParallelizeTestCollections>
+  </xUnit>
+
+  <!-- Test Parameters -->
+  <TestRunParameters>
+    <Parameter name="BaseURL" value="https://www.google.com/" />
+    <Parameter name="Username" value="backac" />
+    <Parameter name="Password" value="tajnehaslo" />
+  </TestRunParameters>
+
+</RunSettings>
