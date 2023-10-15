@@ -5,7 +5,7 @@ namespace Gucu112.PlaywrightXunit.Tests;
 public class TestSettings
 {
     [Fact]
-    public void VerifyIfXunitRunsWithoutParallelExecution()
+    public void VerifyThatXunitRunsWithoutParallelExecution()
     {
         // Arrange
         var rootElement = XDocument.Load(".runsettings").Root ?? new XElement("RunSettings");
@@ -26,7 +26,7 @@ public class TestSettings
     }
 
     [Fact]
-    public void VerifyIfEnvironmentVariablesLoadedCorrectly()
+    public void VerifyThatEnvironmentVariablesAreLoadedCorrectly()
     {
         // Arrange
         var expectedVariables = new HashSet<string>
@@ -48,7 +48,7 @@ public class TestSettings
     }
 
     [Fact]
-    public void VerifyIfEnvironmentVariableLoadedCorrectly()
+    public void VerifyThatEnvironmentVariableIsLoadedCorrectly()
     {
         // Arrange
         var variableName = "HEADED";
@@ -61,7 +61,7 @@ public class TestSettings
     }
 
     [Fact]
-    public void VerifyIfPlaywrightBrowserNameLoadedCorrectly()
+    public void VerifyThatPlaywrightBrowserNameIsLoadedCorrectly()
     {
         // Arrange
         var settings = new Settings();
@@ -74,7 +74,7 @@ public class TestSettings
     }
 
     [Fact]
-    public void VerifyIfPlaywrightExpectedTimeoutLoadedCorrectly()
+    public void VerifyThatPlaywrightExpectedTimeoutIsLoadedCorrectly()
     {
         // Arrange
         var settings = new Settings();
@@ -87,7 +87,7 @@ public class TestSettings
     }
 
     [Fact]
-    public void VerifyIfPlaywrightBrowserOptionsLoadedCorrectly()
+    public void VerifyThatPlaywrightBrowserOptionsAreLoadedCorrectly()
     {
         // Arrange
         var settings = new Settings();
@@ -105,7 +105,7 @@ public class TestSettings
     }
 
     [Fact]
-    public void VerifyIfPlaywrightLaunchOptionsLoadedCorrectly()
+    public void VerifyThatPlaywrightLaunchOptionsAreLoadedCorrectly()
     {
         // Arrange
         var settings = new Settings();
@@ -121,7 +121,7 @@ public class TestSettings
     }
 
     [Fact]
-    public void VerifyIfTestParametersLoadedCorrectly()
+    public void VerifyThatTestParametersAreLoadedCorrectly()
     {
         // Arrange
         var settings = new Settings();
@@ -134,7 +134,7 @@ public class TestSettings
     }
 
     [Fact]
-    public void VerifyIfBaseUrlTestParameterLoadedCorrectly()
+    public void VerifyThatUrlTestParameterIsLoadedCorrectly()
     {
         // Arrange
         var settings = new Settings();

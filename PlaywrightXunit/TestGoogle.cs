@@ -13,7 +13,7 @@ public class TestGoogle : IClassFixture<PageGoogle>
     }
 
     [Fact]
-    public async Task VerifyIfSearchInputIsVisible()
+    public async Task VerifyThatSearchInputIsVisible()
     {
         // Act
         var isVisible = await page.SearchInput.IsVisibleAsync();
@@ -26,7 +26,7 @@ public class TestGoogle : IClassFixture<PageGoogle>
     [InlineData("c")]
     [InlineData("d")]
     [InlineData("e")]
-    public async Task VerifyIfSearchResultContainsSearchPhrase(string phrase)
+    public async Task VerifyThatSearchResultsContainSearchPhrase(string phrase)
     {
         // Arrange
         await page.SearchInput.FillAsync(phrase);

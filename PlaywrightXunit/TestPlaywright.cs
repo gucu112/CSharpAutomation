@@ -15,7 +15,7 @@ public class TestPlaywright
     }
 
     [Fact]
-    public void VerifyIfPlaywrightInstanceInitilized()
+    public void VerifyThatPlaywrightInstanceIsInitilized()
     {
         // Arrange
         var property = fixture.GetType().GetProperty("Instance",
@@ -29,7 +29,7 @@ public class TestPlaywright
     }
 
     [Fact]
-    public void VerifyIfBrowserInitilizedAndConnected()
+    public void VerifyThatBrowserIsInitilizedAndConnected()
     {
         // Act
         var browser = fixture.Browser;
@@ -40,7 +40,7 @@ public class TestPlaywright
     }
 
     [Fact]
-    public void VerifyIfCorrectBrowserTypeOpened()
+    public void VerifyThatCorrectBrowserTypeIsOpened()
     {
         // Arrange
         var settings = new Settings();
@@ -53,7 +53,7 @@ public class TestPlaywright
     }
 
     [Fact]
-    public async Task VerifyIfBrowserContextInitialized()
+    public async Task VerifyThatBrowserContextIsInitialized()
     {
         // Arrange
         var page = new PageBlank(fixture);
@@ -68,7 +68,7 @@ public class TestPlaywright
     }
 
     [Fact]
-    public async Task VerifyIfPageContextInitialized()
+    public async Task VerifyThatPageContextIsInitialized()
     {
         // Arrange
         var page = new PageBlank(fixture);
@@ -83,7 +83,7 @@ public class TestPlaywright
     }
 
     [Fact]
-    public async Task VerifyIfPageTimeoutIsCorrect()
+    public async Task VerifyThatPageTimeoutWorksCorrect()
     {
         // Arrange
         var settings = new Settings();
