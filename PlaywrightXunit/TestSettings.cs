@@ -96,6 +96,10 @@ public class TestSettings
         var options = settings.GetBrowserOptions();
 
         // Assert
+        Assert.Equal("en-GB", options.Locale);
+        Assert.Equal("Europe/London", options.TimezoneId);
+        Assert.Equal(51.5007325f, options.Geolocation?.Latitude);
+        Assert.Equal(-0.1272003f, options.Geolocation?.Longitude);
         Assert.False(options.Offline);
         // TODO: Proxy
     }

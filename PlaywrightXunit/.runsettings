@@ -14,6 +14,12 @@
     <BrowserName>firefox</BrowserName>
     <ExpectTimeout>5000</ExpectTimeout>
     <BrowserOptions>
+      <Locale>en-GB</Locale>
+      <TimezoneId>Europe/London</TimezoneId>
+      <Geolocation>
+        <Latitude>51.5007324</Latitude>
+        <Longitude>-0.127200305</Longitude>
+      </Geolocation>
       <Offline>false</Offline>
     </BrowserOptions>
     <LaunchOptions>
