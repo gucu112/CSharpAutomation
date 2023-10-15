@@ -29,6 +29,14 @@ public class Settings
         return Environment.GetEnvironmentVariable(name) ?? string.Empty;
     }
 
+    public string GetBrowserName()
+    {
+        var element = elements.First(element => element.Name == "Playwright").Elements()
+            .First(element => element.Name == "BrowserName");
+
+        return element.Value;
+    }
+
     public BrowserNewContextOptions GetBrowserOptions()
     {
         var element = elements.First(element => element.Name == "Playwright").Elements()

@@ -61,6 +61,19 @@ public class TestSettings
     }
 
     [Fact]
+    public void VerifyIfPlaywrightBrowserNameLoadedCorrectly()
+    {
+        // Arrange
+        var settings = new Settings();
+
+        // Act
+        var browserName = settings.GetBrowserName();
+
+        // Assert
+        Assert.Equal("firefox", browserName);
+    }
+
+    [Fact]
     public void VerifyIfPlaywrightBrowserOptionsLoadedCorrectly()
     {
         // Arrange

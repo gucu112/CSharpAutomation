@@ -15,7 +15,8 @@ public class PlaywrightFixture : IAsyncLifetime
     public async Task InitializeAsync()
     {
         Instance = await Playwright.CreateAsync();
-        Browser = await Instance["firefox"].LaunchAsync(settings.GetLaunchOptions());
+        Browser = await Instance[settings.GetBrowserName()]
+            .LaunchAsync(settings.GetLaunchOptions());
     }
 
     public async Task DisposeAsync()

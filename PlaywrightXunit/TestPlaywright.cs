@@ -37,4 +37,15 @@ public class TestPlaywright
         Assert.IsAssignableFrom<IBrowser>(browser);
         Assert.True(browser.IsConnected);
     }
+
+    [Fact]
+    public void VerifyIfCorrectBrowserTypeOpened()
+    {
+        // Arrange
+        var browser = fixture.Browser;
+
+        // Assert
+        Assert.IsAssignableFrom<IBrowser>(browser);
+        Assert.Equal("firefox", browser.BrowserType.Name);
+    }
 }
