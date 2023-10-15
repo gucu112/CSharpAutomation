@@ -2,6 +2,7 @@
 
 namespace Gucu112.PlaywrightXunit.Tests;
 
+[Trait("Category", "Pages")]
 [Collection(nameof(PlaywrightFixture))]
 public class TestBing : IClassFixture<PageBing>
 {
@@ -26,7 +27,7 @@ public class TestBing : IClassFixture<PageBing>
     public async Task VerifyThatSearchResultsContainSearchPhrase()
     {
         // Arrange
-        var phrase = "cat";
+        var phrase = "catwalk";
         await page.SearchInput.FillAsync(phrase);
         await page.Context.Keyboard.PressAsync("Enter");
 

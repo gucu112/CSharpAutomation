@@ -2,6 +2,7 @@
 
 namespace Gucu112.PlaywrightXunit.Tests;
 
+[Trait("Category", "Settings")]
 public class TestSettings
 {
     [Fact]

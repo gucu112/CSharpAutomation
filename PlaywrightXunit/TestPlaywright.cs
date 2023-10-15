@@ -4,6 +4,7 @@ using Gucu112.PlaywrightXunit.Pages;
 
 namespace Gucu112.PlaywrightXunit.Tests;
 
+[Trait("Category", "Playwright")]
 [Collection(nameof(PlaywrightFixture))]
 public class TestPlaywright
 {

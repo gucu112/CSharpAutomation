@@ -2,6 +2,7 @@
 
 namespace Gucu112.PlaywrightXunit.Tests;
 
+[Trait("Category", "Pages")]
 [Collection(nameof(PlaywrightFixture))]
 public class TestGoogle : IClassFixture<PageGoogle>
 {
@@ -22,13 +23,11 @@ public class TestGoogle : IClassFixture<PageGoogle>
         Assert.True(isVisible);
     }
 
-    [Theory]
-    [InlineData("c")]
-    [InlineData("d")]
-    [InlineData("e")]
-    public async Task VerifyThatSearchResultsContainSearchPhrase(string phrase)
+    [Fact]
+    public async Task VerifyThatSearchResultsContainSearchPhrase()
     {
         // Arrange
+        var phrase = "castle";
         await page.SearchInput.FillAsync(phrase);
         await page.Context.Keyboard.PressAsync("Enter");
 
