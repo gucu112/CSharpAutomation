@@ -91,7 +91,7 @@ public class TestPlaywright
         await page.InitializeAsync();
 
         // Act
-        await page.Context.GotoAsync(settings.GetTestParameter("BaseURL"));
+        await page.Context.GotoAsync(settings.GetTestParameter("PlaywrightBaseURL"));
         var action = async () =>
         {
             await page.Context.GetByTestId("unknow").ClickAsync();

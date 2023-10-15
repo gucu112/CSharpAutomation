@@ -4,22 +4,21 @@ namespace Gucu112.PlaywrightXunit.Pages;
 
 public abstract class PageBase : IAsyncLifetime
 {
-    private readonly Settings settings;
-
+    protected Settings Settings { get; set; }
     protected IBrowser Browser { get; set; } = null!;
     public IBrowserContext BrowserContext { get; private set; } = null!;
     public IPage Context { get; private set; } = null!;
 
     public PageBase(PlaywrightFixture fixture)
     {
-        settings = new Settings();
+        Settings = new Settings();
         Browser = fixture.Browser;
     }
 
     public async Task InitializeAsync()
     {
         BrowserContext = await Browser.NewContextAsync();
-        BrowserContext.SetDefaultTimeout(settings.GetExpectTimeout());
+        BrowserContext.SetDefaultTimeout(Settings.GetExpectTimeout());
         Context = await BrowserContext.NewPageAsync();
     }
 

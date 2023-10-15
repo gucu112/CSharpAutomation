@@ -136,9 +136,9 @@ public class TestSettings
         var settings = new Settings();
 
         // Act
-        var baseUrl = settings.GetTestParameter("BaseURL");
+        var baseUrl = settings.GetTestParameter("PlaywrightBaseURL");
 
         // Assert
-        Assert.Contains("google.com", baseUrl);
+        Assert.Contains("playwright.dev", baseUrl);
     }
 }

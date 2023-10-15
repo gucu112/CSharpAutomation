@@ -33,9 +33,9 @@
 
   <!-- Test Parameters -->
   <TestRunParameters>
-    <Parameter name="BaseURL" value="https://www.google.com/" />
-    <Parameter name="Username" value="backac" />
-    <Parameter name="Password" value="tajnehaslo" />
+    <Parameter name="GoogleBaseURL" value="https://www.google.com/" />
+    <Parameter name="BingBaseURL" value="https://www.bing.com/" />
+    <Parameter name="PlaywrightBaseURL" value="https://playwright.dev/dotnet/" />
   </TestRunParameters>
 
 </RunSettings>
