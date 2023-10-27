@@ -102,7 +102,7 @@ public class TestSettings
         Assert.Equal(51.5007325f, options.Geolocation?.Latitude);
         Assert.Equal(-0.1272003f, options.Geolocation?.Longitude);
         Assert.False(options.Offline);
-        // TODO: Proxy
+        Assert.Equal("localhost:3128", options.Proxy?.Server);
     }
 
     [Fact]
@@ -118,7 +118,7 @@ public class TestSettings
         Assert.False(options.Headless, "Headless mode is enabled");
         Assert.Equal(500, options.SlowMo);
         Assert.Equal(15000, options.Timeout);
-        // TODO: Proxy
+        Assert.Equal("per-context", options.Proxy?.Server);
     }
 
     [Fact]

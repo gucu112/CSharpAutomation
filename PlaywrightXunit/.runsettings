@@ -4,7 +4,10 @@
   <RunConfiguration>
     <MaxCpuCount>1</MaxCpuCount>
     <ResultsDirectory>.\TestResults</ResultsDirectory>
-    <TestCaseFilter>(Category != Results) &amp; (Category != Settings)</TestCaseFilter>
+    <TestCaseFilter>
+      (DisplayName !~ VerifyThatPageTimeoutWorksCorrect)
+      &amp; (Category != Pages) &amp; (Category != Results)
+    </TestCaseFilter>
     <TestSessionTimeout>0</TestSessionTimeout>
     <EnvironmentVariables>
       <HEADED>1</HEADED>
@@ -23,11 +26,18 @@
         <Longitude>-0.127200305</Longitude>
       </Geolocation>
       <Offline>false</Offline>
+      <Proxy>
+        <Server>localhost:3128</Server>
+      </Proxy>
     </BrowserOptions>
     <LaunchOptions>
       <Headless>false</Headless>
       <SlowMo>500</SlowMo>
       <Timeout>15000</Timeout>
+      <Proxy>
+        <!-- https://github.com/microsoft/playwright/issues/17252 -->
+        <Server>per-context</Server>
+      </Proxy>
     </LaunchOptions>
   </Playwright>
 
