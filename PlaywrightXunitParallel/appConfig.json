@@ -27,7 +27,7 @@
     "Offline": false
   },
   "LaunchOptions": {
-    "Channel": "edge",
+    "Channel": "msedge",
     "Headless": false,
     "SlowMo": 500,
     "Timeout": 15000
