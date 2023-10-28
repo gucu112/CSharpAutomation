@@ -4,6 +4,7 @@
   <RunConfiguration>
     <MaxCpuCount>1</MaxCpuCount>
     <ResultsDirectory>.\TestResults</ResultsDirectory>
+    <!-- https://learn.microsoft.com/en-us/dotnet/core/testing/selective-unit-tests?pivots=xunit -->
     <TestCaseFilter>
       (DisplayName !~ VerifyThatPageTimeoutWorksCorrect)
       &amp; (Category != Pages) &amp; (Category != Results)
