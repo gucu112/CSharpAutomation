@@ -61,7 +61,7 @@ public class SettingsTest
     {
         var options = settings.LaunchOptions;
 
-        Assert.Equal("edge", options.Channel);
+        Assert.Equal("msedge", options.Channel);
         Assert.False(options.Headless, "Headless mode is enabled");
         Assert.Equal(500, options.SlowMo);
         Assert.Equal(15000, options.Timeout);
