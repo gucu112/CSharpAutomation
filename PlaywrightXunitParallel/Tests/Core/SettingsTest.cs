@@ -2,7 +2,7 @@
 
 namespace Gucu112.PlaywrightXunitParallel.Tests.Core;
 
-[Collection("Settings")]
+[Collection(nameof(SettingsFixture))]
 public class SettingsTest
 {
     private readonly SettingsFixture settings;

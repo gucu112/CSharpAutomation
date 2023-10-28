@@ -59,7 +59,7 @@ public class SettingsFixture : IAsyncLifetime, ISettings
     }
 }
 
-[CollectionDefinition("Settings")]
+[CollectionDefinition(nameof(SettingsFixture))]
 public class SettingsCollection : ICollectionFixture<SettingsFixture>
 {
 }
