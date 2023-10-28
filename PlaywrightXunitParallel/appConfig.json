@@ -1,0 +1,37 @@
+{
+  "Environment": "#{Environment}",
+  "RootPath": "#{RootPath}",
+  "EntryPoints": [
+    {
+      "Name": "Google",
+      "Url": "https://www.google.com/"
+    },
+    {
+      "Name": "Bing",
+      "Url": "https://www.bing.com/"
+    },
+    {
+      "Name": "Playwright",
+      "Url": "https://playwright.dev/dotnet/"
+    }
+  ],
+  "BrowserName": "chromium",
+  "ExpectTimeout": 5000,
+  "BrowserOptions": {
+    "Locale": "pl-PL",
+    "TimezoneId": "Europe/Warsaw",
+    "Geolocation": {
+      "Latitude": "52.2316724",
+      "Longitude": "21.0059873"
+    },
+    "Offline": false
+  },
+  "LaunchOptions": {
+    "Channel": "edge",
+    "Headless": false,
+    "SlowMo": 500,
+    "Timeout": 15000
+  },
+  "ScreenshotDir": "#{RootPath}\\Screenshots\\",
+  "RecordVideoDir": "#{RootPath}\\Videos\\"
+}

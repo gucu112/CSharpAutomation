@@ -63,6 +63,10 @@ There are no deployment procedure established yet.
 
 ### PlaywrightXunitParallel
 
+* [Playwright](https://playwright.dev/dotnet/)
+* [Xunit](https://xunit.net/)
+* [Xunit.SkippableFact](https://github.com/AArnott/Xunit.SkippableFact)
+
 ### PlaywrightSpecflowXunit
 
 ## Contributing
