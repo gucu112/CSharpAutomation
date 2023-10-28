@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <IsPackable>false</IsPackable>
-    <Configurations>ChromeDebug;ChromeRelease;FirefoxDebug;FirefoxRelease;WebkitDebug;WebkitRelease</Configurations>
+    <Configurations>ChromiumDebug;ChromiumRelease;FirefoxDebug;FirefoxRelease;WebkitDebug;WebkitRelease</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
