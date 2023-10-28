@@ -18,4 +18,11 @@ public class PlaywrightTest : IClassFixture<PlaywrightFixture>
         Assert.True(playwright.Browser.IsConnected, "Browser is not connected");
         Assert.Equal("chromium", playwright.Browser.BrowserType.Name);
     }
+
+    [Fact]
+    public void VerifyThatLaunchOptionsAreInitalized()
+    {
+        Assert.NotNull(playwright.LaunchOptions);
+        Assert.Equal("msedge", playwright.LaunchOptions.Channel);
+    }
 }
