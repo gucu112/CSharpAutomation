@@ -1,12 +1,12 @@
 ﻿using Gucu112.PlaywrightXunitParallel.Fixtures;
-using Gucu112.PlaywrightXunitParallel.Models;
+using Gucu112.PlaywrightXunitParallel.Models.Attribute;
 using Gucu112.PlaywrightXunitParallel.Models.Enum;
 using Gucu112.PlaywrightXunitParallel.Pages;
 
 namespace Gucu112.PlaywrightXunitParallel.Tests.Core;
 
 [Collection(nameof(SettingsFixture))]
-[Trait(TestTrait.Category, nameof(TestCategory.Browser))]
+[Category(TestCategory.Browser)]
 public class PlaywrightTest : IClassFixture<PlaywrightFixture>
 {
     private readonly SettingsFixture settings;
@@ -21,7 +21,7 @@ public class PlaywrightTest : IClassFixture<PlaywrightFixture>
     }
 
     [Fact]
-    [Trait(TestTrait.Priority, nameof(TestPriority.Critical))]
+    [Priority(TestPriority.Critical)]
     public void VerifyThatBrowserDoesExist()
     {
         Assert.NotNull(playwright.Browser);
@@ -30,8 +30,8 @@ public class PlaywrightTest : IClassFixture<PlaywrightFixture>
     }
 
     [Fact]
-    [Trait(TestTrait.Category, nameof(TestCategory.Settings))]
-    [Trait(TestTrait.Priority, nameof(TestPriority.Medium))]
+    [Category(TestCategory.Settings)]
+    [Priority(TestPriority.Medium)]
     public void VerifyThatLaunchOptionsAreInitalized()
     {
         Assert.NotNull(playwright.LaunchOptions);
@@ -39,7 +39,7 @@ public class PlaywrightTest : IClassFixture<PlaywrightFixture>
     }
 
     [Fact]
-    [Trait(TestTrait.Priority, nameof(TestPriority.High))]
+    [Priority(TestPriority.High)]
     public void VerifyThatBrowserContextDoesExist()
     {
         using var page = new BlankPage(settings, playwright);
@@ -49,8 +49,8 @@ public class PlaywrightTest : IClassFixture<PlaywrightFixture>
     }
 
     [Fact]
-    [Trait(TestTrait.Category, nameof(TestCategory.Settings))]
-    [Trait(TestTrait.Priority, nameof(TestPriority.Low))]
+    [Category(TestCategory.Settings)]
+    [Priority(TestPriority.Low)]
     public void VerifyThatBrowserOptionsAreInitialized()
     {
         using var page = new BlankPage(settings, playwright);
@@ -60,7 +60,7 @@ public class PlaywrightTest : IClassFixture<PlaywrightFixture>
     }
 
     [Fact]
-    [Trait(TestTrait.Priority, nameof(TestPriority.High))]
+    [Priority(TestPriority.High)]
     public void VerifyThatPageDoesExist()
     {
         using var page = new BlankPage(settings, playwright);
@@ -70,8 +70,8 @@ public class PlaywrightTest : IClassFixture<PlaywrightFixture>
     }
 
     [Fact]
-    [Trait(TestTrait.Category, nameof(TestCategory.Settings))]
-    [Trait(TestTrait.Priority, nameof(TestPriority.High))]
+    [Category(TestCategory.Settings)]
+    [Priority(TestPriority.High)]
     public async Task VerifyThatPageTimeoutWorksCorrect()
     {
         using var page = new BlankPage(settings, playwright);

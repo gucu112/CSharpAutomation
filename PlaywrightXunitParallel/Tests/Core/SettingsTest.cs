@@ -1,12 +1,12 @@
 ﻿using Gucu112.PlaywrightXunitParallel.Fixtures;
-using Gucu112.PlaywrightXunitParallel.Models;
+using Gucu112.PlaywrightXunitParallel.Models.Attribute;
 using Gucu112.PlaywrightXunitParallel.Models.Enum;
 
 namespace Gucu112.PlaywrightXunitParallel.Tests.Core;
 
 [Collection(nameof(SettingsFixture))]
-[Trait(TestTrait.Category, nameof(TestCategory.Settings))]
-[Trait(TestTrait.Priority, nameof(TestPriority.Medium))]
+[Category(TestCategory.Settings)]
+[Priority(TestPriority.Medium)]
 public class SettingsTest
 {
     private readonly SettingsFixture settings;
