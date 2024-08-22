@@ -1,11 +1,14 @@
 ﻿using Gucu112.PlaywrightXunitParallel.Fixtures;
 using Gucu112.PlaywrightXunitParallel.Models.Attribute;
 using Gucu112.PlaywrightXunitParallel.Models.Enum;
+using Gucu112.PlaywrightXunitParallel.Orderers.TestCase;
 using Gucu112.PlaywrightXunitParallel.Pages;
 
 namespace Gucu112.PlaywrightXunitParallel.Tests.Core;
 
 [Collection(nameof(SettingsFixture))]
+[TestCaseOrderer(PriorityOrderer.FullTypeName, PriorityOrderer.AssemblyName)]
+
 [Category(TestCategory.Browser)]
 public class PlaywrightTest : IClassFixture<PlaywrightFixture>
 {

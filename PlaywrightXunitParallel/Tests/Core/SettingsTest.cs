@@ -1,10 +1,13 @@
 ﻿using Gucu112.PlaywrightXunitParallel.Fixtures;
 using Gucu112.PlaywrightXunitParallel.Models.Attribute;
 using Gucu112.PlaywrightXunitParallel.Models.Enum;
+using Gucu112.PlaywrightXunitParallel.Orderers.TestCase;
 
 namespace Gucu112.PlaywrightXunitParallel.Tests.Core;
 
 [Collection(nameof(SettingsFixture))]
+[TestCaseOrderer(NameOrderer.FullTypeName, NameOrderer.AssemblyName)]
+
 [Category(TestCategory.Settings)]
 [Priority(TestPriority.Medium)]
 public class SettingsTest
