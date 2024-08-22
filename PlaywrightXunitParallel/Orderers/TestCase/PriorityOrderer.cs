@@ -31,6 +31,6 @@ public class PriorityOrderer : ITestCaseOrderer
             }
         }
 
-        return priorityDictionary.OrderByDescending(pair => pair.Key).SelectMany(pair => pair.Value).ToList();
+        return priorityDictionary.OrderBy(pair => pair.Key).SelectMany(pair => pair.Value).ToList();
     }
 }

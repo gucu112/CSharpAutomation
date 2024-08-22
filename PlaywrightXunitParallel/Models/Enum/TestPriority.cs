@@ -2,9 +2,9 @@
 
 public enum TestPriority
 {
-    Trivial,
-    Low,
-    Medium,
+    Critical,
     High,
-    Critical
+    Medium,
+    Low,
+    Trivial
 }
