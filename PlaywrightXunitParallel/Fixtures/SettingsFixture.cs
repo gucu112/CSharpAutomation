@@ -26,7 +26,7 @@ public class SettingsFixture : IAsyncLifetime, ISettings
 
     public string Environment => ExpandEnvironment(appConfig?.GetValue<string>("Environment"));
     public string RootPath => ExpandRootPath(appConfig?.GetValue<string>("RootPath"));
-    public IList<EntryPoint> EntryPoints => appConfig?.GetSection("EntryPoints").Get<List<EntryPoint>>() ?? new();
+    public IList<EntryPoint> EntryPoints => appConfig?.GetSection("EntryPoints").Get<List<EntryPoint>>() ?? [];
     public string BrowserName => appConfig?.GetValue<string>("BrowserName") ?? GetCurrentBrowserName();
     public int ExpectTimeout => appConfig?.GetValue<int>("ExpectTimeout") ?? 0;
     public BrowserNewContextOptions BrowserOptions => appConfig?.GetSection("BrowserOptions").Get<BrowserNewContextOptions>() ?? new();

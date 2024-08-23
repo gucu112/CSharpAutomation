@@ -6,12 +6,7 @@ namespace Gucu112.PlaywrightXunitParallel.Models.Attribute;
 
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
 [TraitDiscoverer(TraitDiscoverer.FullTypeName, TraitDiscoverer.AssemblyName)]
-public class CategoryAttribute : BaseAttribute, ITraitAttribute
+public class CategoryAttribute(TestCategory category) : BaseAttribute, ITraitAttribute
 {
-    public TestCategory Category { get; set; }
-
-    public CategoryAttribute(TestCategory category)
-    {
-        Category = category;
-    }
+    public TestCategory Category { get; set; } = category;
 }

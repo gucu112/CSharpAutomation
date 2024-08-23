@@ -1,14 +1,7 @@
 ﻿namespace Gucu112.PlaywrightXunitParallel.Fixtures;
 
-public class PlaywrightFixture : IAsyncLifetime
+public class PlaywrightFixture(SettingsFixture settings) : IAsyncLifetime
 {
-    private readonly SettingsFixture settings;
-
-    public PlaywrightFixture(SettingsFixture fixture)
-    {
-        settings = fixture;
-    }
-
     private IPlaywright Instance { get; set; } = null!;
     public IBrowser Browser { get; private set; } = null!;
     public BrowserTypeLaunchOptions LaunchOptions { get; private set; } = null!;

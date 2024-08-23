@@ -23,7 +23,7 @@ public class PriorityOrderer : ITestCaseOrderer
 
             if (!priorityDictionary.ContainsKey(priority))
             {
-                priorityDictionary.Add(priority, new List<TTestCase>() { testCase });
+                priorityDictionary.Add(priority, [testCase]);
             }
             else
             {

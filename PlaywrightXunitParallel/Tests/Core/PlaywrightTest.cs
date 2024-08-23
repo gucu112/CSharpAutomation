@@ -10,19 +10,11 @@ namespace Gucu112.PlaywrightXunitParallel.Tests.Core;
 [TestCaseOrderer(PriorityOrderer.FullTypeName, PriorityOrderer.AssemblyName)]
 
 [Category(TestCategory.Browser)]
-public class PlaywrightTest : IClassFixture<PlaywrightFixture>
+public class PlaywrightTest(
+    SettingsFixture settings,
+    PlaywrightFixture playwright
+) : IClassFixture<PlaywrightFixture>
 {
-    private readonly SettingsFixture settings;
-    private readonly PlaywrightFixture playwright;
-
-    public PlaywrightTest(
-        SettingsFixture settingsFixture,
-        PlaywrightFixture playwrightFixture)
-    {
-        settings = settingsFixture;
-        playwright = playwrightFixture;
-    }
-
     [Fact]
     [Priority(TestPriority.Critical)]
     public void VerifyThatBrowserDoesExist()
@@ -93,12 +85,12 @@ public class PlaywrightTest : IClassFixture<PlaywrightFixture>
             PlaywrightFixture playwright
         ) : base(settings, playwright)
         {
-            Task.Run(async () => await InitializeAsync()).Wait();
+            Task.Run(InitializeAsync).Wait();
         }
 
         public void Dispose()
         {
-            Task.Run(async () => await DisposeAsync()).Wait();
+            Task.Run(DisposeAsync).Wait();
         }
     }
 }

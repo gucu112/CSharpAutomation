@@ -10,15 +10,8 @@ namespace Gucu112.PlaywrightXunitParallel.Tests.Core;
 
 [Category(TestCategory.Settings)]
 [Priority(TestPriority.Medium)]
-public class SettingsTest
+public class SettingsTest(SettingsFixture settings)
 {
-    private readonly SettingsFixture settings;
-
-    public SettingsTest(SettingsFixture fixture)
-    {
-        settings = fixture;
-    }
-
     [Fact]
     public void VerifyThatEnvironmentIsLoadedCorrectly()
     {

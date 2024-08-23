@@ -2,23 +2,16 @@
 
 namespace Gucu112.PlaywrightXunitParallel.Pages;
 
-public abstract class BasePage : IAsyncLifetime
+public abstract class BasePage(
+    SettingsFixture settings,
+    PlaywrightFixture playwright
+) : IAsyncLifetime
 {
-    protected SettingsFixture Settings { get; set; }
-    protected IBrowser Browser { get; set; } = null!;
+    protected SettingsFixture Settings { get; init; } = settings;
+    protected IBrowser Browser { get; init; } = playwright.Browser;
+    public BrowserNewContextOptions BrowserOptions { get; init; } = settings.BrowserOptions;
     public IBrowserContext BrowserContext { get; private set; } = null!;
     public IPage Context { get; private set; } = null!;
-    public BrowserNewContextOptions BrowserOptions { get; private set; } = null!;
-
-    public BasePage(
-        SettingsFixture settingsFixture,
-        PlaywrightFixture playwrightFixture
-    )
-    {
-        Settings = settingsFixture;
-        BrowserOptions = settingsFixture.BrowserOptions;
-        Browser = playwrightFixture.Browser;
-    }
 
     public async Task InitializeAsync()
     {
