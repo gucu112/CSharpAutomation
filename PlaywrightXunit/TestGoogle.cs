@@ -4,15 +4,8 @@ namespace Gucu112.PlaywrightXunit.Tests;
 
 [Trait("Category", "Pages")]
 [Collection(nameof(PlaywrightFixture))]
-public class TestGoogle : IClassFixture<PageGoogle>
+public class TestGoogle(PageGoogle page) : IClassFixture<PageGoogle>
 {
-    private readonly PageGoogle page;
-
-    public TestGoogle(PageGoogle page)
-    {
-        this.page = page;
-    }
-
     [Fact]
     public async Task VerifyThatSearchInputIsVisible()
     {

@@ -20,7 +20,7 @@ public class Settings
 
     public static IDictionary<string, string> GetEnvironmentVariables()
     {
-        var hashtable = Environment.GetEnvironmentVariables() as Hashtable ?? new Hashtable();
+        var hashtable = Environment.GetEnvironmentVariables() as Hashtable ?? [];
         return hashtable.Cast<DictionaryEntry>().ToDictionary(e => $"{e.Key}", e => $"{e.Value}");
     }
 

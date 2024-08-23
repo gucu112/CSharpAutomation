@@ -269,3 +269,7 @@ dotnet_style_prefer_compound_assignment = true:suggestion
 dotnet_style_prefer_simplified_interpolation = true:suggestion
 dotnet_style_namespace_match_folder = true:suggestion
 dotnet_style_predefined_type_for_locals_parameters_members = true:silent
+
+# Diagnostic
+
+dotnet_diagnostic.xUnit1004.severity = none
