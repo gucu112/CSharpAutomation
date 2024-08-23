@@ -6,24 +6,17 @@ namespace Gucu112.PlaywrightXunit.Tests;
 
 [Trait("Category", "Playwright")]
 [Collection(nameof(PlaywrightFixture))]
-public class TestPlaywright
+public class TestPlaywright(PlaywrightFixture playwright)
 {
-    private readonly PlaywrightFixture fixture;
-
-    public TestPlaywright(PlaywrightFixture fixture)
-    {
-        this.fixture = fixture;
-    }
-
     [Fact]
     public void VerifyThatPlaywrightInstanceIsInitilized()
     {
         // Arrange
-        var property = fixture.GetType().GetProperty("Instance",
+        var property = playwright.GetType().GetProperty("Instance",
             BindingFlags.Instance | BindingFlags.NonPublic);
 
         // Act
-        var instance = property?.GetGetMethod(nonPublic: true)?.Invoke(fixture, null);
+        var instance = property?.GetGetMethod(nonPublic: true)?.Invoke(playwright, null);
 
         // Assert
         Assert.IsAssignableFrom<IPlaywright>(instance);
@@ -33,7 +26,7 @@ public class TestPlaywright
     public void VerifyThatBrowserIsInitilizedAndConnected()
     {
         // Act
-        var browser = fixture.Browser;
+        var browser = playwright.Browser;
 
         // Assert
         Assert.IsAssignableFrom<IBrowser>(browser);
@@ -47,7 +40,7 @@ public class TestPlaywright
         var settings = new Settings();
 
         // Act
-        var browser = fixture.Browser;
+        var browser = playwright.Browser;
 
         // Assert
         Assert.Equal(settings.GetBrowserName(), browser.BrowserType.Name);
@@ -57,7 +50,7 @@ public class TestPlaywright
     public async Task VerifyThatBrowserContextIsInitialized()
     {
         // Arrange
-        var page = new PageBlank(fixture);
+        var page = new PageBlank(playwright);
         await page.InitializeAsync();
 
         // Act
@@ -72,7 +65,7 @@ public class TestPlaywright
     public async Task VerifyThatPageContextIsInitialized()
     {
         // Arrange
-        var page = new PageBlank(fixture);
+        var page = new PageBlank(playwright);
         await page.InitializeAsync();
 
         // Act
@@ -88,7 +81,7 @@ public class TestPlaywright
     {
         // Arrange
         var settings = new Settings();
-        var page = new PageBlank(fixture);
+        var page = new PageBlank(playwright);
         await page.InitializeAsync();
 
         // Act
@@ -100,12 +93,11 @@ public class TestPlaywright
         };
 
         // Assert
-        Exception exception = await Assert.ThrowsAsync<TimeoutException>(action);
+        var exception = await Assert.ThrowsAsync<TimeoutException>(action);
         Assert.Contains($"Timeout {settings.GetExpectTimeout()}ms exceeded", exception.Message);
     }
 
-    private class PageBlank : PageBase
+    private class PageBlank(PlaywrightFixture playwright) : PageBase(playwright)
     {
-        public PageBlank(PlaywrightFixture fixture) : base(fixture) { }
     }
 }

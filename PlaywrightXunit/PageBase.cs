@@ -2,18 +2,12 @@
 
 namespace Gucu112.PlaywrightXunit.Pages;
 
-public abstract class PageBase : IAsyncLifetime
+public abstract class PageBase(PlaywrightFixture playwright) : IAsyncLifetime
 {
-    protected Settings Settings { get; set; }
-    protected IBrowser Browser { get; set; } = null!;
+    protected Settings Settings { get; init; } = new Settings();
+    protected IBrowser Browser { get; init; } = playwright.Browser;
     public IBrowserContext BrowserContext { get; private set; } = null!;
     public IPage Context { get; private set; } = null!;
-
-    public PageBase(PlaywrightFixture fixture)
-    {
-        Settings = new Settings();
-        Browser = fixture.Browser;
-    }
 
     public async Task InitializeAsync()
     {
