@@ -2,29 +2,16 @@
 
 namespace Gucu112.PlaywrightXunitParallel.Pages;
 
-public abstract class BasePage(
-    SettingsFixture settings,
-    PlaywrightFixture playwright
-) : IAsyncLifetime
+public abstract class BasePage : BasePageAsync, IDisposable
 {
-    protected SettingsFixture Settings { get; init; } = settings;
-    protected IBrowser Browser { get; init; } = playwright.Browser;
-    public BrowserNewContextOptions BrowserOptions { get; init; } = settings.BrowserOptions;
-    public IBrowserContext BrowserContext { get; private set; } = null!;
-    public IPage Context { get; private set; } = null!;
-    public abstract string BaseUrl { get; }
-
-    public async Task InitializeAsync()
+    public BasePage(PlaywrightFixture playwright) : base(playwright)
     {
-        BrowserContext = await Browser.NewContextAsync(BrowserOptions);
-        BrowserContext.SetDefaultTimeout(Settings.ExpectTimeout);
-        Context = await BrowserContext.NewPageAsync();
-        await Context.GotoAsync(BaseUrl);
+        InitializeAsync().Wait();
     }
 
-    public async Task DisposeAsync()
+    public void Dispose()
     {
-        await Context.CloseAsync();
-        await BrowserContext.DisposeAsync();
+        Task.Run(DisposeAsync);
+        GC.SuppressFinalize(this);
     }
 }

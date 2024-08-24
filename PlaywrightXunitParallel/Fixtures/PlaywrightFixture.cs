@@ -1,20 +1,27 @@
 ﻿namespace Gucu112.PlaywrightXunitParallel.Fixtures;
 
-public class PlaywrightFixture(SettingsFixture settings) : IAsyncLifetime
+public class PlaywrightFixture : IAsyncLifetime
 {
+    private SettingsFixture Settings { get; } = new();
     private IPlaywright Instance { get; set; } = null!;
     public IBrowser Browser { get; private set; } = null!;
     public BrowserTypeLaunchOptions LaunchOptions { get; private set; } = null!;
+    public IBrowserContext BrowserContext { get; private set; } = null!;
+    public BrowserNewContextOptions BrowserOptions { get; private set; } = null!;
 
     public async Task InitializeAsync()
     {
-        LaunchOptions = settings.LaunchOptions;
+        LaunchOptions = Settings.LaunchOptions;
         Instance = await Playwright.CreateAsync();
-        Browser = await Instance[settings.BrowserName].LaunchAsync(LaunchOptions);
+        Browser = await Instance[Settings.BrowserName].LaunchAsync(LaunchOptions);
+        BrowserOptions = Settings.BrowserOptions;
+        BrowserContext = await Browser.NewContextAsync(BrowserOptions);
+        BrowserContext.SetDefaultTimeout(Settings.ExpectTimeout);
     }
 
     public async Task DisposeAsync()
     {
+        await BrowserContext.DisposeAsync();
         await Browser.DisposeAsync();
         Instance.Dispose();
     }

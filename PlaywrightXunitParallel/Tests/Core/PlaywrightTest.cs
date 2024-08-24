@@ -35,31 +35,29 @@ public class PlaywrightTest(
     }
 
     [Fact]
+    [Category(TestCategory.Settings)]
+    [Priority(TestPriority.Low)]
+    public void VerifyThatBrowserOptionsAreInitialized()
+    {
+        playwright.BrowserOptions.Should().NotBeNull();
+        playwright.BrowserOptions.Offline.Should().BeFalse();
+    }
+
+    [Fact]
     [Priority(TestPriority.High)]
     public void VerifyThatBrowserContextDoesExist()
     {
-        using var page = new BlankPage(settings, playwright);
+        using var page = new EdgeAboutPage(playwright);
 
         page.BrowserContext.Should().NotBeNull();
         page.BrowserContext.Browser?.BrowserType.Name.Should().Be("chromium");
     }
 
     [Fact]
-    [Category(TestCategory.Settings)]
-    [Priority(TestPriority.Low)]
-    public void VerifyThatBrowserOptionsAreInitialized()
-    {
-        using var page = new BlankPage(settings, playwright);
-
-        page.BrowserOptions.Should().NotBeNull();
-        page.BrowserOptions.Offline.Should().BeFalse();
-    }
-
-    [Fact]
     [Priority(TestPriority.High)]
     public void VerifyThatPageDoesExist()
     {
-        using var page = new BlankPage(settings, playwright);
+        using var page = new EdgeAboutPage(playwright);
 
         page.Context.Should().NotBeNull();
         page.Context.Url.Should().StartWith("edge://edge");
@@ -70,28 +68,15 @@ public class PlaywrightTest(
     [Priority(TestPriority.High)]
     public async Task VerifyThatPageTimeoutWorksCorrect()
     {
-        using var page = new BlankPage(settings, playwright);
+        using var page = new EdgeAboutPage(playwright);
         var action = async () => await page.Context.GetByTestId("unknow").ClickAsync();
 
         var exception = await action.Should().ThrowExactlyAsync<TimeoutException>();
         exception.Which.Message.Should().Contain($"Timeout {settings.ExpectTimeout}ms exceeded");
     }
 
-    private class BlankPage : BasePage, IDisposable
+    private class EdgeAboutPage(PlaywrightFixture playwright) : BasePage(playwright)
     {
         public override string BaseUrl => "edge://about";
-
-        public BlankPage(
-            SettingsFixture settings,
-            PlaywrightFixture playwright
-        ) : base(settings, playwright)
-        {
-            Task.Run(InitializeAsync).Wait();
-        }
-
-        public void Dispose()
-        {
-            Task.Run(DisposeAsync).Wait();
-        }
     }
 }

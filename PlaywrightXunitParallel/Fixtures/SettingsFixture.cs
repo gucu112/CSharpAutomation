@@ -6,22 +6,17 @@ using Microsoft.Extensions.Configuration;
 
 namespace Gucu112.PlaywrightXunitParallel.Fixtures;
 
-public class SettingsFixture : IAsyncLifetime, ISettings
+public class SettingsFixture : ISettings
 {
     private const string DefaultConfiguration = "Debug";
 
-    private IConfigurationRoot? appConfig;
+    private readonly IConfigurationRoot? appConfig;
 
-    public async Task InitializeAsync()
+    public SettingsFixture()
     {
-        appConfig = await Task.Run(() => new ConfigurationBuilder()
+        appConfig = new ConfigurationBuilder()
             .AddJsonFile("appConfig.json", optional: false)
-            .Build());
-    }
-
-    public Task DisposeAsync()
-    {
-        return Task.CompletedTask;
+            .Build();
     }
 
     public string Environment => ExpandEnvironment(appConfig?.GetValue<string>("Environment"));
