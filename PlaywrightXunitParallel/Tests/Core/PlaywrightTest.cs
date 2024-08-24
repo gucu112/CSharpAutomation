@@ -1,4 +1,5 @@
-﻿using Gucu112.PlaywrightXunitParallel.Fixtures;
+﻿using FluentAssertions;
+using Gucu112.PlaywrightXunitParallel.Fixtures;
 using Gucu112.PlaywrightXunitParallel.Models.Attribute;
 using Gucu112.PlaywrightXunitParallel.Models.Enum;
 using Gucu112.PlaywrightXunitParallel.Orderers.TestCase;
@@ -19,9 +20,9 @@ public class PlaywrightTest(
     [Priority(TestPriority.Critical)]
     public void VerifyThatBrowserDoesExist()
     {
-        Assert.NotNull(playwright.Browser);
-        Assert.True(playwright.Browser.IsConnected, "Browser is not connected");
-        Assert.Equal("chromium", playwright.Browser.BrowserType.Name);
+        playwright.Browser.Should().NotBeNull();
+        playwright.Browser.IsConnected.Should().BeTrue();
+        playwright.Browser.BrowserType.Name.Should().Be("chromium");
     }
 
     [Fact]
@@ -29,8 +30,8 @@ public class PlaywrightTest(
     [Priority(TestPriority.Medium)]
     public void VerifyThatLaunchOptionsAreInitalized()
     {
-        Assert.NotNull(playwright.LaunchOptions);
-        Assert.Equal("msedge", playwright.LaunchOptions.Channel);
+        playwright.LaunchOptions.Should().NotBeNull();
+        playwright.LaunchOptions.Channel.Should().Be("msedge");
     }
 
     [Fact]
@@ -39,8 +40,8 @@ public class PlaywrightTest(
     {
         using var page = new BlankPage(settings, playwright);
 
-        Assert.NotNull(page.BrowserContext);
-        Assert.Equal("chromium", page.BrowserContext.Browser?.BrowserType.Name);
+        page.BrowserContext.Should().NotBeNull();
+        page.BrowserContext.Browser?.BrowserType.Name.Should().Be("chromium");
     }
 
     [Fact]
@@ -50,8 +51,8 @@ public class PlaywrightTest(
     {
         using var page = new BlankPage(settings, playwright);
 
-        Assert.NotNull(page.BrowserOptions);
-        Assert.False(page.BrowserOptions.Offline, "Browser is in offline mode");
+        page.BrowserOptions.Should().NotBeNull();
+        page.BrowserOptions.Offline.Should().BeFalse();
     }
 
     [Fact]
@@ -60,8 +61,8 @@ public class PlaywrightTest(
     {
         using var page = new BlankPage(settings, playwright);
 
-        Assert.NotNull(page.Context);
-        Assert.Equal("about:blank", page.Context.Url);
+        page.Context.Should().NotBeNull();
+        page.Context.Url.Should().Be("about:blank");
     }
 
     [Fact]
@@ -74,8 +75,8 @@ public class PlaywrightTest(
 
         await page.Context.GotoAsync("chrome://about");
 
-        Exception exception = await Assert.ThrowsAsync<TimeoutException>(action);
-        Assert.Contains($"Timeout {settings.ExpectTimeout}ms exceeded", exception.Message);
+        var exception = await action.Should().ThrowExactlyAsync<TimeoutException>();
+        exception.Which.Message.Should().Contain($"Timeout {settings.ExpectTimeout}ms exceeded");
     }
 
     private class BlankPage : BasePage, IDisposable

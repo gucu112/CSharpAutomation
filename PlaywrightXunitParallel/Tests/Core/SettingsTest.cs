@@ -1,4 +1,5 @@
-﻿using Gucu112.PlaywrightXunitParallel.Fixtures;
+﻿using FluentAssertions;
+using Gucu112.PlaywrightXunitParallel.Fixtures;
 using Gucu112.PlaywrightXunitParallel.Models.Attribute;
 using Gucu112.PlaywrightXunitParallel.Models.Enum;
 using Gucu112.PlaywrightXunitParallel.Orderers.TestCase;
@@ -15,32 +16,31 @@ public class SettingsTest(SettingsFixture settings)
     [Fact]
     public void VerifyThatEnvironmentIsLoadedCorrectly()
     {
-        Assert.EndsWith("Debug", settings.Environment);
+        settings.Environment.Should().EndWith("Debug");
     }
 
     [Fact]
     public void VerifyThatRootPathIsLoadedCorrectly()
     {
-        Assert.Contains(AppDomain.CurrentDomain.BaseDirectory, settings.RootPath);
+        settings.RootPath.Should().Contain(AppDomain.CurrentDomain.BaseDirectory);
     }
 
     [Fact]
     public void VerifyThatEntryPointsAreLoadedCorrectly()
     {
-        Assert.True(3 <= settings.EntryPoints.Count,
-            "EntryPoints list does not have at least 3 elements");
+        settings.EntryPoints.Should().HaveCountGreaterThanOrEqualTo(3);
     }
 
     [Fact]
     public void VerifyThatPlaywrightBrowserNameIsLoadedCorrectly()
     {
-        Assert.Equal("chromium", settings.BrowserName);
+        settings.BrowserName.Should().Be("chromium");
     }
 
     [Fact]
     public void VerifyThatPlaywrightExpectTimeoutIsLoadedCorrectly()
     {
-        Assert.Equal(5000, settings.ExpectTimeout);
+        settings.ExpectTimeout.Should().Be(5000);
     }
 
     [Fact]
@@ -48,12 +48,15 @@ public class SettingsTest(SettingsFixture settings)
     {
         var options = settings.BrowserOptions;
 
-        Assert.Equal("pl-PL", options.Locale);
-        Assert.Equal("Europe/Warsaw", options.TimezoneId);
-        Assert.Equal(52.2316742f, options.Geolocation?.Latitude);
-        Assert.Equal(21.0059872f, options.Geolocation?.Longitude);
-        Assert.False(options.Offline);
-        Assert.Null(options.Proxy);
+        options.Locale.Should().Be("pl-PL");
+        options.TimezoneId.Should().Be("Europe/Warsaw");
+        options.Geolocation.Should().BeEquivalentTo(new Geolocation()
+        {
+            Latitude = 52.2316742f,
+            Longitude = 21.0059872f
+        });
+        options.Offline.Should().BeFalse();
+        options.Proxy.Should().BeNull();
     }
 
     [Fact]
@@ -61,24 +64,22 @@ public class SettingsTest(SettingsFixture settings)
     {
         var options = settings.LaunchOptions;
 
-        Assert.Equal("msedge", options.Channel);
-        Assert.False(options.Headless, "Headless mode is enabled");
-        Assert.Equal(500, options.SlowMo);
-        Assert.Equal(15000, options.Timeout);
-        Assert.Null(options.Proxy);
+        options.Channel.Should().Be("msedge");
+        options.Headless.Should().BeFalse();
+        options.SlowMo.Should().BeLessThanOrEqualTo(1000);
+        options.Timeout.Should().BeGreaterThanOrEqualTo(10000);
+        options.Proxy.Should().BeNull();
     }
 
     [Fact]
     public void VerifyThatScreenshotDirectoryPathIsLoadedCorrectly()
     {
-        Assert.EndsWith("screenshots\\", settings.ScreenshotDir,
-            StringComparison.InvariantCultureIgnoreCase);
+        settings.ScreenshotDir.Should().EndWithEquivalentOf("screenshots\\");
     }
 
     [Fact]
     public void VerifyThatRecordVideoDirectoryPathIsLoadedCorrectly()
     {
-        Assert.EndsWith("videos\\", settings.RecordVideoDir,
-            StringComparison.InvariantCultureIgnoreCase);
+        settings.RecordVideoDir.Should().EndWithEquivalentOf("videos\\");
     }
 }

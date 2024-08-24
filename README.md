@@ -28,7 +28,7 @@ Simply open the solution file (`TestingFrameworks.sln`) from main project direct
 Run this command from selected project directory (e.g. `PlaywrightXunit`).
 
 ```
-pwsh bin/Debug/net6.0/playwright.ps1 install
+pwsh bin/Debug/net8.0/playwright.ps1 install
 ```
 
 If `pwsh` is not available, you have to [install PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell).
@@ -66,6 +66,7 @@ There are no deployment procedure established yet.
 * [Playwright](https://playwright.dev/dotnet/)
 * [Xunit](https://xunit.net/)
 * [Xunit.SkippableFact](https://github.com/AArnott/Xunit.SkippableFact)
+* [FluentAssertions](https://fluentassertions.com/)
 
 ### PlaywrightSpecflowXunit
 
