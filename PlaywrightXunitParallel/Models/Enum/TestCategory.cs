@@ -3,5 +3,6 @@
 public enum TestCategory
 {
     Settings,
-    Browser
+    Browser,
+    Google
 }

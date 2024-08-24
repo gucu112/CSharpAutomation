@@ -3,8 +3,8 @@
   "RootPath": "#{RootPath}",
   "EntryPoints": [
     {
-      "Name": "Google",
-      "Url": "https://www.google.com/"
+      "Name": "Google Calculator",
+      "Url": "https://www.google.com/search?hl=en&q=calculator"
     },
     {
       "Name": "Bing",
