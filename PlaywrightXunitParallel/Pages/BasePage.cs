@@ -12,12 +12,14 @@ public abstract class BasePage(
     public BrowserNewContextOptions BrowserOptions { get; init; } = settings.BrowserOptions;
     public IBrowserContext BrowserContext { get; private set; } = null!;
     public IPage Context { get; private set; } = null!;
+    public abstract string BaseUrl { get; }
 
     public async Task InitializeAsync()
     {
         BrowserContext = await Browser.NewContextAsync(BrowserOptions);
         BrowserContext.SetDefaultTimeout(Settings.ExpectTimeout);
         Context = await BrowserContext.NewPageAsync();
+        await Context.GotoAsync(BaseUrl);
     }
 
     public async Task DisposeAsync()

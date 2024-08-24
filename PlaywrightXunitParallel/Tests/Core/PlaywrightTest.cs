@@ -62,7 +62,7 @@ public class PlaywrightTest(
         using var page = new BlankPage(settings, playwright);
 
         page.Context.Should().NotBeNull();
-        page.Context.Url.Should().Be("about:blank");
+        page.Context.Url.Should().StartWith("edge://edge");
     }
 
     [Fact]
@@ -73,14 +73,14 @@ public class PlaywrightTest(
         using var page = new BlankPage(settings, playwright);
         var action = async () => await page.Context.GetByTestId("unknow").ClickAsync();
 
-        await page.Context.GotoAsync("chrome://about");
-
         var exception = await action.Should().ThrowExactlyAsync<TimeoutException>();
         exception.Which.Message.Should().Contain($"Timeout {settings.ExpectTimeout}ms exceeded");
     }
 
     private class BlankPage : BasePage, IDisposable
     {
+        public override string BaseUrl => "edge://about";
+
         public BlankPage(
             SettingsFixture settings,
             PlaywrightFixture playwright
