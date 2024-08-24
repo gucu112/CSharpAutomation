@@ -4,6 +4,7 @@ namespace Gucu112.PlaywrightXunitParallel.Pages;
 
 public abstract class BasePageAsync(PlaywrightFixture playwright) : IAsyncLifetime
 {
+    protected static SettingsFixture Settings => new();
     public IBrowserContext BrowserContext => playwright.BrowserContext;
     public IPage Context { get; private set; } = null!;
     public abstract string BaseUrl { get; }
