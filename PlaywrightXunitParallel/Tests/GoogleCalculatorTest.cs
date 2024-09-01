@@ -31,6 +31,19 @@ public class GoogleCalculatorTest(PlaywrightFixture playwright) : IClassFixture<
         buttonsVisibility.Should().AllSatisfy(x => x.Value.Should().BeTrue($"'{x.Key}' button should be visible"));
     }
 
+    [Fact]
+    public async Task VerifyThatGoogleCalculatorWorksThroughGoogleSearch()
+    {
+        await page.Context.GotoAsync(GoogleSearchPage.MainUrl);
+
+        await page.SearchInputLocator.FillAsync("2+3");
+        await page.SearchButtonLocator.ClickAsync();
+
+        var result = Convert.ToInt32(await page.ResultLocator.TextContentAsync());
+
+        result.Should().Be(5);
+    }
+
     [Theory]
     [MemberData(nameof(TestData))]
     [InlineData(112, -50)]

@@ -4,7 +4,8 @@ namespace Gucu112.PlaywrightXunitParallel.Pages;
 
 public class GoogleSearchPage(PlaywrightFixture playwright) : BasePage(playwright)
 {
-    public override string BaseUrl => Settings.EntryPoints.Single(ep => ep.Name == "Google Search").Url;
+    public static string MainUrl => Settings.EntryPoints.Single(ep => ep.Name == "Google Search").Url;
+    public override string BaseUrl => MainUrl;
 
     public ILocator SearchInputLocator => Context.GetByRole(AriaRole.Combobox);
     public ILocator SearchButtonLocator => Context.GetByRole(AriaRole.Button, new() { Name = "Google Search" }).First;
