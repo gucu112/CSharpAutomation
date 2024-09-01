@@ -11,6 +11,10 @@
       "Url": "https://google.com/search?hl=en&q=calculator"
     },
     {
+      "Name": "Google Unit Converter",
+      "Url": "https://google.com/search?hl=en&q=unit+converter"
+    },
+    {
       "Name": "Playwright",
       "Url": "https://playwright.dev/dotnet/"
     }
