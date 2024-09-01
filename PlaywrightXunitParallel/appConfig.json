@@ -4,7 +4,7 @@
   "EntryPoints": [
     {
       "Name": "Google Calculator",
-      "Url": "https://www.google.com/search?hl=en&q=calculator"
+      "Url": "https://google.com/search?hl=en&q=calculator"
     },
     {
       "Name": "Bing",

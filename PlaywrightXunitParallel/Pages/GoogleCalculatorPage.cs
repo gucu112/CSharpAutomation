@@ -36,6 +36,16 @@ public class GoogleCalculatorPage(PlaywrightFixture playwright) : BasePage(playw
         };
     }
 
+    public async Task<IDictionary<string, bool>> GetElementsVisibility()
+    {
+        return new Dictionary<string, bool>
+        {
+            { "CalculatorBox", await CalculatorBoxLocator.IsVisibleAsync() },
+            { "BasicSectionBox", await BasicSectionBoxLocator.IsVisibleAsync() },
+            { "Result", await ResultLocator.IsVisibleAsync() },
+        };
+    }
+
     public async Task<IDictionary<string, bool>> GetBasicButtonsVisibility(IEnumerable<string> buttons)
     {
         var tasks = buttons.Select(async button => new KeyValuePair<string, bool>(button,

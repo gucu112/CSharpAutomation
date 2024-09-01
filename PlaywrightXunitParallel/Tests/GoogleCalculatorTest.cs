@@ -21,15 +21,14 @@ public class GoogleCalculatorTest(PlaywrightFixture playwright) : IClassFixture<
     [Fact]
     public async Task VerifyThatGoogleCalculatorIsProperlyShown()
     {
-        await page.CalculatorBoxLocator.IsVisibleAsync();
-        await page.BasicSectionBoxLocator.IsVisibleAsync();
-        await page.ResultLocator.IsVisibleAsync();
+        var elementsVisiblity = await page.GetElementsVisibility();
+        elementsVisiblity.Should().AllSatisfy(x => x.Value.Should().BeTrue($"'{x.Key}' element should be visible"));
 
         var numbers = Enumerable.Range(0, 9).Select(i => i.ToString()).ToList();
         var buttons = numbers.Concat(["+", "-", "*", "/", "="]).ToList();
 
         var buttonsVisibility = await page.GetBasicButtonsVisibility(buttons);
-        buttonsVisibility.Should().AllSatisfy(x => x.Value.Should().BeTrue($"{x.Key} should be visible"));
+        buttonsVisibility.Should().AllSatisfy(x => x.Value.Should().BeTrue($"'{x.Key}' button should be visible"));
     }
 
     [Theory]
@@ -57,6 +56,7 @@ public class GoogleCalculatorTest(PlaywrightFixture playwright) : IClassFixture<
 
     [Theory]
     [MemberData(nameof(TestData))]
+    [InlineData(11120, 128)]
     public async Task VerifyThatGoogleCalculatorCanMultiplyTwoIntegers(int a, int b)
     {
         await page.Calculate($"{a}*{b}");
