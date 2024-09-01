@@ -3,12 +3,12 @@
   "RootPath": "#{RootPath}",
   "EntryPoints": [
     {
-      "Name": "Google Calculator",
-      "Url": "https://google.com/search?hl=en&q=calculator"
+      "Name": "Google Search",
+      "Url": "https://google.com/?hl=en"
     },
     {
-      "Name": "Bing",
-      "Url": "https://www.bing.com/"
+      "Name": "Google Calculator",
+      "Url": "https://google.com/search?hl=en&q=calculator"
     },
     {
       "Name": "Playwright",

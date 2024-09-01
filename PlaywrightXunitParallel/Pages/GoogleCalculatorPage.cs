@@ -2,27 +2,13 @@
 
 namespace Gucu112.PlaywrightXunitParallel.Pages;
 
-public class GoogleCalculatorPage(PlaywrightFixture playwright) : BasePage(playwright)
+public class GoogleCalculatorPage(PlaywrightFixture playwright) : GoogleSearchPage(playwright)
 {
     public override string BaseUrl => Settings.EntryPoints.Single(ep => ep.Name == "Google Calculator").Url;
 
     public ILocator CalculatorBoxLocator => Context.Locator("[jscontroller='qxNryb']");
     public ILocator BasicSectionBoxLocator => CalculatorBoxLocator.Locator("table.ElumCf");
     public ILocator ResultLocator => CalculatorBoxLocator.Locator("#cwos");
-
-    public override async Task BeforeGoToBaseUrl()
-    {
-        await BrowserContext.AddCookiesAsync(
-        [
-            new Cookie()
-            {
-                Name = "SOCS",
-                Value = "CAISHA",
-                Domain = ".google.com",
-                Path = "/"
-            }
-        ]);
-    }
 
     public ILocator GetBasicButtonLocator(string buttonSymbol)
     {
@@ -36,7 +22,7 @@ public class GoogleCalculatorPage(PlaywrightFixture playwright) : BasePage(playw
         };
     }
 
-    public async Task<IDictionary<string, bool>> GetElementsVisibility()
+    public new async Task<IDictionary<string, bool>> GetElementsVisibility()
     {
         return new Dictionary<string, bool>
         {
