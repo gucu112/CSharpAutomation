@@ -7,7 +7,7 @@ public class PageGoogle : PageBase, IAsyncLifetime
 {
     public string BaseUrl { get; private set; }
 
-    public PageGoogle(PlaywrightFixture fixture) : base(fixture)
+    public PageGoogle(PlaywrightFixture playwright) : base(playwright)
     {
         BaseUrl = Settings.GetTestParameter("GoogleBaseURL");
     }
@@ -15,8 +15,8 @@ public class PageGoogle : PageBase, IAsyncLifetime
     public new async Task InitializeAsync()
     {
         await base.InitializeAsync();
-        await BrowserContext.AddCookiesAsync(new List<Cookie>
-        {
+        await BrowserContext.AddCookiesAsync(
+        [
             new Cookie()
             {
                 Name = "SOCS",
@@ -24,7 +24,7 @@ public class PageGoogle : PageBase, IAsyncLifetime
                 Domain = ".google.com",
                 Path = "/"
             }
-        });
+        ]);
         await Context.GotoAsync(BaseUrl);
     }
 

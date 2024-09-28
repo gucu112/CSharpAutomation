@@ -1,15 +1,8 @@
 namespace Gucu112.PlaywrightXunit.Tests;
 
 [Trait("Category", "Results")]
-public class TestResults
+public class TestResults(ITestOutputHelper output)
 {
-    private readonly ITestOutputHelper output;
-
-    public TestResults(ITestOutputHelper output)
-    {
-        this.output = output;
-    }
-
     [Fact]
     public void TestPass()
     {

@@ -4,15 +4,8 @@ namespace Gucu112.PlaywrightXunit.Tests;
 
 [Trait("Category", "Pages")]
 [Collection(nameof(PlaywrightFixture))]
-public class TestBing : IClassFixture<PageBing>
+public class TestBing(PageBing page) : IClassFixture<PageBing>
 {
-    private readonly PageBing page;
-
-    public TestBing(PageBing page)
-    {
-        this.page = page;
-    }
-
     [Fact]
     public async Task VerifyThatSearchInputIsVisible()
     {
