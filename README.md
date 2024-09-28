@@ -11,7 +11,7 @@
 * [Built with](#build-with)
   * [PlaywrightXunit](#playwrightxunit)
   * [PlaywrightXunitParallel](#playwrightxunitparallel)
-  * [PlaywrightReqnrollMSTest](#playwrightreqnrollmstest)
+  * [PlaywrightReqnrollMsTest](#playwrightreqnrollmstest)
   * [SeleniumReqnrollNUnit](#seleniumreqnrollnunit)
 * [Contributing](#contributing)
 * [Versioning](#versioning)
@@ -69,7 +69,11 @@ There are no deployment procedure established yet.
 * [Xunit.SkippableFact](https://github.com/AArnott/Xunit.SkippableFact)
 * [FluentAssertions](https://fluentassertions.com/)
 
-### PlaywrightReqnrollMSTest
+### PlaywrightReqnrollMsTest
+
+* [Playwright](https://playwright.dev/dotnet/)
+* [Reqnroll](https://reqnroll.net/)
+* [MSTest](https://learn.microsoft.com/dotnet/core/testing/unit-testing-with-mstest)
 
 ### SeleniumReqnrollNUnit
 
