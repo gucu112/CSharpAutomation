@@ -3,9 +3,11 @@
   <PropertyGroup>
     <RootNamespace>Gucu112.CSharp.Automation.PlaywrightXunit</RootNamespace>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <PublishRelease>true</PublishRelease>
   </PropertyGroup>
 
   <ItemGroup>

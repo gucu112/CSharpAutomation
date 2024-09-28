@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>Gucu112.CSharp.Automation.PlaywrightXunitParallel</RootNamespace>
-    <Nullable>enable</Nullable>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
     <PublishRelease>true</PublishRelease>
     <Configurations>ChromiumDebug;ChromiumRelease;FirefoxDebug;FirefoxRelease;WebkitDebug;WebkitRelease</Configurations>
   </PropertyGroup>

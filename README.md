@@ -11,8 +11,8 @@
 * [Built with](#build-with)
   * [PlaywrightXunit](#playwrightxunit)
   * [PlaywrightXunitParallel](#playwrightxunitparallel)
-  * [PlaywrightReqnrollMSTest](#playwrightreqnrollmstest)
-  * [SeleniumReqnrollNUnit](#seleniumreqnrollnunit)
+  * [PlaywrightReqnrollMsTest](#playwrightreqnrollmstest)
+  * [SeleniumReqnrollNunit](#seleniumreqnrollnunit)
 * [Contributing](#contributing)
 * [Versioning](#versioning)
 * [Authors](#authors)
@@ -71,7 +71,7 @@ There are no deployment procedure established yet.
 
 ### PlaywrightReqnrollMSTest
 
-### SeleniumReqnrollNUnit
+### SeleniumReqnrollNunit
 
 ## Contributing
 
