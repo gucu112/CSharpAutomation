@@ -1,6 +1,4 @@
-﻿using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute;
-using Xunit.Abstractions;
-using Xunit.Sdk;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel;
 

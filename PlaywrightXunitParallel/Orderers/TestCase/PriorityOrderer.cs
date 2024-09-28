@@ -1,7 +1,5 @@
-﻿using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute;
 using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum;
-using Xunit.Abstractions;
-using Xunit.Sdk;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase;
 

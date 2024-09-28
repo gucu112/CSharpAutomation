@@ -1,5 +1,4 @@
-﻿using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum;
-using Xunit.Sdk;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum;
 using BaseAttribute = System.Attribute;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute;

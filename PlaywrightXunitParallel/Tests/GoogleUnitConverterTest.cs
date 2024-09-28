@@ -1,4 +1,3 @@
-﻿using FluentAssertions;
 using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
 using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages;
 
