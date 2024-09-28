@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gucu112/TestingFrameworks/refs/heads/playwright-xunit-parallel/PlaywrightXunitParallel/appConfig.schema.json",
+  "Environment": "{{Environment}}",
+  "RootPath": "{{RootPath}}",
+  "EntryPoints": [
+    {
+      "Name": "Google Search",
+      "Url": "https://google.com/?hl=en"
+    },
+    {
+      "Name": "Google Calculator",
+      "Url": "https://google.com/search?hl=en&q=calculator"
+    },
+    {
+      "Name": "Google Unit Converter",
+      "Url": "https://google.com/search?hl=en&q=unit+converter"
+    }
+  ],
+  "BrowserName": "chromium",
+  "ExpectTimeout": 5000,
+  "BrowserOptions": {
+    "Locale": "pl-PL",
+    "TimezoneId": "Europe/Warsaw",
+    "Geolocation": {
+      "Latitude": 52.2316724,
+      "Longitude": 21.0059873
+    },
+    "Offline": false
+  },
+  "LaunchOptions": {
+    "Channel": "msedge",
+    "Headless": false,
+    "SlowMo": 500,
+    "Timeout": 15000
+  }
+}
