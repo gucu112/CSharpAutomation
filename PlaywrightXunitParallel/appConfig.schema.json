@@ -1,6 +1,6 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "./appConfig.schema.json",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/gucu112/TestingFrameworks/refs/heads/playwright-xunit-parallel/PlaywrightXunitParallel/appConfig.schema.json",
   "title": "Application Configuration",
   "description": "A configuration file of PlaywrightXunitParallel project",
   "type": "object",
