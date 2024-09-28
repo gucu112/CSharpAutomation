@@ -84,8 +84,7 @@
           "$ref": "#/$defs/proxy"
         },
         "RecordVideoDir": {
-          "type": "string",
-          "format": "uri"
+          "type": "string"
         },
         "RecordVideoSize": {
           "$ref": "#/$defs/screenSize"
