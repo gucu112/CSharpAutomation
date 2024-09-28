@@ -1,4 +1,4 @@
-﻿namespace Gucu112.PlaywrightXunitParallel.Models.Interface;
+namespace Gucu112.PlaywrightXunitParallel.Models.Interface;
 
 public interface ISettings
 {
@@ -6,11 +6,11 @@ public interface ISettings
     string RootPath { get; }
     IList<EntryPoint> EntryPoints { get; }
 
-    public string BrowserName { get; }
-    public int ExpectTimeout { get; }
-    public BrowserNewContextOptions BrowserOptions { get; }
-    public BrowserTypeLaunchOptions LaunchOptions { get; }
+    string BrowserName { get; }
+    float ExpectTimeout { get; }
+    BrowserNewContextOptions BrowserOptions { get; }
+    BrowserTypeLaunchOptions LaunchOptions { get; }
 
-    public string ScreenshotDir { get; }
-    public string RecordVideoDir { get; }
+    bool IsVideoEnabled { get; }
+    string? RecordVideoDir { get; }
 }

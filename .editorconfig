@@ -257,4 +257,5 @@ dotnet_naming_style.i_pascal_case.capitalization = pascal_case
 #### Analyzers ####
 
 # xUnit
+dotnet_diagnostic.xUnit1004.severity = silent
 dotnet_diagnostic.xUnit1042.severity = silent

@@ -1,4 +1,4 @@
-﻿using FluentAssertions;
+using FluentAssertions;
 using Gucu112.PlaywrightXunitParallel.Fixtures;
 using Gucu112.PlaywrightXunitParallel.Models.Attribute;
 using Gucu112.PlaywrightXunitParallel.Models.Enum;
@@ -40,7 +40,7 @@ public class SettingsTest(SettingsFixture settings)
     [Fact]
     public void VerifyThatPlaywrightExpectTimeoutIsLoadedCorrectly()
     {
-        settings.ExpectTimeout.Should().Be(5000);
+        settings.ExpectTimeout.Should().Be(5000.0f);
     }
 
     [Fact]
@@ -72,14 +72,9 @@ public class SettingsTest(SettingsFixture settings)
     }
 
     [Fact]
-    public void VerifyThatScreenshotDirectoryPathIsLoadedCorrectly()
+    public void VerifyThatRecordVideoSettingsAreLoadedCorrectly()
     {
-        settings.ScreenshotDir.Should().EndWithEquivalentOf("screenshots\\");
-    }
-
-    [Fact]
-    public void VerifyThatRecordVideoDirectoryPathIsLoadedCorrectly()
-    {
-        settings.RecordVideoDir.Should().EndWithEquivalentOf("videos\\");
+        settings.IsVideoEnabled.Should().BeFalse();
+        settings.RecordVideoDir.Should().BeNull();
     }
 }

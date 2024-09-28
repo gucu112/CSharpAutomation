@@ -1,6 +1,7 @@
 {
-  "Environment": "#{Environment}",
-  "RootPath": "#{RootPath}",
+  "$schema": "./appConfig.schema.json",
+  "Environment": "{{Environment}}",
+  "RootPath": "{{RootPath}}",
   "EntryPoints": [
     {
       "Name": "Google Search",
@@ -13,10 +14,6 @@
     {
       "Name": "Google Unit Converter",
       "Url": "https://google.com/search?hl=en&q=unit+converter"
-    },
-    {
-      "Name": "Playwright",
-      "Url": "https://playwright.dev/dotnet/"
     }
   ],
   "BrowserName": "chromium",
@@ -25,8 +22,8 @@
     "Locale": "pl-PL",
     "TimezoneId": "Europe/Warsaw",
     "Geolocation": {
-      "Latitude": "52.2316724",
-      "Longitude": "21.0059873"
+      "Latitude": 52.2316724,
+      "Longitude": 21.0059873
     },
     "Offline": false
   },
@@ -35,7 +32,5 @@
     "Headless": false,
     "SlowMo": 500,
     "Timeout": 15000
-  },
-  "ScreenshotDir": "#{RootPath}\\Screenshots\\",
-  "RecordVideoDir": "#{RootPath}\\Videos\\"
+  }
 }

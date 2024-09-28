@@ -1,4 +1,4 @@
-﻿using FluentAssertions;
+using FluentAssertions;
 using Gucu112.PlaywrightXunitParallel.Fixtures;
 using Gucu112.PlaywrightXunitParallel.Models.Attribute;
 using Gucu112.PlaywrightXunitParallel.Models.Enum;
@@ -63,13 +63,15 @@ public class PlaywrightTest(
         page.Context.Url.Should().StartWith("edge://edge");
     }
 
-    [Fact]
+    [SkippableFact]
     [Category(TestCategory.Settings)]
     [Priority(TestPriority.High)]
     public async Task VerifyThatPageTimeoutWorksCorrect()
     {
         using var page = new EdgeAboutPage(playwright);
         var action = async () => await page.Context.GetByTestId("unknow").ClickAsync();
+
+        Skip.If(settings.ExpectTimeout == 0.0f, "Timeout set to 0ms");
 
         var exception = await action.Should().ThrowExactlyAsync<TimeoutException>();
         exception.Which.Message.Should().Contain($"Timeout {settings.ExpectTimeout}ms exceeded");

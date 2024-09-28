@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using Gucu112.PlaywrightXunitParallel.Models;
 using Gucu112.PlaywrightXunitParallel.Models.Interface;
@@ -15,7 +15,7 @@ public class SettingsFixture : ISettings
     public SettingsFixture()
     {
         appConfig = new ConfigurationBuilder()
-            .AddJsonFile("appConfig.json", optional: false)
+            .AddJsonFile("appConfig.json", optional: true)
             .Build();
     }
 
@@ -23,11 +23,11 @@ public class SettingsFixture : ISettings
     public string RootPath => ExpandRootPath(appConfig?.GetValue<string>("RootPath"));
     public IList<EntryPoint> EntryPoints => appConfig?.GetSection("EntryPoints").Get<List<EntryPoint>>() ?? [];
     public string BrowserName => appConfig?.GetValue<string>("BrowserName") ?? GetCurrentBrowserName();
-    public int ExpectTimeout => appConfig?.GetValue<int>("ExpectTimeout") ?? 0;
+    public float ExpectTimeout => appConfig?.GetValue<float>("ExpectTimeout") ?? 0.0f;
     public BrowserNewContextOptions BrowserOptions => appConfig?.GetSection("BrowserOptions").Get<BrowserNewContextOptions>() ?? new();
     public BrowserTypeLaunchOptions LaunchOptions => appConfig?.GetSection("LaunchOptions").Get<BrowserTypeLaunchOptions>() ?? new();
-    public string ScreenshotDir => ExpandRootPath(appConfig?.GetValue<string>("ScreenshotDir"));
-    public string RecordVideoDir => ExpandRootPath(appConfig?.GetValue<string>("RecordVideoDir"));
+    public bool IsVideoEnabled => RecordVideoDir is not null;
+    public string? RecordVideoDir => BrowserOptions.RecordVideoDir;
 
     private static string GetCurrentConfiguration()
     {
@@ -40,17 +40,17 @@ public class SettingsFixture : ISettings
     {
         var pattern = "^(Chromium|Firefox|Webkit)(Debug|Release)$";
         return Regex.Replace(GetCurrentConfiguration(), pattern,
-            match => match.Groups[1].Value).ToLowerInvariant();
+            match => match.Groups[1].Value).ToLower();
     }
 
     private static string ExpandEnvironment(string? name)
     {
-        return name?.Replace("#{Environment}", GetCurrentConfiguration()) ?? DefaultConfiguration;
+        return name?.Replace("{{Environment}}", GetCurrentConfiguration()) ?? DefaultConfiguration;
     }
 
     private static string ExpandRootPath(string? path)
     {
-        return path?.Replace("#{RootPath}", AppDomain.CurrentDomain.BaseDirectory) ?? @".\\";
+        return path?.Replace("{{RootPath}}", AppDomain.CurrentDomain.BaseDirectory) ?? ".";
     }
 }
 
