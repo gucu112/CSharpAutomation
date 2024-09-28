@@ -1,4 +1,4 @@
-﻿namespace Gucu112.PlaywrightXunitParallel.Models;
+﻿namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models;
 
 public class EntryPoint
 {

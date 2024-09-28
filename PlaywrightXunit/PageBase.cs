@@ -1,6 +1,6 @@
-﻿using Gucu112.PlaywrightXunit.Fixtures;
+﻿using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
 
-namespace Gucu112.PlaywrightXunit.Pages;
+namespace Gucu112.CSharp.Automation.PlaywrightXunit.Pages;
 
 public abstract class PageBase(PlaywrightFixture playwright) : IAsyncLifetime
 {

@@ -1,4 +1,4 @@
-﻿namespace Gucu112.PlaywrightXunitParallel.Models.Enum;
+﻿namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum;
 
 public enum TestPriority
 {

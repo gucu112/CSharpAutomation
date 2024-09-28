@@ -1,6 +1,6 @@
-# Testing Frameworks
+# C# Automation
 
-> This is simple repository which will contain various projects that show how you can approach building your own framework using some set of technologies and tools.
+> This is repository which contains various projects that show how you can approach building your own framework using some set of technologies and tools.
 
 ## Table of Contents
 * [Getting started](#getting-started)
@@ -11,7 +11,8 @@
 * [Built with](#build-with)
   * [PlaywrightXunit](#playwrightxunit)
   * [PlaywrightXunitParallel](#playwrightxunitparallel)
-  * [PlaywrightSpecflowXunit](#playwrightspecflowxunit)
+  * [PlaywrightReqnrollMSTest](#playwrightreqnrollmstest)
+  * [SeleniumReqnrollNUnit](#seleniumreqnrollnunit)
 * [Contributing](#contributing)
 * [Versioning](#versioning)
 * [Authors](#authors)
@@ -19,16 +20,16 @@
 
 ## Getting started
 
-Simply open the solution file (`TestingFrameworks.sln`) from main project directory. Any commands should be run towards chosen project, so remember to `cd` into chosen project directory.
+Simply open the solution file (`CSharpAutomation.sln`) from main project directory. Any commands should be run towards chosen project, so remember to `cd` into chosen project directory.
 
 ### Prerequisites
 
 #### Playwright
 
-Run this command from selected project directory (e.g. `PlaywrightXunit`).
+Run this command from selected project directory (e.g. `PlaywrightXunitParallel`), replacing `{{Configuration}}` with current configuration (e.g. `ChromiumDebug`).
 
 ```
-pwsh bin/Debug/net8.0/playwright.ps1 install
+pwsh bin/{{Configuration}}/net8.0/playwright.ps1 install
 ```
 
 If `pwsh` is not available, you have to [install PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell).
@@ -68,7 +69,9 @@ There are no deployment procedure established yet.
 * [Xunit.SkippableFact](https://github.com/AArnott/Xunit.SkippableFact)
 * [FluentAssertions](https://fluentassertions.com/)
 
-### PlaywrightSpecflowXunit
+### PlaywrightReqnrollMSTest
+
+### SeleniumReqnrollNUnit
 
 ## Contributing
 
@@ -93,7 +96,7 @@ v{yy}.{M}.{d}.{r}
 
 - **Bartlomiej Roszczypala** - [Gucu112](https://github.com/gucu112)
 
-See also the list of [contributors](https://github.com/gucu112/TestingFrameworks/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/gucu112/CSharpAutomation/contributors) who participated in this project.
 
 ## License
 

@@ -1,12 +1,12 @@
-﻿using Gucu112.PlaywrightXunitParallel.Models.Attribute;
+﻿using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute;
 using Xunit.Abstractions;
 using Xunit.Sdk;
 
-namespace Gucu112.PlaywrightXunitParallel;
+namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel;
 
 public class TraitDiscoverer : ITraitDiscoverer
 {
-    public const string FullTypeName = $"Gucu112.{AssemblyName}.{nameof(TraitDiscoverer)}";
+    public const string FullTypeName = $"Gucu112.CSharp.Automation.{AssemblyName}.{nameof(TraitDiscoverer)}";
     public const string AssemblyName = "PlaywrightXunitParallel";
 
     public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)

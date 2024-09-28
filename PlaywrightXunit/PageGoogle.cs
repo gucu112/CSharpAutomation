@@ -1,7 +1,7 @@
-﻿using Gucu112.PlaywrightXunit.Fixtures;
-using Gucu112.PlaywrightXunit.Pages;
+﻿using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
+using Gucu112.CSharp.Automation.PlaywrightXunit.Pages;
 
-namespace Gucu112.PlaywrightXunit;
+namespace Gucu112.CSharp.Automation.PlaywrightXunit;
 
 public class PageGoogle : PageBase, IAsyncLifetime
 {

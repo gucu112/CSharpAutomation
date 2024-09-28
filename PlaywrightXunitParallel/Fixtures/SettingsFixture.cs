@@ -1,10 +1,10 @@
 using System.Reflection;
 using System.Text.RegularExpressions;
-using Gucu112.PlaywrightXunitParallel.Models;
-using Gucu112.PlaywrightXunitParallel.Models.Interface;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface;
 using Microsoft.Extensions.Configuration;
 
-namespace Gucu112.PlaywrightXunitParallel.Fixtures;
+namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
 
 public class SettingsFixture : ISettings
 {

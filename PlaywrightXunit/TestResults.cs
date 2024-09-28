@@ -1,4 +1,4 @@
-namespace Gucu112.PlaywrightXunit.Tests;
+namespace Gucu112.CSharp.Automation.PlaywrightXunit.Tests;
 
 [Trait("Category", "Results")]
 public class TestResults(ITestOutputHelper output)

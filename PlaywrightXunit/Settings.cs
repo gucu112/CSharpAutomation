@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Xml.Linq;
-using Gucu112.PlaywrightXunit.Extensions;
+using Gucu112.CSharp.Automation.PlaywrightXunit.Extensions;
 
-namespace Gucu112.PlaywrightXunit;
+namespace Gucu112.CSharp.Automation.PlaywrightXunit;
 
 public class Settings
 {

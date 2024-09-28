@@ -1,13 +1,13 @@
-﻿using Gucu112.PlaywrightXunitParallel.Models.Attribute;
-using Gucu112.PlaywrightXunitParallel.Models.Enum;
+﻿using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum;
 using Xunit.Abstractions;
 using Xunit.Sdk;
 
-namespace Gucu112.PlaywrightXunitParallel.Orderers.TestCase;
+namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase;
 
 public class PriorityOrderer : ITestCaseOrderer
 {
-    public const string FullTypeName = $"Gucu112.{AssemblyName}.Orderers.TestCase.{nameof(PriorityOrderer)}";
+    public const string FullTypeName = $"Gucu112.CSharp.Automation.{AssemblyName}.Orderers.TestCase.{nameof(PriorityOrderer)}";
     public const string AssemblyName = "PlaywrightXunitParallel";
 
     public IEnumerable<TTestCase> OrderTestCases<TTestCase>(IEnumerable<TTestCase> testCases) where TTestCase : ITestCase

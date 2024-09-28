@@ -1,6 +1,6 @@
-﻿using Gucu112.PlaywrightXunitParallel.Fixtures;
+﻿using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
 
-namespace Gucu112.PlaywrightXunitParallel.Pages;
+namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages;
 
 public class GoogleSearchPage(PlaywrightFixture playwright) : BasePage(playwright)
 {

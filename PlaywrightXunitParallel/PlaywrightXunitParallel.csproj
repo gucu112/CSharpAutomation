@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>Gucu112.PlaywrightXunitParallel</RootNamespace>
+    <RootNamespace>Gucu112.CSharp.Automation.PlaywrightXunitParallel</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <IsPackable>false</IsPackable>

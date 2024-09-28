@@ -1,7 +1,7 @@
 ﻿using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace Gucu112.PlaywrightXunit.Extensions;
+namespace Gucu112.CSharp.Automation.PlaywrightXunit.Extensions;
 
 public static class XElementExtensions
 {

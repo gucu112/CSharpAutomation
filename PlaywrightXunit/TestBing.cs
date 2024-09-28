@@ -1,6 +1,6 @@
-﻿using Gucu112.PlaywrightXunit.Fixtures;
+﻿using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
 
-namespace Gucu112.PlaywrightXunit.Tests;
+namespace Gucu112.CSharp.Automation.PlaywrightXunit.Tests;
 
 [Trait("Category", "Pages")]
 [Collection(nameof(PlaywrightFixture))]

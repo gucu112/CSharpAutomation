@@ -1,4 +1,4 @@
-namespace Gucu112.PlaywrightXunitParallel.Models.Interface;
+namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface;
 
 public interface ISettings
 {

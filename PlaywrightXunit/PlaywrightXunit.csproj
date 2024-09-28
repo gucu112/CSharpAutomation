@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <RootNamespace>Gucu112.CSharp.Automation.PlaywrightXunit</RootNamespace>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>Gucu112.PlaywrightXunit</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <IsPackable>false</IsPackable>

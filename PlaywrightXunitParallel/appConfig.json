@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/gucu112/TestingFrameworks/refs/heads/playwright-xunit-parallel/PlaywrightXunitParallel/appConfig.schema.json",
+  "$schema": "https://raw.githubusercontent.com/gucu112/CSharpAutomation/refs/heads/master/PlaywrightXunitParallel/appConfig.schema.json",
   "Environment": "{{Environment}}",
   "RootPath": "{{RootPath}}",
   "EntryPoints": [

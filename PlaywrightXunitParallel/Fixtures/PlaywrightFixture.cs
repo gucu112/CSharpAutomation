@@ -1,4 +1,4 @@
-﻿namespace Gucu112.PlaywrightXunitParallel.Fixtures;
+﻿namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
 
 public class PlaywrightFixture : IAsyncLifetime
 {

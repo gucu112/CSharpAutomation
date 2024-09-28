@@ -1,10 +1,10 @@
 using FluentAssertions;
-using Gucu112.PlaywrightXunitParallel.Fixtures;
-using Gucu112.PlaywrightXunitParallel.Models.Attribute;
-using Gucu112.PlaywrightXunitParallel.Models.Enum;
-using Gucu112.PlaywrightXunitParallel.Orderers.TestCase;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase;
 
-namespace Gucu112.PlaywrightXunitParallel.Tests.Core;
+namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Tests.Core;
 
 [Collection(nameof(SettingsFixture))]
 [TestCaseOrderer(NameOrderer.FullTypeName, NameOrderer.AssemblyName)]

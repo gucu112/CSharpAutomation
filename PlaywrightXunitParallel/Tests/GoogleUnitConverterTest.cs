@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
-using Gucu112.PlaywrightXunitParallel.Fixtures;
-using Gucu112.PlaywrightXunitParallel.Pages;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages;
 
-namespace Gucu112.PlaywrightXunitParallel.Tests;
+namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Tests;
 
 public class GoogleUnitConverterTest(PlaywrightFixture playwright) : IClassFixture<PlaywrightFixture>, IDisposable
 {
