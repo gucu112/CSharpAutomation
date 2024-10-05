@@ -13,6 +13,8 @@
   * [PlaywrightXunitParallel](#playwrightxunitparallel)
   * [PlaywrightReqnrollMsTest](#playwrightreqnrollmstest)
   * [SeleniumReqnrollNunit](#seleniumreqnrollnunit)
+  * [Common/Helpers](#common-helpers)
+  * [Common/Helpers.Tests](#common-helpers-tests)
 * [Contributing](#contributing)
 * [Versioning](#versioning)
 * [Authors](#authors)
@@ -72,6 +74,15 @@ There are no deployment procedure established yet.
 ### PlaywrightReqnrollMSTest
 
 ### SeleniumReqnrollNunit
+
+### Common Helpers
+
+* [Json.NET](https://www.newtonsoft.com/json)
+
+#### Common Helpers Tests
+
+* [NUnit](https://nunit.org/)
+* [Moq](https://github.com/devlooped/moq)
 
 ## Contributing
 
