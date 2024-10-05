@@ -50,7 +50,7 @@ public static class StringData
             yield return new TestCaseData("\fabc\r\n");
             yield return new TestCaseData(" \t 123 \v ");
             yield return new TestCaseData(" \f 123 \r\n ");
-            yield return new TestCaseData("vwxyz \t \r\n \v\f 98765");
+            yield return new TestCaseData("vwxyz \t \u0085 \v\f 98765");
             yield return new TestCaseData(" Big \u0020 bang \u00A0 theory ");
             yield return new TestCaseData("hard\u00A0\u00A0space\u00A0only");
         }

@@ -23,6 +23,7 @@ public static class WhitespaceData
             yield return new TestCaseData("\r");
             yield return new TestCaseData("\r\n");
             yield return new TestCaseData("\n\r");
+            yield return new TestCaseData("\u0085");
             yield return new TestCaseData("\u00a0");
             yield return new TestCaseData("\u00A0");
             yield return new TestCaseData("\u0020\u0020");
@@ -44,6 +45,7 @@ public static class WhitespaceData
             yield return new TestCaseData(" \r\n ");
             yield return new TestCaseData(" \n\r ");
             yield return new TestCaseData(" \t \f \v ");
+            yield return new TestCaseData(" \u0085 ");
             yield return new TestCaseData(" \u00a0 ");
             yield return new TestCaseData(" \u00A0 ");
             yield return new TestCaseData(" \u0020 \u0020 ");
