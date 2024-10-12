@@ -16,7 +16,7 @@ public class RegexStoreTest
     }
 
     [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.ExceptSingleRegularSpace))]
-    [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.InBetweenSingleRegularSpace))]
+    [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.InBetweenSingleRegularSpaces))]
     [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithMultipleSpaces))]
     [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithMultipleWhitespaces))]
     public void DoesMatch(string input)

@@ -13,9 +13,10 @@ public class StringExtensionsTest
     }
 
     [TestCase(StringData.EmptyString)]
+    [TestCase(WhitespaceData.MultipleRegularSpaces)]
     [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.SingleRegularSpace))]
     [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.ExceptSingleRegularSpace))]
-    [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.InBetweenSingleRegularSpace))]
+    [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.InBetweenSingleRegularSpaces))]
     public void DoesReturnEmptyString(string input)
     {
         Assert.That(StringExtensions.NormalizeSpace(input), Is.Empty);

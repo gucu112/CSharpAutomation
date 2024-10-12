@@ -2,6 +2,8 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 public static class WhitespaceData
 {
+    public const string MultipleRegularSpaces = "   ";
+
     public static IEnumerable SingleRegularSpace
     {
         get
@@ -32,7 +34,7 @@ public static class WhitespaceData
         }
     }
 
-    public static IEnumerable InBetweenSingleRegularSpace
+    public static IEnumerable InBetweenSingleRegularSpaces
     {
         get
         {
