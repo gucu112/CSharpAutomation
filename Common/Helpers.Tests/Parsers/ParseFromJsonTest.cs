@@ -10,32 +10,56 @@ public class ParseFromJsonTest
     [Test]
     public void ThrowsOnNull()
     {
-        Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>(null!));
+        Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((string)null!));
+        Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((StreamReader)null!));
     }
 
-    [TestCase(StringData.EmptyString)]
-    [TestCase(WhitespaceData.MultipleRegularSpaces)]
-    public void EmptyStringReturnsNull(string content)
+    [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyContent))]
+    public void EmptyContentReturnsNull<T>(T content)
     {
-        Assert.That(Parse.FromJson<object>(content), Is.Null);
+        Assert.That(ParseFromJson<object>(content), Is.Null);
     }
 
-    [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyObjects))]
-    public void EmptyObjectReturnsEmpty(string content)
+    [TestCaseSource(typeof(JsonData), nameof(JsonData.WhitespaceContent))]
+    public void WhitespaceContentReturnsNull<T>(T content)
     {
-        Assert.That(Parse.FromJson<object>(content), Is.Empty);
+        Assert.That(ParseFromJson<object>(content), Is.Null);
     }
 
-    [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleElements))]
-    public void ObjectReturnsExactlyThreeItems(string content)
+    [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyArray))]
+    public void EmptyArrayReturnsEmpty<T>(T content)
     {
-        Assert.That(Parse.FromJson<object>(content), Has.Exactly(3).Items);
+        Assert.That(ParseFromJson<object>(content), Is.Empty.And.TypeOf<JArray>());
     }
 
-    [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleObjects))]
-    public void ObjectReturnsItemsUsingJsonType(string content)
+    [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyObject))]
+    public void EmptyObjectReturnsEmpty<T>(T content)
     {
-        var jsonObject = Parse.FromJson<JObject>(content);
+        Assert.That(ParseFromJson<object>(content), Is.Empty.And.TypeOf<JObject>());
+    }
+
+    [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleList))]
+    public void ListReturnsExactlyThreeItems<T>(T content)
+    {
+        var jsonList = ParseFromJson<List<int>>(content);
+
+        Assert.That(jsonList, Has.Exactly(3).Items);
+        Assert.That(jsonList, Is.Ordered.And.SubsetOf(Enumerable.Range(1, 5)));
+    }
+
+    [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleDictionary))]
+    public void DictionaryReturnsExactlyThreeItems<T>(T content)
+    {
+        var jsonDictionary = ParseFromJson<Dictionary<string, int>>(content);
+
+        Assert.That(jsonDictionary, Has.Exactly(3).Items);
+        Assert.That(jsonDictionary.Values, Is.Ordered.And.SubsetOf(Enumerable.Range(1, 5)));
+    }
+
+    [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleObject))]
+    public void ObjectReturnsItemsUsingJsonType<T>(T content)
+    {
+        var jsonObject = ParseFromJson<JObject>(content);
 
         Assert.That(jsonObject, Has.Exactly(3).Items);
 
@@ -69,10 +93,10 @@ public class ParseFromJsonTest
         });
     }
 
-    [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleObjects))]
-    public void ObjectReturnsItemsUsingCustomType(string content)
+    [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleObject))]
+    public void ObjectReturnsItemsUsingCustomType<T>(T content)
     {
-        var customObject = Parse.FromJson<JsonData.SimpleObjectsModel>(content);
+        var customObject = ParseFromJson<JsonData.SimpleObjectModel>(content);
 
         Assert.Multiple(() =>
         {
@@ -84,5 +108,10 @@ public class ParseFromJsonTest
             Assert.That(customObject?.DictionaryOfStrings?["number"], Does.Contain(7.ToString()));
             Assert.That(customObject?.DictionaryOfStrings?["string"], Is.EqualTo("test").IgnoreCase);
         });
+    }
+
+    private static T? ParseFromJson<T>(dynamic? input)
+    {
+        return Parse.FromJson<T>(input);
     }
 }
