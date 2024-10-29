@@ -1,1 +1,2 @@
-global using Gucu112.CSharp.Automation.Helpers.Stores;
+global using System.Text;
+global using Newtonsoft.Json;

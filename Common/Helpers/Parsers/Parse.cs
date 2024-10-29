@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-
 namespace Gucu112.CSharp.Automation.Helpers.Parsers;
 
 public static class Parse
@@ -8,14 +6,19 @@ public static class Parse
 
     public static T? FromJson<T>(string content)
     {
-        return JsonConvert.DeserializeObject<T>(content);
+        return FromJson<T>(new StringReader(content));
     }
 
-    public static T? FromJson<T>(TextReader input)
+    public static T? FromJson<T>(TextReader reader)
     {
         var serializer = new JsonSerializer();
-        using var reader = new JsonTextReader(input);
-        return serializer.Deserialize<T>(reader);
+        using var jsonReader = new JsonTextReader(reader);
+        return serializer.Deserialize<T>(jsonReader);
+    }
+
+    public static T? FromJson<T>(Stream stream)
+    {
+        return FromJson<T>(new StreamReader(stream));
     }
 
     #endregion
