@@ -9,8 +9,12 @@ public class ParseToJsonTest
     [Test]
     public void ThrowsOnNull()
     {
-        Assert.Throws<ArgumentNullException>(() => Parse.ToJsonString(null!));
-        Assert.Throws<ArgumentNullException>(() => Parse.ToJsonWriter<StringWriter>(null!));
+        Assert.Multiple(() =>
+        {
+            Assert.Throws<ArgumentNullException>(() => Parse.ToJsonString(null!));
+            Assert.Throws<ArgumentNullException>(() => Parse.ToJsonWriter<StringWriter>(null!));
+            Assert.Throws<ArgumentNullException>(() => Parse.ToJsonStream<MemoryStream>(null!));
+        });
     }
 
     [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyValue))]
@@ -69,6 +73,12 @@ public class ParseToJsonTest
 
     private static string ParseToJson<T>(object? value)
     {
+        if (typeof(T) == typeof(Stream))
+        {
+            using var stream = Parse.ToJsonStream<MemoryStream>(value);
+            return Encoding.UTF8.GetString(stream.GetBuffer(), 0, (int)stream.Length);
+        }
+
         if (typeof(T) == typeof(TextWriter))
         {
             using var writer = Parse.ToJsonWriter<StringWriter>(value);

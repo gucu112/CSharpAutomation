@@ -15,6 +15,7 @@ public class ObjectData
 
             yield return GenerateTestCaseData<string>();
             yield return GenerateTestCaseData<TextWriter>();
+            yield return GenerateTestCaseData<Stream>();
         }
     }
 
@@ -29,6 +30,7 @@ public class ObjectData
 
             yield return GenerateTestCaseData<string>();
             yield return GenerateTestCaseData<TextWriter>();
+            yield return GenerateTestCaseData<Stream>();
         }
     }
 
@@ -43,6 +45,7 @@ public class ObjectData
 
             yield return GenerateTestCaseData<string>();
             yield return GenerateTestCaseData<TextWriter>();
+            yield return GenerateTestCaseData<Stream>();
         }
     }
 
@@ -58,7 +61,7 @@ public class ObjectData
             yield return GenerateTestCaseData<string>(true);
             yield return GenerateTestCaseData<string>(false);
             yield return GenerateTestCaseData<TextWriter>(true);
-            yield return GenerateTestCaseData<TextWriter>(false);
+            yield return GenerateTestCaseData<Stream>(false);
         }
     }
 
@@ -73,6 +76,7 @@ public class ObjectData
 
             yield return GenerateTestCaseData<string>();
             yield return GenerateTestCaseData<TextWriter>();
+            yield return GenerateTestCaseData<Stream>();
         }
     }
 
@@ -87,6 +91,7 @@ public class ObjectData
 
             yield return GenerateTestCaseData<string>();
             yield return GenerateTestCaseData<TextWriter>();
+            yield return GenerateTestCaseData<Stream>();
         }
     }
 
@@ -102,6 +107,7 @@ public class ObjectData
 
             yield return GenerateTestCaseData<string>();
             yield return GenerateTestCaseData<TextWriter>();
+            yield return GenerateTestCaseData<Stream>();
         }
     }
 
@@ -122,6 +128,7 @@ public class ObjectData
 
             yield return GenerateTestCaseData<string>();
             yield return GenerateTestCaseData<TextWriter>();
+            yield return GenerateTestCaseData<Stream>();
         }
     }
 
@@ -146,6 +153,7 @@ public class ObjectData
 
             yield return GenerateTestCaseData<string>();
             yield return GenerateTestCaseData<TextWriter>();
+            yield return GenerateTestCaseData<Stream>();
         }
     }
 }

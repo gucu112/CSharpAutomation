@@ -39,9 +39,14 @@ public class ParseFromJsonFileTest
     }
 
     [Test]
-    public void ThrowsOnNullOrEmptyPath()
+    public void ThrowsOnNullPath()
     {
         Assert.Throws<ArgumentNullException>(() => Parse.FromJsonFile<object>(null!));
+    }
+
+    [Test]
+    public void ThrowsOnEmptyPath()
+    {
         Assert.Throws<ArgumentException>(() => Parse.FromJsonFile<object>(string.Empty));
     }
 

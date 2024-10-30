@@ -9,9 +9,12 @@ public class ParseFromJsonTest
     [Test]
     public void ThrowsOnNull()
     {
-        Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((string)null!));
-        Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((StreamReader)null!));
-        Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((MemoryStream)null!));
+        Assert.Multiple(() =>
+        {
+            Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((string)null!));
+            Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((StreamReader)null!));
+            Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((MemoryStream)null!));
+        });
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyContent))]
