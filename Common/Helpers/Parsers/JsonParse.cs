@@ -8,7 +8,7 @@ public static partial class Parse
 
     public static T? FromJson<T>(string content)
     {
-        return FromJson<T>(new StringReader(content));
+        return JsonConvert.DeserializeObject<T>(content);
     }
 
     public static T? FromJson<T>(TextReader reader)
@@ -33,5 +33,14 @@ public static partial class Parse
     {
         ArgumentNullException.ThrowIfNull(value, nameof(value));
         return JsonConvert.SerializeObject(value);
+    }
+
+    public static T ToJsonWriter<T>(object? value) where T : TextWriter, new()
+    {
+        ArgumentNullException.ThrowIfNull(value, nameof(value));
+        var serializer = new JsonSerializer();
+        var writer = new T();
+        serializer.Serialize(writer, value);
+        return writer;
     }
 }

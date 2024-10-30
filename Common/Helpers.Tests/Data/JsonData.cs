@@ -4,6 +4,8 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 public static class JsonData
 {
+    public const string EmptyJsonString = @"""""";
+
     public const string EmptyArrayString = "[]";
 
     public const string ValidArrayString = "[true]";
@@ -16,13 +18,24 @@ public static class JsonData
 
     public const string SimpleDictionaryString = """
         {
-            "one": 1,
-            "two": 2,
-            "three": 3
+            "First": 1,
+            "Second": 2,
+            "Third": 3
         }
         """;
 
     public const string SimpleObjectString = """
+        {
+            "InvalidProperty": null,
+            "BooleanValue": false,
+            "ListOfNumbers": [1, 2, 3],
+            "DictionaryOfStrings": {
+                "Empty": ""
+            }
+        }
+        """;
+
+    public const string SimpleObjectStringWithComment = """
         {
             /* This is example JSON */
             "booleanValue": true,
@@ -39,9 +52,9 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(StringData.EmptyString) { TypeArgs = [typeof(string)] };
-            yield return new TestCaseData(new StringReader(StringData.EmptyString)) { TypeArgs = [typeof(StringReader)] };
-            yield return new TestCaseData(new MemoryStream(StringData.EmptyString.GetBytes())) { TypeArgs = [typeof(MemoryStream)] };
+            yield return new TestCaseData(StringData.EmptyString);
+            yield return new TestCaseData(new StringReader(StringData.EmptyString));
+            yield return new TestCaseData(new MemoryStream(StringData.EmptyString.GetBytes()));
         }
     }
 
@@ -49,9 +62,9 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(WhitespaceData.MultipleRegularSpaces) { TypeArgs = [typeof(string)] };
-            yield return new TestCaseData(new StringReader(WhitespaceData.MultipleRegularSpaces)) { TypeArgs = [typeof(StringReader)] };
-            yield return new TestCaseData(new MemoryStream(WhitespaceData.MultipleRegularSpaces.GetBytes())) { TypeArgs = [typeof(MemoryStream)] };
+            yield return new TestCaseData(WhitespaceData.MultipleRegularSpaces);
+            yield return new TestCaseData(new StringReader(WhitespaceData.MultipleRegularSpaces));
+            yield return new TestCaseData(new MemoryStream(WhitespaceData.MultipleRegularSpaces.GetBytes()));
         }
     }
 
@@ -59,9 +72,9 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(EmptyArrayString) { TypeArgs = [typeof(string)] };
-            yield return new TestCaseData(new StringReader(EmptyArrayString)) { TypeArgs = [typeof(StringReader)] };
-            yield return new TestCaseData(new MemoryStream(EmptyArrayString.GetBytes())) { TypeArgs = [typeof(MemoryStream)] };
+            yield return new TestCaseData(EmptyArrayString);
+            yield return new TestCaseData(new StringReader(EmptyArrayString));
+            yield return new TestCaseData(new MemoryStream(EmptyArrayString.GetBytes()));
         }
     }
 
@@ -69,9 +82,9 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(EmptyObjectString) { TypeArgs = [typeof(string)] };
-            yield return new TestCaseData(new StringReader(EmptyObjectString)) { TypeArgs = [typeof(StringReader)] };
-            yield return new TestCaseData(new MemoryStream(EmptyObjectString.GetBytes())) { TypeArgs = [typeof(MemoryStream)] };
+            yield return new TestCaseData(EmptyObjectString);
+            yield return new TestCaseData(new StringReader(EmptyObjectString));
+            yield return new TestCaseData(new MemoryStream(EmptyObjectString.GetBytes()));
         }
     }
 
@@ -79,9 +92,9 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(SimpleListString) { TypeArgs = [typeof(string)] };
-            yield return new TestCaseData(new StringReader(SimpleListString)) { TypeArgs = [typeof(StringReader)] };
-            yield return new TestCaseData(new MemoryStream(SimpleListString.GetBytes())) { TypeArgs = [typeof(MemoryStream)] };
+            yield return new TestCaseData(SimpleListString);
+            yield return new TestCaseData(new StringReader(SimpleListString));
+            yield return new TestCaseData(new MemoryStream(SimpleListString.GetBytes()));
         }
     }
 
@@ -89,9 +102,9 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(SimpleDictionaryString) { TypeArgs = [typeof(string)] };
-            yield return new TestCaseData(new StringReader(SimpleDictionaryString)) { TypeArgs = [typeof(StringReader)] };
-            yield return new TestCaseData(new MemoryStream(SimpleDictionaryString.GetBytes())) { TypeArgs = [typeof(MemoryStream)] };
+            yield return new TestCaseData(SimpleDictionaryString);
+            yield return new TestCaseData(new StringReader(SimpleDictionaryString));
+            yield return new TestCaseData(new MemoryStream(SimpleDictionaryString.GetBytes()));
         }
     }
 
@@ -99,9 +112,9 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(SimpleObjectString) { TypeArgs = [typeof(string)] };
-            yield return new TestCaseData(new StringReader(SimpleObjectString)) { TypeArgs = [typeof(StringReader)] };
-            yield return new TestCaseData(new MemoryStream(SimpleObjectString.GetBytes())) { TypeArgs = [typeof(MemoryStream)] };
+            yield return new TestCaseData(SimpleObjectStringWithComment);
+            yield return new TestCaseData(new StringReader(SimpleObjectStringWithComment));
+            yield return new TestCaseData(new MemoryStream(SimpleObjectStringWithComment.GetBytes()));
         }
     }
 

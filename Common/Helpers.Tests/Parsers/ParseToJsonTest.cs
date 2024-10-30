@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
@@ -11,71 +10,71 @@ public class ParseToJsonTest
     public void ThrowsOnNull()
     {
         Assert.Throws<ArgumentNullException>(() => Parse.ToJsonString(null!));
+        Assert.Throws<ArgumentNullException>(() => Parse.ToJsonWriter<StringWriter>(null!));
     }
 
-    [TestCase(StringData.EmptyString)]
-    [TestCase(WhitespaceData.MultipleRegularSpaces)]
-    public void EmptyContent_ReturnsEmptyJsonString(object value)
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyValue))]
+    public string EmptyValue_ReturnsEmptyJsonString<T>(object value)
     {
-        Assert.That(Parse.ToJsonString(value), Is.EqualTo($"\"{value}\""));
+        return ParseToJson<T>(value);
     }
 
-    [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithoutSpaces))]
-    public void Content_ReturnsJsonString(object value)
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.WhitespaceValue))]
+    public string WhitespaceValue_ReturnsJsonString<T>(object value)
     {
-        Assert.That(Parse.ToJsonString(value), Is.EqualTo($"\"{value}\""));
+        return ParseToJson<T>(value);
     }
 
-    [TestCase(ExpectedResult = JsonData.EmptyArrayString)]
-    public string EmptyArray_ReturnsEmptyJsonArray()
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.StringValue))]
+    public string StringValue_ReturnsJsonString<T>(object value)
     {
-        return Parse.ToJsonString(new List<object>());
+        return ParseToJson<T>(value);
     }
 
-    [TestCase(ExpectedResult = JsonData.EmptyObjectString)]
-    public string EmptyObject_ReturnsEmptyJsonObject()
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.BooleanValue))]
+    public string BooleanValue_ReturnsBooleanJsonValue<T>(object value)
     {
-        return Parse.ToJsonString(new object());
+        return ParseToJson<T>(value);
     }
 
-    [TestCase(JsonData.SimpleListString)]
-    public void List_ReturnsJsonArray(string listString)
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyArray))]
+    public string EmptyArray_ReturnsEmptyJsonArray<T>(object value)
     {
-        listString = listString.Replace(" ", "");
-        List<int> list = [ 1, 2, 3 ];
-        Assert.That(Parse.ToJsonString(list), Is.EqualTo(listString));
+        return ParseToJson<T>(value);
     }
 
-    [TestCase(JsonData.SimpleDictionaryString)]
-    public void Dictionary_ReturnsJsonObject(string dictionaryString)
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyObject))]
+    public string EmptyObject_ReturnsEmptyJsonObject<T>(object value)
     {
-        dictionaryString = dictionaryString.Replace(" ", "").Replace("\r\n", "");
-        Dictionary<string, int> dictionary = new()
+        return ParseToJson<T>(value);
+    }
+
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleList))]
+    public string List_ReturnsJsonArray<T>(object value)
+    {
+        return ParseToJson<T>(value);
+    }
+
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleDictionary))]
+    public string Dictionary_ReturnsJsonObject<T>(object value)
+    {
+        return ParseToJson<T>(value);
+    }
+
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleObject))]
+    public string Object_ReturnsJsonObject<T>(object value)
+    {
+        return ParseToJson<T>(value);
+    }
+
+    private static string ParseToJson<T>(object? value)
+    {
+        if (typeof(T) == typeof(TextWriter))
         {
-            { "one", 1 },
-            { "two", 2 },
-            { "three", 3 },
-        };
-        Assert.That(Parse.ToJsonString(dictionary), Is.EqualTo(dictionaryString));
-    }
+            using var writer = Parse.ToJsonWriter<StringWriter>(value);
+            return writer.GetStringBuilder().ToString();
+        }
 
-    [TestCase(JsonData.SimpleObjectString)]
-    public void Object_ReturnsJsonObject(string expectedObjectString)
-    {
-        expectedObjectString = expectedObjectString.Replace(" ", "").Replace("\r\n", "");
-        expectedObjectString = Regex.Replace(expectedObjectString, @"/\*\w+\*/", "");
-        var customObject = new JsonData.SimpleObjectModel
-        {
-            BooleanValue = true,
-            ListOfNumbers = [9, 8, 7, 6, 5],
-            DictionaryOfStrings = new()
-            {
-                { "Empty", string.Empty },
-                { "Number", "007" },
-                { "String", "Test" },
-            }
-        };
-        var actualObjectString = Parse.ToJsonString(customObject).Replace("\"InvalidProperty\":null,", "");
-        Assert.That(actualObjectString, Is.EqualTo(expectedObjectString).IgnoreCase);
+        return Parse.ToJsonString(value);
     }
 }

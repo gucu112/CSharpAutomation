@@ -16,4 +16,10 @@ public static class StringExtensions
         ArgumentNullException.ThrowIfNull(text, nameof(text));
         return RegexStore.NormalizeSpaceRegex().Replace(text, " ").Trim();
     }
+
+    public static string RemoveSpace(this string text)
+    {
+        ArgumentNullException.ThrowIfNull(text, nameof(text));
+        return RegexStore.AnyWhitespaceRegex().Replace(text, string.Empty);
+    }
 }

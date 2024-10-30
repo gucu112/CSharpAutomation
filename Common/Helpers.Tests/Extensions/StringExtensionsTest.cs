@@ -82,4 +82,33 @@ public class StringExtensionsTest
     }
 
     #endregion
+
+    #region RemoveSpace
+
+    [Test]
+    public void RemoveSpace_ThrowsOnNull()
+    {
+        Assert.Throws<ArgumentNullException>(() => StringExtensions.RemoveSpace(null!));
+    }
+
+    [TestCase(StringData.EmptyString)]
+    [TestCase(WhitespaceData.MultipleRegularSpaces)]
+    [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.SingleRegularSpace))]
+    [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.ExceptSingleRegularSpace))]
+    [TestCaseSource(typeof(WhitespaceData), nameof(WhitespaceData.InBetweenSingleRegularSpaces))]
+    public void RemoveSpace_DoesReturnEmptyString(string input)
+    {
+        Assert.That(StringExtensions.RemoveSpace(input), Is.Empty);
+    }
+
+    [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithoutSpaces))]
+    [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithSingleRegularSpaces))]
+    [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithMultipleSpaces))]
+    [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithMultipleWhitespaces))]
+    public void RemoveSpace_DoesNotContainSpaces(string input)
+    {
+        Assert.That(StringExtensions.RemoveSpace(input), Does.Not.Contain(@" "));
+    }
+
+    #endregion
 }
