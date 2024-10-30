@@ -1,6 +1,5 @@
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
-using Newtonsoft.Json.Linq;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
 
@@ -16,31 +15,31 @@ public class ParseFromJsonTest
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyContent))]
-    public void EmptyContentReturnsNull<T>(T content)
+    public void EmptyContent_ReturnsNull<T>(T content)
     {
         Assert.That(ParseFromJson<object>(content), Is.Null);
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.WhitespaceContent))]
-    public void WhitespaceContentReturnsNull<T>(T content)
+    public void WhitespaceContent_ReturnsNull<T>(T content)
     {
         Assert.That(ParseFromJson<object>(content), Is.Null);
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyArray))]
-    public void EmptyArrayReturnsEmpty<T>(T content)
+    public void EmptyArray_ReturnsEmpty<T>(T content)
     {
         Assert.That(ParseFromJson<object>(content), Is.Empty.And.TypeOf<JArray>());
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyObject))]
-    public void EmptyObjectReturnsEmpty<T>(T content)
+    public void EmptyObject_ReturnsEmpty<T>(T content)
     {
         Assert.That(ParseFromJson<object>(content), Is.Empty.And.TypeOf<JObject>());
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleList))]
-    public void ListReturnsExactlyThreeItems<T>(T content)
+    public void List_ReturnsExactlyThreeItems<T>(T content)
     {
         var jsonList = ParseFromJson<List<int>>(content);
 
@@ -49,7 +48,7 @@ public class ParseFromJsonTest
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleDictionary))]
-    public void DictionaryReturnsExactlyThreeItems<T>(T content)
+    public void Dictionary_ReturnsExactlyThreeItems<T>(T content)
     {
         var jsonDictionary = ParseFromJson<Dictionary<string, int>>(content);
 
@@ -58,7 +57,7 @@ public class ParseFromJsonTest
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleObject))]
-    public void ObjectReturnsItemsUsingJsonType<T>(T content)
+    public void Object_ReturnsItemsUsingJsonType<T>(T content)
     {
         var jsonObject = ParseFromJson<JObject>(content);
 
@@ -95,7 +94,7 @@ public class ParseFromJsonTest
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleObject))]
-    public void ObjectReturnsItemsUsingCustomType<T>(T content)
+    public void Object_ReturnsItemsUsingCustomType<T>(T content)
     {
         var customObject = ParseFromJson<JsonData.SimpleObjectModel>(content);
 

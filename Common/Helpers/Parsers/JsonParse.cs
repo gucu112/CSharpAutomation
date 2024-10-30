@@ -1,8 +1,10 @@
+using Gucu112.CSharp.Automation.Helpers.Models.Interface;
+
 namespace Gucu112.CSharp.Automation.Helpers.Parsers;
 
-public static class Parse
+public static partial class Parse
 {
-    #region Json
+    private static IFileSystem FileSystem => ParseSettings.FileSystem;
 
     public static T? FromJson<T>(string content)
     {
@@ -21,5 +23,9 @@ public static class Parse
         return FromJson<T>(new StreamReader(stream));
     }
 
-    #endregion
+    public static T? FromJsonFile<T>(string path)
+    {
+        using var fileStream = FileSystem.ReadStream(path);
+        return FromJson<T>(fileStream);
+    }
 }

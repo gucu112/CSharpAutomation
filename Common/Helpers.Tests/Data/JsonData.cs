@@ -6,7 +6,11 @@ public static class JsonData
 {
     public const string EmptyArrayString = "[]";
 
+    public const string ValidArrayString = "[true]";
+
     public const string EmptyObjectString = "{}";
+
+    public const string InvalidObjectString = "false{}";
 
     public const string SimpleListString = "[1, 2, 3]";
 
