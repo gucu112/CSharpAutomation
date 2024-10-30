@@ -30,7 +30,7 @@ public static class JsonData
             "dictionaryOfStrings": {
                 "empty": "",
                 "number": "007",
-                "string": "Test",
+                "string": "Test"
             }
         }
         """;

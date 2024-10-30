@@ -33,32 +33,32 @@ public class ParseFromJsonFileTest
     }
 
     [Test]
-    public void FromJsonFile_ThrowsOnNullOrEmptyPath()
+    public void ThrowsOnNullOrEmptyPath()
     {
         Assert.Throws<ArgumentNullException>(() => Parse.FromJsonFile<object>(null!));
         Assert.Throws<ArgumentException>(() => Parse.FromJsonFile<object>(string.Empty));
     }
 
     [Test]
-    public void FromJsonFile_WithNotExistingPath_ThorwsNotFound()
+    public void ThrowsOnNotExistingPath()
     {
         Assert.Throws<DirectoryNotFoundException>(() => Parse.FromJsonFile<object>(@"notExisting.json"));
     }
 
     [Test]
-    public void FromJsonFile_WithExistingPath_ThorwsOnInvalidSyntax()
+    public void ThrowsOnInvalidSyntax()
     {
         Assert.Throws<JsonReaderException>(() => Parse.FromJsonFile<JValue>(@"notValid.json"));
     }
 
     [Test]
-    public void FromJsonFile_WithExistingPath_ThorwsOnInvalidType()
+    public void ThrowsOnInvalidType()
     {
         Assert.Throws<JsonSerializationException>(() => Parse.FromJsonFile<JObject>(@"valid.json"));
     }
 
     [Test]
-    public void FromJsonFile_WithExistingPath_ReturnsEmptyObject()
+    public void CorrectPathReturnsEmptyArray()
     {
         Assert.That(Parse.FromJsonFile<JArray>(@"valid.json"), Is.Not.Empty);
     }

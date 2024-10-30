@@ -28,4 +28,10 @@ public static partial class Parse
         using var fileStream = FileSystem.ReadStream(path);
         return FromJson<T>(fileStream);
     }
+
+    public static string ToJsonString(object? value)
+    {
+        ArgumentNullException.ThrowIfNull(value, nameof(value));
+        return JsonConvert.SerializeObject(value);
+    }
 }
