@@ -35,11 +35,11 @@ public static partial class Parse
         return JsonConvert.SerializeObject(value);
     }
 
-    public static T ToJsonWriter<T>(object? value) where T : TextWriter, new()
+    public static T ToJsonWriter<T>(object? value, T? writer = null) where T : TextWriter
     {
         ArgumentNullException.ThrowIfNull(value, nameof(value));
 
-        var writer = new T();
+        writer ??= (T)(TextWriter)new StringWriter();
         using (var jsonWriter = new JsonTextWriter(writer))
         {
             var serializer = new JsonSerializer();
@@ -49,18 +49,16 @@ public static partial class Parse
         return writer;
     }
 
-    public static T ToJsonStream<T>(object? value) where T : Stream, new()
+    public static T ToJsonStream<T>(object? value, T? stream = null) where T : Stream
     {
-        ArgumentNullException.ThrowIfNull(value, nameof(value));
+        stream ??= (T)(Stream)new MemoryStream();
+        return (T)ToJsonWriter(value, new StreamWriter(stream, leaveOpen: true)).BaseStream;
+    }
 
-        var stream = new T();
-        using (var writer = new StreamWriter(stream, leaveOpen: true))
-        using (var jsonWriter = new JsonTextWriter(writer))
-        {
-            var serializer = new JsonSerializer();
-            serializer.Serialize(jsonWriter, value);
-        }
-
-        return stream;
+    public static void ToJsonFile(object? value, string path)
+    {
+        using var fileStream = FileSystem.WriteStream(path);
+        using var memoryStream = ToJsonStream(value, new MemoryStream());
+        memoryStream.WriteTo(fileStream);
     }
 }

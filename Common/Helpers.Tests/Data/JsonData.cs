@@ -6,6 +6,8 @@ public static class JsonData
 {
     public const string EmptyJsonString = @"""""";
 
+    public const string HelloJsonString = @"""hello""";
+
     public const string EmptyArrayString = "[]";
 
     public const string ValidArrayString = "[true]";

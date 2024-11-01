@@ -8,4 +8,9 @@ public class FileSystemWrapper : IFileSystem
     {
         return File.OpenRead(path);
     }
+
+    public Stream WriteStream(string path)
+    {
+        return File.OpenWrite(path);
+    }
 }
