@@ -8,51 +8,51 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
 [TestFixture]
 public class ParseFromJsonFileTest
 {
-    private static readonly Mock<IFileSystem> mock = new();
+    private static readonly Mock<IFileSystem> Mock = new();
 
     [OneTimeSetUp]
     public void MockFileSystem()
     {
-        mock.Setup(fs => fs.ReadStream(It.Is<string>(v => v == null)))
+        Mock.Setup(fs => fs.ReadStream(It.Is<string>(v => v == null)))
             .Throws<ArgumentNullException>().Verifiable();
 
-        mock.Setup(fs => fs.ReadStream(It.Is<string>(v => v == string.Empty)))
+        Mock.Setup(fs => fs.ReadStream(It.Is<string>(v => v == string.Empty)))
             .Throws<ArgumentException>().Verifiable();
 
-        mock.Setup(fs => fs.ReadStream(It.IsRegex("noDirectory")))
+        Mock.Setup(fs => fs.ReadStream(It.IsRegex("noDirectory")))
             .Throws<DirectoryNotFoundException>().Verifiable();
 
-        mock.Setup(fs => fs.ReadStream(It.IsRegex("notExisting")))
+        Mock.Setup(fs => fs.ReadStream(It.IsRegex("notExisting")))
             .Throws<FileNotFoundException>().Verifiable();
 
-        mock.Setup(fs => fs.ReadStream(It.IsRegex("notValid")))
+        Mock.Setup(fs => fs.ReadStream(It.IsRegex("notValid")))
             .Returns(new MemoryStream(JsonData.InvalidObjectString.GetBytes()));
 
-        mock.SetupSequence(fs => fs.ReadStream(It.IsRegex("validString")))
+        Mock.SetupSequence(fs => fs.ReadStream(It.IsRegex("validString")))
             .Returns(new MemoryStream(JsonData.EmptyJsonString.GetBytes()))
             .Returns(new MemoryStream(JsonData.EmptyJsonString.GetBytes()));
 
-        mock.Setup(fs => fs.ReadStream(It.IsRegex("validArray")))
+        Mock.Setup(fs => fs.ReadStream(It.IsRegex("validArray")))
             .Returns(new MemoryStream(JsonData.ValidArrayString.GetBytes()));
 
-        mock.Setup(fs => fs.ReadStream(It.IsRegex("validObject")))
+        Mock.Setup(fs => fs.ReadStream(It.IsRegex("validObject")))
             .Returns(new MemoryStream(JsonData.SimpleDictionaryString.GetBytes()));
 
-        ParseSettings.FileSystem = mock.Object;
+        ParseSettings.FileSystem = Mock.Object;
     }
 
     [Test]
     public void ThrowsOnNullPath()
     {
         Assert.Throws<ArgumentNullException>(() => Parse.FromJsonFile<object>(null!));
-        mock.Verify(fs => fs.ReadStream(null!), Times.Exactly(1));
+        Mock.Verify(fs => fs.ReadStream(null!), Times.Exactly(1));
     }
 
     [Test]
     public void ThrowsOnEmptyPath()
     {
         Assert.Throws<ArgumentException>(() => Parse.FromJsonFile<object>(string.Empty));
-        mock.Verify(fs => fs.ReadStream(string.Empty), Times.Exactly(1));
+        Mock.Verify(fs => fs.ReadStream(string.Empty), Times.Exactly(1));
     }
 
     [Test]
@@ -60,7 +60,7 @@ public class ParseFromJsonFileTest
     {
         var path = @"noDirectory\any.json";
         Assert.Throws<DirectoryNotFoundException>(() => Parse.FromJsonFile<object>(path));
-        mock.Verify(fs => fs.ReadStream(path), Times.Exactly(1));
+        Mock.Verify(fs => fs.ReadStream(path), Times.Exactly(1));
     }
 
     [Test]
@@ -68,7 +68,7 @@ public class ParseFromJsonFileTest
     {
         var path = @".\notExisting.json";
         Assert.Throws<FileNotFoundException>(() => Parse.FromJsonFile<object>(path));
-        mock.Verify(fs => fs.ReadStream(path), Times.Exactly(1));
+        Mock.Verify(fs => fs.ReadStream(path), Times.Exactly(1));
     }
 
     [Test]

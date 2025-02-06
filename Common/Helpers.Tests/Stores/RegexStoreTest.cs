@@ -9,12 +9,12 @@ public class RegexStoreTest
 {
     #region AnyWhitespaceRegex
 
-    private static readonly Regex anyWhitespaceRegex = RegexStore.AnyWhitespaceRegex();
+    private static readonly Regex AnyWhitespaceRegex = RegexStore.AnyWhitespaceRegex();
 
     [Test]
     public void AnyWhitespaceRegex_IsInstanceOfRegex()
     {
-        Assert.That(anyWhitespaceRegex, Is.InstanceOf<Regex>());
+        Assert.That(AnyWhitespaceRegex, Is.InstanceOf<Regex>());
     }
 
     [TestCase(WhitespaceData.MultipleRegularSpaces)]
@@ -26,7 +26,7 @@ public class RegexStoreTest
     [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithMultipleWhitespaces))]
     public void AnyWhitespaceRegex_DoesMatch(string input)
     {
-        Assert.That(input, Does.Match(anyWhitespaceRegex));
+        Assert.That(input, Does.Match(AnyWhitespaceRegex));
     }
 
     [TestCase(StringData.EmptyString)]
@@ -34,19 +34,19 @@ public class RegexStoreTest
     [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithoutSpaces))]
     public void AnyWhitespaceRegex_DoesNotMatch(string input)
     {
-        Assert.That(input, Does.Not.Match(anyWhitespaceRegex));
+        Assert.That(input, Does.Not.Match(AnyWhitespaceRegex));
     }
 
     #endregion
 
     #region NormalizeSpaceRegex
 
-    private static readonly Regex normalizeSpaceRegex = RegexStore.NormalizeSpaceRegex();
+    private static readonly Regex NormalizeSpaceRegex = RegexStore.NormalizeSpaceRegex();
 
     [Test]
     public void NormalizeSpaceRegex_IsInstanceOfRegex()
     {
-        Assert.That(normalizeSpaceRegex, Is.InstanceOf<Regex>());
+        Assert.That(NormalizeSpaceRegex, Is.InstanceOf<Regex>());
     }
 
     [TestCase(WhitespaceData.MultipleRegularSpaces)]
@@ -56,7 +56,7 @@ public class RegexStoreTest
     [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithMultipleWhitespaces))]
     public void NormalizeSpaceRegex_DoesMatch(string input)
     {
-        Assert.That(input, Does.Match(normalizeSpaceRegex));
+        Assert.That(input, Does.Match(NormalizeSpaceRegex));
     }
 
     [TestCase(StringData.EmptyString)]
@@ -66,7 +66,7 @@ public class RegexStoreTest
     [TestCaseSource(typeof(StringData), nameof(StringData.ShortWordsWithoutSpaces))]
     public void NormalizeSpaceRegex_DoesNotMatch(string input)
     {
-        Assert.That(input, Does.Not.Match(normalizeSpaceRegex));
+        Assert.That(input, Does.Not.Match(NormalizeSpaceRegex));
     }
 
     #endregion
