@@ -2,18 +2,10 @@
 
   <PropertyGroup>
     <RootNamespace>Gucu112.CSharp.Automation.PlaywrightXunitParallel</RootNamespace>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <PublishRelease>true</PublishRelease>
     <Configurations>ChromiumDebug;ChromiumRelease;FirefoxDebug;FirefoxRelease;WebkitDebug;WebkitRelease</Configurations>
   </PropertyGroup>
-
-  <ItemGroup>
-    <EditorConfigFiles Remove="..\.editorconfig" />
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="xunit.runner.json">

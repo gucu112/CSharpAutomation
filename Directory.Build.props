@@ -1,0 +1,19 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishRelease>true</PublishRelease>
+    <PackRelease>true</PackRelease>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="$(MSBuildProjectDirectory)\.editorconfig" />
+  </ItemGroup>
+
+  <!-- https://learn.microsoft.com/en-us/nuget/consume-packages/Central-Package-Management -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
+  </PropertyGroup>
+</Project>
