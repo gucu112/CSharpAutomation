@@ -1,13 +1,16 @@
-﻿using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
+using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages;
 
-public class GoogleCalculatorPage(PlaywrightFixture playwright) : GoogleSearchPage(playwright)
+public class GoogleCalculatorPage(PlaywrightFixture playwright)
+    : GoogleSearchPage(playwright)
 {
     public override string BaseUrl => Settings.EntryPoints.Single(ep => ep.Name == "Google Calculator").Url;
 
     public ILocator CalculatorBoxLocator => Context.Locator("[jscontroller='qxNryb']");
+
     public ILocator BasicSectionBoxLocator => CalculatorBoxLocator.Locator("table.ElumCf");
+
     public ILocator ResultLocator => CalculatorBoxLocator.Locator("#cwos");
 
     public ILocator GetBasicButtonLocator(string buttonSymbol)
@@ -34,8 +37,8 @@ public class GoogleCalculatorPage(PlaywrightFixture playwright) : GoogleSearchPa
 
     public async Task<IDictionary<string, bool>> GetBasicButtonsVisibility(IEnumerable<string> buttons)
     {
-        var tasks = buttons.Select(async button => new KeyValuePair<string, bool>(button,
-            await GetBasicButtonLocator(button).IsVisibleAsync()));
+        var tasks = buttons.Select(async button =>
+            new KeyValuePair<string, bool>(button, await GetBasicButtonLocator(button).IsVisibleAsync()));
 
         return (await Task.WhenAll(tasks)).ToDictionary();
     }

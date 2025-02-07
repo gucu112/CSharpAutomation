@@ -3,7 +3,8 @@ using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Tests;
 
-public class GoogleUnitConverterTest(PlaywrightFixture playwright) : IClassFixture<PlaywrightFixture>, IDisposable
+public class GoogleUnitConverterTest(PlaywrightFixture playwright)
+    : IClassFixture<PlaywrightFixture>, IDisposable
 {
     private readonly GoogleUnitConverterPage page = new(playwright);
 

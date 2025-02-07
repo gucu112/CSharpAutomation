@@ -12,8 +12,8 @@ namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Tests.Core;
 [Category(TestCategory.Browser)]
 public class PlaywrightTest(
     SettingsFixture settings,
-    PlaywrightFixture playwright
-) : IClassFixture<PlaywrightFixture>
+    PlaywrightFixture playwright)
+    : IClassFixture<PlaywrightFixture>
 {
     [Fact]
     [Priority(TestPriority.Critical)]
@@ -76,7 +76,8 @@ public class PlaywrightTest(
         exception.Which.Message.Should().Contain($"Timeout {settings.ExpectTimeout}ms exceeded");
     }
 
-    private class EdgeAboutPage(PlaywrightFixture playwright) : BasePage(playwright)
+    private class EdgeAboutPage(PlaywrightFixture playwright)
+        : BasePage(playwright)
     {
         public override string BaseUrl => "edge://about";
     }
