@@ -16,7 +16,7 @@ public static class JsonData
 
     public const string InvalidObjectString = "false{}";
 
-    public const string SimpleListString = "[1, 2, 3]";
+    public const string SimpleListString = "[ 1, 2, 3 ]";
 
     public const string SimpleDictionaryString = """
         {
@@ -30,10 +30,15 @@ public static class JsonData
         {
             "InvalidProperty": null,
             "BooleanValue": false,
-            "ListOfNumbers": [1, 2, 3],
+            "ListOfNumbers": [
+                1,
+                2,
+                3
+            ],
             "DictionaryOfStrings": {
                 "Empty": ""
-            }
+            },
+            "CurrentYearStart": "2025-01-01T00:00:00"
         }
         """;
 
@@ -46,7 +51,8 @@ public static class JsonData
                 "empty": "",
                 "number": "007",
                 "string": "Test"
-            }
+            },
+            "currentYearStart": "2025-01-01T00:00:00.000Z"
         }
         """;
 
@@ -126,8 +132,10 @@ public static class JsonData
 
         public bool? BooleanValue;
 
-        public List<int>? ListOfNumbers;
+        public List<int> ListOfNumbers = [0];
 
         public Dictionary<string, string>? DictionaryOfStrings;
+
+        public DateTime? CurrentYearStart;
     }
 }

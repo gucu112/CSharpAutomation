@@ -1,20 +1,33 @@
+using Gucu112.CSharp.Automation.Helpers.Extensions;
+using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
 
 [TestFixture]
-public class ParseToJsonTest
+public class ParseToJsonTest : BaseJsonTest
 {
+    private static readonly JsonSettings Settings = new()
+    {
+        Encoding = Encoding.Unicode,
+        Formatting = Formatting.Indented,
+        Indentation = 4,
+        IndentChar = ' ',
+        NullValueHandling = NullValueHandling.Include,
+    };
+
+    private readonly char byteOrderMark = BitConverter.ToChar(Settings.Encoding.GetPreamble());
+
     [Test]
     public void ThrowsOnNull()
     {
-        Assert.Multiple(() =>
+        using (Assert.EnterMultipleScope())
         {
             Assert.Throws<ArgumentNullException>(() => Parse.ToJsonString(null!));
             Assert.Throws<ArgumentNullException>(() => Parse.ToJsonWriter<StringWriter>(null!));
             Assert.Throws<ArgumentNullException>(() => Parse.ToJsonStream<MemoryStream>(null!));
-        });
+        }
     }
 
     [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyValue))]
@@ -44,47 +57,30 @@ public class ParseToJsonTest
     [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyArray))]
     public string EmptyArray_ReturnsEmptyJsonArray<T>(object value)
     {
-        return ParseToJson<T>(value);
+        return ParseToJson<T>(value).NormalizeSpace();
     }
 
     [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyObject))]
     public string EmptyObject_ReturnsEmptyJsonObject<T>(object value)
     {
-        return ParseToJson<T>(value);
+        return ParseToJson<T>(value).NormalizeSpace();
     }
 
     [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleList))]
     public string List_ReturnsJsonArray<T>(object value)
     {
-        return ParseToJson<T>(value);
+        return ParseToJson<T>(value).NormalizeSpace();
     }
 
     [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleDictionary))]
     public string Dictionary_ReturnsJsonObject<T>(object value)
     {
-        return ParseToJson<T>(value);
+        return ParseToJson<T>(value, Settings).TrimStart(byteOrderMark);
     }
 
     [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleObject))]
     public string Object_ReturnsJsonObject<T>(object value)
     {
-        return ParseToJson<T>(value);
-    }
-
-    private static string ParseToJson<T>(object? value)
-    {
-        if (typeof(T) == typeof(Stream))
-        {
-            using var stream = Parse.ToJsonStream<MemoryStream>(value);
-            return Encoding.UTF8.GetString(stream.GetBuffer(), 0, (int)stream.Length);
-        }
-
-        if (typeof(T) == typeof(TextWriter))
-        {
-            using var writer = Parse.ToJsonWriter<StringWriter>(value);
-            return writer.GetStringBuilder().ToString();
-        }
-
-        return Parse.ToJsonString(value);
+        return ParseToJson<T>(value, Settings).TrimStart(byteOrderMark);
     }
 }

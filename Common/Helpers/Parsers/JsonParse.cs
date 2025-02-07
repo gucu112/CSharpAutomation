@@ -1,3 +1,4 @@
+using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Models.Interface;
 
 namespace Gucu112.CSharp.Automation.Helpers.Parsers;
@@ -6,59 +7,62 @@ public static partial class Parse
 {
     private static IFileSystem FileSystem => ParseSettings.FileSystem;
 
-    public static T? FromJson<T>(string content)
+    public static T? FromJson<T>(string content, JsonSettings? settings = null)
     {
-        return JsonConvert.DeserializeObject<T>(content);
+        return FromJson<T>(new StringReader(content), settings);
     }
 
-    public static T? FromJson<T>(TextReader reader)
+    public static T? FromJson<T>(TextReader textReader, JsonSettings? settings = null)
     {
-        using var jsonReader = new JsonTextReader(reader);
-        var serializer = new JsonSerializer();
+        settings ??= ParseSettings.Json;
+        using var jsonReader = JsonSettings.CreateReader(textReader);
+        var serializer = JsonSerializer.Create(settings);
         return serializer.Deserialize<T>(jsonReader);
     }
 
-    public static T? FromJson<T>(Stream stream)
+    public static T? FromJson<T>(Stream stream, JsonSettings? settings = null)
     {
-        return FromJson<T>(new StreamReader(stream));
+        return FromJson<T>(new StreamReader(stream), settings);
     }
 
-    public static T? FromJsonFile<T>(string path)
+    public static T? FromJsonFile<T>(string path, JsonSettings? settings = null)
     {
         using var fileStream = FileSystem.ReadStream(path);
-        return FromJson<T>(fileStream);
+        return FromJson<T>(fileStream, settings);
     }
 
-    public static string ToJsonString(object? value)
+    public static string ToJsonString(object? value, JsonSettings? settings = null)
     {
         ArgumentNullException.ThrowIfNull(value, nameof(value));
-        return JsonConvert.SerializeObject(value);
+        return ToJsonWriter<StringWriter>(value, settings).GetStringBuilder().ToString();
     }
 
-    public static T ToJsonWriter<T>(object? value, T? writer = null) where T : TextWriter
+    public static T ToJsonWriter<T>(object? value, JsonSettings? settings = null, T? textWriter = null) where T : TextWriter
     {
+        settings ??= ParseSettings.Json;
         ArgumentNullException.ThrowIfNull(value, nameof(value));
 
-        writer ??= (T)(TextWriter)new StringWriter();
-        using (var jsonWriter = new JsonTextWriter(writer))
+        textWriter ??= (T)(TextWriter)new StringWriter(settings.Encoding);
+        using (var jsonWriter = settings.CreateWriter(textWriter))
         {
-            var serializer = new JsonSerializer();
+            var serializer = JsonSerializer.Create(settings);
             serializer.Serialize(jsonWriter, value);
         }
 
-        return writer;
+        return textWriter;
     }
 
-    public static T ToJsonStream<T>(object? value, T? stream = null) where T : Stream
+    public static T ToJsonStream<T>(object? value, JsonSettings? settings = null, T? stream = null) where T : Stream
     {
         stream ??= (T)(Stream)new MemoryStream();
-        return (T)ToJsonWriter(value, new StreamWriter(stream, leaveOpen: true)).BaseStream;
+        var streamWriter = new StreamWriter(stream, settings?.Encoding, leaveOpen: true);
+        return (T)ToJsonWriter(value, settings, streamWriter).BaseStream;
     }
 
-    public static void ToJsonFile(object? value, string path)
+    public static void ToJsonFile(object? value, string path, JsonSettings? settings = null)
     {
         using var fileStream = FileSystem.WriteStream(path);
-        using var memoryStream = ToJsonStream(value, new MemoryStream());
+        using var memoryStream = ToJsonStream(value, settings, new MemoryStream());
         memoryStream.WriteTo(fileStream);
     }
 }

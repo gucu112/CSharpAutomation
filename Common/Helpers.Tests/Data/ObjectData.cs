@@ -1,5 +1,3 @@
-using Gucu112.CSharp.Automation.Helpers.Extensions;
-
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 public class ObjectData
@@ -102,7 +100,7 @@ public class ObjectData
             static TestCaseData GenerateTestCaseData<T>()
             {
                 List<int> list = [1, 2, 3];
-                return new TestCaseData(list) { TypeArgs = [typeof(T)] }.Returns(JsonData.SimpleListString.RemoveSpace());
+                return new TestCaseData(list) { TypeArgs = [typeof(T)] }.Returns(JsonData.SimpleListString);
             }
 
             yield return GenerateTestCaseData<string>();
@@ -123,7 +121,7 @@ public class ObjectData
                     { "Second", 2 },
                     { "Third", 3 },
                 };
-                return new TestCaseData(dictionary) { TypeArgs = [typeof(T)] }.Returns(JsonData.SimpleDictionaryString.RemoveSpace());
+                return new TestCaseData(dictionary) { TypeArgs = [typeof(T)] }.Returns(JsonData.SimpleDictionaryString);
             }
 
             yield return GenerateTestCaseData<string>();
@@ -146,9 +144,10 @@ public class ObjectData
                     DictionaryOfStrings = new()
                     {
                         { "Empty", string.Empty }
-                    }
+                    },
+                    CurrentYearStart = new DateTime(2025, 1, 1),
                 };
-                return new TestCaseData(customObject) { TypeArgs = [typeof(T)] }.Returns(JsonData.SimpleObjectString.RemoveSpace());
+                return new TestCaseData(customObject) { TypeArgs = [typeof(T)] }.Returns(JsonData.SimpleObjectString);
             }
 
             yield return GenerateTestCaseData<string>();

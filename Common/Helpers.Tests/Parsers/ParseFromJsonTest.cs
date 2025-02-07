@@ -4,17 +4,17 @@ using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
 
 [TestFixture]
-public class ParseFromJsonTest
+public class ParseFromJsonTest : BaseJsonTest
 {
     [Test]
     public void ThrowsOnNull()
     {
-        Assert.Multiple(() =>
+        using (Assert.EnterMultipleScope())
         {
             Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((string)null!));
             Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((StreamReader)null!));
             Assert.Throws<ArgumentNullException>(() => Parse.FromJson<object>((MemoryStream)null!));
-        });
+        }
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyContent))]
@@ -64,36 +64,45 @@ public class ParseFromJsonTest
     {
         var jsonObject = ParseFromJson<JObject>(content);
 
-        Assert.That(jsonObject, Has.Exactly(3).Items);
+        Assert.That(jsonObject, Has.Exactly(4).Items);
 
         Assert.That(jsonObject["invalidProperty"], Is.Null);
 
-        Assert.Multiple(() =>
+        using (Assert.EnterMultipleScope())
         {
             var itemToken = jsonObject["booleanValue"];
             Assert.That(itemToken, Has.Property("HasValues").EqualTo(false));
 
             var itemValue = itemToken?.Value<bool>();
             Assert.That(itemValue, Is.EqualTo(true));
-        });
+        }
 
-        Assert.Multiple(() =>
+        using (Assert.EnterMultipleScope())
         {
             var listToken = jsonObject["listOfNumbers"];
             Assert.That(listToken, Has.Property("HasValues").EqualTo(true));
 
             var listValues = listToken?.Values<int>().ToList();
             Assert.That(listValues, Has.Exactly(5).Items.And.All.TypeOf<int>());
-        });
+        }
 
-        Assert.Multiple(() =>
+        using (Assert.EnterMultipleScope())
         {
             var dictionaryToken = jsonObject["dictionaryOfStrings"];
             Assert.That(dictionaryToken, Has.Property("HasValues").EqualTo(true));
 
             var dictionaryValues = dictionaryToken?.ToObject<Dictionary<string, string>>();
             Assert.That(dictionaryValues, Has.Exactly(3).Items.And.All.Property("Key").And.Property("Value").TypeOf<string>());
-        });
+        }
+
+        using (Assert.EnterMultipleScope())
+        {
+            var dateTimeToken = jsonObject["currentYearStart"];
+            Assert.That(dateTimeToken, Has.Property("Type").EqualTo(JTokenType.Date));
+
+            var dateTimeValue = dateTimeToken?.ToObject<DateTime>();
+            Assert.That(dateTimeValue, Is.GreaterThanOrEqualTo(new DateTime(2025, 1, 1)));
+        }
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleObject))]
@@ -101,20 +110,16 @@ public class ParseFromJsonTest
     {
         var customObject = ParseFromJson<JsonData.SimpleObjectModel>(content);
 
-        Assert.Multiple(() =>
+        using (Assert.EnterMultipleScope())
         {
             Assert.That(customObject?.InvalidProperty, Is.EqualTo(null!));
             Assert.That(customObject?.BooleanValue, Is.EqualTo(true));
-            Assert.That(customObject?.ListOfNumbers, Has.Exactly(5).Items.And.All.LessThan(10));
+            Assert.That(customObject?.ListOfNumbers, Has.Exactly(6).Items.And.All.LessThan(10));
             Assert.That(customObject?.DictionaryOfStrings, Has.Exactly(3).Items);
             Assert.That(customObject?.DictionaryOfStrings?["empty"], Has.Length.EqualTo(0));
             Assert.That(customObject?.DictionaryOfStrings?["number"], Does.Contain(7.ToString()));
             Assert.That(customObject?.DictionaryOfStrings?["string"], Is.EqualTo("test").IgnoreCase);
-        });
-    }
-
-    private static T? ParseFromJson<T>(dynamic? input)
-    {
-        return Parse.FromJson<T>(input);
+            Assert.That(customObject?.CurrentYearStart!.Value.Year, Is.EqualTo(2025));
+        }
     }
 }

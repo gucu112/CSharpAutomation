@@ -1,3 +1,4 @@
+using Gucu112.CSharp.Automation.Helpers.Extensions;
 using Gucu112.CSharp.Automation.Helpers.Models.Interface;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
@@ -5,11 +6,9 @@ using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
 
 [TestFixture]
-public class ParseToJsonFileTest
+public class ParseToJsonFileTest : BaseJsonTest
 {
     private static readonly Mock<IFileSystem> Mock = new();
-
-    private byte[] streamData = [];
 
     [OneTimeSetUp]
     public void MockFileSystem()
@@ -32,19 +31,7 @@ public class ParseToJsonFileTest
     [SetUp]
     public void MockMemoryStream()
     {
-        var streamMock = new Mock<MemoryStream>() { CallBase = true };
-
-        void StreamWriteCallback(byte[] buffer, int offset, int count)
-        {
-            var bytes = offset > streamData.Length
-                ? streamData.Concat(Enumerable.Repeat<byte>(0, offset - streamData.Length))
-                : streamData[0..offset];
-
-            streamData = bytes.Concat(buffer.Take(count)).ToArray();
-        }
-
-        streamMock.Setup(ms => ms.Write(It.IsAny<byte[]>(), It.IsAny<int>(), It.IsAny<int>()))
-            .Callback(StreamWriteCallback).CallBase();
+        var streamMock = GetMemoryStreamMock();
 
         Mock.Setup(fs => fs.WriteStream(It.IsRegex("validString")))
             .Returns(streamMock.Object).Verifiable();
@@ -101,7 +88,7 @@ public class ParseToJsonFileTest
         Parse.ToJsonFile(StringData.HelloString, path);
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
-        var data = Encoding.UTF8.GetString(streamData, 0, streamData.Length);
+        var data = GetMemoryStreamData().RemoveSpace();
         Assert.That(data, Is.EqualTo(JsonData.HelloJsonString));
     }
 
@@ -112,7 +99,7 @@ public class ParseToJsonFileTest
         Parse.ToJsonFile(new List<bool>([true]), path);
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
-        var data = Encoding.UTF8.GetString(streamData, 0, streamData.Length);
+        var data = GetMemoryStreamData().RemoveSpace();
         Assert.That(data, Is.EqualTo(JsonData.ValidArrayString));
     }
 
@@ -123,7 +110,7 @@ public class ParseToJsonFileTest
         Parse.ToJsonFile(new object(), path);
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
-        var data = Encoding.UTF8.GetString(streamData, 0, streamData.Length);
+        var data = GetMemoryStreamData().RemoveSpace();
         Assert.That(data, Is.EqualTo(JsonData.EmptyObjectString));
     }
 }
