@@ -263,6 +263,13 @@ dotnet_naming_style.i_pascal_case.capitalization = pascal_case
 
 #### Analyzers ####
 
+# StyleCop
+dotnet_diagnostic.SA1000.severity = none
+dotnet_diagnostic.SA1010.severity = none
+dotnet_diagnostic.SA1101.severity = none
+dotnet_diagnostic.SA1200.severity = none
+dotnet_diagnostic.SA1633.severity = none
+
 # xUnit
 dotnet_diagnostic.xUnit1004.severity = silent
 dotnet_diagnostic.xUnit1042.severity = silent

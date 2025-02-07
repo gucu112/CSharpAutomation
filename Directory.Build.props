@@ -5,10 +5,15 @@
     <Nullable>enable</Nullable>
     <PublishRelease>true</PublishRelease>
     <PackRelease>true</PackRelease>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>CS1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <EditorConfigFiles Remove="$(MSBuildProjectDirectory)\.editorconfig" />
+    <EditorConfigFiles Remove="$(MSBuildThisFileDirectory)\.editorconfig" />
   </ItemGroup>
 
   <!-- https://learn.microsoft.com/en-us/nuget/consume-packages/Central-Package-Management -->
