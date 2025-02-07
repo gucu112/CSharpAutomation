@@ -1,4 +1,5 @@
 using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
+using Gucu112.CSharp.Automation.PlaywrightXunit.Pages;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunit.Tests;
 

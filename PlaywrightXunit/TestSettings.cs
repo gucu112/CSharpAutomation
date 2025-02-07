@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunit.Tests;
 
