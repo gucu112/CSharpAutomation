@@ -128,14 +128,14 @@ public static class JsonData
 
     public class SimpleObjectModel
     {
-        public string? InvalidProperty;
+        public string? InvalidProperty { get; init; }
 
-        public bool? BooleanValue;
+        public bool? BooleanValue { get; init; }
 
-        public List<int> ListOfNumbers = [0];
+        public List<int> ListOfNumbers { get; init; } = [0];
 
-        public Dictionary<string, string>? DictionaryOfStrings;
+        public Dictionary<string, string>? DictionaryOfStrings { get; init; }
 
-        public DateTime? CurrentYearStart;
+        public DateTime? CurrentYearStart { get; init; }
     }
 }

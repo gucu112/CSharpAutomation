@@ -278,5 +278,5 @@ dotnet_diagnostic.SA1642.severity = none
 [*.cs]
 dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = suggestion
 
-[*{Page,Test}.cs]
+[*{Data,Page,Test}.cs]
 dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = none

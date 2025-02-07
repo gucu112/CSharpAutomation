@@ -6,8 +6,6 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests.Extensions;
 [TestFixture]
 public class StringExtensionsTest
 {
-    #region GetBytes
-
     [Test]
     public void GetBytes_ThrowsOnNull()
     {
@@ -44,10 +42,6 @@ public class StringExtensionsTest
         return groupedBytes.Select(b => b.First()).ToArray();
     }
 
-    #endregion
-
-    #region NormalizeSpace
-
     [Test]
     public void NormalizeSpace_ThrowsOnNull()
     {
@@ -81,10 +75,6 @@ public class StringExtensionsTest
         Assert.That(StringExtensions.NormalizeSpace(input), Does.Not.Match(@"\s{2,}"));
     }
 
-    #endregion
-
-    #region RemoveSpace
-
     [Test]
     public void RemoveSpace_ThrowsOnNull()
     {
@@ -109,6 +99,4 @@ public class StringExtensionsTest
     {
         Assert.That(StringExtensions.RemoveSpace(input), Does.Not.Contain(@" "));
     }
-
-    #endregion
 }
