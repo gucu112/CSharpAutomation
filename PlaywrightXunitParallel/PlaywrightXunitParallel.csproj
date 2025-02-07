@@ -30,14 +30,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="coverlet.collector"/>
+    <PackageReference Include="coverlet.collector" PrivateAssets="all" />
     <PackageReference Include="FluentAssertions" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="Microsoft.Playwright" />
+    <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" />
     <PackageReference Include="xunit" />
-    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
     <PackageReference Include="Xunit.SkippableFact" />
   </ItemGroup>
 

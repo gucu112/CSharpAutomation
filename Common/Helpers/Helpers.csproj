@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
