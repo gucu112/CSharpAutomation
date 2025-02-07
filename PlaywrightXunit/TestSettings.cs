@@ -1,4 +1,4 @@
-﻿using System.Xml.Linq;
+using System.Xml.Linq;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunit.Tests;
 
@@ -30,14 +30,14 @@ public class TestSettings
     public void VerifyThatEnvironmentVariablesAreLoadedCorrectly()
     {
         // Arrange
-        var expectedVariables = new HashSet<string>
+        ISet<string> expectedVariables = new HashSet<string>
         {
             "Path",
             "ProgramFiles",
             "ProgramData",
             "SystemDrive",
-            "SystemRoot"
-        } as ISet<string>;
+            "SystemRoot",
+        };
 
         // Act
         var variables = Settings.GetEnvironmentVariables();

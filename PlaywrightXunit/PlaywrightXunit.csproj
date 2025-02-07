@@ -6,9 +6,9 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
-  <ItemGroup>
-    <EditorConfigFiles Remove="$(MSBuildProjectDirectory)\.editorconfig" />
-  </ItemGroup>
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);SA1600</NoWarn>
+  </PropertyGroup>
 
   <PropertyGroup>
     <RunSettingsFilePath>$(MSBuildProjectDirectory)\.runsettings</RunSettingsFilePath>
@@ -29,14 +29,6 @@
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
     <PackageReference Include="Xunit.SkippableFact" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EditorConfigFiles Remove="E:\Git\CSharpAutomation\PlaywrightXunit\.editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="E:\Git\CSharpAutomation\PlaywrightXunit\.editorconfig" />
   </ItemGroup>
 
 </Project>

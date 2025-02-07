@@ -1,4 +1,4 @@
-﻿namespace Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
+namespace Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
 
 public class PlaywrightFixture : IAsyncLifetime
 {
@@ -9,8 +9,9 @@ public class PlaywrightFixture : IAsyncLifetime
         settings = new Settings();
     }
 
-    private IPlaywright Instance { get; set; } = null!;
     public IBrowser Browser { get; private set; } = null!;
+
+    private IPlaywright Instance { get; set; } = null!;
 
     public async Task InitializeAsync()
     {

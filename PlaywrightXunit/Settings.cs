@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Xml.Linq;
 using Gucu112.CSharp.Automation.PlaywrightXunit.Extensions;
 
@@ -65,7 +65,8 @@ public class Settings
     {
         return elements.First(element => element.Name == "TestRunParameters").Elements()
             .Where(element => !string.IsNullOrEmpty(element.Attribute("name")?.Value))
-            .ToDictionary(element => element.Attribute("name")?.Value ?? string.Empty,
+            .ToDictionary(
+                element => element.Attribute("name")?.Value ?? string.Empty,
                 element => element.Attribute("value")?.Value ?? string.Empty);
     }
 
