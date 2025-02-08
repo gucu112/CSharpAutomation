@@ -36,4 +36,16 @@ public static partial class Parse
         var serializer = new XmlSerializer(typeof(TOutput));
         return (TOutput?)serializer.Deserialize(xmlReader);
     }
+
+    /// <summary>
+    /// Deserializes the XML content from a <see cref="Stream"/> into an object of specific type.
+    /// </summary>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
+    /// <param name="stream">The <see cref="Stream"/> containing the XML content to deserialize.</param>
+    /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
+    public static TOutput? FromXml<TOutput>(Stream stream)
+        where TOutput : class
+    {
+        return FromXml<TOutput>(new StreamReader(stream));
+    }
 }

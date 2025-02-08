@@ -13,6 +13,7 @@ public class ParseFromXmlTest : BaseXmlTest
         {
             Assert.Throws<ArgumentNullException>(() => Parse.FromXml<object>((string)null!));
             Assert.Throws<ArgumentNullException>(() => Parse.FromXml<object>((StreamReader)null!));
+            Assert.Throws<ArgumentNullException>(() => Parse.FromXml<object>((Stream)null!));
         }
     }
 
