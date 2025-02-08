@@ -1,5 +1,3 @@
-- name: About
-  href: ../README.md
 - name: Documentation
   items:
   - name: Introduction
