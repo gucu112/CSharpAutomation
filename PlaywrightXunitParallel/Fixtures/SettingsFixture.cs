@@ -22,7 +22,7 @@ public class SettingsFixture : ISettings
 
     /// <summary>
     /// Initializes a new instance of the <see cref="SettingsFixture"/> class.
-    /// Reads and builds the configuration object from the appConfig.json file.
+    /// Reads and builds the configuration object from the <see langword="appConfig.json"/> file.
     /// </summary>
     public SettingsFixture()
     {
