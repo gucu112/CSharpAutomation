@@ -4,18 +4,22 @@ using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Xml;
 
 [TestFixture]
-public class ParseFromXmlTest
+public class ParseFromXmlTest : BaseXmlTest
 {
     [Test]
     public void ThrowsOnNull()
     {
-        Assert.Throws<ArgumentNullException>(() => Parse.FromXml<object>(null!));
+        using (Assert.EnterMultipleScope())
+        {
+            Assert.Throws<ArgumentNullException>(() => Parse.FromXml<object>((string)null!));
+            Assert.Throws<ArgumentNullException>(() => Parse.FromXml<object>((StreamReader)null!));
+        }
     }
 
     [TestCaseSource(typeof(XmlData), nameof(XmlData.EmptyContent))]
-    public void EmptyContent_ThrowsRootElementMissing(string content)
+    public void EmptyContent_ThrowsRootElementMissing<T>(T content)
     {
-        var exception = Assert.Catch(() => Parse.FromXml<object>(content)).InnerException;
+        var exception = Assert.Catch(() => ParseFromXml<object>(content)).InnerException;
 
         using (Assert.EnterMultipleScope())
         {
@@ -25,9 +29,9 @@ public class ParseFromXmlTest
     }
 
     [TestCaseSource(typeof(XmlData), nameof(XmlData.IncorrectDeclaration))]
-    public void IncorrectDeclaration_ThrowsUnexpectedToken(string content)
+    public void IncorrectDeclaration_ThrowsUnexpectedToken<T>(T content)
     {
-        var exception = Assert.Catch(() => Parse.FromXml<object>(content)).InnerException;
+        var exception = Assert.Catch(() => ParseFromXml<object>(content)).InnerException;
 
         using (Assert.EnterMultipleScope())
         {
@@ -37,9 +41,9 @@ public class ParseFromXmlTest
     }
 
     [TestCaseSource(typeof(XmlData), nameof(XmlData.CorrectDeclaration))]
-    public void CorrectDeclarationAlone_ThrowsRootElementMissing(string content)
+    public void CorrectDeclarationAlone_ThrowsRootElementMissing<T>(T content)
     {
-        var exception = Assert.Catch(() => Parse.FromXml<object>(content)).InnerException;
+        var exception = Assert.Catch(() => ParseFromXml<object>(content)).InnerException;
 
         using (Assert.EnterMultipleScope())
         {
@@ -49,9 +53,9 @@ public class ParseFromXmlTest
     }
 
     [TestCaseSource(typeof(XmlData), nameof(XmlData.EmptyRootElement))]
-    public void EmptyRootElement_ThrowsRootElementNotExpected(string content)
+    public void EmptyRootElement_ThrowsRootElementNotExpected<T>(T content)
     {
-        var exception = Assert.Catch(() => Parse.FromXml<object>(content)).InnerException;
+        var exception = Assert.Catch(() => ParseFromXml<object>(content)).InnerException;
 
         using (Assert.EnterMultipleScope())
         {
@@ -61,9 +65,9 @@ public class ParseFromXmlTest
     }
 
     [TestCaseSource(typeof(XmlData), nameof(XmlData.EmptyRootElement))]
-    public void EmptyRootElement_ReturnEmptyObject(string content)
+    public void EmptyRootElement_ReturnEmptyObject<T>(T content)
     {
-        var customObject = Parse.FromXml<XmlData.RootObjectModel>(content);
+        var customObject = ParseFromXml<XmlData.RootObjectModel>(content);
 
         using (Assert.EnterMultipleScope())
         {
@@ -77,27 +81,10 @@ public class ParseFromXmlTest
         }
     }
 
-    [Test]
-    public void CorrectXmlObjects_ReturnObject()
+    [TestCaseSource(typeof(XmlData), nameof(XmlData.RootObject))]
+    public void CorrectXmlObjects_ReturnObject<T>(T content)
     {
-        List<XObject> objects = [
-            new XAttribute("IsPrimary", false),
-            new XElement("CapThickness", 0.0003d),
-            new XElement(
-                "GeneticCode",
-                new List<XElement>
-                {
-                    new("codon", "GUC"),
-                    new("codon", "CAA"),
-                    new("codon", "AUG"),
-                    new("codon", "UGA"),
-                }),
-            new XElement("VegetationPeriodStart", new DateTime(2025, 4, 1))
-        ];
-
-        var content = new XElement("root", objects).ToString();
-
-        var customObject = Parse.FromXml<XmlData.RootObjectModel>(content);
+        var customObject = ParseFromXml<XmlData.RootObjectModel>(content);
 
         using (Assert.EnterMultipleScope())
         {
