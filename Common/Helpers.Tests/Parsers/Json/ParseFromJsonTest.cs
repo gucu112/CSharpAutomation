@@ -1,7 +1,7 @@
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
-namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
+namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Json;
 
 [TestFixture]
 public class ParseFromJsonTest : BaseJsonTest

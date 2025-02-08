@@ -38,7 +38,6 @@ public class JsonParse : IJsonParse
     /// <inheritdoc/>
     public string ToJsonString(object? value, JsonSettings? settings = null)
     {
-        ArgumentNullException.ThrowIfNull(value, nameof(value));
         return ToJsonWriter<StringWriter>(value, settings).GetStringBuilder().ToString();
     }
 
