@@ -1,13 +1,14 @@
 using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 
-namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
+namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Json;
 
 public class BaseJsonTest
 {
     private byte[] streamData = [];
 
     protected static T? ParseFromJson<T>(dynamic? input, JsonSettings? settings = null)
+        where T : class
     {
         return Parse.FromJson<T>(input, settings);
     }

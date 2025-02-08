@@ -11,9 +11,9 @@ public static partial class Parse
     private static IFileSystem FileSystem => ParseSettings.FileSystem;
 
     /// <summary>
-    /// Deserializes the JSON content into an object of type <typeparamref name="TOutput"/>.
+    /// Deserializes the JSON content into an object of specific type.
     /// </summary>
-    /// <typeparam name="TOutput">The type of the object to deserialize.</typeparam>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="content">The JSON content to deserialize.</param>
     /// <param name="settings">The JSON settings to use for deserialization.</param>
     /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
@@ -24,9 +24,9 @@ public static partial class Parse
     }
 
     /// <summary>
-    /// Deserializes the JSON content from a <see cref="TextReader"/> into an object of type <typeparamref name="TOutput"/>.
+    /// Deserializes the JSON content from a <see cref="TextReader"/> into an object of specific type.
     /// </summary>
-    /// <typeparam name="TOutput">The type of the object to deserialize.</typeparam>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="textReader">The <see cref="TextReader"/> containing the JSON content to deserialize.</param>
     /// <param name="settings">The JSON settings to use for deserialization.</param>
     /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
@@ -40,9 +40,9 @@ public static partial class Parse
     }
 
     /// <summary>
-    /// Deserializes the JSON content from a <see cref="Stream"/> into an object of type <typeparamref name="TOutput"/>.
+    /// Deserializes the JSON content from a <see cref="Stream"/> into an object of specific type.
     /// </summary>
-    /// <typeparam name="TOutput">The type of the object to deserialize.</typeparam>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="stream">The <see cref="Stream"/> containing the JSON content to deserialize.</param>
     /// <param name="settings">The JSON settings to use for deserialization.</param>
     /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
@@ -53,9 +53,9 @@ public static partial class Parse
     }
 
     /// <summary>
-    /// Deserializes the JSON content from a file at the specified path into an object of type <typeparamref name="TOutput"/>.
+    /// Deserializes the JSON content from a file at the specified path into an object of specific type.
     /// </summary>
-    /// <typeparam name="TOutput">The type of the object to deserialize.</typeparam>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="path">The path to the JSON file.</param>
     /// <param name="settings">The JSON settings to use for deserialization.</param>
     /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
@@ -74,7 +74,6 @@ public static partial class Parse
     /// <returns>The JSON string representation of the object.</returns>
     public static string ToJsonString(object? value, JsonSettings? settings = null)
     {
-        ArgumentNullException.ThrowIfNull(value, nameof(value));
         return ToJsonWriter<StringWriter>(value, settings).GetStringBuilder().ToString();
     }
 
