@@ -11,7 +11,7 @@ public class ParseToJsonTest : BaseJsonTest
     private static readonly JsonSettings Settings = new()
     {
         Encoding = Encoding.Unicode,
-        Formatting = Formatting.Indented,
+        Formatting = JsonFormatting.Indented,
         Indentation = 4,
         IndentChar = ' ',
         NullValueHandling = NullValueHandling.Include,
