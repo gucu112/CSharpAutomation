@@ -23,12 +23,6 @@ public class ParseFromJsonTest : BaseJsonTest
         Assert.That(ParseFromJson<object>(content), Is.Null);
     }
 
-    [TestCaseSource(typeof(JsonData), nameof(JsonData.WhitespaceContent))]
-    public void WhitespaceContent_ReturnsNull<T>(T content)
-    {
-        Assert.That(ParseFromJson<object>(content), Is.Null);
-    }
-
     [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyArray))]
     public void EmptyArray_ReturnsEmpty<T>(T content)
     {

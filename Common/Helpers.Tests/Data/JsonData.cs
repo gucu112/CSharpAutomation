@@ -60,19 +60,18 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(StringData.EmptyString);
-            yield return new TestCaseData(new StringReader(StringData.EmptyString));
-            yield return new TestCaseData(new MemoryStream(StringData.EmptyString.GetBytes()));
-        }
-    }
-
-    public static IEnumerable WhitespaceContent
-    {
-        get
-        {
-            yield return new TestCaseData(WhitespaceData.MultipleRegularSpaces);
-            yield return new TestCaseData(new StringReader(WhitespaceData.MultipleRegularSpaces));
-            yield return new TestCaseData(new MemoryStream(WhitespaceData.MultipleRegularSpaces.GetBytes()));
+            yield return new TestCaseData(StringData.EmptyString)
+                .SetArgDisplayNames("EmptyString");
+            yield return new TestCaseData(new StringReader(StringData.EmptyString))
+                .SetArgDisplayNames("EmptyStringReader");
+            yield return new TestCaseData(new MemoryStream(StringData.EmptyString.GetBytes()))
+                .SetArgDisplayNames("EmptyStringStream");
+            yield return new TestCaseData(WhitespaceData.MultipleRegularSpaces)
+                .SetArgDisplayNames("WhitespaceString");
+            yield return new TestCaseData(new StringReader(WhitespaceData.MultipleRegularSpaces))
+                .SetArgDisplayNames("WhitespaceStringReader");
+            yield return new TestCaseData(new MemoryStream(WhitespaceData.MultipleRegularSpaces.GetBytes()))
+                .SetArgDisplayNames("WhitespaceStringStream");
         }
     }
 
@@ -80,9 +79,12 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(EmptyArrayString);
-            yield return new TestCaseData(new StringReader(EmptyArrayString));
-            yield return new TestCaseData(new MemoryStream(EmptyArrayString.GetBytes()));
+            yield return new TestCaseData(EmptyArrayString)
+                .SetArgDisplayNames("EmptyArrayString");
+            yield return new TestCaseData(new StringReader(EmptyArrayString))
+                .SetArgDisplayNames("EmptyArrayStringReader");
+            yield return new TestCaseData(new MemoryStream(EmptyArrayString.GetBytes()))
+                .SetArgDisplayNames("EmptyArrayStringStream");
         }
     }
 
@@ -90,9 +92,12 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(EmptyObjectString);
-            yield return new TestCaseData(new StringReader(EmptyObjectString));
-            yield return new TestCaseData(new MemoryStream(EmptyObjectString.GetBytes()));
+            yield return new TestCaseData(EmptyObjectString)
+                .SetArgDisplayNames("EmptyObjectString");
+            yield return new TestCaseData(new StringReader(EmptyObjectString))
+                .SetArgDisplayNames("EmptyObjectStringReader");
+            yield return new TestCaseData(new MemoryStream(EmptyObjectString.GetBytes()))
+                .SetArgDisplayNames("EmptyObjectStringStream");
         }
     }
 
@@ -100,9 +105,12 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(SimpleListString);
-            yield return new TestCaseData(new StringReader(SimpleListString));
-            yield return new TestCaseData(new MemoryStream(SimpleListString.GetBytes()));
+            yield return new TestCaseData(SimpleListString)
+                .SetArgDisplayNames("SimpleListString");
+            yield return new TestCaseData(new StringReader(SimpleListString))
+                .SetArgDisplayNames("SimpleListStringReader");
+            yield return new TestCaseData(new MemoryStream(SimpleListString.GetBytes()))
+                .SetArgDisplayNames("SimpleListStringStream");
         }
     }
 
@@ -110,9 +118,12 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(SimpleDictionaryString);
-            yield return new TestCaseData(new StringReader(SimpleDictionaryString));
-            yield return new TestCaseData(new MemoryStream(SimpleDictionaryString.GetBytes()));
+            yield return new TestCaseData(SimpleDictionaryString)
+                .SetArgDisplayNames("SimpleDictionaryString");
+            yield return new TestCaseData(new StringReader(SimpleDictionaryString))
+                .SetArgDisplayNames("SimpleDictionaryStringReader");
+            yield return new TestCaseData(new MemoryStream(SimpleDictionaryString.GetBytes()))
+                .SetArgDisplayNames("SimpleDictionaryStringStream");
         }
     }
 
@@ -120,9 +131,12 @@ public static class JsonData
     {
         get
         {
-            yield return new TestCaseData(SimpleObjectStringWithComment);
-            yield return new TestCaseData(new StringReader(SimpleObjectStringWithComment));
-            yield return new TestCaseData(new MemoryStream(SimpleObjectStringWithComment.GetBytes()));
+            yield return new TestCaseData(SimpleObjectStringWithComment)
+                .SetArgDisplayNames("SimpleObjectString");
+            yield return new TestCaseData(new StringReader(SimpleObjectStringWithComment))
+                .SetArgDisplayNames("SimpleObjectStringReader");
+            yield return new TestCaseData(new MemoryStream(SimpleObjectStringWithComment.GetBytes()))
+                .SetArgDisplayNames("SimpleObjectStringStream");
         }
     }
 

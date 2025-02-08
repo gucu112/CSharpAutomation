@@ -11,9 +11,9 @@ public class ObjectData
                 return new TestCaseData(StringData.EmptyString) { TypeArgs = [typeof(T)] }.Returns(JsonData.EmptyJsonString);
             }
 
-            yield return GenerateTestCaseData<string>();
-            yield return GenerateTestCaseData<TextWriter>();
-            yield return GenerateTestCaseData<Stream>();
+            yield return GenerateTestCaseData<string>().SetArgDisplayNames("EmptyValueToJsonString");
+            yield return GenerateTestCaseData<TextWriter>().SetArgDisplayNames("EmptyValueWriterToJsonString");
+            yield return GenerateTestCaseData<Stream>().SetArgDisplayNames("EmptyValueStreamToJsonString");
         }
     }
 
@@ -26,9 +26,9 @@ public class ObjectData
                 return new TestCaseData(WhitespaceData.MultipleRegularSpaces) { TypeArgs = [typeof(T)] }.Returns(@$"""{WhitespaceData.MultipleRegularSpaces}""");
             }
 
-            yield return GenerateTestCaseData<string>();
-            yield return GenerateTestCaseData<TextWriter>();
-            yield return GenerateTestCaseData<Stream>();
+            yield return GenerateTestCaseData<string>().SetArgDisplayNames("WhitespaceValueToJsonString");
+            yield return GenerateTestCaseData<TextWriter>().SetArgDisplayNames("WhitespaceValueWriterToJsonString");
+            yield return GenerateTestCaseData<Stream>().SetArgDisplayNames("WhitespaceValueStreamToJsonString");
         }
     }
 
@@ -41,9 +41,9 @@ public class ObjectData
                 return new TestCaseData(StringData.HelloString) { TypeArgs = [typeof(T)] }.Returns(@$"""{StringData.HelloString}""");
             }
 
-            yield return GenerateTestCaseData<string>();
-            yield return GenerateTestCaseData<TextWriter>();
-            yield return GenerateTestCaseData<Stream>();
+            yield return GenerateTestCaseData<string>().SetArgDisplayNames("StringValueToJsonString");
+            yield return GenerateTestCaseData<TextWriter>().SetArgDisplayNames("StringValueWriterToJsonString");
+            yield return GenerateTestCaseData<Stream>().SetArgDisplayNames("StringValueStreamToJsonString");
         }
     }
 
@@ -56,10 +56,10 @@ public class ObjectData
                 return new TestCaseData(value) { TypeArgs = [typeof(T)] }.Returns(value.ToString().ToLower());
             }
 
-            yield return GenerateTestCaseData<string>(true);
-            yield return GenerateTestCaseData<string>(false);
-            yield return GenerateTestCaseData<TextWriter>(true);
-            yield return GenerateTestCaseData<Stream>(false);
+            yield return GenerateTestCaseData<string>(true).SetArgDisplayNames("TrueBooleanToJsonString");
+            yield return GenerateTestCaseData<string>(false).SetArgDisplayNames("FalseBooleanToJsonString");
+            yield return GenerateTestCaseData<TextWriter>(true).SetArgDisplayNames("TrueBooleanWriterToJsonString");
+            yield return GenerateTestCaseData<Stream>(false).SetArgDisplayNames("FalseBooleanStreamToJsonString");
         }
     }
 
@@ -72,9 +72,9 @@ public class ObjectData
                 return new TestCaseData(new List<object>()) { TypeArgs = [typeof(T)] }.Returns(JsonData.EmptyArrayString);
             }
 
-            yield return GenerateTestCaseData<string>();
-            yield return GenerateTestCaseData<TextWriter>();
-            yield return GenerateTestCaseData<Stream>();
+            yield return GenerateTestCaseData<string>().SetArgDisplayNames("EmptyArrayToJsonString");
+            yield return GenerateTestCaseData<TextWriter>().SetArgDisplayNames("EmptyArrayWriterToJsonString");
+            yield return GenerateTestCaseData<Stream>().SetArgDisplayNames("EmptyArrayStreamToJsonString");
         }
     }
 
@@ -87,9 +87,9 @@ public class ObjectData
                 return new TestCaseData(new object()) { TypeArgs = [typeof(T)] }.Returns(JsonData.EmptyObjectString);
             }
 
-            yield return GenerateTestCaseData<string>();
-            yield return GenerateTestCaseData<TextWriter>();
-            yield return GenerateTestCaseData<Stream>();
+            yield return GenerateTestCaseData<string>().SetArgDisplayNames("EmptyObjectToJsonString");
+            yield return GenerateTestCaseData<TextWriter>().SetArgDisplayNames("EmptyObjectWriterToJsonString");
+            yield return GenerateTestCaseData<Stream>().SetArgDisplayNames("EmptyObjectStreamToJsonString");
         }
     }
 
@@ -103,9 +103,9 @@ public class ObjectData
                 return new TestCaseData(list) { TypeArgs = [typeof(T)] }.Returns(JsonData.SimpleListString);
             }
 
-            yield return GenerateTestCaseData<string>();
-            yield return GenerateTestCaseData<TextWriter>();
-            yield return GenerateTestCaseData<Stream>();
+            yield return GenerateTestCaseData<string>().SetArgDisplayNames("SimpleListToJsonString");
+            yield return GenerateTestCaseData<TextWriter>().SetArgDisplayNames("SimpleListWriterToJsonString");
+            yield return GenerateTestCaseData<Stream>().SetArgDisplayNames("SimpleListStreamToJsonString");
         }
     }
 
@@ -124,9 +124,9 @@ public class ObjectData
                 return new TestCaseData(dictionary) { TypeArgs = [typeof(T)] }.Returns(JsonData.SimpleDictionaryString);
             }
 
-            yield return GenerateTestCaseData<string>();
-            yield return GenerateTestCaseData<TextWriter>();
-            yield return GenerateTestCaseData<Stream>();
+            yield return GenerateTestCaseData<string>().SetArgDisplayNames("SimpleDictionaryToJsonString");
+            yield return GenerateTestCaseData<TextWriter>().SetArgDisplayNames("SimpleDictionaryWriterToJsonString");
+            yield return GenerateTestCaseData<Stream>().SetArgDisplayNames("SimpleDictionaryStreamToJsonString");
         }
     }
 
@@ -150,9 +150,9 @@ public class ObjectData
                 return new TestCaseData(customObject) { TypeArgs = [typeof(T)] }.Returns(JsonData.SimpleObjectString);
             }
 
-            yield return GenerateTestCaseData<string>();
-            yield return GenerateTestCaseData<TextWriter>();
-            yield return GenerateTestCaseData<Stream>();
+            yield return GenerateTestCaseData<string>().SetArgDisplayNames("SimpleObjectToJsonString");
+            yield return GenerateTestCaseData<TextWriter>().SetArgDisplayNames("SimpleObjectWriterToJsonString");
+            yield return GenerateTestCaseData<Stream>().SetArgDisplayNames("SimpleObjectStreamToJsonString");
         }
     }
 }
