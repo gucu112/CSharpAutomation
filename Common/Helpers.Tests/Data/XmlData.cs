@@ -21,10 +21,15 @@ public class XmlData
                 .SetArgDisplayNames("EmptyString");
             yield return new TestCaseData(new StringReader(StringData.EmptyString))
                 .SetArgDisplayNames("EmptyStringReader");
+            yield return new TestCaseData(new MemoryStream(StringData.EmptyString.GetBytes()))
+                .SetArgDisplayNames("EmptyStringStream");
+
             yield return new TestCaseData(WhitespaceData.MultipleRegularSpaces)
                 .SetArgDisplayNames("WhitespaceString");
             yield return new TestCaseData(new StringReader(WhitespaceData.MultipleRegularSpaces))
                 .SetArgDisplayNames("WhitespaceStringReader");
+            yield return new TestCaseData(new MemoryStream(WhitespaceData.MultipleRegularSpaces.GetBytes()))
+                .SetArgDisplayNames("WhitespaceStringStream");
         }
     }
 
@@ -36,10 +41,15 @@ public class XmlData
                 .SetArgDisplayNames("EmptyDeclaration");
             yield return new TestCaseData(new StringReader(GetXmlDeclarationString()))
                 .SetArgDisplayNames("EmptyDeclarationReader");
+            yield return new TestCaseData(new MemoryStream(GetXmlDeclarationString().GetBytes()))
+                .SetArgDisplayNames("EmptyDeclarationStream");
+
             yield return new TestCaseData(IncorrectDeclarationString)
                 .SetArgDisplayNames("IncorrectDeclaration");
             yield return new TestCaseData(new StringReader(IncorrectDeclarationString))
                 .SetArgDisplayNames("IncorrectDeclarationReader");
+            yield return new TestCaseData(new MemoryStream(IncorrectDeclarationString.GetBytes()))
+                .SetArgDisplayNames("IncorrectDeclarationStream");
         }
     }
 
@@ -51,14 +61,22 @@ public class XmlData
                 .SetArgDisplayNames("CorrectDeclarationVersion");
             yield return new TestCaseData(new StringReader(GetXmlDeclarationString("1.0")))
                 .SetArgDisplayNames("CorrectDeclarationVersionReader");
+            yield return new TestCaseData(new MemoryStream(GetXmlDeclarationString("1.0").GetBytes()))
+                .SetArgDisplayNames("CorrectDeclarationVersionStream");
+
             yield return new TestCaseData(CorrectDeclarationString)
                 .SetArgDisplayNames("CorrectDeclarationEncoding");
             yield return new TestCaseData(new StringReader(CorrectDeclarationString))
                 .SetArgDisplayNames("CorrectDeclarationEncodingReader");
+            yield return new TestCaseData(new MemoryStream(CorrectDeclarationString.GetBytes()))
+                .SetArgDisplayNames("CorrectDeclarationEncodingStream");
+
             yield return new TestCaseData(GetXmlDeclarationString("1.0", Encoding.UTF8, true))
                 .SetArgDisplayNames("CorrectDeclarationStandalone");
             yield return new TestCaseData(new StringReader(GetXmlDeclarationString("1.0", Encoding.UTF8, true)))
                 .SetArgDisplayNames("CorrectDeclarationStandaloneReader");
+            yield return new TestCaseData(new MemoryStream(GetXmlDeclarationString("1.0", Encoding.UTF8, true).GetBytes()))
+                .SetArgDisplayNames("CorrectDeclarationStandaloneStream");
         }
     }
 
@@ -70,18 +88,29 @@ public class XmlData
                 .SetArgDisplayNames("VoidRootElement");
             yield return new TestCaseData(new StringReader(VoidRootElementString))
                 .SetArgDisplayNames("VoidRootElementReader");
+            yield return new TestCaseData(new MemoryStream(VoidRootElementString.GetBytes()))
+                .SetArgDisplayNames("VoidRootElementStream");
+
             yield return new TestCaseData(EmptyRootElementString)
                 .SetArgDisplayNames("EmptyRootElement");
             yield return new TestCaseData(new StringReader(EmptyRootElementString))
                 .SetArgDisplayNames("EmptyRootElementReader");
+            yield return new TestCaseData(new MemoryStream(EmptyRootElementString.GetBytes()))
+                .SetArgDisplayNames("EmptyRootElementStream");
+
             yield return new TestCaseData(CorrectDeclarationString + VoidRootElementString)
                 .SetArgDisplayNames("DeclarationAndVoidRootElement");
             yield return new TestCaseData(new StringReader(CorrectDeclarationString + VoidRootElementString))
                 .SetArgDisplayNames("DeclarationAndVoidRootElementReader");
+            yield return new TestCaseData(new MemoryStream((CorrectDeclarationString + VoidRootElementString).GetBytes()))
+                .SetArgDisplayNames("DeclarationAndVoidRootElementStream");
+
             yield return new TestCaseData(CorrectDeclarationString + EmptyRootElementString)
                 .SetArgDisplayNames("DeclarationAndEmptyRootElement");
             yield return new TestCaseData(new StringReader(CorrectDeclarationString + EmptyRootElementString))
                 .SetArgDisplayNames("DeclarationAndEmptyRootElementReader");
+            yield return new TestCaseData(new MemoryStream((CorrectDeclarationString + EmptyRootElementString).GetBytes()))
+                .SetArgDisplayNames("DeclarationAndEmptyRootElementStream");
         }
     }
 
@@ -93,6 +122,8 @@ public class XmlData
                 .SetArgDisplayNames("RootObjectModel");
             yield return new TestCaseData(new StringReader(GetXmlDocumentString()))
                 .SetArgDisplayNames("RootObjectModelReader");
+            yield return new TestCaseData(new MemoryStream(GetXmlDocumentString().GetBytes()))
+                .SetArgDisplayNames("RootObjectModelStream");
         }
     }
 
