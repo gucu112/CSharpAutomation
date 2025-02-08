@@ -57,7 +57,7 @@ public class JsonSettingsTest : BaseJsonTest
         using (Assert.EnterMultipleScope())
         {
             Assert.That(settings.Encoding, Is.EqualTo(Encoding.UTF8));
-            Assert.That(settings.Formatting, Is.EqualTo(Formatting.Indented));
+            Assert.That(settings.Formatting, Is.EqualTo(JsonFormatting.Indented));
             Assert.That(settings.MaxDepth, Is.EqualTo(16));
             Assert.That(settings.Indentation, Is.EqualTo(4));
             Assert.That(settings.IndentChar, Is.EqualTo(' '));
@@ -73,7 +73,7 @@ public class JsonSettingsTest : BaseJsonTest
         ParseSettings.Json = new JsonSettings
         {
             Encoding = Encoding.Unicode,
-            Formatting = Formatting.None,
+            Formatting = JsonFormatting.None,
             MaxDepth = 128,
             Indentation = 1,
             IndentChar = '\t',
@@ -86,7 +86,7 @@ public class JsonSettingsTest : BaseJsonTest
         using (Assert.EnterMultipleScope())
         {
             Assert.That(settings.Encoding, Is.EqualTo(Encoding.Unicode));
-            Assert.That(settings.Formatting, Is.EqualTo(Formatting.None));
+            Assert.That(settings.Formatting, Is.EqualTo(JsonFormatting.None));
             Assert.That(settings.MaxDepth, Is.EqualTo(128));
             Assert.That(settings.Indentation, Is.EqualTo(1));
             Assert.That(settings.IndentChar, Is.EqualTo('\t'));
