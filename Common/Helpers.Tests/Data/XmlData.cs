@@ -22,9 +22,9 @@ public class XmlData
             yield return new TestCaseData(new StringReader(StringData.EmptyString))
                 .SetArgDisplayNames("EmptyStringReader");
             yield return new TestCaseData(WhitespaceData.MultipleRegularSpaces)
-                .SetArgDisplayNames("MultipleRegularSpaces");
+                .SetArgDisplayNames("WhitespaceString");
             yield return new TestCaseData(new StringReader(WhitespaceData.MultipleRegularSpaces))
-                .SetArgDisplayNames("MultipleRegularSpacesReader");
+                .SetArgDisplayNames("WhitespaceStringReader");
         }
     }
 
