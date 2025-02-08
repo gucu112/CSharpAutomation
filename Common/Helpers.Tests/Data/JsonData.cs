@@ -66,6 +66,7 @@ public static class JsonData
                 .SetArgDisplayNames("EmptyStringReader");
             yield return new TestCaseData(new MemoryStream(StringData.EmptyString.GetBytes()))
                 .SetArgDisplayNames("EmptyStringStream");
+
             yield return new TestCaseData(WhitespaceData.MultipleRegularSpaces)
                 .SetArgDisplayNames("WhitespaceString");
             yield return new TestCaseData(new StringReader(WhitespaceData.MultipleRegularSpaces))
