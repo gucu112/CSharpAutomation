@@ -15,10 +15,24 @@ public static partial class Parse
     /// <param name="content">The XML content to deserialize.</param>
     /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
     public static TOutput? FromXml<TOutput>(string content)
+        where TOutput : class
     {
-        using var strReader = new StringReader(content);
-        using var xmlReader = new XmlTextReader(strReader);
+        using var stringReader = new StringReader(content);
+        return FromXml<TOutput>(stringReader);
+    }
 
+    /// <summary>
+    /// Deserializes the XML content from a <see cref="TextReader"/> into an object of specific type.
+    /// </summary>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
+    /// <param name="textReader">The <see cref="TextReader"/> containing the XML content to deserialize.</param>
+    /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
+    public static TOutput? FromXml<TOutput>(TextReader textReader)
+        where TOutput : class
+    {
+        ArgumentNullException.ThrowIfNull(textReader, nameof(textReader));
+
+        using var xmlReader = new XmlTextReader(textReader);
         var serializer = new XmlSerializer(typeof(TOutput));
         return (TOutput?)serializer.Deserialize(xmlReader);
     }
