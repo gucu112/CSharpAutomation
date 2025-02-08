@@ -52,7 +52,7 @@ public class SettingsTest(SettingsFixture settings)
         options.Geolocation.Should().BeEquivalentTo(new Geolocation()
         {
             Latitude = 52.2316742f,
-            Longitude = 21.0059872f
+            Longitude = 21.0059872f,
         });
         options.Offline.Should().BeFalse();
         options.Proxy.Should().BeNull();

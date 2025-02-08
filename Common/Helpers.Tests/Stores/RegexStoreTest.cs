@@ -7,9 +7,9 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests.Stores;
 [TestFixture]
 public class RegexStoreTest
 {
-    #region AnyWhitespaceRegex
-
     private static readonly Regex AnyWhitespaceRegex = RegexStore.AnyWhitespaceRegex();
+
+    private static readonly Regex NormalizeSpaceRegex = RegexStore.NormalizeSpaceRegex();
 
     [Test]
     public void AnyWhitespaceRegex_IsInstanceOfRegex()
@@ -37,12 +37,6 @@ public class RegexStoreTest
         Assert.That(input, Does.Not.Match(AnyWhitespaceRegex));
     }
 
-    #endregion
-
-    #region NormalizeSpaceRegex
-
-    private static readonly Regex NormalizeSpaceRegex = RegexStore.NormalizeSpaceRegex();
-
     [Test]
     public void NormalizeSpaceRegex_IsInstanceOfRegex()
     {
@@ -68,6 +62,4 @@ public class RegexStoreTest
     {
         Assert.That(input, Does.Not.Match(NormalizeSpaceRegex));
     }
-
-    #endregion
 }

@@ -1,11 +1,12 @@
-﻿using System.Xml.Linq;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunit.Extensions;
 
 public static class XElementExtensions
 {
-    public static T? Deserialize<T>(this XElement element) where T : new()
+    public static T? Deserialize<T>(this XElement element)
+        where T : new()
     {
         try
         {

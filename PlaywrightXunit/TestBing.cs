@@ -1,10 +1,12 @@
-﻿using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
+using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
+using Gucu112.CSharp.Automation.PlaywrightXunit.Pages;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunit.Tests;
 
 [Trait("Category", "Pages")]
 [Collection(nameof(PlaywrightFixture))]
-public class TestBing(PageBing page) : IClassFixture<PageBing>
+public class TestBing(PageBing page)
+    : IClassFixture<PageBing>
 {
     [Fact]
     public async Task VerifyThatSearchInputIsVisible()

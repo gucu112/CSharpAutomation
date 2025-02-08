@@ -2,11 +2,26 @@ using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel;
 
+/// <summary>
+/// Represents class for discovering traits used for categorizing tests.
+/// </summary>
 public class TraitDiscoverer : ITraitDiscoverer
 {
-    public const string FullTypeName = $"Gucu112.CSharp.Automation.{AssemblyName}.{nameof(TraitDiscoverer)}";
+    /// <summary>
+    /// Represents the assembly name in which the trait discoverer is defined.
+    /// </summary>
     public const string AssemblyName = "PlaywrightXunitParallel";
 
+    /// <summary>
+    /// Represents the full type name of the trait discoverer.
+    /// </summary>
+    public const string FullTypeName = $"Gucu112.CSharp.Automation.{AssemblyName}.{nameof(TraitDiscoverer)}";
+
+    /// <summary>
+    /// Gets the traits from the given attribute information.
+    /// </summary>
+    /// <param name="traitAttribute">The attribute information.</param>
+    /// <returns>The traits as key-value pairs.</returns>
     public IEnumerable<KeyValuePair<string, string>> GetTraits(IAttributeInfo traitAttribute)
     {
         var reflectionInfo = traitAttribute as ReflectionAttributeInfo;

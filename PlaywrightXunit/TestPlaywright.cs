@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
 using Gucu112.CSharp.Automation.PlaywrightXunit.Pages;
 
@@ -12,14 +12,15 @@ public class TestPlaywright(PlaywrightFixture playwright)
     public void VerifyThatPlaywrightInstanceIsInitilized()
     {
         // Arrange
-        var property = playwright.GetType().GetProperty("Instance",
+        var property = playwright.GetType().GetProperty(
+            "Instance",
             BindingFlags.Instance | BindingFlags.NonPublic);
 
         // Act
         var instance = property?.GetGetMethod(nonPublic: true)?.Invoke(playwright, null);
 
         // Assert
-        Assert.IsAssignableFrom<IPlaywright>(instance);
+        Assert.IsType<IPlaywright>(instance, exactMatch: false);
     }
 
     [Fact]
@@ -29,7 +30,7 @@ public class TestPlaywright(PlaywrightFixture playwright)
         var browser = playwright.Browser;
 
         // Assert
-        Assert.IsAssignableFrom<IBrowser>(browser);
+        Assert.IsType<IBrowser>(browser, exactMatch: false);
         Assert.True(browser.IsConnected);
     }
 
@@ -58,7 +59,7 @@ public class TestPlaywright(PlaywrightFixture playwright)
         await page.DisposeAsync();
 
         // Assert
-        Assert.IsAssignableFrom<IBrowserContext>(browserContext);
+        Assert.IsType<IBrowserContext>(browserContext, exactMatch: false);
     }
 
     [Fact]
@@ -73,7 +74,7 @@ public class TestPlaywright(PlaywrightFixture playwright)
         await page.DisposeAsync();
 
         // Assert
-        Assert.IsAssignableFrom<IPage>(pageContext);
+        Assert.IsType<IPage>(pageContext, exactMatch: false);
     }
 
     [Fact]
@@ -97,7 +98,8 @@ public class TestPlaywright(PlaywrightFixture playwright)
         Assert.Contains($"Timeout {settings.GetExpectTimeout()}ms exceeded", exception.Message);
     }
 
-    private class PageBlank(PlaywrightFixture playwright) : PageBase(playwright)
+    private class PageBlank(PlaywrightFixture playwright)
+        : PageBase(playwright)
     {
     }
 }

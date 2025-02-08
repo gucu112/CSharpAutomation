@@ -1,13 +1,17 @@
-﻿using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
+using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunit.Pages;
 
-public abstract class PageBase(PlaywrightFixture playwright) : IAsyncLifetime
+public abstract class PageBase(PlaywrightFixture playwright)
+    : IAsyncLifetime
 {
-    protected Settings Settings { get; init; } = new Settings();
-    protected IBrowser Browser { get; init; } = playwright.Browser;
-    public IBrowserContext BrowserContext { get; private set; } = null!;
     public IPage Context { get; private set; } = null!;
+
+    public IBrowserContext BrowserContext { get; private set; } = null!;
+
+    protected IBrowser Browser { get; init; } = playwright.Browser;
+
+    protected Settings Settings { get; init; } = new Settings();
 
     public async Task InitializeAsync()
     {

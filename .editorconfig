@@ -49,7 +49,7 @@ csharp_prefer_braces = true:warning
 csharp_style_namespace_declarations = file_scoped:error
 csharp_style_prefer_method_group_conversion = false:suggestion
 csharp_style_prefer_top_level_statements = false:suggestion
-csharp_style_prefer_primary_constructors = true:suggestion
+csharp_style_prefer_primary_constructors = true:warning
 
 # Expression-bodied members
 csharp_style_expression_bodied_methods = false:warning
@@ -66,7 +66,7 @@ dotnet_style_operator_placement_when_wrapping = beginning_of_line
 dotnet_style_coalesce_expression = true:warning
 dotnet_style_null_propagation = true:warning
 dotnet_style_prefer_is_null_check_over_reference_equality_method = true:warning
-dotnet_style_prefer_auto_properties = true:silent
+dotnet_style_prefer_auto_properties = true:suggestion
 dotnet_style_object_initializer = true:warning
 dotnet_style_collection_initializer = true:warning
 dotnet_style_prefer_simplified_boolean_expressions = true:warning
@@ -266,3 +266,17 @@ dotnet_naming_style.i_pascal_case.capitalization = pascal_case
 # xUnit
 dotnet_diagnostic.xUnit1004.severity = silent
 dotnet_diagnostic.xUnit1042.severity = silent
+
+# StyleCop
+dotnet_diagnostic.SA1000.severity = none
+dotnet_diagnostic.SA1010.severity = none
+dotnet_diagnostic.SA1101.severity = none
+dotnet_diagnostic.SA1200.severity = none
+dotnet_diagnostic.SA1633.severity = none
+dotnet_diagnostic.SA1642.severity = none
+
+[*.cs]
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = suggestion
+
+[*{Data,Page,Test}.cs]
+dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = none

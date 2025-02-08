@@ -7,7 +7,8 @@ namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Tests;
 
 [Category(TestCategory.Browser)]
 [Category(TestCategory.Google)]
-public class GoogleSearchTest(PlaywrightFixture playwright) : IClassFixture<PlaywrightFixture>, IDisposable
+public class GoogleSearchTest(PlaywrightFixture playwright)
+    : IClassFixture<PlaywrightFixture>, IDisposable
 {
     private readonly GoogleSearchPage page = new(playwright);
 

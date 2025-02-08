@@ -2,18 +2,10 @@
 
   <PropertyGroup>
     <RootNamespace>Gucu112.CSharp.Automation.PlaywrightXunitParallel</RootNamespace>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <PublishRelease>true</PublishRelease>
     <Configurations>ChromiumDebug;ChromiumRelease;FirefoxDebug;FirefoxRelease;WebkitDebug;WebkitRelease</Configurations>
   </PropertyGroup>
-
-  <ItemGroup>
-    <EditorConfigFiles Remove="..\.editorconfig" />
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="xunit.runner.json">
@@ -30,21 +22,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="6.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.*" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
-    <PackageReference Include="Microsoft.Playwright" Version="1.*" />
-    <PackageReference Include="xunit" Version="2.*" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.*">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="coverlet.collector" Version="6.*">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Xunit.SkippableFact" Version="1.*" />
+    <PackageReference Include="coverlet.collector" PrivateAssets="all" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Microsoft.Playwright" />
+    <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
+    <PackageReference Include="Xunit.SkippableFact" />
   </ItemGroup>
 
 </Project>

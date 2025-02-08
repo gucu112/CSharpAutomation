@@ -1,16 +1,22 @@
-﻿using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
-using Gucu112.CSharp.Automation.PlaywrightXunit.Pages;
+using Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
 
-namespace Gucu112.CSharp.Automation.PlaywrightXunit;
+namespace Gucu112.CSharp.Automation.PlaywrightXunit.Pages;
 
 public class PageBing : PageBase, IAsyncLifetime
 {
-    public string BaseUrl { get; private set; }
-
-    public PageBing(PlaywrightFixture fixture) : base(fixture)
+    public PageBing(PlaywrightFixture fixture)
+        : base(fixture)
     {
         BaseUrl = Settings.GetTestParameter("BingBaseURL");
     }
+
+    public string BaseUrl { get; private set; }
+
+    public ILocator AcceptCookiesButton => Context.Locator("button[id=bnp_btn_accept]");
+
+    public ILocator SearchInput => Context.Locator("textarea[id=sb_form_q]");
+
+    public ILocator SearchResult => Context.Locator("li[data-tag] h2>a[href]");
 
     public new async Task InitializeAsync()
     {
@@ -18,8 +24,4 @@ public class PageBing : PageBase, IAsyncLifetime
         await Context.GotoAsync(BaseUrl);
         await AcceptCookiesButton.ClickAsync();
     }
-
-    public ILocator AcceptCookiesButton => Context.Locator("button[id=bnp_btn_accept]");
-    public ILocator SearchInput => Context.Locator("textarea[id=sb_form_q]");
-    public ILocator SearchResult => Context.Locator("li[data-tag] h2>a[href]");
 }

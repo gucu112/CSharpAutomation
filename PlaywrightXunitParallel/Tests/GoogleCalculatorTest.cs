@@ -7,7 +7,8 @@ namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Tests;
 
 [Category(TestCategory.Browser)]
 [Category(TestCategory.Google)]
-public class GoogleCalculatorTest(PlaywrightFixture playwright) : IClassFixture<PlaywrightFixture>, IDisposable
+public class GoogleCalculatorTest(PlaywrightFixture playwright)
+    : IClassFixture<PlaywrightFixture>, IDisposable
 {
     private readonly GoogleCalculatorPage page = new(playwright);
 

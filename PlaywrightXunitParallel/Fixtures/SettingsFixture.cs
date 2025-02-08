@@ -6,12 +6,24 @@ using Microsoft.Extensions.Configuration;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
 
+/// <summary>
+/// Represents a controller that provides configuration settings.
+/// </summary>
 public class SettingsFixture : ISettings
 {
+    private const string ConfigurationPattern = "^(Chromium|Firefox|Webkit)?(Debug|Release)$";
+
     private const string DefaultConfiguration = "Debug";
 
+    /// <summary>
+    /// Represents the configuration object.
+    /// </summary>
     private readonly IConfigurationRoot? appConfig;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SettingsFixture"/> class.
+    /// Reads and builds the configuration object from the <see langword="appConfig.json"/> file.
+    /// </summary>
     public SettingsFixture()
     {
         appConfig = new ConfigurationBuilder()
@@ -19,14 +31,31 @@ public class SettingsFixture : ISettings
             .Build();
     }
 
+    /// <inheritdoc/>
     public string Environment => ExpandEnvironment(appConfig?.GetValue<string>("Environment"));
+
+    /// <inheritdoc/>
     public string RootPath => ExpandRootPath(appConfig?.GetValue<string>("RootPath"));
+
+    /// <inheritdoc/>
     public IList<EntryPoint> EntryPoints => appConfig?.GetSection("EntryPoints").Get<List<EntryPoint>>() ?? [];
+
+    /// <inheritdoc/>
     public string BrowserName => appConfig?.GetValue<string>("BrowserName") ?? GetCurrentBrowserName();
+
+    /// <inheritdoc/>
     public float ExpectTimeout => appConfig?.GetValue<float>("ExpectTimeout") ?? 0.0f;
+
+    /// <inheritdoc/>
     public BrowserNewContextOptions BrowserOptions => appConfig?.GetSection("BrowserOptions").Get<BrowserNewContextOptions>() ?? new();
+
+    /// <inheritdoc/>
     public BrowserTypeLaunchOptions LaunchOptions => appConfig?.GetSection("LaunchOptions").Get<BrowserTypeLaunchOptions>() ?? new();
+
+    /// <inheritdoc/>
     public bool IsVideoEnabled => RecordVideoDir is not null;
+
+    /// <inheritdoc/>
     public string? RecordVideoDir => BrowserOptions.RecordVideoDir;
 
     private static string GetCurrentConfiguration()
@@ -38,8 +67,9 @@ public class SettingsFixture : ISettings
 
     private static string GetCurrentBrowserName()
     {
-        var pattern = "^(Chromium|Firefox|Webkit)(Debug|Release)$";
-        return Regex.Replace(GetCurrentConfiguration(), pattern,
+        return Regex.Replace(
+            GetCurrentConfiguration(),
+            ConfigurationPattern,
             match => match.Groups[1].Value).ToLower();
     }
 
@@ -54,6 +84,9 @@ public class SettingsFixture : ISettings
     }
 }
 
+/// <summary>
+/// Represents a collection definition for the SettingsFixture.
+/// </summary>
 [CollectionDefinition(nameof(SettingsFixture))]
 public class SettingsCollection : ICollectionFixture<SettingsFixture>
 {

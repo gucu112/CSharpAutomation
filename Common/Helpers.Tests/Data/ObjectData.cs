@@ -143,7 +143,7 @@ public class ObjectData
                     ListOfNumbers = [1, 2, 3],
                     DictionaryOfStrings = new()
                     {
-                        { "Empty", string.Empty }
+                        { "Empty", string.Empty },
                     },
                     CurrentYearStart = new DateTime(2025, 1, 1),
                 };
