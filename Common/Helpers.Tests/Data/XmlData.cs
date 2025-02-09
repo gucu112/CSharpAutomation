@@ -5,6 +5,10 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 public class XmlData
 {
+    public const string VoidStringElement = "<string />";
+
+    public const string EmptyStringElement = "<string></string>";
+
     public static readonly string IncorrectDeclarationString = new XDeclaration(string.Empty).ToString()[..13] + ">";
 
     public static readonly string CorrectDeclarationString = new XDeclaration("1.0", Encoding.UTF8).ToString();

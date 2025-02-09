@@ -4,17 +4,32 @@ using Gucu112.CSharp.Automation.Helpers.Parsers;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Json;
 
+/// <summary>
+/// Base class for JSON parsing tests.
+/// </summary>
 [AllureNUnit]
-public class BaseJsonTest
+public class BaseJsonTest : BaseTest
 {
-    private byte[] streamData = [];
-
+    /// <summary>
+    /// Serializes a value of any type to JSON input.
+    /// </summary>
+    /// <typeparam name="T">The type to parse into.</typeparam>
+    /// <param name="input">The input JSON.</param>
+    /// <param name="settings">The JSON settings.</param>
+    /// <returns>The serialized object.</returns>
     protected static T? ParseFromJson<T>(dynamic? input, JsonSettings? settings = null)
         where T : class
     {
         return Parse.FromJson<T>(input, settings);
     }
 
+    /// <summary>
+    /// Deserializes the specified object to JSON string output.
+    /// </summary>
+    /// <typeparam name="T">The type of the object.</typeparam>
+    /// <param name="value">The object to convert.</param>
+    /// <param name="settings">The JSON settings.</param>
+    /// <returns>The JSON representation of the object.</returns>
     protected static string ParseToJson<T>(object? value, JsonSettings? settings = null)
     {
         if (typeof(T) == typeof(Stream))
@@ -31,30 +46,5 @@ public class BaseJsonTest
         }
 
         return Parse.ToJsonString(value, settings);
-    }
-
-    protected Mock<MemoryStream> GetMemoryStreamMock()
-    {
-        var streamMock = new Mock<MemoryStream>() { CallBase = true };
-
-        void StreamWriteCallback(byte[] buffer, int offset, int count)
-        {
-            var bytes = offset > streamData.Length
-                ? streamData.Concat(Enumerable.Repeat<byte>(0, offset - streamData.Length))
-                : streamData[0..offset];
-
-            streamData = bytes.Concat(buffer.Take(count)).ToArray();
-        }
-
-        streamMock.Setup(ms => ms.Write(It.IsAny<byte[]>(), It.IsAny<int>(), It.IsAny<int>()))
-            .Callback(StreamWriteCallback).CallBase();
-
-        return streamMock;
-    }
-
-    protected string GetMemoryStreamData(Encoding? encoding = null)
-    {
-        encoding ??= Encoding.UTF8;
-        return encoding.GetString(streamData, 0, streamData.Length);
     }
 }

@@ -25,22 +25,16 @@ public class ParseToJsonFileTest : BaseJsonTest
         Mock.Setup(fs => fs.WriteStream(It.IsRegex("notExisting")))
             .Throws<FileNotFoundException>().Verifiable();
 
-        ParseSettings.FileSystem = Mock.Object;
-    }
-
-    [SetUp]
-    public void MockMemoryStream()
-    {
-        var streamMock = GetMemoryStreamMock();
-
         Mock.Setup(fs => fs.WriteStream(It.IsRegex("validString")))
-            .Returns(streamMock.Object).Verifiable();
+            .Returns(GetMemoryStreamMock().Object).Verifiable();
 
         Mock.Setup(fs => fs.WriteStream(It.IsRegex("validArray")))
-            .Returns(streamMock.Object).Verifiable();
+            .Returns(GetMemoryStreamMock().Object).Verifiable();
 
         Mock.Setup(fs => fs.WriteStream(It.IsRegex("validObject")))
-            .Returns(streamMock.Object).Verifiable();
+            .Returns(GetMemoryStreamMock().Object).Verifiable();
+
+        ParseSettings.FileSystem = Mock.Object;
     }
 
     [Test]

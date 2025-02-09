@@ -12,85 +12,52 @@ public class ParseToXmlTest
         Assert.Throws<ArgumentNullException>(() => Parse.ToXmlString(null!));
     }
 
-    [Test]
-    public void EmptyValue_ReturnsVoidRootString()
+    [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.EmptyValue))]
+    public string EmptyValue_ReturnsVoidRootString(object value)
     {
-        var text = Parse.ToXmlString(StringData.EmptyString);
-
-        Assert.That(text, Does.StartWith(XmlData.CorrectDeclarationString));
-        Assert.That(text, Does.EndWith("<string />"));
+        return Parse.ToXmlString(value);
     }
 
-    [Test]
-    public void WhitespaceValue_ReturnsEmptyRootString()
+    [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.WhitespaceValue))]
+    public string WhitespaceValue_ReturnsEmptyRootString(object value)
     {
-        var text = Parse.ToXmlString(WhitespaceData.MultipleRegularSpaces);
-
-        Assert.That(text, Does.StartWith(XmlData.CorrectDeclarationString));
-        Assert.That(text, Does.EndWith("<string>   </string>"));
+        return Parse.ToXmlString(value);
     }
 
-    [Test]
-    public void StringValue_ReturnsRootString()
+    [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.StringValue))]
+    public string StringValue_ReturnsRootString(object value)
     {
-        var text = Parse.ToXmlString(StringData.LoremIpsumString);
-
-        Assert.That(text, Does.StartWith(XmlData.CorrectDeclarationString));
-        Assert.That(text, Does.EndWith("<string>Lorem ipsum dolor sit amet</string>"));
+        return Parse.ToXmlString(value);
     }
 
-    [TestCase(true)]
-    [TestCase(false)]
-    public void BooleanValue_ReturnsRootBoolean(bool value)
+    [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.BooleanValue))]
+    public string BooleanValue_ReturnsRootBoolean(object value)
     {
-        var text = Parse.ToXmlString(value);
-
-        Assert.That(text, Does.StartWith(XmlData.CorrectDeclarationString));
-        Assert.That(text, Does.EndWith($"<boolean>{value.ToString().ToLower()}</boolean>"));
+        return Parse.ToXmlString(value);
     }
 
-    [Test]
-    public void EmptyList_ReturnsVoidArray()
+    [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.EmptyList))]
+    public string EmptyList_ReturnsVoidArray(object value)
     {
-        var text = Parse.ToXmlString(new List<double>());
-
-        Assert.That(text, Does.StartWith(XmlData.CorrectDeclarationString));
-        Assert.That(text, Does.EndWith($"<ArrayOfDouble />"));
+        return Parse.ToXmlString(value);
     }
 
-    [Test]
-    public void EmptyObject_ReturnsVoidAnyType()
+    [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.EmptyObject))]
+    public string EmptyObject_ReturnsVoidAnyType(object value)
     {
-        var text = Parse.ToXmlString(new object());
-
-        Assert.That(text, Does.StartWith(XmlData.CorrectDeclarationString));
-        Assert.That(text, Does.EndWith($"<anyType />"));
+        return Parse.ToXmlString(value);
     }
 
-    [Test]
-    public void SimpleList_ReturnsArrayOfInteger()
+    [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.SimpleList))]
+    public string SimpleList_ReturnsArrayOfInteger(object value)
     {
-        List<int> list = [1, 2, 3];
-
-        var text = Parse.ToXmlString(list);
-
-        Assert.That(text, Does.StartWith(XmlData.CorrectDeclarationString));
-        Assert.That(text, Does.Contain("<ArrayOfInt>"));
-        Assert.That(text, Does.Contain("<int>1</int>"));
-        Assert.That(text, Does.Contain("<int>2</int>"));
-        Assert.That(text, Does.Contain("<int>3</int>"));
-        Assert.That(text, Does.EndWith($"</ArrayOfInt>"));
+        return Parse.ToXmlString(value);
     }
 
     [Test]
     public void SimpleDictionary_ThrowsNotSupported()
     {
-        Dictionary<string, int> dictionary = new()
-        {
-            { "First", 1 },
-            { "Second", 2 },
-            { "Third", 3 },
-        };
+        var dictionary = ObjectData.SimpleDictionaryValue;
 
         Assert.Throws<NotSupportedException>(() => Parse.ToXmlString(dictionary));
     }
@@ -98,20 +65,7 @@ public class ParseToXmlTest
     [Test]
     public void SimpleObject_ReturnsXmlDocument()
     {
-        var simpleObject = new XmlData.RootObjectModel
-        {
-            Environment = "Humidity: 69%; Wind: 18 km/h",
-            IsPrimary = true,
-            CapThickness = 0.0005f,
-            GeneticCode = ["AGG", "CUC", "UAA"],
-            ApexStructure = new()
-            {
-                [1] = new object(),
-                [3] = new object(),
-                [5] = new object(),
-            },
-            VegetationPeriodStart = new DateTime(2025, 4, 1),
-        };
+        var simpleObject = ObjectData.SimpleRootObjectValue;
 
         var xmlString = Parse.ToXmlString(simpleObject);
 

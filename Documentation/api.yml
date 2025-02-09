@@ -3,7 +3,7 @@ apiRules:
     uidRegex: ^Gucu112\.CSharp\.Automation\.PlaywrightXunit\.
     type: Namespace
 - include:
-    uidRegex: \.BasePage$
+    uidRegex: \.Base.*(Data|Page|Test)(Async)?$
     type: Type
 - exclude:
     uidRegex: (Data|Page|Test)$
