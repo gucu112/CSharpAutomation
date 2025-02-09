@@ -32,6 +32,8 @@ public class ParseFromXmlTest : BaseXmlTest
     [TestCaseSource(typeof(XmlData), nameof(XmlData.IncorrectDeclaration))]
     public void IncorrectDeclaration_ThrowsUnexpectedToken<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         var exception = Assert.Catch(() => ParseFromXml<object>(content)).InnerException;
 
         using (Assert.EnterMultipleScope())
@@ -44,6 +46,8 @@ public class ParseFromXmlTest : BaseXmlTest
     [TestCaseSource(typeof(XmlData), nameof(XmlData.CorrectDeclaration))]
     public void CorrectDeclarationAlone_ThrowsRootElementMissing<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         var exception = Assert.Catch(() => ParseFromXml<object>(content)).InnerException;
 
         using (Assert.EnterMultipleScope())
@@ -56,6 +60,8 @@ public class ParseFromXmlTest : BaseXmlTest
     [TestCaseSource(typeof(XmlData), nameof(XmlData.EmptyRootElement))]
     public void EmptyRootElement_ThrowsRootElementNotExpected<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         var exception = Assert.Catch(() => ParseFromXml<object>(content)).InnerException;
 
         using (Assert.EnterMultipleScope())
@@ -68,6 +74,8 @@ public class ParseFromXmlTest : BaseXmlTest
     [TestCaseSource(typeof(XmlData), nameof(XmlData.EmptyRootElement))]
     public void EmptyRootElement_ReturnEmptyObject<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         var customObject = ParseFromXml<XmlData.RootObjectModel>(content);
 
         using (Assert.EnterMultipleScope())
@@ -85,6 +93,8 @@ public class ParseFromXmlTest : BaseXmlTest
     [TestCaseSource(typeof(XmlData), nameof(XmlData.RootObject))]
     public void CorrectXmlObjects_ReturnObject<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         var customObject = ParseFromXml<XmlData.RootObjectModel>(content);
 
         using (Assert.EnterMultipleScope())
