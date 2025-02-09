@@ -82,14 +82,15 @@ public class ParseToJsonFileTest : BaseJsonTest
     }
 
     [Test]
-    public void CorrectPath_WritesHelloString()
+    public void CorrectPath_WritesString()
     {
         var path = "validString.json";
-        Parse.ToJsonFile(StringData.HelloString, path);
+        Parse.ToJsonFile(StringData.EmptyString, path);
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
         var data = GetMemoryStreamData().RemoveSpace();
-        Assert.That(data, Is.EqualTo(JsonData.HelloJsonString));
+        TestContext.Out.WriteLine(data);
+        Assert.That(data, Is.EqualTo(JsonData.EmptyJsonString));
     }
 
     [Test]
@@ -100,6 +101,7 @@ public class ParseToJsonFileTest : BaseJsonTest
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
         var data = GetMemoryStreamData().RemoveSpace();
+        TestContext.Out.WriteLine(data);
         Assert.That(data, Is.EqualTo(JsonData.ValidArrayString));
     }
 
@@ -111,6 +113,7 @@ public class ParseToJsonFileTest : BaseJsonTest
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
         var data = GetMemoryStreamData().RemoveSpace();
+        TestContext.Out.WriteLine(data);
         Assert.That(data, Is.EqualTo(JsonData.EmptyObjectString));
     }
 }

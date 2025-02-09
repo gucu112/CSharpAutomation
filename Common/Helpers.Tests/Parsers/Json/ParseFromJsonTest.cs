@@ -26,18 +26,24 @@ public class ParseFromJsonTest : BaseJsonTest
     [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyArray))]
     public void EmptyArray_ReturnsEmpty<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         Assert.That(ParseFromJson<object>(content), Is.Empty.And.TypeOf<JArray>());
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.EmptyObject))]
     public void EmptyObject_ReturnsEmpty<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         Assert.That(ParseFromJson<object>(content), Is.Empty.And.TypeOf<JObject>());
     }
 
     [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleList))]
     public void List_ReturnsExactlyThreeItems<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         var jsonList = ParseFromJson<List<int>>(content);
 
         Assert.That(jsonList, Has.Exactly(3).Items);
@@ -47,6 +53,8 @@ public class ParseFromJsonTest : BaseJsonTest
     [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleDictionary))]
     public void Dictionary_ReturnsExactlyThreeItems<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         var jsonDictionary = ParseFromJson<Dictionary<string, int>>(content);
 
         Assert.That(jsonDictionary, Has.Exactly(3).Items);
@@ -56,6 +64,8 @@ public class ParseFromJsonTest : BaseJsonTest
     [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleObject))]
     public void Object_ReturnsItemsUsingJsonType<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         var jsonObject = ParseFromJson<JObject>(content);
 
         Assert.That(jsonObject, Has.Exactly(4).Items);
@@ -102,6 +112,8 @@ public class ParseFromJsonTest : BaseJsonTest
     [TestCaseSource(typeof(JsonData), nameof(JsonData.SimpleObject))]
     public void Object_ReturnsItemsUsingCustomType<T>(T content)
     {
+        TestContext.Out.WriteLine(content);
+
         var customObject = ParseFromJson<JsonData.SimpleObjectModel>(content);
 
         using (Assert.EnterMultipleScope())
