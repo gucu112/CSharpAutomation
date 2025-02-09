@@ -42,13 +42,13 @@ public class JsonParse : IJsonParse
     }
 
     /// <inheritdoc/>
-    public TWritter ToJsonWriter<TWritter>(object? value, JsonSettings? settings = null, TWritter? textWriter = null)
-        where TWritter : TextWriter
+    public TWriter ToJsonWriter<TWriter>(object? value, JsonSettings? settings = null, TWriter? textWriter = null)
+        where TWriter : TextWriter
     {
         settings ??= ParseSettings.Json;
         ArgumentNullException.ThrowIfNull(value, nameof(value));
 
-        textWriter ??= (TWritter)(TextWriter)new StringWriter(settings.Encoding);
+        textWriter ??= (TWriter)(TextWriter)new StringWriter(settings.Encoding);
         using (var jsonWriter = settings.CreateWriter(textWriter))
         {
             var serializer = JsonSerializer.Create(settings);

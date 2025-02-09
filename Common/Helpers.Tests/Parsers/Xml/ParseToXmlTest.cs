@@ -4,7 +4,7 @@ using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Xml;
 
 [TestFixture]
-public class ParseToXmlTest
+public class ParseToXmlTest : BaseXmlTest
 {
     [Test]
     public void ThrowsOnNull()
@@ -13,45 +13,45 @@ public class ParseToXmlTest
     }
 
     [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.EmptyValue))]
-    public string EmptyValue_ReturnsVoidRootString(object value)
+    public string EmptyValue_ReturnsVoidRootString<T>(object value)
     {
-        return Parse.ToXmlString(value);
+        return ParseToXml<T>(value);
     }
 
     [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.WhitespaceValue))]
-    public string WhitespaceValue_ReturnsEmptyRootString(object value)
+    public string WhitespaceValue_ReturnsEmptyRootString<T>(object value)
     {
-        return Parse.ToXmlString(value);
+        return ParseToXml<T>(value);
     }
 
     [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.StringValue))]
-    public string StringValue_ReturnsRootString(object value)
+    public string StringValue_ReturnsRootString<T>(object value)
     {
-        return Parse.ToXmlString(value);
+        return ParseToXml<T>(value);
     }
 
     [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.BooleanValue))]
-    public string BooleanValue_ReturnsRootBoolean(object value)
+    public string BooleanValue_ReturnsRootBoolean<T>(object value)
     {
-        return Parse.ToXmlString(value);
+        return ParseToXml<T>(value);
     }
 
     [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.EmptyList))]
-    public string EmptyList_ReturnsVoidArray(object value)
+    public string EmptyList_ReturnsVoidArray<T>(object value)
     {
-        return Parse.ToXmlString(value);
+        return ParseToXml<T>(value);
     }
 
     [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.EmptyObject))]
-    public string EmptyObject_ReturnsVoidAnyType(object value)
+    public string EmptyObject_ReturnsVoidAnyType<T>(object value)
     {
-        return Parse.ToXmlString(value);
+        return ParseToXml<T>(value);
     }
 
     [TestCaseSource(typeof(ObjectToXmlData), nameof(ObjectToXmlData.SimpleList))]
-    public string SimpleList_ReturnsArrayOfInteger(object value)
+    public string SimpleList_ReturnsArrayOfInteger<T>(object value)
     {
-        return Parse.ToXmlString(value);
+        return ParseToXml<T>(value);
     }
 
     [Test]
@@ -62,22 +62,26 @@ public class ParseToXmlTest
         Assert.Throws<NotSupportedException>(() => Parse.ToXmlString(dictionary));
     }
 
-    [Test]
-    public void SimpleObject_ReturnsXmlDocument()
+    [TestCase(TypeArgs = [typeof(string)], TestName = nameof(SimpleObject_ReturnsXmlDocument) + "UsingString")]
+    [TestCase(TypeArgs = [typeof(TextWriter)], TestName = nameof(SimpleObject_ReturnsXmlDocument) + "UsingWriter")]
+    public void SimpleObject_ReturnsXmlDocument<T>()
     {
         var simpleObject = ObjectData.SimpleRootObjectValue;
 
-        var xmlString = Parse.ToXmlString(simpleObject);
+        var xmlString = ParseToXml<T>(simpleObject);
 
-        Assert.That(xmlString, Does.StartWith(XmlData.CorrectDeclarationString));
-        Assert.That(xmlString, Does.Contain(@"<RootElement IsPrimary=""true"">"));
-        Assert.That(xmlString, Does.Match("<Environment>Humidity.+ Wind.+</Environment>"));
-        Assert.That(xmlString, Does.Contain("<CapThickness>0.0005</CapThickness>"));
-        Assert.That(xmlString, Does.Contain("<GeneticCode>"));
-        Assert.That(xmlString, Does.Contain("<Codon>AGG</Codon><Codon>CUC</Codon>"));
-        Assert.That(xmlString, Does.Contain("<Codon>UAA</Codon>"));
-        Assert.That(xmlString, Does.Contain("</GeneticCode>"));
-        Assert.That(xmlString, Does.Match(@"<Vegetation\w+>2025-04.+</Vegetation\w+>"));
-        Assert.That(xmlString, Does.EndWith("</RootElement>"));
+        using (Assert.EnterMultipleScope())
+        {
+            Assert.That(xmlString, Does.StartWith(XmlData.CorrectDeclarationString));
+            Assert.That(xmlString, Does.Contain(@"<RootElement IsPrimary=""true"">"));
+            Assert.That(xmlString, Does.Match("<Environment>Humidity.+ Wind.+</Environment>"));
+            Assert.That(xmlString, Does.Contain("<CapThickness>0.0005</CapThickness>"));
+            Assert.That(xmlString, Does.Contain("<GeneticCode>"));
+            Assert.That(xmlString, Does.Contain("<Codon>AGG</Codon><Codon>CUC</Codon>"));
+            Assert.That(xmlString, Does.Contain("<Codon>UAA</Codon>"));
+            Assert.That(xmlString, Does.Contain("</GeneticCode>"));
+            Assert.That(xmlString, Does.Match(@"<Vegetation\w+>2025-04.+</Vegetation\w+>"));
+            Assert.That(xmlString, Does.EndWith("</RootElement>"));
+        }
     }
 }

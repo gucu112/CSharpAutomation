@@ -52,13 +52,13 @@ public interface IJsonParse
     /// <summary>
     /// Serializes an object into a <see cref="TextWriter"/> using JSON format.
     /// </summary>
-    /// <typeparam name="TWritter">The type of the <see cref="TextWriter"/> to use.</typeparam>
+    /// <typeparam name="TWriter">The type of the <see cref="TextWriter"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
     /// <param name="settings">The JSON settings to use for serialization.</param>
     /// <param name="textWriter">The <see cref="TextWriter"/> to write the JSON content to.</param>
-    /// <returns>The <see cref="TextWriter"/> containing the serialized JSON content.</returns>
-    TWritter ToJsonWriter<TWritter>(object? value, JsonSettings? settings = null, TWritter? textWriter = null)
-        where TWritter : TextWriter;
+    /// <returns>The <typeparamref name="TWriter"/> containing the serialized JSON string.</returns>
+    TWriter ToJsonWriter<TWriter>(object? value, JsonSettings? settings = null, TWriter? textWriter = null)
+        where TWriter : TextWriter;
 
     /// <summary>
     /// Serializes an object into a <see cref="Stream"/> using JSON format.

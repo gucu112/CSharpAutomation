@@ -75,11 +75,22 @@ public static partial class Parse
     /// <returns>The XML string representation of the object.</returns>
     public static string ToXmlString(object? value)
     {
+        return ToXmlWriter<StringWriter>(value).GetStringBuilder().ToString();
+    }
+
+    /// <summary>
+    /// Serializes an object into a <see cref="TextWriter"/> using XML format.
+    /// </summary>
+    /// <typeparam name="TWriter">The type of the <see cref="TextWriter"/> to use.</typeparam>
+    /// <param name="value">The object to serialize.</param>
+    /// <returns>The <typeparamref name="TWriter"/> containing the serialized XML string.</returns>
+    public static TWriter ToXmlWriter<TWriter>(object? value)
+        where TWriter : TextWriter
+    {
         ArgumentNullException.ThrowIfNull(value, nameof(value));
 
-        var builder = new StringBuilder();
-        using (var strWriter = new StringWriter(builder))
-        using (var xmlWriter = XmlWriter.Create(strWriter))
+        var textWriter = (TWriter)(TextWriter)new StringWriter();
+        using (var xmlWriter = XmlWriter.Create(textWriter))
         {
             var namespaces = new XmlSerializerNamespaces();
             namespaces.Add(string.Empty, string.Empty);
@@ -87,6 +98,6 @@ public static partial class Parse
             serializer.Serialize(xmlWriter, value, namespaces);
         }
 
-        return builder.ToString();
+        return textWriter;
     }
 }
