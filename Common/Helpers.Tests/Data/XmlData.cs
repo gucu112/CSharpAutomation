@@ -7,11 +7,11 @@ public class XmlData
 {
     public static readonly string IncorrectDeclarationString = new XDeclaration(string.Empty).ToString()[..13] + ">";
 
-    public static readonly string CorrectDeclarationString = new XDeclaration("1.0").ToString();
+    public static readonly string CorrectDeclarationString = new XDeclaration("1.0", Encoding.UTF8).ToString();
 
-    public static readonly string VoidRootElementString = new XElement("root").ToString();
+    public static readonly string VoidRootElementString = new XElement("Root").ToString();
 
-    public static readonly string EmptyRootElementString = new XElement("root", string.Empty).ToString();
+    public static readonly string EmptyRootElementString = new XElement("Root", string.Empty).ToString();
 
     public static readonly string RootObjectDocumentString = GetXmlDocumentString();
 
@@ -138,30 +138,36 @@ public class XmlData
                 "GeneticCode",
                 new List<XElement>
                 {
-                    new("codon", "GUC"),
-                    new("codon", "CAA"),
-                    new("codon", "AUG"),
-                    new("codon", "UGA"),
+                    new("Codon", "GUC"),
+                    new("Codon", "CAA"),
+                    new("Codon", "AUG"),
+                    new("Codon", "UGA"),
                 }),
             new XElement("VegetationPeriodStart", new DateTime(2025, 4, 1))
         ];
 
         return new XDeclaration("1.0", Encoding.UTF8).ToString() + '\n'
-            + new XDocument(new XElement("root", objects)).ToString();
+            + new XDocument(new XElement("RootElement", objects)).ToString();
     }
 
-    [XmlType("root")]
+    [XmlType("Root")]
+    public class RootOnlyModel
+    {
+        public object? RootObject { get; init; }
+    }
+
+    [XmlRoot("RootElement")]
     public class RootObjectModel
     {
         public string Environment { get; init; } = null!;
 
-        [XmlAttribute(nameof(IsPrimary))]
+        [XmlAttribute("IsPrimary")]
         public bool IsPrimary { get; init; }
 
         public float CapThickness { get; init; }
 
-        [XmlArray(nameof(GeneticCode))]
-        [XmlArrayItem("codon")]
+        [XmlArray("GeneticCode")]
+        [XmlArrayItem("Codon")]
         public List<string> GeneticCode { get; init; } = [];
 
         [XmlIgnore]

@@ -54,8 +54,8 @@ public class ParseToJsonTest : BaseJsonTest
         return ParseToJson<T>(value);
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyArray))]
-    public string EmptyArray_ReturnsEmptyJsonArray<T>(object value)
+    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyList))]
+    public string EmptyList_ReturnsEmptyJsonArray<T>(object value)
     {
         return ParseToJson<T>(value).NormalizeSpace();
     }

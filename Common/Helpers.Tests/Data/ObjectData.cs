@@ -63,7 +63,7 @@ public class ObjectData
         }
     }
 
-    public static IEnumerable EmptyArray
+    public static IEnumerable EmptyList
     {
         get
         {

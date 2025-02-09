@@ -5,6 +5,7 @@ using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Xml;
 
+[TestFixture]
 public class ParseFromXmlFileTest
 {
     private static readonly Mock<IFileSystem> Mock = new();
@@ -88,7 +89,7 @@ public class ParseFromXmlFileTest
 
         TestContext.Out.WriteLine(xmlElement);
 
-        Assert.That(xmlElement?.Name, Has.Property("LocalName").EqualTo("root"));
+        Assert.That(xmlElement?.Name, Has.Property("LocalName").EqualTo("Root"));
     }
 
     [Test]

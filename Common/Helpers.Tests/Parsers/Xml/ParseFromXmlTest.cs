@@ -53,7 +53,7 @@ public class ParseFromXmlTest : BaseXmlTest
         using (Assert.EnterMultipleScope())
         {
             Assert.That(exception, Is.TypeOf<XmlException>());
-            Assert.That(exception?.Message, Does.StartWith("root element is missing").IgnoreCase);
+            Assert.That(exception?.Message, Does.StartWith("Root element is missing"));
         }
     }
 
@@ -67,7 +67,7 @@ public class ParseFromXmlTest : BaseXmlTest
         using (Assert.EnterMultipleScope())
         {
             Assert.That(exception, Is.TypeOf<InvalidOperationException>());
-            Assert.That(exception?.Message, Does.Match("root .+ not expected"));
+            Assert.That(exception?.Message, Does.Match("Root .+ not expected"));
         }
     }
 
@@ -76,18 +76,10 @@ public class ParseFromXmlTest : BaseXmlTest
     {
         TestContext.Out.WriteLine(content);
 
-        var customObject = ParseFromXml<XmlData.RootObjectModel>(content);
+        var customObject = ParseFromXml<XmlData.RootOnlyModel>(content);
 
-        using (Assert.EnterMultipleScope())
-        {
-            Assert.That(customObject, Is.Not.Null);
-            Assert.That(customObject?.Environment, Is.Null);
-            Assert.That(customObject?.IsPrimary, Is.False);
-            Assert.That(customObject?.CapThickness, Is.EqualTo(0));
-            Assert.That(customObject?.GeneticCode, Is.Empty);
-            Assert.That(customObject?.ApexStructure, Is.Null);
-            Assert.That(customObject?.VegetationPeriodStart, Is.EqualTo(DateTime.MinValue));
-        }
+        Assert.That(customObject, Is.Not.Null);
+        Assert.That(customObject?.RootObject, Is.Null);
     }
 
     [TestCaseSource(typeof(XmlData), nameof(XmlData.RootObject))]

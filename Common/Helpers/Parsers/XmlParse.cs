@@ -67,4 +67,26 @@ public static partial class Parse
         using var fileStream = FileSystem.ReadStream(path);
         return FromXml<TOutput>(fileStream);
     }
+
+    /// <summary>
+    /// Serializes an object into a XML string.
+    /// </summary>
+    /// <param name="value">The object to serialize.</param>
+    /// <returns>The XML string representation of the object.</returns>
+    public static string ToXmlString(object? value)
+    {
+        ArgumentNullException.ThrowIfNull(value, nameof(value));
+
+        var builder = new StringBuilder();
+        using (var strWriter = new StringWriter(builder))
+        using (var xmlWriter = XmlWriter.Create(strWriter))
+        {
+            var namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(string.Empty, string.Empty);
+            var serializer = new XmlSerializer(value.GetType());
+            serializer.Serialize(xmlWriter, value, namespaces);
+        }
+
+        return builder.ToString();
+    }
 }
