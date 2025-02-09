@@ -74,7 +74,7 @@ public class ParseFromJsonFileTest : BaseJsonTest
     [Test]
     public void ThrowsOnInvalidSyntax()
     {
-        Assert.Throws<JsonReaderException>(() => Parse.FromJsonFile<JValue>("notValid.json"));
+        Assert.Throws<JsonReaderException>(() => Parse.FromJsonFile<JContainer>("notValid.json"));
     }
 
     [Test]

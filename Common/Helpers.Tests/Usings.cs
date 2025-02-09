@@ -7,3 +7,4 @@ global using Newtonsoft.Json;
 global using Newtonsoft.Json.Linq;
 global using JsonFormatting = Newtonsoft.Json.Formatting;
 global using StringWriter = Gucu112.CSharp.Automation.Helpers.Models.StringWriter;
+global using XDeclaration = Gucu112.CSharp.Automation.Helpers.Models.XDeclaration;

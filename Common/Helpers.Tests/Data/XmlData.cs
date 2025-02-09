@@ -5,13 +5,15 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 public class XmlData
 {
-    public static readonly string IncorrectDeclarationString = GetXmlDeclarationString(string.Empty)[..13] + ">";
+    public static readonly string IncorrectDeclarationString = new XDeclaration(string.Empty).ToString()[..13] + ">";
 
-    public static readonly string CorrectDeclarationString = GetXmlDeclarationString("1.0", Encoding.UTF8);
+    public static readonly string CorrectDeclarationString = new XDeclaration("1.0").ToString();
 
     public static readonly string VoidRootElementString = new XElement("root").ToString();
 
     public static readonly string EmptyRootElementString = new XElement("root", string.Empty).ToString();
+
+    public static readonly string RootObjectDocumentString = GetXmlDocumentString();
 
     public static IEnumerable EmptyContent
     {
@@ -37,11 +39,11 @@ public class XmlData
     {
         get
         {
-            yield return new TestCaseData(GetXmlDeclarationString())
+            yield return new TestCaseData(new XDeclaration().ToString())
                 .SetArgDisplayNames("EmptyDeclaration");
-            yield return new TestCaseData(new StringReader(GetXmlDeclarationString()))
+            yield return new TestCaseData(new StringReader(new XDeclaration().ToString()))
                 .SetArgDisplayNames("EmptyDeclarationReader");
-            yield return new TestCaseData(new MemoryStream(GetXmlDeclarationString().GetBytes()))
+            yield return new TestCaseData(new MemoryStream(new XDeclaration().ToString().GetBytes()))
                 .SetArgDisplayNames("EmptyDeclarationStream");
 
             yield return new TestCaseData(IncorrectDeclarationString)
@@ -57,11 +59,11 @@ public class XmlData
     {
         get
         {
-            yield return new TestCaseData(GetXmlDeclarationString("1.0"))
+            yield return new TestCaseData(new XDeclaration("1.0").ToString())
                 .SetArgDisplayNames("CorrectDeclarationVersion");
-            yield return new TestCaseData(new StringReader(GetXmlDeclarationString("1.0")))
+            yield return new TestCaseData(new StringReader(new XDeclaration("1.0").ToString()))
                 .SetArgDisplayNames("CorrectDeclarationVersionReader");
-            yield return new TestCaseData(new MemoryStream(GetXmlDeclarationString("1.0").GetBytes()))
+            yield return new TestCaseData(new MemoryStream(new XDeclaration("1.0").ToString().GetBytes()))
                 .SetArgDisplayNames("CorrectDeclarationVersionStream");
 
             yield return new TestCaseData(CorrectDeclarationString)
@@ -71,11 +73,11 @@ public class XmlData
             yield return new TestCaseData(new MemoryStream(CorrectDeclarationString.GetBytes()))
                 .SetArgDisplayNames("CorrectDeclarationEncodingStream");
 
-            yield return new TestCaseData(GetXmlDeclarationString("1.0", Encoding.UTF8, true))
+            yield return new TestCaseData(new XDeclaration("1.0", Encoding.UTF8, true).ToString())
                 .SetArgDisplayNames("CorrectDeclarationStandalone");
-            yield return new TestCaseData(new StringReader(GetXmlDeclarationString("1.0", Encoding.UTF8, true)))
+            yield return new TestCaseData(new StringReader(new XDeclaration("1.0", Encoding.UTF8, true).ToString()))
                 .SetArgDisplayNames("CorrectDeclarationStandaloneReader");
-            yield return new TestCaseData(new MemoryStream(GetXmlDeclarationString("1.0", Encoding.UTF8, true).GetBytes()))
+            yield return new TestCaseData(new MemoryStream(new XDeclaration("1.0", Encoding.UTF8, true).ToString().GetBytes()))
                 .SetArgDisplayNames("CorrectDeclarationStandaloneStream");
         }
     }
@@ -118,18 +120,13 @@ public class XmlData
     {
         get
         {
-            yield return new TestCaseData(GetXmlDocumentString())
+            yield return new TestCaseData(RootObjectDocumentString)
                 .SetArgDisplayNames("RootObjectModel");
-            yield return new TestCaseData(new StringReader(GetXmlDocumentString()))
+            yield return new TestCaseData(new StringReader(RootObjectDocumentString))
                 .SetArgDisplayNames("RootObjectModelReader");
-            yield return new TestCaseData(new MemoryStream(GetXmlDocumentString().GetBytes()))
+            yield return new TestCaseData(new MemoryStream(RootObjectDocumentString.GetBytes()))
                 .SetArgDisplayNames("RootObjectModelStream");
         }
-    }
-
-    private static string GetXmlDeclarationString(string? version = null, Encoding? encoding = null, bool? standalone = null)
-    {
-        return new XDeclaration(version, encoding?.WebName, standalone.ToLocalizedString()?.ToLower()).ToString();
     }
 
     private static string GetXmlDocumentString()
@@ -149,7 +146,8 @@ public class XmlData
             new XElement("VegetationPeriodStart", new DateTime(2025, 4, 1))
         ];
 
-        return new XDocument(new XElement("root", objects)).ToString();
+        return new XDeclaration("1.0", Encoding.UTF8).ToString() + '\n'
+            + new XDocument(new XElement("root", objects)).ToString();
     }
 
     [XmlType("root")]
