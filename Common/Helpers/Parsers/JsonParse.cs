@@ -83,7 +83,8 @@ public static partial class Parse
     /// <typeparam name="TWriter">The type of the <see cref="TextWriter"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
     /// <param name="settings">The JSON settings to use for serialization.</param>
-    /// <param name="textWriter">The <typeparamref name="TWriter"/> to write the JSON content to.</param>
+    /// <param name="textWriter">The <typeparamref name="TWriter"/> to write the JSON content to.
+    /// If null, <see cref="StringWriter"/> will be used.</param>
     /// <returns>The <typeparamref name="TWriter"/> containing the serialized JSON string.</returns>
     public static TWriter ToJsonWriter<TWriter>(object? value, JsonSettings? settings = null, TWriter? textWriter = null)
         where TWriter : TextWriter
@@ -107,8 +108,9 @@ public static partial class Parse
     /// <typeparam name="TStream">The type of the <see cref="Stream"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
     /// <param name="settings">The JSON settings to use for serialization.</param>
-    /// <param name="stream">The <see cref="Stream"/> to write the JSON content to.</param>
-    /// <returns>The <see cref="Stream"/> containing the serialized JSON content.</returns>
+    /// <param name="stream">The <typeparamref name="TStream"/> to write the JSON content to.
+    /// If null, <see cref="MemoryStream"/> will be used.</param>
+    /// <returns>The <typeparamref name="TStream"/> containing the serialized JSON content.</returns>
     public static TStream ToJsonStream<TStream>(object? value, JsonSettings? settings = null, TStream? stream = null)
         where TStream : Stream
     {
