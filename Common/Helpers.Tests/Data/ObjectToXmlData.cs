@@ -10,6 +10,7 @@ public class ObjectToXmlData : BaseData
             var output = XmlData.CorrectDeclarationString + XmlData.VoidStringElement;
 
             yield return Create<string>(input, output).SetArgDisplayNames("EmptyValueToXmlString");
+            yield return Create<TextWriter>(input, output).SetArgDisplayNames("EmptyValueWriterToXmlString");
         }
     }
 
@@ -22,6 +23,7 @@ public class ObjectToXmlData : BaseData
                 .Replace("><", $">{WhitespaceData.MultipleRegularSpaces}<");
 
             yield return Create<string>(input, output).SetArgDisplayNames("WhitespaceValueToXmlString");
+            yield return Create<TextWriter>(input, output).SetArgDisplayNames("WhitespaceValueWriterToXmlString");
         }
     }
 
@@ -34,6 +36,7 @@ public class ObjectToXmlData : BaseData
                 .Replace("><", $">{StringData.LoremIpsumString}<");
 
             yield return Create<string>(input, output).SetArgDisplayNames("StringValueToXmlString");
+            yield return Create<TextWriter>(input, output).SetArgDisplayNames("StringValueWriterToXmlString");
         }
     }
 
@@ -46,6 +49,7 @@ public class ObjectToXmlData : BaseData
 
             yield return Create<string>(true, trueValueString).SetArgDisplayNames("TrueBooleanToXmlString");
             yield return Create<string>(false, falseValueString).SetArgDisplayNames("FalseBooleanToXmlString");
+            yield return Create<TextWriter>(true, trueValueString).SetArgDisplayNames("TrueBooleanWriterToXmlString");
         }
     }
 
@@ -57,6 +61,7 @@ public class ObjectToXmlData : BaseData
             var output = XmlData.CorrectDeclarationString + "<ArrayOfDouble />";
 
             yield return Create<string>(input, output).SetArgDisplayNames("EmptyArrayOfDoubleToXmlString");
+            yield return Create<TextWriter>(input, output).SetArgDisplayNames("EmptyArrayOfDoubleWriterToXmlString");
         }
     }
 
@@ -68,6 +73,7 @@ public class ObjectToXmlData : BaseData
             var output = XmlData.CorrectDeclarationString + XmlData.VoidRootElementString;
 
             yield return Create<string>(input, output).SetArgDisplayNames("EmptyRootOnlyObjectToXmlString");
+            yield return Create<TextWriter>(input, output).SetArgDisplayNames("EmptyRootOnlyObjectWriterToXmlString");
         }
     }
 
@@ -80,6 +86,7 @@ public class ObjectToXmlData : BaseData
                 + "<int>5</int><int>4</int><int>3</int>" + "</ArrayOfInt>";
 
             yield return Create<string>(input, output).SetArgDisplayNames("ArrayOfIntToXmlString");
+            yield return Create<TextWriter>(input, output).SetArgDisplayNames("ArrayOfIntWriterToXmlString");
         }
     }
 }
