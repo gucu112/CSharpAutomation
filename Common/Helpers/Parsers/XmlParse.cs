@@ -83,13 +83,14 @@ public static partial class Parse
     /// </summary>
     /// <typeparam name="TWriter">The type of the <see cref="TextWriter"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
+    /// <param name="textWriter">The <typeparamref name="TWriter"/> to write the JSON content to.</param>
     /// <returns>The <typeparamref name="TWriter"/> containing the serialized XML string.</returns>
-    public static TWriter ToXmlWriter<TWriter>(object? value)
+    public static TWriter ToXmlWriter<TWriter>(object? value, TWriter? textWriter = null)
         where TWriter : TextWriter
     {
         ArgumentNullException.ThrowIfNull(value, nameof(value));
 
-        var textWriter = (TWriter)(TextWriter)new StringWriter();
+        textWriter ??= (TWriter)(TextWriter)new StringWriter();
         using (var xmlWriter = XmlWriter.Create(textWriter))
         {
             var namespaces = new XmlSerializerNamespaces();
@@ -99,5 +100,19 @@ public static partial class Parse
         }
 
         return textWriter;
+    }
+
+    /// <summary>
+    /// Serializes an object into a <see cref="Stream"/> using XML format.
+    /// </summary>
+    /// <typeparam name="TStream">The type of the <see cref="Stream"/> to use.</typeparam>
+    /// <param name="value">The object to serialize.</param>
+    /// <returns>The <typeparamref name="TStream"/> containing the serialized XML data.</returns>
+    public static TStream ToXmlStream<TStream>(object? value)
+        where TStream : Stream
+    {
+        var stream = new MemoryStream();
+        var streamWriter = new StreamWriter(stream, leaveOpen: true);
+        return (TStream)ToXmlWriter(value, streamWriter).BaseStream;
     }
 }

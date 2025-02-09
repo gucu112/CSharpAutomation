@@ -64,6 +64,7 @@ public class ParseToXmlTest : BaseXmlTest
 
     [TestCase(TypeArgs = [typeof(string)], TestName = nameof(SimpleObject_ReturnsXmlDocument) + "UsingString")]
     [TestCase(TypeArgs = [typeof(TextWriter)], TestName = nameof(SimpleObject_ReturnsXmlDocument) + "UsingWriter")]
+    [TestCase(TypeArgs = [typeof(Stream)], TestName = nameof(SimpleObject_ReturnsXmlDocument) + "UsingStream")]
     public void SimpleObject_ReturnsXmlDocument<T>()
     {
         var simpleObject = ObjectData.SimpleRootObjectValue;
