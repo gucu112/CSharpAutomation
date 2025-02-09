@@ -83,7 +83,8 @@ public static partial class Parse
     /// </summary>
     /// <typeparam name="TWriter">The type of the <see cref="TextWriter"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
-    /// <param name="textWriter">The <typeparamref name="TWriter"/> to write the JSON content to.</param>
+    /// <param name="textWriter">The <typeparamref name="TWriter"/> to write the JSON content to.
+    /// If null, <see cref="StringWriter"/> will be used.</param>
     /// <returns>The <typeparamref name="TWriter"/> containing the serialized XML string.</returns>
     public static TWriter ToXmlWriter<TWriter>(object? value, TWriter? textWriter = null)
         where TWriter : TextWriter
@@ -107,12 +108,26 @@ public static partial class Parse
     /// </summary>
     /// <typeparam name="TStream">The type of the <see cref="Stream"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
+    /// <param name="stream">The <typeparamref name="TStream"/> to write the XML content to.
+    /// If null, <see cref="MemoryStream"/> will be used.</param>
     /// <returns>The <typeparamref name="TStream"/> containing the serialized XML data.</returns>
-    public static TStream ToXmlStream<TStream>(object? value)
+    public static TStream ToXmlStream<TStream>(object? value, TStream? stream = null)
         where TStream : Stream
     {
-        var stream = new MemoryStream();
+        stream ??= (TStream)(Stream)new MemoryStream();
         var streamWriter = new StreamWriter(stream, leaveOpen: true);
         return (TStream)ToXmlWriter(value, streamWriter).BaseStream;
+    }
+
+    /// <summary>
+    /// Serializes an object into a file at the specified path using XML format.
+    /// </summary>
+    /// <param name="value">The object to serialize.</param>
+    /// <param name="path">The path to the XML file.</param>
+    internal static void ToXmlFile(object value, string path)
+    {
+        using var fileStream = FileSystem.WriteStream(path);
+        using var memoryStream = ToXmlStream(value, new MemoryStream());
+        memoryStream.WriteTo(fileStream);
     }
 }
