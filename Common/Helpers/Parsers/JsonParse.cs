@@ -80,18 +80,18 @@ public static partial class Parse
     /// <summary>
     /// Serializes an object into a <see cref="TextWriter"/> using JSON format.
     /// </summary>
-    /// <typeparam name="TWritter">The type of the <see cref="TextWriter"/> to use.</typeparam>
+    /// <typeparam name="TWriter">The type of the <see cref="TextWriter"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
     /// <param name="settings">The JSON settings to use for serialization.</param>
     /// <param name="textWriter">The <see cref="TextWriter"/> to write the JSON content to.</param>
-    /// <returns>The <see cref="TextWriter"/> containing the serialized JSON content.</returns>
-    public static TWritter ToJsonWriter<TWritter>(object? value, JsonSettings? settings = null, TWritter? textWriter = null)
-        where TWritter : TextWriter
+    /// <returns>The <typeparamref name="TWriter"/> containing the serialized JSON string.</returns>
+    public static TWriter ToJsonWriter<TWriter>(object? value, JsonSettings? settings = null, TWriter? textWriter = null)
+        where TWriter : TextWriter
     {
         settings ??= ParseSettings.Json;
         ArgumentNullException.ThrowIfNull(value, nameof(value));
 
-        textWriter ??= (TWritter)(TextWriter)new StringWriter(settings.Encoding);
+        textWriter ??= (TWriter)(TextWriter)new StringWriter(settings.Encoding);
         using (var jsonWriter = settings.CreateWriter(textWriter))
         {
             var serializer = JsonSerializer.Create(settings);
