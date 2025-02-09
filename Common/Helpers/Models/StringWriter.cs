@@ -5,7 +5,7 @@ namespace Gucu112.CSharp.Automation.Helpers.Models;
 /// <summary>
 /// Initializes a new instance of the <see cref="StringWriter"/> class.
 /// </summary>
-/// <param name="builder">The <see cref="StringBuilder"/> to write to. If null, a new <see cref="StringBuilder"/> will be created.</param>
+/// <param name="builder">The <see cref="StringBuilder"/> to write to. If null, a new one will be created.</param>
 /// <param name="encoding">The encoding to use. If null, <see cref="Encoding.UTF8"/> will be used.</param>
 /// <param name="formatProvider">The format provider to use. If null, the default format provider will be used.</param>
 internal class StringWriter(
