@@ -30,57 +30,70 @@ public class ParseToJsonTest : BaseJsonTest
         }
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyValue))]
+    [TestCaseSource(typeof(ObjectToJsonData), nameof(ObjectToJsonData.EmptyValue))]
     public string EmptyValue_ReturnsEmptyJsonString<T>(object value)
     {
         return ParseToJson<T>(value);
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.WhitespaceValue))]
+    [TestCaseSource(typeof(ObjectToJsonData), nameof(ObjectToJsonData.WhitespaceValue))]
     public string WhitespaceValue_ReturnsJsonString<T>(object value)
     {
         return ParseToJson<T>(value);
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.StringValue))]
+    [TestCaseSource(typeof(ObjectToJsonData), nameof(ObjectToJsonData.StringValue))]
     public string StringValue_ReturnsJsonString<T>(object value)
     {
         return ParseToJson<T>(value);
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.BooleanValue))]
+    [TestCaseSource(typeof(ObjectToJsonData), nameof(ObjectToJsonData.BooleanValue))]
     public string BooleanValue_ReturnsBooleanJsonValue<T>(object value)
     {
         return ParseToJson<T>(value);
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyList))]
+    [TestCaseSource(typeof(ObjectToJsonData), nameof(ObjectToJsonData.EmptyList))]
     public string EmptyList_ReturnsEmptyJsonArray<T>(object value)
     {
-        return ParseToJson<T>(value).NormalizeSpace();
+        return ParseToJson<T>(value);
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.EmptyObject))]
+    [TestCaseSource(typeof(ObjectToJsonData), nameof(ObjectToJsonData.EmptyObject))]
     public string EmptyObject_ReturnsEmptyJsonObject<T>(object value)
     {
-        return ParseToJson<T>(value).NormalizeSpace();
+        return ParseToJson<T>(value);
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleList))]
-    public string List_ReturnsJsonArray<T>(object value)
+    [TestCaseSource(typeof(ObjectToJsonData), nameof(ObjectToJsonData.SimpleList))]
+    public string SimpleList_ReturnsJsonArray<T>(object value)
     {
         return ParseToJson<T>(value).NormalizeSpace();
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleDictionary))]
-    public string Dictionary_ReturnsJsonObject<T>(object value)
+    [TestCaseSource(typeof(ObjectToJsonData), nameof(ObjectToJsonData.SimpleDictionary))]
+    public string SimpleDictionary_ReturnsJsonObject<T>(object value)
     {
         return ParseToJson<T>(value, Settings).TrimStart(byteOrderMark);
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleObject))]
-    public string Object_ReturnsJsonObject<T>(object value)
+    [TestCase(TypeArgs = [typeof(string)], TestName = nameof(SimpleObject_ReturnsJsonObject) + "UsingString")]
+    [TestCase(TypeArgs = [typeof(TextWriter)], TestName = nameof(SimpleObject_ReturnsJsonObject) + "UsingWriter")]
+    public void SimpleObject_ReturnsJsonObject<T>()
     {
-        return ParseToJson<T>(value, Settings).TrimStart(byteOrderMark);
+        var input = (object)ObjectData.SimpleObjectValue;
+        var output = JsonData.SimpleObjectString;
+
+        Assert.That(ParseToJson<T>(input, Settings), Is.EqualTo(output));
+    }
+
+    [TestCase(TypeArgs = [typeof(Stream)], TestName = nameof(SimpleObject_ReturnsJsonObjectWithBOM) + "UsingStream")]
+    public void SimpleObject_ReturnsJsonObjectWithBOM<T>()
+    {
+        var input = (object)ObjectData.SimpleObjectValue;
+        var output = byteOrderMark + JsonData.SimpleObjectString;
+
+        Assert.That(ParseToJson<T>(input, Settings), Is.EqualTo(output));
     }
 }

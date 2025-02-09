@@ -3,7 +3,7 @@ using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
 namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages;
 
 /// <summary>
-/// Represents a synchronous base page.
+/// Represents a synchronous page.
 /// </summary>
 public abstract class BasePage : BasePageAsync, IDisposable
 {
