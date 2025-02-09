@@ -27,6 +27,12 @@ public class BaseXmlTest
     /// <returns>The XML representation of the object.</returns>
     protected static string ParseToXml<T>(object? value)
     {
+        if (typeof(T) == typeof(Stream))
+        {
+            using var stream = Parse.ToXmlStream<MemoryStream>(value);
+            return Encoding.UTF8.GetString(stream.GetBuffer(), 0, (int)stream.Length);
+        }
+
         if (typeof(T) == typeof(TextWriter))
         {
             using var writer = Parse.ToXmlWriter<StringWriter>(value);

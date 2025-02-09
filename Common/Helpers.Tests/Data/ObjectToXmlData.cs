@@ -11,6 +11,7 @@ public class ObjectToXmlData : BaseData
 
             yield return Create<string>(input, output).SetArgDisplayNames("EmptyValueToXmlString");
             yield return Create<TextWriter>(input, output).SetArgDisplayNames("EmptyValueWriterToXmlString");
+            yield return Create<Stream>(input, output).SetArgDisplayNames("EmptyValueStreamToXmlString");
         }
     }
 
@@ -24,6 +25,7 @@ public class ObjectToXmlData : BaseData
 
             yield return Create<string>(input, output).SetArgDisplayNames("WhitespaceValueToXmlString");
             yield return Create<TextWriter>(input, output).SetArgDisplayNames("WhitespaceValueWriterToXmlString");
+            yield return Create<Stream>(input, output).SetArgDisplayNames("WhitespaceValueStreamToXmlString");
         }
     }
 
@@ -37,6 +39,7 @@ public class ObjectToXmlData : BaseData
 
             yield return Create<string>(input, output).SetArgDisplayNames("StringValueToXmlString");
             yield return Create<TextWriter>(input, output).SetArgDisplayNames("StringValueWriterToXmlString");
+            yield return Create<Stream>(input, output).SetArgDisplayNames("StringValueStreamToXmlString");
         }
     }
 
@@ -50,6 +53,7 @@ public class ObjectToXmlData : BaseData
             yield return Create<string>(true, trueValueString).SetArgDisplayNames("TrueBooleanToXmlString");
             yield return Create<string>(false, falseValueString).SetArgDisplayNames("FalseBooleanToXmlString");
             yield return Create<TextWriter>(true, trueValueString).SetArgDisplayNames("TrueBooleanWriterToXmlString");
+            yield return Create<Stream>(false, falseValueString).SetArgDisplayNames("FalseBooleanStreamToXmlString");
         }
     }
 
@@ -62,6 +66,7 @@ public class ObjectToXmlData : BaseData
 
             yield return Create<string>(input, output).SetArgDisplayNames("EmptyArrayOfDoubleToXmlString");
             yield return Create<TextWriter>(input, output).SetArgDisplayNames("EmptyArrayOfDoubleWriterToXmlString");
+            yield return Create<Stream>(input, output).SetArgDisplayNames("EmptyArrayOfDoubleStreamToXmlString");
         }
     }
 
@@ -74,6 +79,7 @@ public class ObjectToXmlData : BaseData
 
             yield return Create<string>(input, output).SetArgDisplayNames("EmptyRootOnlyObjectToXmlString");
             yield return Create<TextWriter>(input, output).SetArgDisplayNames("EmptyRootOnlyObjectWriterToXmlString");
+            yield return Create<Stream>(input, output).SetArgDisplayNames("EmptyRootOnlyObjectStreamToXmlString");
         }
     }
 
@@ -87,6 +93,7 @@ public class ObjectToXmlData : BaseData
 
             yield return Create<string>(input, output).SetArgDisplayNames("ArrayOfIntToXmlString");
             yield return Create<TextWriter>(input, output).SetArgDisplayNames("ArrayOfIntWriterToXmlString");
+            yield return Create<Stream>(input, output).SetArgDisplayNames("ArrayOfIntStreamToXmlString");
         }
     }
 }

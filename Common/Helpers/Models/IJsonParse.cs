@@ -55,7 +55,7 @@ public interface IJsonParse
     /// <typeparam name="TWriter">The type of the <see cref="TextWriter"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
     /// <param name="settings">The JSON settings to use for serialization.</param>
-    /// <param name="textWriter">The <see cref="TextWriter"/> to write the JSON content to.</param>
+    /// <param name="textWriter">The <typeparamref name="TWriter"/> to write the JSON content to.</param>
     /// <returns>The <typeparamref name="TWriter"/> containing the serialized JSON string.</returns>
     TWriter ToJsonWriter<TWriter>(object? value, JsonSettings? settings = null, TWriter? textWriter = null)
         where TWriter : TextWriter;
