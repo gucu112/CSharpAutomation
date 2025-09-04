@@ -1,6 +1,7 @@
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using XmlReaderSettings = Gucu112.CSharp.Automation.Helpers.Models.XmlReaderSettings;
 
 namespace Gucu112.CSharp.Automation.Helpers.Parsers;
 
@@ -14,12 +15,13 @@ public static partial class Parse
     /// </summary>
     /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="content">The XML content to deserialize.</param>
+    /// <param name="settings">The XML reader settings to use for deserialization.</param>
     /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
-    public static TOutput? FromXml<TOutput>(string content)
+    public static TOutput? FromXml<TOutput>(string content, XmlReaderSettings? settings = null)
         where TOutput : class
     {
         using var stringReader = new StringReader(content);
-        return FromXml<TOutput>(stringReader);
+        return FromXml<TOutput>(stringReader, settings);
     }
 
     /// <summary>
@@ -27,18 +29,20 @@ public static partial class Parse
     /// </summary>
     /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="textReader">The <see cref="TextReader"/> containing the XML content to deserialize.</param>
+    /// <param name="settings">The XML reader settings to use for deserialization.</param>
     /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
-    public static TOutput? FromXml<TOutput>(TextReader textReader)
+    public static TOutput? FromXml<TOutput>(TextReader textReader, XmlReaderSettings? settings = null)
         where TOutput : class
     {
         ArgumentNullException.ThrowIfNull(textReader, nameof(textReader));
+        settings ??= ParseSettings.XmlRead;
 
         if (typeof(TOutput) == typeof(XDocument))
         {
             return XDocument.Load(textReader) as TOutput;
         }
 
-        using var xmlReader = new XmlTextReader(textReader);
+        using var xmlReader = settings.CreateReader(textReader);
         var serializer = new XmlSerializer(typeof(TOutput));
         return (TOutput?)serializer.Deserialize(xmlReader);
     }
@@ -48,11 +52,12 @@ public static partial class Parse
     /// </summary>
     /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="stream">The <see cref="Stream"/> containing the XML content to deserialize.</param>
+    /// <param name="settings">The XML reader settings to use for deserialization.</param>
     /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
-    public static TOutput? FromXml<TOutput>(Stream stream)
+    public static TOutput? FromXml<TOutput>(Stream stream, XmlReaderSettings? settings = null)
         where TOutput : class
     {
-        return FromXml<TOutput>(new StreamReader(stream));
+        return FromXml<TOutput>(new StreamReader(stream, settings?.Encoding ?? ParseSettings.DefaultEncoding), settings);
     }
 
     /// <summary>
@@ -60,12 +65,13 @@ public static partial class Parse
     /// </summary>
     /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="path">The path to the XML file.</param>
+    /// <param name="settings">The XML reader settings to use for deserialization.</param>
     /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
-    public static TOutput? FromXmlFile<TOutput>(string path)
+    public static TOutput? FromXmlFile<TOutput>(string path, XmlReaderSettings? settings = null)
         where TOutput : class
     {
         using var fileStream = FileSystem.ReadStream(path);
-        return FromXml<TOutput>(fileStream);
+        return FromXml<TOutput>(fileStream, settings);
     }
 
     /// <summary>

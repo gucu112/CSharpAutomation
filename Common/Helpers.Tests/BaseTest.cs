@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Gucu112.CSharp.Automation.Helpers.Tests;
 
 /// <summary>
@@ -5,6 +7,8 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests;
 /// </summary>
 public class BaseTest
 {
+    private readonly Stopwatch stopwatch = new();
+
     private byte[] streamData = [];
 
     /// <summary>
@@ -39,5 +43,20 @@ public class BaseTest
     {
         encoding ??= Encoding.UTF8;
         return encoding.GetString(streamData, 0, streamData.Length);
+    }
+
+    /// <summary>
+    /// Measures the execution time of a given function and returns its result
+    /// as well as the elapsed time span that it took to execute.
+    /// </summary>
+    /// <typeparam name="T">Result return type.</typeparam>
+    /// <param name="function">The function to measure.</param>
+    /// <returns>A tuple of the result and elapsed time.</returns>
+    protected (T Result, TimeSpan Elapsed) MeasureExecutionTime<T>(Func<T> function)
+    {
+        stopwatch.Restart();
+        var result = function();
+        stopwatch.Stop();
+        return (result, stopwatch.Elapsed);
     }
 }

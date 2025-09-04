@@ -25,7 +25,7 @@ public class JsonParse : IJsonParse
     /// <inheritdoc/>
     public TOutput? FromJson<TOutput>(Stream stream, JsonSettings? settings = null)
     {
-        return FromJson<TOutput>(new StreamReader(stream), settings);
+        return FromJson<TOutput>(new StreamReader(stream, settings?.Encoding ?? ParseSettings.DefaultEncoding), settings);
     }
 
     /// <inheritdoc/>

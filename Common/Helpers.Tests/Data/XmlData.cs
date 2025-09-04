@@ -19,6 +19,9 @@ public class XmlData
 
     public static readonly string RootObjectDocumentString = GetXmlDocumentString();
 
+    public static readonly string RootObjectSpaceDocumentString = GetXmlDocumentString()
+        .Replace("><", $">{Enumerable.Range(0, new Random().Next(20)).Select(_ => " ")}<");
+
     public static IEnumerable EmptyContent
     {
         get
@@ -130,6 +133,32 @@ public class XmlData
                 .SetArgDisplayNames("RootObjectModelReader");
             yield return new TestCaseData(new MemoryStream(RootObjectDocumentString.GetBytes()))
                 .SetArgDisplayNames("RootObjectModelStream");
+        }
+    }
+
+    public static IEnumerable RootObjectResolver
+    {
+        get
+        {
+            yield return new TestCaseData(() => RootObjectDocumentString)
+                .SetArgDisplayNames("RootObjectsModelResolver");
+            yield return new TestCaseData(() => new StringReader(RootObjectDocumentString))
+                .SetArgDisplayNames("RootObjectsModelReaderResolver");
+            yield return new TestCaseData(() => new MemoryStream(RootObjectDocumentString.GetBytes()))
+                .SetArgDisplayNames("RootObjectsModelStreamResolver");
+        }
+    }
+
+    public static IEnumerable RootObjectSpaceResolver
+    {
+        get
+        {
+            yield return new TestCaseData(() => RootObjectSpaceDocumentString)
+                .SetArgDisplayNames("RootObjectsModelResolver");
+            yield return new TestCaseData(() => new StringReader(RootObjectSpaceDocumentString))
+                .SetArgDisplayNames("RootObjectsModelReaderResolver");
+            yield return new TestCaseData(() => new MemoryStream(RootObjectSpaceDocumentString.GetBytes()))
+                .SetArgDisplayNames("RootObjectsModelStreamResolver");
         }
     }
 

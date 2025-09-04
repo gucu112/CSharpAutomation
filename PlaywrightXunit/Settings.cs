@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Xml.Linq;
-using Gucu112.CSharp.Automation.PlaywrightXunit.Extensions;
+using Gucu112.CSharp.Automation.Helpers.Extensions;
 
 namespace Gucu112.CSharp.Automation.PlaywrightXunit.Fixtures;
 

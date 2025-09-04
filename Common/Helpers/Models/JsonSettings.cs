@@ -1,3 +1,5 @@
+using Gucu112.CSharp.Automation.Helpers.Parsers;
+
 namespace Gucu112.CSharp.Automation.Helpers.Models;
 
 /// <summary>
@@ -10,8 +12,6 @@ public sealed class JsonSettings : JsonSerializerSettings
     private const char DefaultIndentChar = ' ';
 
     private const int DefaultMaxDepth = 16;
-
-    private static readonly Encoding DefaultEncoding = Encoding.UTF8;
 
     private static readonly Formatting DefaultFormatting = Formatting.Indented;
 
@@ -38,7 +38,7 @@ public sealed class JsonSettings : JsonSerializerSettings
     /// </summary>
     public Encoding Encoding
     {
-        get => encoding ?? DefaultEncoding;
+        get => encoding ?? ParseSettings.DefaultEncoding;
         set => encoding = value;
     }
 

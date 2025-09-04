@@ -1,22 +1,24 @@
 using Gucu112.CSharp.Automation.Helpers.Parsers;
+using XmlReaderSettings = Gucu112.CSharp.Automation.Helpers.Models.XmlReaderSettings;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Xml;
 
 /// <summary>
 /// Base class for XML parsing tests.
 /// </summary>
-public class BaseXmlTest
+public class BaseXmlTest : BaseTest
 {
     /// <summary>
     /// Parses a value of any type to XML input.
     /// </summary>
     /// <typeparam name="T">The type to parse into.</typeparam>
     /// <param name="input">The input XML.</param>
+    /// <param name="settings">The XML reader settings.</param>
     /// <returns>The parsed object.</returns>
-    protected static T? ParseFromXml<T>(dynamic? input)
+    protected static T? ParseFromXml<T>(dynamic? input, XmlReaderSettings? settings = null)
         where T : class
     {
-        return Parse.FromXml<T>(input);
+        return Parse.FromXml<T>(input, settings);
     }
 
     /// <summary>
