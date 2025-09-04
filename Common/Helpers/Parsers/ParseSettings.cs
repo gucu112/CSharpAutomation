@@ -9,6 +9,11 @@ namespace Gucu112.CSharp.Automation.Helpers.Parsers;
 public static partial class ParseSettings
 {
     /// <summary>
+    /// Gets the default encoding used while parsing.
+    /// </summary>
+    public static readonly Encoding DefaultEncoding = Encoding.UTF8;
+
+    /// <summary>
     /// Gets or sets the file system implementation used for parsing.
     /// </summary>
     internal static IFileSystem FileSystem { get; set; } = new FileSystemWrapper();

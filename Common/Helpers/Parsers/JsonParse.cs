@@ -49,7 +49,7 @@ public static partial class Parse
     public static TOutput? FromJson<TOutput>(Stream stream, JsonSettings? settings = null)
         where TOutput : class
     {
-        return FromJson<TOutput>(new StreamReader(stream), settings);
+        return FromJson<TOutput>(new StreamReader(stream, settings?.Encoding ?? ParseSettings.DefaultEncoding), settings);
     }
 
     /// <summary>
