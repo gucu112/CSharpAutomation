@@ -1,8 +1,10 @@
+using Allure.NUnit;
 using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
 
+[AllureNUnit]
 public class BaseJsonTest
 {
     private byte[] streamData = [];

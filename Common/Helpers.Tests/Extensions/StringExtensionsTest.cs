@@ -1,9 +1,11 @@
+using Allure.NUnit;
 using Gucu112.CSharp.Automation.Helpers.Extensions;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Extensions;
 
 [TestFixture]
+[AllureNUnit]
 public class StringExtensionsTest
 {
     [Test]
