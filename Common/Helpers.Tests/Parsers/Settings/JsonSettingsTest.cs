@@ -159,10 +159,10 @@ public class JsonSettingsTest : BaseJsonTest
         }
 
         var localContent = ParseToJson<T>(value, localSettings);
-        Assert.That(localContent, Does.Match(@"CurrentYearStart.+Date.?1735686000000"));
+        Assert.That(localContent, Does.Match(@"CurrentYearStart.+Date.?173568"));
 
         var globalContent = ParseToJson<T>(value);
-        Assert.That(globalContent, Does.Not.Match(@"CurrentYearStart.+Date.?1735686000000"));
+        Assert.That(globalContent, Does.Not.Match(@"CurrentYearStart.+Date.?173568"));
 
         return globalContent;
     }

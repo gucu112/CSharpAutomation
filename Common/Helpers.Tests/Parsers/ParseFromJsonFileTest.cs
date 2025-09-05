@@ -6,7 +6,7 @@ using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
 
 [TestFixture]
-public class ParseFromJsonFileTest
+public class ParseFromJsonFileTest : BaseJsonTest
 {
     private static readonly Mock<IFileSystem> Mock = new();
 
