@@ -4,8 +4,8 @@ using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Extensions;
 
-[TestFixture]
 [AllureNUnit]
+[TestFixture]
 public class StringExtensionsTest
 {
     [Test]
