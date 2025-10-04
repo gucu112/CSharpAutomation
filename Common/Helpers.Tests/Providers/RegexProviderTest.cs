@@ -1,15 +1,15 @@
 using System.Text.RegularExpressions;
-using Gucu112.CSharp.Automation.Helpers.Stores;
+using Gucu112.CSharp.Automation.Helpers.Providers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
-namespace Gucu112.CSharp.Automation.Helpers.Tests.Stores;
+namespace Gucu112.CSharp.Automation.Helpers.Tests.Providers;
 
 [TestFixture]
-public class RegexStoreTest
+public class RegexProviderTest
 {
-    private static readonly Regex AnyWhitespaceRegex = RegexStore.AnyWhitespaceRegex();
+    private static readonly Regex AnyWhitespaceRegex = RegexProvider.AnyWhitespaceRegex();
 
-    private static readonly Regex NormalizeSpaceRegex = RegexStore.NormalizeSpaceRegex();
+    private static readonly Regex NormalizeSpaceRegex = RegexProvider.NormalizeSpaceRegex();
 
     [Test]
     public void AnyWhitespaceRegex_IsInstanceOfRegex()

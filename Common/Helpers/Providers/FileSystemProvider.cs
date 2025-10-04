@@ -1,11 +1,11 @@
-using Gucu112.CSharp.Automation.Helpers.Models.Interface;
+using Gucu112.CSharp.Automation.Helpers.Models;
 
-namespace Gucu112.CSharp.Automation.Helpers.Wrappers;
+namespace Gucu112.CSharp.Automation.Helpers.Providers;
 
 /// <summary>
 /// Represents an implementation of file system.
 /// </summary>
-public class FileSystemWrapper : IFileSystem
+public class FileSystemProvider : IFileSystem
 {
     /// <inheritdoc/>
     public Stream ReadStream(string path)

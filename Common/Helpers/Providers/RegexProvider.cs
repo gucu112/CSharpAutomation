@@ -1,11 +1,11 @@
 using System.Text.RegularExpressions;
 
-namespace Gucu112.CSharp.Automation.Helpers.Stores;
+namespace Gucu112.CSharp.Automation.Helpers.Providers;
 
 /// <summary>
 /// Provides a collection of regular expressions for common string operations.
 /// </summary>
-public static partial class RegexStore
+public static partial class RegexProvider
 {
     /// <summary>
     /// Gets a regular expression that matches one or more whitespace characters.
