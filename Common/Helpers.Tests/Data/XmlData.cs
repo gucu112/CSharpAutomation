@@ -192,7 +192,7 @@ public class XmlData
     [XmlRoot("RootElement")]
     public class RootObjectModel
     {
-        public string Environment { get; init; } = null!;
+        public string Environment { get; init; } = string.Empty;
 
         [XmlAttribute("IsPrimary")]
         public bool IsPrimary { get; init; }
@@ -204,7 +204,7 @@ public class XmlData
         public List<string> GeneticCode { get; init; } = [];
 
         [XmlIgnore]
-        public Dictionary<int, object> ApexStructure { get; init; } = null!;
+        public Dictionary<int, object> ApexStructure { get; init; } = [];
 
         public DateTime VegetationPeriodStart { get; init; }
     }

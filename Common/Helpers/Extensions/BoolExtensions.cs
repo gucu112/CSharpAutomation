@@ -15,7 +15,7 @@ public static class BoolExtensions
         return value switch
         {
             true => "Yes",
-            false => "No"
+            false => "No",
         };
     }
 

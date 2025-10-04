@@ -3,6 +3,7 @@ using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Xml;
+
 public class ParseToXmlFileTest : BaseTest
 {
     private static readonly Mock<IFileSystem> Mock = new();
@@ -92,7 +93,7 @@ public class ParseToXmlFileTest : BaseTest
     [Test]
     public void CorrectPath_WritesArray()
     {
-        var path = "validRoot.json";
+        var path = "validRoot.xml";
         Parse.ToXmlFile(new XmlData.RootOnlyModel(), path);
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
@@ -109,7 +110,7 @@ public class ParseToXmlFileTest : BaseTest
     [Test]
     public void CorrectPath_WritesObject()
     {
-        var path = "validDocument.json";
+        var path = "validDocument.xml";
         Parse.ToXmlFile(ObjectData.SimpleRootObjectValue, path);
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 

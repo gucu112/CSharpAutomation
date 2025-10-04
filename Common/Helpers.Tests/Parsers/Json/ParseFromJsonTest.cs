@@ -78,7 +78,7 @@ public class ParseFromJsonTest : BaseJsonTest
             Assert.That(itemToken, Has.Property("HasValues").EqualTo(false));
 
             var itemValue = itemToken?.Value<bool>();
-            Assert.That(itemValue, Is.EqualTo(true));
+            Assert.That(itemValue, Is.True);
         }
 
         using (Assert.EnterMultipleScope())
@@ -118,14 +118,14 @@ public class ParseFromJsonTest : BaseJsonTest
 
         using (Assert.EnterMultipleScope())
         {
-            Assert.That(customObject?.InvalidProperty, Is.EqualTo(null!));
-            Assert.That(customObject?.BooleanValue, Is.EqualTo(true));
+            Assert.That(customObject?.InvalidProperty, Is.Null);
+            Assert.That(customObject?.BooleanValue, Is.True);
             Assert.That(customObject?.ListOfNumbers, Has.Exactly(6).Items.And.All.LessThan(10));
             Assert.That(customObject?.DictionaryOfStrings, Has.Exactly(3).Items);
             Assert.That(customObject?.DictionaryOfStrings?["empty"], Has.Length.EqualTo(0));
             Assert.That(customObject?.DictionaryOfStrings?["number"], Does.Contain(7.ToString()));
             Assert.That(customObject?.DictionaryOfStrings?["string"], Is.EqualTo("test").IgnoreCase);
-            Assert.That(customObject?.CurrentYearStart!.Value.Year, Is.EqualTo(2025));
+            Assert.That(customObject?.CurrentYearStart?.Year, Is.EqualTo(2025));
         }
     }
 }

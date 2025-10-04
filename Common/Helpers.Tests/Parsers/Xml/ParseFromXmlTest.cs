@@ -87,17 +87,41 @@ public class ParseFromXmlTest : BaseXmlTest
     {
         TestContext.Out.WriteLine(content);
 
-        var customObject = ParseFromXml<XmlData.RootObjectModel>(content);
+        var customObject = ParseFromXml<XmlData.RootObjectModel>(content)
+            ?? throw new AssertionException($"{nameof(XmlData.RootObjectModel)} object is null.");
 
         using (Assert.EnterMultipleScope())
         {
-            Assert.That(customObject?.IsPrimary, Is.False);
-            Assert.That(customObject?.CapThickness, Is.EqualTo(0.0003f));
-            Assert.That(customObject?.GeneticCode, Has.Count.GreaterThanOrEqualTo(3)
+            Assert.That(customObject.IsPrimary, Is.False);
+            Assert.That(customObject.CapThickness, Is.EqualTo(0.0003f));
+            Assert.That(customObject.GeneticCode, Has.Count.GreaterThanOrEqualTo(3)
                 .And.All.Length.EqualTo(3));
-            Assert.That(customObject?.ApexStructure, Is.Null);
-            Assert.That(customObject?.VegetationPeriodStart, Is.GreaterThan(new DateTime(2025, 1, 1))
+            Assert.That(customObject.ApexStructure, Is.Empty);
+            Assert.That(customObject.VegetationPeriodStart, Is.GreaterThan(new DateTime(2025, 1, 1))
                 .And.Property("Month").EqualTo(4));
+        }
+    }
+
+    [Test]
+    public void CorrectXmlObjects_ReturnXDocumentObject()
+    {
+        var content = XmlData.RootObjectDocumentString;
+
+        TestContext.Out.WriteLine(content);
+
+        var expectedDeclaration = new XDeclaration("1.0", Encoding.UTF8).ToString();
+        var document = ParseFromXml<XDocument>(content)
+            ?? throw new AssertionException($"{nameof(XDocument)} object is null.");
+        var descendants = document.Descendants().ToList();
+        var elements = document.Elements().ToList();
+
+        using (Assert.EnterMultipleScope())
+        {
+            Assert.That(document.Declaration?.ToString(), Is.EqualTo(expectedDeclaration));
+            Assert.That(document.Root?.Name.LocalName, Is.EqualTo("RootElement"));
+            Assert.That(descendants, Has.One.Property("Name").EqualTo(XName.Get("GeneticCode")));
+            Assert.That(elements, Has.Count.EqualTo(1));
+            Assert.That(elements[0], Is.EqualTo(descendants[0]));
         }
     }
 }

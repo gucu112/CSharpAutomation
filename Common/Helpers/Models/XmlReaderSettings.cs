@@ -68,6 +68,7 @@ public class XmlReaderSettings(BaseXmlReaderSettings? readerSettings = null)
                 Namespaces = Namespaces,
                 Normalization = Normalization,
                 WhitespaceHandling = WhitespaceHandling,
-            }, ReaderSettings);
+            },
+            ReaderSettings);
     }
 }
