@@ -1,6 +1,6 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-name: Run build and test for Solution
+name: Build & Test Solution
 
 on:
   push:
@@ -21,8 +21,28 @@ jobs:
       with:
         dotnet-version: '8.x'
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore -c Release
     - name: Build solution
-      run: dotnet build --no-restore
+      run: dotnet build -c Release --no-restore --output dist/
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dotnet-build
+        path: dist/
+
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: dotnet-build
+        path: dist/
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: '8.x'
     - name: Test solution
-      run: dotnet test --no-build --verbosity normal --filter "Category\!=Google"
+      run: dotnet test dist/ --verbosity normal --filter "Category\!=Google"
