@@ -34,7 +34,7 @@ public sealed class JsonSettings : JsonSerializerSettings
     }
 
     /// <summary>
-    /// Gets or sets the type of JSON text encoding to use. The default is <see cref="Encoding.UTF8"/>.
+    /// Gets or sets the type of JSON text encoding to use. The default is <see cref="ParseSettings.DefaultEncoding"/>.
     /// </summary>
     public Encoding Encoding
     {

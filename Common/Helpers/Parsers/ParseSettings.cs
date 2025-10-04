@@ -8,17 +8,17 @@ namespace Gucu112.CSharp.Automation.Helpers.Parsers;
 /// </summary>
 public static partial class ParseSettings
 {
+    /// <summary>
+    /// Gets or sets the default encoding used while parsing.
+    /// </summary>
+    public static Encoding DefaultEncoding { get; set; } = Encoding.UTF8;
+
     /// <inheritdoc cref="JsonParseSettings.Json"/>
     public static JsonSettings Json
     {
         get => JsonParseSettings.Json;
         set => JsonParseSettings.Json = value;
     }
-
-    /// <summary>
-    /// Gets the default encoding used while parsing.
-    /// </summary>
-    public static readonly Encoding DefaultEncoding = Encoding.UTF8;
 
     /// <summary>
     /// Gets or sets the file system implementation used for parsing.

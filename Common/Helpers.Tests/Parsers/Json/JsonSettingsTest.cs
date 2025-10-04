@@ -65,7 +65,7 @@ public class JsonSettingsTest : BaseJsonTest
 
         using (Assert.EnterMultipleScope())
         {
-            Assert.That(settings.Encoding, Is.EqualTo(Encoding.UTF8));
+            Assert.That(settings.Encoding, Is.EqualTo(ParseSettings.DefaultEncoding));
             Assert.That(settings.Formatting, Is.EqualTo(JsonFormatting.Indented));
             Assert.That(settings.MaxDepth, Is.EqualTo(16));
             Assert.That(settings.Indentation, Is.EqualTo(4));

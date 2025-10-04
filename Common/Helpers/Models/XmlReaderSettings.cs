@@ -17,27 +17,27 @@ public class XmlReaderSettings(BaseXmlReaderSettings? readerSettings = null)
     private WhitespaceHandling whitespaceHandling = DefaultWhitespaceHandling;
 
     /// <summary>
-    /// Gets or sets the type of XML text encoding to use. The default is <see cref="Encoding.UTF8"/>.
+    /// Gets or sets the type of XML text encoding to use. The default is <see cref="ParseSettings.DefaultEncoding"/>.
     /// </summary>
     public Encoding Encoding { get; set; } = ParseSettings.DefaultEncoding;
 
     /// <summary>
-    /// Gets or sets a value that specifies how the reader handles entities. If no <see cref="EntityHandling"/> is specified, it defaults to <see langword="EntityHandling.ExpandCharEntities"/>.
+    /// Gets or sets a value that specifies how the reader handles entities. If no <c>EntityHandling</c> is specified, it defaults to <see cref="EntityHandling.ExpandCharEntities"/>.
     /// </summary>
     public EntityHandling EntityHandling { get; set; } = DefaultEntityHandling;
 
     /// <summary>
-    /// Gets or sets a value indicating whether to do namespace support. The default is <see langword="false"/>.
+    /// Gets or sets a value indicating whether to do namespace support. The default is <c>false</c>.
     /// </summary>
     public bool Namespaces { get; set; } = DefaultNamespaces;
 
     /// <summary>
-    /// Gets or sets a value indicating whether to normalize white space and attribute values. The default is <see langword="false"/>.
+    /// Gets or sets a value indicating whether to normalize white space and attribute values. The default is <c>false</c>.
     /// </summary>
     public bool Normalization { get; set; } = DefaultNormalization;
 
     /// <summary>
-    /// Gets or sets a value that specifies how white space is handled. The default is <see langword="WhitespaceHandling.All"/>.
+    /// Gets or sets a value that specifies how white space is handled. The default is <see cref="WhitespaceHandling.All"/>.
     /// </summary>
     public WhitespaceHandling WhitespaceHandling
     {

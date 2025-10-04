@@ -34,7 +34,7 @@ public class BaseJsonTest : BaseTest
     {
         if (typeof(T) == typeof(Stream))
         {
-            var encoding = settings?.Encoding ?? Encoding.UTF8;
+            var encoding = settings?.Encoding ?? ParseSettings.DefaultEncoding;
             using var stream = Parse.ToJsonStream<MemoryStream>(value, settings);
             return encoding.GetString(stream.GetBuffer(), 0, (int)stream.Length);
         }

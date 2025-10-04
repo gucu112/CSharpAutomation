@@ -1,4 +1,4 @@
-using Gucu112.CSharp.Automation.Helpers.Models.Interface;
+using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 

@@ -1,5 +1,5 @@
 using Gucu112.CSharp.Automation.Helpers.Extensions;
-using Gucu112.CSharp.Automation.Helpers.Models.Interface;
+using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 using XmlReaderSettings = Gucu112.CSharp.Automation.Helpers.Models.XmlReaderSettings;
@@ -59,7 +59,7 @@ public class XmlReaderSettingsTest : BaseXmlTest
 
         using (Assert.EnterMultipleScope())
         {
-            Assert.That(settings.Encoding, Is.EqualTo(Encoding.UTF8));
+            Assert.That(settings.Encoding, Is.EqualTo(ParseSettings.DefaultEncoding));
             Assert.That(settings.Namespaces, Is.True);
             Assert.That(settings.Normalization, Is.True);
             Assert.That(settings.EntityHandling, Is.EqualTo(EntityHandling.ExpandCharEntities));
@@ -151,7 +151,7 @@ public class XmlReaderSettingsTest : BaseXmlTest
         if (typeof(T) == typeof(StreamReader))
         {
             var reader = contentResolver() as StreamReader;
-            Assert.That(reader?.CurrentEncoding, Is.EqualTo(Encoding.UTF8));
+            Assert.That(reader?.CurrentEncoding, Is.EqualTo(ParseSettings.DefaultEncoding));
         }
     }
 
@@ -187,7 +187,7 @@ public class XmlReaderSettingsTest : BaseXmlTest
         if (typeof(T) == typeof(StreamReader))
         {
             var reader = contentResolver() as StreamReader;
-            Assert.That(reader?.CurrentEncoding, Is.EqualTo(Encoding.UTF8));
+            Assert.That(reader?.CurrentEncoding, Is.EqualTo(ParseSettings.DefaultEncoding));
         }
     }
 
