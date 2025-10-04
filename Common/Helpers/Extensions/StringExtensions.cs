@@ -1,4 +1,4 @@
-using Gucu112.CSharp.Automation.Helpers.Stores;
+using Gucu112.CSharp.Automation.Helpers.Providers;
 
 namespace Gucu112.CSharp.Automation.Helpers.Extensions;
 
@@ -29,7 +29,7 @@ public static class StringExtensions
     public static string NormalizeSpace(this string text)
     {
         ArgumentNullException.ThrowIfNull(text, nameof(text));
-        return RegexStore.NormalizeSpaceRegex().Replace(text, " ").Trim();
+        return RegexProvider.NormalizeSpaceRegex().Replace(text, " ").Trim();
     }
 
     /// <summary>
@@ -40,6 +40,6 @@ public static class StringExtensions
     public static string RemoveSpace(this string text)
     {
         ArgumentNullException.ThrowIfNull(text, nameof(text));
-        return RegexStore.AnyWhitespaceRegex().Replace(text, string.Empty);
+        return RegexProvider.AnyWhitespaceRegex().Replace(text, string.Empty);
     }
 }

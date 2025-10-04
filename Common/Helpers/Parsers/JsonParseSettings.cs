@@ -5,7 +5,7 @@ namespace Gucu112.CSharp.Automation.Helpers.Parsers;
 /// <summary>
 /// Represents a class that provides JSON parsing settings.
 /// </summary>
-public static partial class ParseSettings
+public static class JsonParseSettings
 {
     private static Func<JsonSettings> jsonSettings = new(() => new());
 

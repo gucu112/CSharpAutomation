@@ -1,4 +1,4 @@
-namespace Gucu112.CSharp.Automation.Helpers.Models.Interface;
+namespace Gucu112.CSharp.Automation.Helpers.Models;
 
 /// <summary>
 /// Represents a file system.

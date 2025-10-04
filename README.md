@@ -63,6 +63,7 @@ There are no deployment procedure established yet.
 * [Playwright](https://playwright.dev/dotnet/)
 * [Xunit](https://xunit.net/)
 * [Xunit.SkippableFact](https://github.com/AArnott/Xunit.SkippableFact)
+* [Allure.Xunit](https://allurereport.org/docs/xunit/)
 
 ### PlaywrightXunitParallel
 
@@ -70,6 +71,7 @@ There are no deployment procedure established yet.
 * [Xunit](https://xunit.net/)
 * [Xunit.SkippableFact](https://github.com/AArnott/Xunit.SkippableFact)
 * [FluentAssertions](https://fluentassertions.com/)
+* [Allure.Xunit](https://allurereport.org/docs/xunit/)
 
 ### PlaywrightReqnrollMSTest
 
@@ -81,6 +83,7 @@ There are no deployment procedure established yet.
 
 #### Common Helpers Tests
 
+* [Allure.NUnit](https://allurereport.org/docs/nunit/)
 * [NUnit](https://nunit.org/)
 * [Moq](https://github.com/devlooped/moq)
 
