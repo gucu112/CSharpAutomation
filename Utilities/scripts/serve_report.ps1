@@ -2,11 +2,10 @@ param (
     [string]$ProjectDirectory = "Common/Helpers.Tests"
 )
 
-$BasePath = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
-
 Push-Location
-Set-Location (Join-Path $BasePath $ProjectDirectory)
+Set-Location (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 try {
+    Set-Location $ProjectDirectory
     allure generate allure-results --clean -o allure-report; allure open
 }
 finally {
