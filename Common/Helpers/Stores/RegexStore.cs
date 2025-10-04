@@ -14,7 +14,7 @@ public static partial class RegexStore
     public static partial Regex AnyWhitespaceRegex();
 
     /// <summary>
-    /// Gets a regular expression that matches consecutive whitespacespaces except a single space.
+    /// Gets a regular expression that matches consecutive whitespaces except a single space.
     /// </summary>
     [GeneratedRegex(@"\s{2,}|[^\S ]+")]
     public static partial Regex NormalizeSpaceRegex();
