@@ -20,6 +20,13 @@ public static partial class ParseSettings
         set => JsonParseSettings.Json = value;
     }
 
+    /// <inheritdoc cref="XmlParseSettings.XmlRead"/>
+    public static XmlReaderSettings XmlRead
+    {
+        get => XmlParseSettings.XmlRead;
+        set => XmlParseSettings.XmlRead = value;
+    }
+
     /// <summary>
     /// Gets or sets the file system implementation used for parsing.
     /// </summary>
