@@ -2,9 +2,11 @@ using Gucu112.CSharp.Automation.Helpers.Models;
 
 namespace Gucu112.CSharp.Automation.Helpers.Parsers;
 
-#pragma warning disable SA1648 // InheritDocMustBeUsedWithInheritingClass
 /// <inheritdoc path="Common/Helpers/Parsers/Parse.cs"/>
-#pragma warning restore SA1648 // InheritDocMustBeUsedWithInheritingClass
+[System.Diagnostics.CodeAnalysis.SuppressMessage(
+    "StyleCop.CSharp.DocumentationRules",
+    "SA1648:inheritdoc should be used with inheriting class",
+    Justification = "partial class")]
 public static partial class Parse
 {
     private static readonly JsonParse JsonParse = new();
