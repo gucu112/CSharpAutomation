@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
@@ -7,6 +8,7 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Xml;
 public class ParseToXmlTest : BaseXmlTest
 {
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void ThrowsOnNull()
     {
         Assert.Throws<ArgumentNullException>(() => Parse.ToXmlString(null!));

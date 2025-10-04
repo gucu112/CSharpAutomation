@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Gucu112.CSharp.Automation.Helpers.Extensions;
 using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
@@ -42,6 +43,7 @@ public class ParseFromJsonFileTest : BaseJsonTest
     }
 
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void ThrowsOnNullPath()
     {
         Assert.Throws<ArgumentNullException>(() => Parse.FromJsonFile<object>(null!));

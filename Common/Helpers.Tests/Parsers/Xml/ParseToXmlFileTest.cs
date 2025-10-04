@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
@@ -36,6 +37,7 @@ public class ParseToXmlFileTest : BaseTest
     }
 
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void ThrowsOnNullValue()
     {
         var path = "existing.xml";
@@ -44,6 +46,7 @@ public class ParseToXmlFileTest : BaseTest
     }
 
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void ThrowsOnNullPath()
     {
         Assert.Throws<ArgumentNullException>(() => Parse.ToXmlFile(new object(), null!));

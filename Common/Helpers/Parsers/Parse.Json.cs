@@ -1,9 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
 using Gucu112.CSharp.Automation.Helpers.Models;
 
 namespace Gucu112.CSharp.Automation.Helpers.Parsers;
 
 /// <inheritdoc path="Common/Helpers/Parsers/Parse.cs"/>
-[System.Diagnostics.CodeAnalysis.SuppressMessage(
+[SuppressMessage(
     "StyleCop.CSharp.DocumentationRules",
     "SA1648:inheritdoc should be used with inheriting class",
     Justification = "partial class")]

@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Allure.NUnit;
 using Gucu112.CSharp.Automation.Helpers.Extensions;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
@@ -9,6 +10,7 @@ namespace Gucu112.CSharp.Automation.Helpers.Tests.Extensions;
 public class StringExtensionsTest
 {
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void GetBytes_ThrowsOnNull()
     {
         Assert.Throws<ArgumentNullException>(() => StringExtensions.GetBytes(null!));
@@ -45,6 +47,7 @@ public class StringExtensionsTest
     }
 
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void NormalizeSpace_ThrowsOnNull()
     {
         Assert.Throws<ArgumentNullException>(() => StringExtensions.NormalizeSpace(null!));
@@ -78,6 +81,7 @@ public class StringExtensionsTest
     }
 
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void RemoveSpace_ThrowsOnNull()
     {
         Assert.Throws<ArgumentNullException>(() => StringExtensions.RemoveSpace(null!));
