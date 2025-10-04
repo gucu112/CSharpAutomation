@@ -49,10 +49,10 @@ public class BaseTest
     /// Measures the execution time of a given function and returns its result
     /// as well as the elapsed time span that it took to execute.
     /// </summary>
-    /// <typeparam name="T">Result return type.</typeparam>
+    /// <typeparam name="TReturn">Result return type.</typeparam>
     /// <param name="function">The function to measure.</param>
     /// <returns>A tuple of the result and elapsed time.</returns>
-    protected (T Result, TimeSpan Elapsed) MeasureExecutionTime<T>(Func<T> function)
+    protected (TReturn Result, TimeSpan Elapsed) MeasureExecutionTime<TReturn>(Func<TReturn> function)
     {
         stopwatch.Restart();
         var result = function();

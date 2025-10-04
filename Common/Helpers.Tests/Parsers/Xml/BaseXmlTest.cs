@@ -11,31 +11,30 @@ public class BaseXmlTest : BaseTest
     /// <summary>
     /// Parses a value of any type to XML input.
     /// </summary>
-    /// <typeparam name="T">The type to parse into.</typeparam>
+    /// <typeparam name="TOutput">The type to parse into.</typeparam>
     /// <param name="input">The input XML.</param>
     /// <param name="settings">The XML reader settings.</param>
     /// <returns>The parsed object.</returns>
-    protected static T? ParseFromXml<T>(dynamic? input, XmlReaderSettings? settings = null)
-        where T : class
+    protected static TOutput? ParseFromXml<TOutput>(dynamic? input, XmlReaderSettings? settings = null)
     {
-        return Parse.FromXml<T>(input, settings);
+        return Parse.FromXml<TOutput>(input, settings);
     }
 
     /// <summary>
     /// Deserializes the specified object to XML string output.
     /// </summary>
-    /// <typeparam name="T">The type of the object.</typeparam>
+    /// <typeparam name="TInput">The type of the object.</typeparam>
     /// <param name="value">The object to convert.</param>
     /// <returns>The XML representation of the object.</returns>
-    protected static string ParseToXml<T>(object? value)
+    protected static string ParseToXml<TInput>(object? value)
     {
-        if (typeof(T) == typeof(Stream))
+        if (typeof(TInput) == typeof(Stream))
         {
             using var stream = Parse.ToXmlStream<MemoryStream>(value);
             return Encoding.UTF8.GetString(stream.GetBuffer(), 0, (int)stream.Length);
         }
 
-        if (typeof(T) == typeof(TextWriter))
+        if (typeof(TInput) == typeof(TextWriter))
         {
             using var writer = Parse.ToXmlWriter<StringWriter>(value);
             return writer.GetStringBuilder().ToString();
