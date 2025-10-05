@@ -24,11 +24,13 @@ jobs:
       run: dotnet restore
     - name: Build solution
       run: dotnet build -c Release --no-restore
+    - name: Publish solution
+      run: dotnet publish -c Release --no-build --no-restore
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: dotnet-build
-        path: ./**/bin/Release/net8.0/**
+        path: ./**/bin/Release/net8.0/publish/**
 
   test:
 
@@ -40,10 +42,10 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: dotnet-build
-        path: src/
+        path: dist/
     - name: Setup .NET
       uses: actions/setup-dotnet@v5
       with:
         dotnet-version: '8.x'
     - name: Test solution
-      run: dotnet test ./src/**/Gucu112.CSharp.Automation.*.dll --verbosity normal --filter "Category\!=Google"
+      run: dotnet test ./**/Gucu112.CSharp.Automation.*.dll --verbosity normal --filter "Category\!=Google"
