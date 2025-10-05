@@ -10,5 +10,11 @@
     href: api/Gucu112.CSharp.Automation.Helpers.Extensions.html
   - name: PlaywrightXunitParallel
     href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.html
+- name: Test Report
+  items:
+  - name: Common/Helpers.Tests
+    href: allure/common/helpers.tests/index.html
+  - name: PlaywrightXunitParallel
+    href: allure/playwrightxunitparallel/index.html
 - name: License
-  href: LICENSE.txt
+  href: https://github.com/gucu112/CSharpAutomation/blob/master/LICENSE.txt
