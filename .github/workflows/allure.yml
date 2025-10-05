@@ -61,7 +61,7 @@ jobs:
           gh_pages: gh-pages
           allure_history: allure-history
           allure_results: artifact/allure-results
-          subfolder: allure_${{steps.destination_prefix.outputs.lowercase}}
+          subfolder: allure
 
       - name: Show directory structure
         if: always()
@@ -75,5 +75,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./allure-history
-          destination_dir: ./allure_${{steps.destination_prefix.outputs.lowercase}}
+          destination_dir: ./${{steps.destination_prefix.outputs.lowercase}}
           exclude_assets: '.git,.github'
