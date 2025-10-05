@@ -46,4 +46,4 @@ jobs:
       with:
         dotnet-version: '8.x'
     - name: Test solution
-      run: dotnet test dist/ --verbosity normal --filter "Category\!=Google"
+      run: dotnet test dist/Gucu112.CSharp.Automation.*.dll --verbosity normal --filter "Category\!=Google"
