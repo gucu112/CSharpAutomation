@@ -63,11 +63,6 @@ jobs:
           allure_results: artifact/allure-results
           subfolder: allure/${{steps.destination_prefix.outputs.lowercase}}
 
-      - name: Show directory structure
-        if: always()
-        run: |
-          ls -la ${GITHUB_WORKSPACE}
-
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v4
         if: always()
