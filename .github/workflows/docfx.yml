@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     concurrency:
-      group: ci-${{ github.ref }}
+      group: ${{ github.workflow }}-${{ github.ref }}
 
     steps:
       - name: Checkout
