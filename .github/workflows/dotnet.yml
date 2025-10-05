@@ -66,6 +66,7 @@ jobs:
         --verbosity normal
         --filter:"Category\!=Google"
         --logger:"trx;LogFileName=TestResults.xml"
+        --collect:"XPlat Code Coverage"
     - name: Set artifact prefix
       id: artifact_prefix
       run: |
