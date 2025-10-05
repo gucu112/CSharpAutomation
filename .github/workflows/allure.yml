@@ -46,7 +46,7 @@ jobs:
         id: destination_prefix
         run: |
           PROJECT_NAME=${{ matrix.project }}
-          DESTINATION_PREFIX=${PROJECT_NAME//\\//}
+          DESTINATION_PREFIX=${PROJECT_NAME//[^A-Za-z0-9_]/_}
           echo "Destination prefix: '${DESTINATION_PREFIX,,}'"
           echo "::set-output name=lowercase::${DESTINATION_PREFIX,,}"
 
@@ -73,4 +73,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./allure-history
-          destination_dir: ./${{steps.destination_prefix.outputs.lowercase}}/allure
+          destination_dir: ./allure_${{steps.destination_prefix.outputs.lowercase}}
