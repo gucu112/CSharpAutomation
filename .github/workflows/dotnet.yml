@@ -65,7 +65,7 @@ jobs:
         --configuration Release
         --verbosity normal
         --filter:"Category\!=Google"
-        --logger:"trx;LogFileName=TestResults.xml"
+        --logger:"trx;LogFileName=test.results.xml"
         --collect:"XPlat Code Coverage"
     - name: Set artifact prefix
       id: artifact_prefix
@@ -77,5 +77,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: ${{steps.artifact_prefix.outputs.lowercase}}-results
-        path: ./dist/${{ matrix.project }}/TestResults/**/
+        path: |
+          ./dist/${{ matrix.project }}/TestResults/test.results.xml
+          ./dist/${{ matrix.project }}/TestResults/*/coverage.cobertura.xml
         retention-days: 7
