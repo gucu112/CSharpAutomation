@@ -11,10 +11,8 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+      group: ci-${{ github.ref }}
       cancel-in-progress: true
 
     strategy:
