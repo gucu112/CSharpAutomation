@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: test-report-deploy
+name: coverage-report-deploy
 
 on:
   workflow_run:
@@ -28,6 +28,11 @@ jobs:
             - PlaywrightXunitParallel
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: dist
+
       - name: Set artifact prefix
         id: artifact_prefix
         run: |
@@ -52,7 +57,15 @@ jobs:
           echo "Destination suffix: '${DESTINATION_SUFFIX,,}'"
           echo "::set-output name=lowercase::${DESTINATION_SUFFIX,,}"
 
-      - name: Load test report history
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '8.x'
+
+      - name: Install reportgenerator
+        run: dotnet tool update -g dotnet-reportgenerator-globaltool
+
+      - name: Download current site
         uses: actions/checkout@v4
         if: always()
         continue-on-error: true
@@ -60,19 +73,17 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Build test report
-        uses: simple-elf/allure-report-action@v1.13
-        if: always()
-        with:
-          gh_pages: gh-pages
-          allure_history: allure-history
-          allure_results: artifact/allure-results
-          subfolder: allure/${{steps.destination_suffix.outputs.lowercase}}
+      - name: Generate code coverage report
+        run: >
+          reportgenerator
+          -reports:"artifact/TestResults/*/coverage.cobertura.xml"
+          -targetdir:"gh-pages/coverlet/${{steps.destination_suffix.outputs.lowercase}}"
+          -reporttypes:"Html_Dark"
+          -filefilters:-*.g.cs
 
-      - name: Publish test report
+      - name: Upload site
         uses: peaceiris/actions-gh-pages@v4
-        if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: allure-history
+          publish_dir: gh-pages

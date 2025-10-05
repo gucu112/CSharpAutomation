@@ -6,15 +6,21 @@
     href: content/getting-started.md
 - name: Reference
   items:
-  - name: Helpers
+  - name: Common/Helpers
     href: api/Gucu112.CSharp.Automation.Helpers.Extensions.html
   - name: PlaywrightXunitParallel
     href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.html
+- name: Code Coverage
+  items:
+  - name: Common/Helpers
+    href: coverlet/Common/Helpers.Tests/index.html
+  - name: PlaywrightXunitParallel
+    href: coverlet/PlaywrightXunitParallel/index.html
 - name: Test Report
   items:
-  - name: Common/Helpers.Tests
-    href: allure/common/helpers.tests/index.html
+  - name: Common/Helpers
+    href: allure/Common/Helpers.Tests/index.html
   - name: PlaywrightXunitParallel
-    href: allure/playwrightxunitparallel/index.html
+    href: allure/PlaywrightXunitParallel/index.html
 - name: License
   href: https://github.com/gucu112/CSharpAutomation/blob/master/LICENSE.txt

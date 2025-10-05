@@ -2,8 +2,11 @@
 name: documentation-deploy
 
 on:
-  push:
+  workflow_run:
+    workflows: [ "solution-build-test" ]
     branches: [ "master", "experimental" ]
+    types:
+      - completed
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,9 +32,6 @@ jobs:
       - name: Install docfx
         run: dotnet tool update -g docfx
 
-      - name: Generate site
-        run: docfx docfx.json
-
       - name: Download current site
         uses: actions/checkout@v4
         if: always()
@@ -39,6 +39,9 @@ jobs:
         with:
           ref: gh-pages
           path: .site
+
+      - name: Generate site
+        run: docfx docfx.json
 
       - name: Upload site
         uses: peaceiris/actions-gh-pages@v4
