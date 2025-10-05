@@ -1,0 +1,1475 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Gucu112.CSharp.Automation.Helpers.Extensions
+  name: Gucu112.CSharp.Automation.Helpers.Extensions
+  href: api/Gucu112.CSharp.Automation.Helpers.Extensions.html
+  commentId: N:Gucu112.CSharp.Automation.Helpers.Extensions
+  fullName: Gucu112.CSharp.Automation.Helpers.Extensions
+  nameWithType: Gucu112.CSharp.Automation.Helpers.Extensions
+- uid: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions
+  name: StringExtensions
+  href: api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions
+  fullName: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions
+  nameWithType: StringExtensions
+- uid: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.GetBytes(System.String,System.Text.Encoding)
+  name: GetBytes(string, Encoding?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.html#Gucu112_CSharp_Automation_Helpers_Extensions_StringExtensions_GetBytes_System_String_System_Text_Encoding_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.GetBytes(System.String,System.Text.Encoding)
+  name.vb: GetBytes(String, Encoding)
+  fullName: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.GetBytes(string, System.Text.Encoding?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.GetBytes(String, System.Text.Encoding)
+  nameWithType: StringExtensions.GetBytes(string, Encoding?)
+  nameWithType.vb: StringExtensions.GetBytes(String, Encoding)
+- uid: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.GetBytes*
+  name: GetBytes
+  href: api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.html#Gucu112_CSharp_Automation_Helpers_Extensions_StringExtensions_GetBytes_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.GetBytes
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.GetBytes
+  nameWithType: StringExtensions.GetBytes
+- uid: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.NormalizeSpace(System.String)
+  name: NormalizeSpace(string)
+  href: api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.html#Gucu112_CSharp_Automation_Helpers_Extensions_StringExtensions_NormalizeSpace_System_String_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.NormalizeSpace(System.String)
+  name.vb: NormalizeSpace(String)
+  fullName: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.NormalizeSpace(string)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.NormalizeSpace(String)
+  nameWithType: StringExtensions.NormalizeSpace(string)
+  nameWithType.vb: StringExtensions.NormalizeSpace(String)
+- uid: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.NormalizeSpace*
+  name: NormalizeSpace
+  href: api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.html#Gucu112_CSharp_Automation_Helpers_Extensions_StringExtensions_NormalizeSpace_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.NormalizeSpace
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.NormalizeSpace
+  nameWithType: StringExtensions.NormalizeSpace
+- uid: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.RemoveSpace(System.String)
+  name: RemoveSpace(string)
+  href: api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.html#Gucu112_CSharp_Automation_Helpers_Extensions_StringExtensions_RemoveSpace_System_String_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.RemoveSpace(System.String)
+  name.vb: RemoveSpace(String)
+  fullName: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.RemoveSpace(string)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.RemoveSpace(String)
+  nameWithType: StringExtensions.RemoveSpace(string)
+  nameWithType.vb: StringExtensions.RemoveSpace(String)
+- uid: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.RemoveSpace*
+  name: RemoveSpace
+  href: api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.html#Gucu112_CSharp_Automation_Helpers_Extensions_StringExtensions_RemoveSpace_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.RemoveSpace
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.RemoveSpace
+  nameWithType: StringExtensions.RemoveSpace
+- uid: Gucu112.CSharp.Automation.Helpers.Models
+  name: Gucu112.CSharp.Automation.Helpers.Models
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.html
+  commentId: N:Gucu112.CSharp.Automation.Helpers.Models
+  fullName: Gucu112.CSharp.Automation.Helpers.Models
+  nameWithType: Gucu112.CSharp.Automation.Helpers.Models
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem
+  name: IFileSystem
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Models.IFileSystem
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem
+  nameWithType: IFileSystem
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.ReadStream(System.String)
+  name: ReadStream(string)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.html#Gucu112_CSharp_Automation_Helpers_Models_IFileSystem_ReadStream_System_String_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.ReadStream(System.String)
+  name.vb: ReadStream(String)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.ReadStream(string)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.ReadStream(String)
+  nameWithType: IFileSystem.ReadStream(string)
+  nameWithType.vb: IFileSystem.ReadStream(String)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.ReadStream*
+  name: ReadStream
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.html#Gucu112_CSharp_Automation_Helpers_Models_IFileSystem_ReadStream_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.ReadStream
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.ReadStream
+  nameWithType: IFileSystem.ReadStream
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.WriteStream(System.String)
+  name: WriteStream(string)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.html#Gucu112_CSharp_Automation_Helpers_Models_IFileSystem_WriteStream_System_String_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.WriteStream(System.String)
+  name.vb: WriteStream(String)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.WriteStream(string)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.WriteStream(String)
+  nameWithType: IFileSystem.WriteStream(string)
+  nameWithType.vb: IFileSystem.WriteStream(String)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.WriteStream*
+  name: WriteStream
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.html#Gucu112_CSharp_Automation_Helpers_Models_IFileSystem_WriteStream_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.WriteStream
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.WriteStream
+  nameWithType: IFileSystem.WriteStream
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse
+  name: IJsonParse
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse
+  nameWithType: IJsonParse
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson*
+  name: FromJson
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_FromJson_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson
+  nameWithType: IJsonParse.FromJson
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJsonFile*
+  name: FromJsonFile
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_FromJsonFile_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJsonFile
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJsonFile
+  nameWithType: IJsonParse.FromJsonFile
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJsonFile``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJsonFile<T>(string, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_FromJsonFile__1_System_String_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJsonFile``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJsonFile(Of T)(String, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJsonFile<T>(string, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJsonFile(Of T)(String, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: IJsonParse.FromJsonFile<T>(string, JsonSettings?)
+  nameWithType.vb: IJsonParse.FromJsonFile(Of T)(String, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson``1(System.IO.Stream,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJson<T>(Stream, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_FromJson__1_System_IO_Stream_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson``1(System.IO.Stream,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJson(Of T)(Stream, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson<T>(System.IO.Stream, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson(Of T)(System.IO.Stream, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: IJsonParse.FromJson<T>(Stream, JsonSettings?)
+  nameWithType.vb: IJsonParse.FromJson(Of T)(Stream, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson``1(System.IO.TextReader,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJson<T>(TextReader, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_FromJson__1_System_IO_TextReader_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson``1(System.IO.TextReader,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJson(Of T)(TextReader, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson<T>(System.IO.TextReader, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson(Of T)(System.IO.TextReader, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: IJsonParse.FromJson<T>(TextReader, JsonSettings?)
+  nameWithType.vb: IJsonParse.FromJson(Of T)(TextReader, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJson<T>(string, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_FromJson__1_System_String_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJson(Of T)(String, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson<T>(string, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.FromJson(Of T)(String, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: IJsonParse.FromJson<T>(string, JsonSettings?)
+  nameWithType.vb: IJsonParse.FromJson(Of T)(String, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonFile(System.Object,System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: ToJsonFile(object?, string, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_ToJsonFile_System_Object_System_String_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonFile(System.Object,System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: ToJsonFile(Object, String, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonFile(object?, string, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonFile(Object, String, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: IJsonParse.ToJsonFile(object?, string, JsonSettings?)
+  nameWithType.vb: IJsonParse.ToJsonFile(Object, String, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonFile*
+  name: ToJsonFile
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_ToJsonFile_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonFile
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonFile
+  nameWithType: IJsonParse.ToJsonFile
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonStream*
+  name: ToJsonStream
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_ToJsonStream_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonStream
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonStream
+  nameWithType: IJsonParse.ToJsonStream
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonStream``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name: ToJsonStream<T>(object?, JsonSettings?, T?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_ToJsonStream__1_System_Object_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings___0_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonStream``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name.vb: ToJsonStream(Of T)(Object, JsonSettings, T)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonStream<T>(object?, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?, T?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonStream(Of T)(Object, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings, T)
+  nameWithType: IJsonParse.ToJsonStream<T>(object?, JsonSettings?, T?)
+  nameWithType.vb: IJsonParse.ToJsonStream(Of T)(Object, JsonSettings, T)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonString(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: ToJsonString(object?, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_ToJsonString_System_Object_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonString(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: ToJsonString(Object, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonString(object?, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonString(Object, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: IJsonParse.ToJsonString(object?, JsonSettings?)
+  nameWithType.vb: IJsonParse.ToJsonString(Object, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonString*
+  name: ToJsonString
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_ToJsonString_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonString
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonString
+  nameWithType: IJsonParse.ToJsonString
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonWriter*
+  name: ToJsonWriter
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_ToJsonWriter_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonWriter
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonWriter
+  nameWithType: IJsonParse.ToJsonWriter
+- uid: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonWriter``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name: ToJsonWriter<T>(object?, JsonSettings?, T?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html#Gucu112_CSharp_Automation_Helpers_Models_IJsonParse_ToJsonWriter__1_System_Object_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings___0_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonWriter``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name.vb: ToJsonWriter(Of T)(Object, JsonSettings, T)
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonWriter<T>(object?, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?, T?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.ToJsonWriter(Of T)(Object, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings, T)
+  nameWithType: IJsonParse.ToJsonWriter<T>(object?, JsonSettings?, T?)
+  nameWithType.vb: IJsonParse.ToJsonWriter(Of T)(Object, JsonSettings, T)
+- uid: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings
+  name: JsonSettings
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Models.JsonSettings
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings
+  nameWithType: JsonSettings
+- uid: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.#ctor
+  name: JsonSettings()
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html#Gucu112_CSharp_Automation_Helpers_Models_JsonSettings__ctor
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.#ctor
+  name.vb: New()
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.JsonSettings()
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.New()
+  nameWithType: JsonSettings.JsonSettings()
+  nameWithType.vb: JsonSettings.New()
+- uid: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.#ctor*
+  name: JsonSettings
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html#Gucu112_CSharp_Automation_Helpers_Models_JsonSettings__ctor_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.JsonSettings
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.New
+  nameWithType: JsonSettings.JsonSettings
+  nameWithType.vb: JsonSettings.New
+- uid: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Encoding
+  name: Encoding
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html#Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_Encoding
+  commentId: P:Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Encoding
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Encoding
+  nameWithType: JsonSettings.Encoding
+- uid: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Encoding*
+  name: Encoding
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html#Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_Encoding_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Encoding
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Encoding
+  nameWithType: JsonSettings.Encoding
+- uid: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.IndentChar
+  name: IndentChar
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html#Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_IndentChar
+  commentId: P:Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.IndentChar
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.IndentChar
+  nameWithType: JsonSettings.IndentChar
+- uid: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.IndentChar*
+  name: IndentChar
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html#Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_IndentChar_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.IndentChar
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.IndentChar
+  nameWithType: JsonSettings.IndentChar
+- uid: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Indentation
+  name: Indentation
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html#Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_Indentation
+  commentId: P:Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Indentation
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Indentation
+  nameWithType: JsonSettings.Indentation
+- uid: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Indentation*
+  name: Indentation
+  href: api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html#Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_Indentation_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Indentation
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.Indentation
+  nameWithType: JsonSettings.Indentation
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers
+  name: Gucu112.CSharp.Automation.Helpers.Parsers
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.html
+  commentId: N:Gucu112.CSharp.Automation.Helpers.Parsers
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers
+  nameWithType: Gucu112.CSharp.Automation.Helpers.Parsers
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse
+  name: JsonParse
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse
+  nameWithType: JsonParse
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson*
+  name: FromJson
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_FromJson_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson
+  nameWithType: JsonParse.FromJson
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJsonFile*
+  name: FromJsonFile
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_FromJsonFile_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJsonFile
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJsonFile
+  nameWithType: JsonParse.FromJsonFile
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJsonFile``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJsonFile<T>(string, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_FromJsonFile__1_System_String_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJsonFile``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJsonFile(Of T)(String, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJsonFile<T>(string, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJsonFile(Of T)(String, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: JsonParse.FromJsonFile<T>(string, JsonSettings?)
+  nameWithType.vb: JsonParse.FromJsonFile(Of T)(String, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson``1(System.IO.Stream,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJson<T>(Stream, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_FromJson__1_System_IO_Stream_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson``1(System.IO.Stream,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJson(Of T)(Stream, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson<T>(System.IO.Stream, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson(Of T)(System.IO.Stream, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: JsonParse.FromJson<T>(Stream, JsonSettings?)
+  nameWithType.vb: JsonParse.FromJson(Of T)(Stream, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson``1(System.IO.TextReader,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJson<T>(TextReader, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_FromJson__1_System_IO_TextReader_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson``1(System.IO.TextReader,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJson(Of T)(TextReader, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson<T>(System.IO.TextReader, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson(Of T)(System.IO.TextReader, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: JsonParse.FromJson<T>(TextReader, JsonSettings?)
+  nameWithType.vb: JsonParse.FromJson(Of T)(TextReader, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJson<T>(string, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_FromJson__1_System_String_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJson(Of T)(String, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson<T>(string, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.FromJson(Of T)(String, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: JsonParse.FromJson<T>(string, JsonSettings?)
+  nameWithType.vb: JsonParse.FromJson(Of T)(String, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonFile(System.Object,System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: ToJsonFile(object?, string, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_ToJsonFile_System_Object_System_String_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonFile(System.Object,System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: ToJsonFile(Object, String, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonFile(object?, string, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonFile(Object, String, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: JsonParse.ToJsonFile(object?, string, JsonSettings?)
+  nameWithType.vb: JsonParse.ToJsonFile(Object, String, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonFile*
+  name: ToJsonFile
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_ToJsonFile_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonFile
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonFile
+  nameWithType: JsonParse.ToJsonFile
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonStream*
+  name: ToJsonStream
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_ToJsonStream_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonStream
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonStream
+  nameWithType: JsonParse.ToJsonStream
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonStream``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name: ToJsonStream<T>(object?, JsonSettings?, T?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_ToJsonStream__1_System_Object_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings___0_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonStream``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name.vb: ToJsonStream(Of T)(Object, JsonSettings, T)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonStream<T>(object?, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?, T?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonStream(Of T)(Object, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings, T)
+  nameWithType: JsonParse.ToJsonStream<T>(object?, JsonSettings?, T?)
+  nameWithType.vb: JsonParse.ToJsonStream(Of T)(Object, JsonSettings, T)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonString(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: ToJsonString(object?, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_ToJsonString_System_Object_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonString(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: ToJsonString(Object, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonString(object?, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonString(Object, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: JsonParse.ToJsonString(object?, JsonSettings?)
+  nameWithType.vb: JsonParse.ToJsonString(Object, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonString*
+  name: ToJsonString
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_ToJsonString_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonString
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonString
+  nameWithType: JsonParse.ToJsonString
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonWriter*
+  name: ToJsonWriter
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_ToJsonWriter_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonWriter
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonWriter
+  nameWithType: JsonParse.ToJsonWriter
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonWriter``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name: ToJsonWriter<T>(object?, JsonSettings?, T?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParse_ToJsonWriter__1_System_Object_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings___0_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonWriter``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name.vb: ToJsonWriter(Of T)(Object, JsonSettings, T)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonWriter<T>(object?, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?, T?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.ToJsonWriter(Of T)(Object, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings, T)
+  nameWithType: JsonParse.ToJsonWriter<T>(object?, JsonSettings?, T?)
+  nameWithType.vb: JsonParse.ToJsonWriter(Of T)(Object, JsonSettings, T)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings
+  name: JsonParseSettings
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings
+  nameWithType: JsonParseSettings
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.Json
+  name: Json
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParseSettings_Json
+  commentId: P:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.Json
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.Json
+  nameWithType: JsonParseSettings.Json
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.Json*
+  name: Json
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.html#Gucu112_CSharp_Automation_Helpers_Parsers_JsonParseSettings_Json_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.Json
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.Json
+  nameWithType: JsonParseSettings.Json
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse
+  name: Parse
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Parsers.Parse
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse
+  nameWithType: Parse
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson*
+  name: FromJson
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_FromJson_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson
+  nameWithType: Parse.FromJson
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJsonFile*
+  name: FromJsonFile
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_FromJsonFile_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJsonFile
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJsonFile
+  nameWithType: Parse.FromJsonFile
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJsonFile``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJsonFile<T>(string, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_FromJsonFile__1_System_String_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJsonFile``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJsonFile(Of T)(String, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJsonFile<T>(string, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJsonFile(Of T)(String, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: Parse.FromJsonFile<T>(string, JsonSettings?)
+  nameWithType.vb: Parse.FromJsonFile(Of T)(String, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson``1(System.IO.Stream,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJson<T>(Stream, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_FromJson__1_System_IO_Stream_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson``1(System.IO.Stream,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJson(Of T)(Stream, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson<T>(System.IO.Stream, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson(Of T)(System.IO.Stream, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: Parse.FromJson<T>(Stream, JsonSettings?)
+  nameWithType.vb: Parse.FromJson(Of T)(Stream, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson``1(System.IO.TextReader,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJson<T>(TextReader, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_FromJson__1_System_IO_TextReader_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson``1(System.IO.TextReader,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJson(Of T)(TextReader, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson<T>(System.IO.TextReader, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson(Of T)(System.IO.TextReader, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: Parse.FromJson<T>(TextReader, JsonSettings?)
+  nameWithType.vb: Parse.FromJson(Of T)(TextReader, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: FromJson<T>(string, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_FromJson__1_System_String_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson``1(System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: FromJson(Of T)(String, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson<T>(string, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.FromJson(Of T)(String, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: Parse.FromJson<T>(string, JsonSettings?)
+  nameWithType.vb: Parse.FromJson(Of T)(String, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonFile(System.Object,System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: ToJsonFile(object?, string, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_ToJsonFile_System_Object_System_String_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonFile(System.Object,System.String,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: ToJsonFile(Object, String, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonFile(object?, string, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonFile(Object, String, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: Parse.ToJsonFile(object?, string, JsonSettings?)
+  nameWithType.vb: Parse.ToJsonFile(Object, String, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonFile*
+  name: ToJsonFile
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_ToJsonFile_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonFile
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonFile
+  nameWithType: Parse.ToJsonFile
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonStream*
+  name: ToJsonStream
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_ToJsonStream_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonStream
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonStream
+  nameWithType: Parse.ToJsonStream
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonStream``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name: ToJsonStream<T>(object?, JsonSettings?, T?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_ToJsonStream__1_System_Object_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings___0_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonStream``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name.vb: ToJsonStream(Of T)(Object, JsonSettings, T)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonStream<T>(object?, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?, T?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonStream(Of T)(Object, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings, T)
+  nameWithType: Parse.ToJsonStream<T>(object?, JsonSettings?, T?)
+  nameWithType.vb: Parse.ToJsonStream(Of T)(Object, JsonSettings, T)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonString(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name: ToJsonString(object?, JsonSettings?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_ToJsonString_System_Object_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonString(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  name.vb: ToJsonString(Object, JsonSettings)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonString(object?, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonString(Object, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings)
+  nameWithType: Parse.ToJsonString(object?, JsonSettings?)
+  nameWithType.vb: Parse.ToJsonString(Object, JsonSettings)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonString*
+  name: ToJsonString
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_ToJsonString_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonString
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonString
+  nameWithType: Parse.ToJsonString
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonWriter*
+  name: ToJsonWriter
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_ToJsonWriter_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonWriter
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonWriter
+  nameWithType: Parse.ToJsonWriter
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonWriter``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name: ToJsonWriter<T>(object?, JsonSettings?, T?)
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html#Gucu112_CSharp_Automation_Helpers_Parsers_Parse_ToJsonWriter__1_System_Object_Gucu112_CSharp_Automation_Helpers_Models_JsonSettings___0_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonWriter``1(System.Object,Gucu112.CSharp.Automation.Helpers.Models.JsonSettings,``0)
+  name.vb: ToJsonWriter(Of T)(Object, JsonSettings, T)
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonWriter<T>(object?, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings?, T?)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Parsers.Parse.ToJsonWriter(Of T)(Object, Gucu112.CSharp.Automation.Helpers.Models.JsonSettings, T)
+  nameWithType: Parse.ToJsonWriter<T>(object?, JsonSettings?, T?)
+  nameWithType.vb: Parse.ToJsonWriter(Of T)(Object, JsonSettings, T)
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings
+  name: ParseSettings
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings
+  nameWithType: ParseSettings
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.Json
+  name: Json
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.html#Gucu112_CSharp_Automation_Helpers_Parsers_ParseSettings_Json
+  commentId: P:Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.Json
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.Json
+  nameWithType: ParseSettings.Json
+- uid: Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.Json*
+  name: Json
+  href: api/Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.html#Gucu112_CSharp_Automation_Helpers_Parsers_ParseSettings_Json_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.Json
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.Json
+  nameWithType: ParseSettings.Json
+- uid: Gucu112.CSharp.Automation.Helpers.Providers
+  name: Gucu112.CSharp.Automation.Helpers.Providers
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.html
+  commentId: N:Gucu112.CSharp.Automation.Helpers.Providers
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers
+  nameWithType: Gucu112.CSharp.Automation.Helpers.Providers
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider
+  name: FileSystemProvider
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider
+  nameWithType: FileSystemProvider
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.ReadStream(System.String)
+  name: ReadStream(string)
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.html#Gucu112_CSharp_Automation_Helpers_Providers_FileSystemProvider_ReadStream_System_String_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.ReadStream(System.String)
+  name.vb: ReadStream(String)
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.ReadStream(string)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.ReadStream(String)
+  nameWithType: FileSystemProvider.ReadStream(string)
+  nameWithType.vb: FileSystemProvider.ReadStream(String)
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.ReadStream*
+  name: ReadStream
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.html#Gucu112_CSharp_Automation_Helpers_Providers_FileSystemProvider_ReadStream_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.ReadStream
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.ReadStream
+  nameWithType: FileSystemProvider.ReadStream
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.WriteStream(System.String)
+  name: WriteStream(string)
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.html#Gucu112_CSharp_Automation_Helpers_Providers_FileSystemProvider_WriteStream_System_String_
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.WriteStream(System.String)
+  name.vb: WriteStream(String)
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.WriteStream(string)
+  fullName.vb: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.WriteStream(String)
+  nameWithType: FileSystemProvider.WriteStream(string)
+  nameWithType.vb: FileSystemProvider.WriteStream(String)
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.WriteStream*
+  name: WriteStream
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.html#Gucu112_CSharp_Automation_Helpers_Providers_FileSystemProvider_WriteStream_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.WriteStream
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.WriteStream
+  nameWithType: FileSystemProvider.WriteStream
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider
+  name: RegexProvider
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.html
+  commentId: T:Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider
+  nameWithType: RegexProvider
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.AnyWhitespaceRegex
+  name: AnyWhitespaceRegex()
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.html#Gucu112_CSharp_Automation_Helpers_Providers_RegexProvider_AnyWhitespaceRegex
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.AnyWhitespaceRegex
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.AnyWhitespaceRegex()
+  nameWithType: RegexProvider.AnyWhitespaceRegex()
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.AnyWhitespaceRegex*
+  name: AnyWhitespaceRegex
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.html#Gucu112_CSharp_Automation_Helpers_Providers_RegexProvider_AnyWhitespaceRegex_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.AnyWhitespaceRegex
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.AnyWhitespaceRegex
+  nameWithType: RegexProvider.AnyWhitespaceRegex
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.NormalizeSpaceRegex
+  name: NormalizeSpaceRegex()
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.html#Gucu112_CSharp_Automation_Helpers_Providers_RegexProvider_NormalizeSpaceRegex
+  commentId: M:Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.NormalizeSpaceRegex
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.NormalizeSpaceRegex()
+  nameWithType: RegexProvider.NormalizeSpaceRegex()
+- uid: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.NormalizeSpaceRegex*
+  name: NormalizeSpaceRegex
+  href: api/Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.html#Gucu112_CSharp_Automation_Helpers_Providers_RegexProvider_NormalizeSpaceRegex_
+  commentId: Overload:Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.NormalizeSpaceRegex
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.NormalizeSpaceRegex
+  nameWithType: RegexProvider.NormalizeSpaceRegex
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel
+  name: Gucu112.CSharp.Automation.PlaywrightXunitParallel
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.html
+  commentId: N:Gucu112.CSharp.Automation.PlaywrightXunitParallel
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel
+  nameWithType: Gucu112.CSharp.Automation.PlaywrightXunitParallel
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures
+  name: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.html
+  commentId: N:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures
+  nameWithType: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture
+  name: PlaywrightFixture
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture
+  nameWithType: PlaywrightFixture
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.Browser
+  name: Browser
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_Browser
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.Browser
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.Browser
+  nameWithType: PlaywrightFixture.Browser
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.Browser*
+  name: Browser
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_Browser_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.Browser
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.Browser
+  nameWithType: PlaywrightFixture.Browser
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserContext
+  name: BrowserContext
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_BrowserContext
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserContext
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserContext
+  nameWithType: PlaywrightFixture.BrowserContext
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserContext*
+  name: BrowserContext
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_BrowserContext_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserContext
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserContext
+  nameWithType: PlaywrightFixture.BrowserContext
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserOptions
+  name: BrowserOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_BrowserOptions
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserOptions
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserOptions
+  nameWithType: PlaywrightFixture.BrowserOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserOptions*
+  name: BrowserOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_BrowserOptions_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserOptions
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.BrowserOptions
+  nameWithType: PlaywrightFixture.BrowserOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.DisposeAsync
+  name: DisposeAsync()
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_DisposeAsync
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.DisposeAsync
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.DisposeAsync()
+  nameWithType: PlaywrightFixture.DisposeAsync()
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.DisposeAsync*
+  name: DisposeAsync
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_DisposeAsync_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.DisposeAsync
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.DisposeAsync
+  nameWithType: PlaywrightFixture.DisposeAsync
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.InitializeAsync
+  name: InitializeAsync()
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_InitializeAsync
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.InitializeAsync
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.InitializeAsync()
+  nameWithType: PlaywrightFixture.InitializeAsync()
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.InitializeAsync*
+  name: InitializeAsync
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_InitializeAsync_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.InitializeAsync
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.InitializeAsync
+  nameWithType: PlaywrightFixture.InitializeAsync
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.LaunchOptions
+  name: LaunchOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_LaunchOptions
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.LaunchOptions
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.LaunchOptions
+  nameWithType: PlaywrightFixture.LaunchOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.LaunchOptions*
+  name: LaunchOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_LaunchOptions_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.LaunchOptions
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.LaunchOptions
+  nameWithType: PlaywrightFixture.LaunchOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsCollection
+  name: SettingsCollection
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsCollection.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsCollection
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsCollection
+  nameWithType: SettingsCollection
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture
+  name: SettingsFixture
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture
+  nameWithType: SettingsFixture
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.#ctor
+  name: SettingsFixture()
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture__ctor
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.#ctor
+  name.vb: New()
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.SettingsFixture()
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.New()
+  nameWithType: SettingsFixture.SettingsFixture()
+  nameWithType.vb: SettingsFixture.New()
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.#ctor*
+  name: SettingsFixture
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture__ctor_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.SettingsFixture
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.New
+  nameWithType: SettingsFixture.SettingsFixture
+  nameWithType.vb: SettingsFixture.New
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserName
+  name: BrowserName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_BrowserName
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserName
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserName
+  nameWithType: SettingsFixture.BrowserName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserName*
+  name: BrowserName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_BrowserName_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserName
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserName
+  nameWithType: SettingsFixture.BrowserName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserOptions
+  name: BrowserOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_BrowserOptions
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserOptions
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserOptions
+  nameWithType: SettingsFixture.BrowserOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserOptions*
+  name: BrowserOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_BrowserOptions_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserOptions
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.BrowserOptions
+  nameWithType: SettingsFixture.BrowserOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.EntryPoints
+  name: EntryPoints
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_EntryPoints
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.EntryPoints
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.EntryPoints
+  nameWithType: SettingsFixture.EntryPoints
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.EntryPoints*
+  name: EntryPoints
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_EntryPoints_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.EntryPoints
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.EntryPoints
+  nameWithType: SettingsFixture.EntryPoints
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.Environment
+  name: Environment
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_Environment
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.Environment
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.Environment
+  nameWithType: SettingsFixture.Environment
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.Environment*
+  name: Environment
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_Environment_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.Environment
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.Environment
+  nameWithType: SettingsFixture.Environment
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.ExpectTimeout
+  name: ExpectTimeout
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_ExpectTimeout
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.ExpectTimeout
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.ExpectTimeout
+  nameWithType: SettingsFixture.ExpectTimeout
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.ExpectTimeout*
+  name: ExpectTimeout
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_ExpectTimeout_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.ExpectTimeout
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.ExpectTimeout
+  nameWithType: SettingsFixture.ExpectTimeout
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.IsVideoEnabled
+  name: IsVideoEnabled
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_IsVideoEnabled
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.IsVideoEnabled
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.IsVideoEnabled
+  nameWithType: SettingsFixture.IsVideoEnabled
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.IsVideoEnabled*
+  name: IsVideoEnabled
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_IsVideoEnabled_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.IsVideoEnabled
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.IsVideoEnabled
+  nameWithType: SettingsFixture.IsVideoEnabled
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.LaunchOptions
+  name: LaunchOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_LaunchOptions
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.LaunchOptions
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.LaunchOptions
+  nameWithType: SettingsFixture.LaunchOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.LaunchOptions*
+  name: LaunchOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_LaunchOptions_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.LaunchOptions
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.LaunchOptions
+  nameWithType: SettingsFixture.LaunchOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RecordVideoDir
+  name: RecordVideoDir
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_RecordVideoDir
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RecordVideoDir
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RecordVideoDir
+  nameWithType: SettingsFixture.RecordVideoDir
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RecordVideoDir*
+  name: RecordVideoDir
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_RecordVideoDir_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RecordVideoDir
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RecordVideoDir
+  nameWithType: SettingsFixture.RecordVideoDir
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RootPath
+  name: RootPath
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_RootPath
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RootPath
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RootPath
+  nameWithType: SettingsFixture.RootPath
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RootPath*
+  name: RootPath
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_SettingsFixture_RootPath_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RootPath
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.RootPath
+  nameWithType: SettingsFixture.RootPath
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models
+  name: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.html
+  commentId: N:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models
+  nameWithType: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute
+  name: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.html
+  commentId: N:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute
+  nameWithType: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute
+  name: CategoryAttribute
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute
+  nameWithType: CategoryAttribute
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.#ctor(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory)
+  name: CategoryAttribute(TestCategory)
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Attribute_CategoryAttribute__ctor_Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestCategory_
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.#ctor(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory)
+  name.vb: New(TestCategory)
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.CategoryAttribute(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory)
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.New(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory)
+  nameWithType: CategoryAttribute.CategoryAttribute(TestCategory)
+  nameWithType.vb: CategoryAttribute.New(TestCategory)
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.#ctor*
+  name: CategoryAttribute
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Attribute_CategoryAttribute__ctor_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.CategoryAttribute
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.New
+  nameWithType: CategoryAttribute.CategoryAttribute
+  nameWithType.vb: CategoryAttribute.New
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.Category
+  name: Category
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Attribute_CategoryAttribute_Category
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.Category
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.Category
+  nameWithType: CategoryAttribute.Category
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.Category*
+  name: Category
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Attribute_CategoryAttribute_Category_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.Category
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.Category
+  nameWithType: CategoryAttribute.Category
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute
+  name: PriorityAttribute
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute
+  nameWithType: PriorityAttribute
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.#ctor(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority)
+  name: PriorityAttribute(TestPriority)
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Attribute_PriorityAttribute__ctor_Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestPriority_
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.#ctor(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority)
+  name.vb: New(TestPriority)
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.PriorityAttribute(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority)
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.New(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority)
+  nameWithType: PriorityAttribute.PriorityAttribute(TestPriority)
+  nameWithType.vb: PriorityAttribute.New(TestPriority)
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.#ctor*
+  name: PriorityAttribute
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Attribute_PriorityAttribute__ctor_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.PriorityAttribute
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.New
+  nameWithType: PriorityAttribute.PriorityAttribute
+  nameWithType.vb: PriorityAttribute.New
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.Priority
+  name: Priority
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Attribute_PriorityAttribute_Priority
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.Priority
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.Priority
+  nameWithType: PriorityAttribute.Priority
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.Priority*
+  name: Priority
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Attribute_PriorityAttribute_Priority_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.Priority
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.Priority
+  nameWithType: PriorityAttribute.Priority
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint
+  name: EntryPoint
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint
+  nameWithType: EntryPoint
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Name
+  name: Name
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_EntryPoint_Name
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Name
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Name
+  nameWithType: EntryPoint.Name
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Name*
+  name: Name
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_EntryPoint_Name_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Name
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Name
+  nameWithType: EntryPoint.Name
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Url
+  name: Url
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_EntryPoint_Url
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Url
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Url
+  nameWithType: EntryPoint.Url
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Url*
+  name: Url
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_EntryPoint_Url_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Url
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.Url
+  nameWithType: EntryPoint.Url
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum
+  name: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.html
+  commentId: N:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum
+  nameWithType: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory
+  name: TestCategory
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory
+  nameWithType: TestCategory
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.Browser
+  name: Browser
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestCategory_Browser
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.Browser
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.Browser
+  nameWithType: TestCategory.Browser
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.Google
+  name: Google
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestCategory_Google
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.Google
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.Google
+  nameWithType: TestCategory.Google
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.Settings
+  name: Settings
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestCategory_Settings
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.Settings
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.Settings
+  nameWithType: TestCategory.Settings
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority
+  name: TestPriority
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority
+  nameWithType: TestPriority
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Critical
+  name: Critical
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestPriority_Critical
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Critical
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Critical
+  nameWithType: TestPriority.Critical
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.High
+  name: High
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestPriority_High
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.High
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.High
+  nameWithType: TestPriority.High
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Low
+  name: Low
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestPriority_Low
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Low
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Low
+  nameWithType: TestPriority.Low
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Medium
+  name: Medium
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestPriority_Medium
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Medium
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Medium
+  nameWithType: TestPriority.Medium
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Trivial
+  name: Trivial
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Enum_TestPriority_Trivial
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Trivial
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.Trivial
+  nameWithType: TestPriority.Trivial
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface
+  name: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.html
+  commentId: N:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface
+  nameWithType: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings
+  name: ISettings
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings
+  nameWithType: ISettings
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserName
+  name: BrowserName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_BrowserName
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserName
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserName
+  nameWithType: ISettings.BrowserName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserName*
+  name: BrowserName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_BrowserName_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserName
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserName
+  nameWithType: ISettings.BrowserName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserOptions
+  name: BrowserOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_BrowserOptions
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserOptions
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserOptions
+  nameWithType: ISettings.BrowserOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserOptions*
+  name: BrowserOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_BrowserOptions_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserOptions
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.BrowserOptions
+  nameWithType: ISettings.BrowserOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.EntryPoints
+  name: EntryPoints
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_EntryPoints
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.EntryPoints
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.EntryPoints
+  nameWithType: ISettings.EntryPoints
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.EntryPoints*
+  name: EntryPoints
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_EntryPoints_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.EntryPoints
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.EntryPoints
+  nameWithType: ISettings.EntryPoints
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.Environment
+  name: Environment
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_Environment
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.Environment
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.Environment
+  nameWithType: ISettings.Environment
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.Environment*
+  name: Environment
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_Environment_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.Environment
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.Environment
+  nameWithType: ISettings.Environment
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.ExpectTimeout
+  name: ExpectTimeout
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_ExpectTimeout
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.ExpectTimeout
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.ExpectTimeout
+  nameWithType: ISettings.ExpectTimeout
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.ExpectTimeout*
+  name: ExpectTimeout
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_ExpectTimeout_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.ExpectTimeout
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.ExpectTimeout
+  nameWithType: ISettings.ExpectTimeout
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.IsVideoEnabled
+  name: IsVideoEnabled
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_IsVideoEnabled
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.IsVideoEnabled
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.IsVideoEnabled
+  nameWithType: ISettings.IsVideoEnabled
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.IsVideoEnabled*
+  name: IsVideoEnabled
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_IsVideoEnabled_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.IsVideoEnabled
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.IsVideoEnabled
+  nameWithType: ISettings.IsVideoEnabled
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.LaunchOptions
+  name: LaunchOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_LaunchOptions
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.LaunchOptions
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.LaunchOptions
+  nameWithType: ISettings.LaunchOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.LaunchOptions*
+  name: LaunchOptions
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_LaunchOptions_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.LaunchOptions
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.LaunchOptions
+  nameWithType: ISettings.LaunchOptions
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RecordVideoDir
+  name: RecordVideoDir
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_RecordVideoDir
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RecordVideoDir
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RecordVideoDir
+  nameWithType: ISettings.RecordVideoDir
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RecordVideoDir*
+  name: RecordVideoDir
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_RecordVideoDir_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RecordVideoDir
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RecordVideoDir
+  nameWithType: ISettings.RecordVideoDir
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RootPath
+  name: RootPath
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_RootPath
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RootPath
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RootPath
+  nameWithType: ISettings.RootPath
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RootPath*
+  name: RootPath
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Models_Interface_ISettings_RootPath_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RootPath
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.RootPath
+  nameWithType: ISettings.RootPath
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase
+  name: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.html
+  commentId: N:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase
+  nameWithType: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer
+  name: NameOrderer
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer
+  nameWithType: NameOrderer
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.AssemblyName
+  name: AssemblyName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Orderers_TestCase_NameOrderer_AssemblyName
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.AssemblyName
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.AssemblyName
+  nameWithType: NameOrderer.AssemblyName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.FullTypeName
+  name: FullTypeName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Orderers_TestCase_NameOrderer_FullTypeName
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.FullTypeName
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.FullTypeName
+  nameWithType: NameOrderer.FullTypeName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.OrderTestCases*
+  name: OrderTestCases
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Orderers_TestCase_NameOrderer_OrderTestCases_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.OrderTestCases
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.OrderTestCases
+  nameWithType: NameOrderer.OrderTestCases
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.OrderTestCases``1(System.Collections.Generic.IEnumerable{``0})
+  name: OrderTestCases<TTestCase>(IEnumerable<TTestCase>)
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Orderers_TestCase_NameOrderer_OrderTestCases__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.OrderTestCases``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: OrderTestCases(Of TTestCase)(IEnumerable(Of TTestCase))
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.OrderTestCases<TTestCase>(System.Collections.Generic.IEnumerable<TTestCase>)
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.OrderTestCases(Of TTestCase)(System.Collections.Generic.IEnumerable(Of TTestCase))
+  nameWithType: NameOrderer.OrderTestCases<TTestCase>(IEnumerable<TTestCase>)
+  nameWithType.vb: NameOrderer.OrderTestCases(Of TTestCase)(IEnumerable(Of TTestCase))
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer
+  name: PriorityOrderer
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer
+  nameWithType: PriorityOrderer
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.AssemblyName
+  name: AssemblyName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Orderers_TestCase_PriorityOrderer_AssemblyName
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.AssemblyName
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.AssemblyName
+  nameWithType: PriorityOrderer.AssemblyName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.FullTypeName
+  name: FullTypeName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Orderers_TestCase_PriorityOrderer_FullTypeName
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.FullTypeName
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.FullTypeName
+  nameWithType: PriorityOrderer.FullTypeName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.OrderTestCases*
+  name: OrderTestCases
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Orderers_TestCase_PriorityOrderer_OrderTestCases_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.OrderTestCases
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.OrderTestCases
+  nameWithType: PriorityOrderer.OrderTestCases
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.OrderTestCases``1(System.Collections.Generic.IEnumerable{``0})
+  name: OrderTestCases<TTestCase>(IEnumerable<TTestCase>)
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Orderers_TestCase_PriorityOrderer_OrderTestCases__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.OrderTestCases``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: OrderTestCases(Of TTestCase)(IEnumerable(Of TTestCase))
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.OrderTestCases<TTestCase>(System.Collections.Generic.IEnumerable<TTestCase>)
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.OrderTestCases(Of TTestCase)(System.Collections.Generic.IEnumerable(Of TTestCase))
+  nameWithType: PriorityOrderer.OrderTestCases<TTestCase>(IEnumerable<TTestCase>)
+  nameWithType.vb: PriorityOrderer.OrderTestCases(Of TTestCase)(IEnumerable(Of TTestCase))
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages
+  name: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.html
+  commentId: N:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages
+  nameWithType: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage
+  name: BasePage
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage
+  nameWithType: BasePage
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.#ctor(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture)
+  name: BasePage(PlaywrightFixture)
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePage__ctor_Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.#ctor(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture)
+  name.vb: New(PlaywrightFixture)
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.BasePage(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture)
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.New(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture)
+  nameWithType: BasePage.BasePage(PlaywrightFixture)
+  nameWithType.vb: BasePage.New(PlaywrightFixture)
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.#ctor*
+  name: BasePage
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePage__ctor_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.BasePage
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.New
+  nameWithType: BasePage.BasePage
+  nameWithType.vb: BasePage.New
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.Dispose
+  name: Dispose()
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePage_Dispose
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.Dispose
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.Dispose()
+  nameWithType: BasePage.Dispose()
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.Dispose*
+  name: Dispose
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePage_Dispose_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.Dispose
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.Dispose
+  nameWithType: BasePage.Dispose
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync
+  name: BasePageAsync
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync
+  nameWithType: BasePageAsync
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.#ctor(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture)
+  name: BasePageAsync(PlaywrightFixture)
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync__ctor_Gucu112_CSharp_Automation_PlaywrightXunitParallel_Fixtures_PlaywrightFixture_
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.#ctor(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture)
+  name.vb: New(PlaywrightFixture)
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BasePageAsync(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture)
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.New(Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture)
+  nameWithType: BasePageAsync.BasePageAsync(PlaywrightFixture)
+  nameWithType.vb: BasePageAsync.New(PlaywrightFixture)
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.#ctor*
+  name: BasePageAsync
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync__ctor_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BasePageAsync
+  fullName.vb: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.New
+  nameWithType: BasePageAsync.BasePageAsync
+  nameWithType.vb: BasePageAsync.New
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BaseUrl
+  name: BaseUrl
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_BaseUrl
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BaseUrl
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BaseUrl
+  nameWithType: BasePageAsync.BaseUrl
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BaseUrl*
+  name: BaseUrl
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_BaseUrl_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BaseUrl
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BaseUrl
+  nameWithType: BasePageAsync.BaseUrl
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BeforeGoToBaseUrl
+  name: BeforeGoToBaseUrl()
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_BeforeGoToBaseUrl
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BeforeGoToBaseUrl
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BeforeGoToBaseUrl()
+  nameWithType: BasePageAsync.BeforeGoToBaseUrl()
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BeforeGoToBaseUrl*
+  name: BeforeGoToBaseUrl
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_BeforeGoToBaseUrl_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BeforeGoToBaseUrl
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BeforeGoToBaseUrl
+  nameWithType: BasePageAsync.BeforeGoToBaseUrl
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BrowserContext
+  name: BrowserContext
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_BrowserContext
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BrowserContext
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BrowserContext
+  nameWithType: BasePageAsync.BrowserContext
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BrowserContext*
+  name: BrowserContext
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_BrowserContext_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BrowserContext
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.BrowserContext
+  nameWithType: BasePageAsync.BrowserContext
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Context
+  name: Context
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_Context
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Context
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Context
+  nameWithType: BasePageAsync.Context
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Context*
+  name: Context
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_Context_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Context
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Context
+  nameWithType: BasePageAsync.Context
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.DisposeAsync
+  name: DisposeAsync()
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_DisposeAsync
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.DisposeAsync
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.DisposeAsync()
+  nameWithType: BasePageAsync.DisposeAsync()
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.DisposeAsync*
+  name: DisposeAsync
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_DisposeAsync_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.DisposeAsync
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.DisposeAsync
+  nameWithType: BasePageAsync.DisposeAsync
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.InitializeAsync
+  name: InitializeAsync()
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_InitializeAsync
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.InitializeAsync
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.InitializeAsync()
+  nameWithType: BasePageAsync.InitializeAsync()
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.InitializeAsync*
+  name: InitializeAsync
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_InitializeAsync_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.InitializeAsync
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.InitializeAsync
+  nameWithType: BasePageAsync.InitializeAsync
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Settings
+  name: Settings
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_Settings
+  commentId: P:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Settings
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Settings
+  nameWithType: BasePageAsync.Settings
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Settings*
+  name: Settings
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_Pages_BasePageAsync_Settings_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Settings
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.Settings
+  nameWithType: BasePageAsync.Settings
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer
+  name: TraitDiscoverer
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.html
+  commentId: T:Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer
+  nameWithType: TraitDiscoverer
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.AssemblyName
+  name: AssemblyName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_TraitDiscoverer_AssemblyName
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.AssemblyName
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.AssemblyName
+  nameWithType: TraitDiscoverer.AssemblyName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.FullTypeName
+  name: FullTypeName
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_TraitDiscoverer_FullTypeName
+  commentId: F:Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.FullTypeName
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.FullTypeName
+  nameWithType: TraitDiscoverer.FullTypeName
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.GetTraits(Xunit.Abstractions.IAttributeInfo)
+  name: GetTraits(IAttributeInfo)
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_TraitDiscoverer_GetTraits_Xunit_Abstractions_IAttributeInfo_
+  commentId: M:Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.GetTraits(Xunit.Abstractions.IAttributeInfo)
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.GetTraits(Xunit.Abstractions.IAttributeInfo)
+  nameWithType: TraitDiscoverer.GetTraits(IAttributeInfo)
+- uid: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.GetTraits*
+  name: GetTraits
+  href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.html#Gucu112_CSharp_Automation_PlaywrightXunitParallel_TraitDiscoverer_GetTraits_
+  commentId: Overload:Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.GetTraits
+  isSpec: "True"
+  fullName: Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.GetTraits
+  nameWithType: TraitDiscoverer.GetTraits

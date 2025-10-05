@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>C# Automation | C# Automation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="C# Automation | C# Automation ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gucu112/CSharpAutomation/blob/experimental/Documentation/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="C# Automation">
+            C# Automation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="c-automation">C# Automation</h1>
+
+<blockquote>
+<p>This is repository which contains various projects that show how you can approach building your own framework using some set of technologies and tools.</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#getting-started">Getting started</a>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#building">Building</a></li>
+<li><a href="#running">Running</a></li>
+</ul>
+</li>
+<li><a href="#deployment">Deployment</a></li>
+<li><a href="#build-with">Built with</a>
+<ul>
+<li><a href="#playwrightxunit">PlaywrightXunit</a></li>
+<li><a href="#playwrightxunitparallel">PlaywrightXunitParallel</a></li>
+<li><a href="#playwrightreqnrollmstest">PlaywrightReqnrollMsTest</a></li>
+<li><a href="#seleniumreqnrollnunit">SeleniumReqnrollNunit</a></li>
+<li><a href="#common-helpers">Common/Helpers</a></li>
+<li><a href="#common-helpers-tests">Common/Helpers.Tests</a></li>
+</ul>
+</li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#versioning">Versioning</a></li>
+<li><a href="#authors">Authors</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>Simply open the solution file (<code>CSharpAutomation.sln</code>) from main project directory. Any commands should be run towards chosen project, so remember to <code>cd</code> into chosen project directory.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<h4 id="playwright">Playwright</h4>
+<p>Run this command from selected project directory (e.g. <code>PlaywrightXunitParallel</code>), replacing <code>{{Configuration}}</code> with current configuration (e.g. <code>ChromiumDebug</code>).</p>
+<pre><code>pwsh bin/{{Configuration}}/net8.0/playwright.ps1 install
+</code></pre>
+<p>If <code>pwsh</code> is not available, you have to <a href="https://docs.microsoft.com/powershell/scripting/install/installing-powershell">install PowerShell</a>.</p>
+<h3 id="building">Building</h3>
+<p>Use Visual Studio or execute following command to build the tests:</p>
+<pre><code>dotnet build
+</code></pre>
+<h3 id="running">Running</h3>
+<p>Use Visual Studio Test Explorer or execute following command to run the tests:</p>
+<pre><code>dotnet test
+</code></pre>
+<h2 id="deployment">Deployment</h2>
+<p>There are no deployment procedure established yet.</p>
+<h2 id="build-with">Build with</h2>
+<h3 id="playwrightxunit">PlaywrightXunit</h3>
+<ul>
+<li><a href="https://playwright.dev/dotnet/">Playwright</a></li>
+<li><a href="https://xunit.net/">Xunit</a></li>
+<li><a href="https://github.com/AArnott/Xunit.SkippableFact">Xunit.SkippableFact</a></li>
+<li><a href="https://allurereport.org/docs/xunit/">Allure.Xunit</a></li>
+</ul>
+<h3 id="playwrightxunitparallel">PlaywrightXunitParallel</h3>
+<ul>
+<li><a href="https://playwright.dev/dotnet/">Playwright</a></li>
+<li><a href="https://xunit.net/">Xunit</a></li>
+<li><a href="https://github.com/AArnott/Xunit.SkippableFact">Xunit.SkippableFact</a></li>
+<li><a href="https://fluentassertions.com/">FluentAssertions</a></li>
+<li><a href="https://allurereport.org/docs/xunit/">Allure.Xunit</a></li>
+</ul>
+<h3 id="playwrightreqnrollmstest">PlaywrightReqnrollMSTest</h3>
+<h3 id="seleniumreqnrollnunit">SeleniumReqnrollNunit</h3>
+<h3 id="common-helpers">Common Helpers</h3>
+<ul>
+<li><a href="https://www.newtonsoft.com/json">Json.NET</a></li>
+</ul>
+<h4 id="common-helpers-tests">Common Helpers Tests</h4>
+<ul>
+<li><a href="https://allurereport.org/docs/nunit/">Allure.NUnit</a></li>
+<li><a href="https://nunit.org/">NUnit</a></li>
+<li><a href="https://github.com/devlooped/moq">Moq</a></li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>There are no contribution rules established yet.</p>
+<h2 id="versioning">Versioning</h2>
+<p>Project versioning pattern is defined as follows:</p>
+<pre><code>v{yy}.{M}.{d}.{r}
+</code></pre>
+<p><strong>Legend:</strong></p>
+<ul>
+<li><code>{yy}</code> - 2-digits year, range from 00 to 99</li>
+<li><code>{M}</code> - month, range from 1 to 12</li>
+<li><code>{d}</code> - day of the month, range from 1 to 31</li>
+<li><code>{r}</code> - revison number, incrementing for each daily version, starting from 0</li>
+</ul>
+<h2 id="authors">Authors</h2>
+<ul>
+<li><strong>Bartlomiej Roszczypala</strong> - <a href="https://github.com/gucu112">Gucu112</a></li>
+</ul>
+<p>See also the list of <a href="https://github.com/gucu112/CSharpAutomation/contributors">contributors</a> who participated in this project.</p>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE.txt">LICENSE</a> file for details.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gucu112/CSharpAutomation/blob/experimental/Documentation/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
