@@ -23,9 +23,10 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build solution
-      run: dotnet build -c Release --no-restore
+      run: dotnet build --configuration Release --no-restore
     - name: Publish solution
-      run: dotnet publish -c Release --no-build --no-restore
+      run: dotnet publish --configuration Release --no-restore --no-build
+      if: 1 == 0
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
@@ -35,6 +36,7 @@ jobs:
           PlaywrightXunit*/**/
           Utilities/**/
           Directory.*.props
+          *.sln
 
   test:
 
@@ -58,4 +60,8 @@ jobs:
       with:
         dotnet-version: '8.x'
     - name: Test solution
-      run: dotnet test ./dist/${{ matrix.project }} --verbosity normal --filter "Category\!=Google"
+      run: >
+        dotnet test ./dist/${{ matrix.project }}
+          --configuration Release
+          --verbosity normal
+          --filter "Category\!=Google"
