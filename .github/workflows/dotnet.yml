@@ -74,6 +74,7 @@ jobs:
       run: |
         PROJECT_NAME=${{ matrix.project }}
         ARTIFACT_PREFIX=${PROJECT_NAME//[^A-Za-z0-9\-]/-}
+        echo "Artifact prefix: '${ARTIFACT_PREFIX,,}'" >> $GITHUB_OUTPUT
         echo "::set-output name=lowercase::${ARTIFACT_PREFIX,,}"
     - name: Upload artifact
       uses: actions/upload-artifact@v4
