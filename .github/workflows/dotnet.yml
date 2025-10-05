@@ -4,7 +4,7 @@ name: solution-build-test
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "experimental" ]
   pull_request:
     branches: [ "master" ]
 
