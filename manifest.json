@@ -571,26 +571,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "Documentation/overwrite/ParseOverwrite.md",
-      "output": {
-        ".html": {
-          "relative_path": "overwrite/ParseOverwrite.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Documentation/overwrite/ParseSettingsOverwrite.md",
-      "output": {
-        ".html": {
-          "relative_path": "overwrite/ParseSettingsOverwrite.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "Documentation/toc.yml",
       "output": {
