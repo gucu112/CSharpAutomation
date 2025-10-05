@@ -9,7 +9,11 @@ try {
     $info = $cmdOutput | Select-Object -Last 4
     Write-Host $info[0]
     Set-Location $ProjectDirectory
-    reportgenerator -reports:"$($info[3])" -targetdir:"coverage-report" -reporttypes:"Html_Dark" -filefilters:-*.g.cs
+    Write-Host $info[3]
+    reportgenerator -reports:"TestResults/*/coverage.cobertura.xml" `
+        -targetdir:"coverage-report" `
+        -reporttypes:"Html_Dark" `
+        -filefilters:-*.g.cs
     Invoke-Item "coverage-report/index.html"
 }
 finally {

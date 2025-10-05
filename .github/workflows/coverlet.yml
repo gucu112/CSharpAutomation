@@ -68,7 +68,7 @@ jobs:
       - name: Generate code coverage report
         run: >
           reportgenerator
-          -reports:"artifact/*/coverage.cobertura.xml"
+          -reports:"artifact/TestResults/*/coverage.cobertura.xml"
           -targetdir:"gh-pages/coverlet/${{steps.destination_suffix.outputs.lowercase}}"
           -reporttypes:"Html_Dark"
           -filefilters:-*.g.cs
