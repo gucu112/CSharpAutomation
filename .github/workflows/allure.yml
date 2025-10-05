@@ -78,5 +78,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./allure-history
-          destination_dir: ./allure_${{steps.destination_prefix.outputs.lowercase}}
           exclude_assets: '.git,.github'
