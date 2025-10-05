@@ -38,13 +38,13 @@ jobs:
           name: ${{steps.artifact_prefix.outputs.lowercase}}-results
           path: artifact
 
-      - name: Set destination path prefix
-        id: destination_prefix
+      - name: Set destination path suffix
+        id: destination_suffix
         run: |
           PROJECT_NAME=${{ matrix.project }}
-          DESTINATION_PREFIX=${PROJECT_NAME//\\//}
-          echo "Destination prefix: '${DESTINATION_PREFIX,,}'"
-          echo "::set-output name=lowercase::${DESTINATION_PREFIX,,}"
+          DESTINATION_SUFFIX=${PROJECT_NAME//\\//}
+          echo "Destination suffix: '${DESTINATION_SUFFIX,,}'"
+          echo "::set-output name=lowercase::${DESTINATION_SUFFIX,,}"
 
       - name: Load test report history
         uses: actions/checkout@v4
@@ -61,7 +61,7 @@ jobs:
           gh_pages: gh-pages
           allure_history: allure-history
           allure_results: artifact/allure-results
-          subfolder: allure/${{steps.destination_prefix.outputs.lowercase}}
+          subfolder: allure/${{steps.destination_suffix.outputs.lowercase}}
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v4
