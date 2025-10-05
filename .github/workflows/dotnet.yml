@@ -30,12 +30,21 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: dotnet-build
-        path: ./**/bin/Release/net8.0/publish/**
+        path: |
+          Common/Helpers.Tests/**/
+          PlaywrightXunit*/**/
+          Utilities/**/
 
   test:
 
     needs: build
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project:
+            - Common/Helpers.Tests
+            - PlaywrightXunitParallel
 
     steps:
     - name: Download artifact
@@ -48,4 +57,4 @@ jobs:
       with:
         dotnet-version: '8.x'
     - name: Test solution
-      run: dotnet test ./dist/**/*.dll --verbosity normal --filter "Category\!=Google"
+      run: dotnet test ./dist/${{ matrix.project }} --verbosity normal --filter "Category\!=Google"
