@@ -3,7 +3,7 @@ name: test-report-deploy
 
 on:
   workflow_run:
-    workflows: [ "coverage-report-deploy" ]
+    workflows: [ "solution-build-test" ]
     branches: [ "master", "experimental" ]
     types:
       - completed
