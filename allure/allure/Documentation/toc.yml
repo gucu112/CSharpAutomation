@@ -1,0 +1,14 @@
+- name: Documentation
+  items:
+  - name: Introduction
+    href: content/introduction.md
+  - name: Getting Started
+    href: content/getting-started.md
+- name: Reference
+  items:
+  - name: Helpers
+    href: api/Gucu112.CSharp.Automation.Helpers.Extensions.html
+  - name: PlaywrightXunitParallel
+    href: api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.html
+- name: License
+  href: LICENSE.txt

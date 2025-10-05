@@ -1,0 +1,10 @@
+apiRules:
+- exclude:
+    uidRegex: ^Gucu112\.CSharp\.Automation\.PlaywrightXunit\.
+    type: Namespace
+- include:
+    uidRegex: \.BasePage$
+    type: Type
+- exclude:
+    uidRegex: (Data|Page|Test)$
+    type: Class
