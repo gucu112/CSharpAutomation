@@ -46,7 +46,7 @@ jobs:
         uses: dawidd6/action-download-artifact@v11
         with:
           workflow: dotnet.yml
-          name: ${{steps.artifact_prefix.outputs.lowercase}}-results
+          name: ${{ steps.artifact_prefix.outputs.lowercase }}-results
           path: artifact
 
       - name: Set destination path suffix
@@ -54,8 +54,8 @@ jobs:
         run: |
           PROJECT_NAME=${{ matrix.project }}
           DESTINATION_SUFFIX=${PROJECT_NAME//\\//}
-          echo "Destination suffix: '${DESTINATION_SUFFIX,,}'"
-          echo "::set-output name=lowercase::${DESTINATION_SUFFIX,,}"
+          echo "Destination suffix: '${DESTINATION_SUFFIX}'"
+          echo "::set-output name=text::${DESTINATION_SUFFIX}"
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
@@ -77,11 +77,11 @@ jobs:
         run: >
           reportgenerator
           -reports:"artifact/TestResults/*/coverage.cobertura.xml"
-          -targetdir:"gh-pages/coverlet/${{steps.destination_suffix.outputs.lowercase}}"
+          -targetdir:"gh-pages/coverlet/${{ steps.destination_suffix.outputs.text }}"
           -reporttypes:"Html_Dark"
           -filefilters:-*.g.cs
 
-      - name: Upload site
+      - name: Upload report
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

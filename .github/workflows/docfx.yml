@@ -3,7 +3,7 @@ name: documentation-deploy
 
 on:
   workflow_run:
-    workflows: [ "solution-build-test" ]
+    workflows: [ "test-report-deploy" ]
     branches: [ "master", "experimental" ]
     types:
       - completed
