@@ -27,7 +27,7 @@ jobs:
         run: |
           PROJECT_NAME=${{ matrix.project }}
           ARTIFACT_PREFIX=${PROJECT_NAME//[^A-Za-z0-9\-]/-}
-          echo "Artifact prefix: '${ARTIFACT_PREFIX,,}'" >> $GITHUB_OUTPUT
+          echo "Artifact prefix: '${ARTIFACT_PREFIX,,}'"
           echo "::set-output name=lowercase::${ARTIFACT_PREFIX,,}"
 
       - name: Download artifact
@@ -43,7 +43,7 @@ jobs:
         run: |
           PROJECT_NAME=${{ matrix.project }}
           DESTINATION_PREFIX=${PROJECT_NAME//\\//}
-          echo "Destination prefix: '${DESTINATION_PREFIX,,}'" >> $GITHUB_OUTPUT
+          echo "Destination prefix: '${DESTINATION_PREFIX,,}'"
           echo "::set-output name=lowercase::${DESTINATION_PREFIX,,}"
 
       - name: Load test report history
