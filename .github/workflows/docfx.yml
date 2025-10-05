@@ -29,9 +29,6 @@ jobs:
       - name: Install docfx
         run: dotnet tool update -g docfx
 
-      - name: Generate site
-        run: docfx docfx.json
-
       - name: Download current site
         uses: actions/checkout@v4
         if: always()
@@ -39,6 +36,9 @@ jobs:
         with:
           ref: gh-pages
           path: .site
+
+      - name: Generate site
+        run: docfx docfx.json
 
       - name: Upload site
         uses: peaceiris/actions-gh-pages@v4
