@@ -66,6 +66,7 @@ jobs:
         --verbosity normal
         --filter:"Category\!=Google"
         --logger:"trx;LogFileName=test.results.xml"
+        --logger:"html;LogFileName=test.results.html"
         --collect:"XPlat Code Coverage"
     - name: Set artifact prefix
       id: artifact_prefix
@@ -79,6 +80,6 @@ jobs:
         name: ${{steps.artifact_prefix.outputs.lowercase}}-results
         path: |
           ./dist/${{ matrix.project }}/allure-results
-          ./dist/${{ matrix.project }}/TestResults/test.results.xml
+          ./dist/${{ matrix.project }}/TestResults/test.results.{xml,html}
           ./dist/${{ matrix.project }}/TestResults/*/coverage.cobertura.xml
         retention-days: 7
