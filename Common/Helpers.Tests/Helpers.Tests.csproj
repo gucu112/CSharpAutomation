@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Gucu112.CSharp.Automation.Helpers.Tests</RootNamespace>
+    <AssemblyName>Gucu112.CSharp.Automation.Helpers.Tests</AssemblyName>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
