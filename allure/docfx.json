@@ -1,0 +1,82 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "build": {
+    "content": [
+      {
+        "src": ".api",
+        "files": [
+          "**/*.yml"
+        ],
+        "dest": "api"
+      },
+      {
+        "src": "Documentation",
+        "files": [
+          "**/*.md",
+          "**/toc.yml"
+        ]
+      },
+      {
+        "src": ".",
+        "files": [
+          "README.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "src": "Documentation",
+        "files": [
+          "assets/**"
+        ]
+      },
+      {
+        "src": ".",
+        "files": [
+          "LICENSE.txt"
+        ]
+      }
+    ],
+    "output": ".site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "overwrite": [
+      {
+        "src": "Documentation/overwrite",
+        "files": [
+          "ParseOverwrite.md",
+          "ParseSettingsOverwrite.md"
+        ]
+      }
+    ],
+    "globalMetadata": {
+      "_appName": "C# Automation",
+      "_appTitle": "C# Automation",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  },
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": ".",
+          "files": [
+            "**/*.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**"
+          ]
+        }
+      ],
+      "output": ".api",
+      "filter": "Documentation/api.yml"
+    }
+  ],
+  "rules": {
+    "InvalidFileLink": "info"
+  }
+}
