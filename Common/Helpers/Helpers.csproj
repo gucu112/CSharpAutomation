@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Gucu112.CSharp.Automation.Helpers</RootNamespace>
+    <AssemblyName>Gucu112.CSharp.Automation.Helpers</AssemblyName>
     <IsPackable>true</IsPackable>
     <IsTestProject>false</IsTestProject>
   </PropertyGroup>

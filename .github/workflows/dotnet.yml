@@ -1,6 +1,6 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-name: Run build and test for Solution
+name: Build & Test Solution
 
 on:
   push:
@@ -23,6 +23,63 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build solution
-      run: dotnet build --no-restore
+      run: dotnet build --configuration Release --no-restore
+    - name: Publish solution
+      run: dotnet publish --configuration Release --no-restore --no-build
+      if: ${{ false }}
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dotnet-sources
+        path: |
+          Common/**/
+          PlaywrightXunit*/**/
+          Utilities/**/
+          Directory.*.props
+          *.sln
+
+  test:
+
+    needs: build
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project:
+            - Common/Helpers.Tests
+            - PlaywrightXunitParallel
+
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: dotnet-sources
+        path: dist/
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: '8.x'
     - name: Test solution
-      run: dotnet test --no-build --verbosity normal --filter "Category\!=Google"
+      run: >
+        dotnet test ./dist/${{ matrix.project }}
+        --configuration Release
+        --verbosity normal
+        --filter:"Category\!=Google"
+        --logger:"trx;LogFileName=test.results.xml"
+        --logger:"html;LogFileName=test.results.html"
+        --collect:"XPlat Code Coverage"
+    - name: Set artifact prefix
+      id: artifact_prefix
+      run: |
+        PROJECT_NAME=${{ matrix.project }}
+        ARTIFACT_PREFIX=${PROJECT_NAME//[^A-Za-z0-9\-]/-}
+        echo "::set-output name=lowercase::${ARTIFACT_PREFIX,,}"
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{steps.artifact_prefix.outputs.lowercase}}-results
+        path: |
+          ./dist/${{ matrix.project }}/allure-results
+          ./dist/${{ matrix.project }}/TestResults/test.results.*
+          ./dist/${{ matrix.project }}/TestResults/*/coverage.cobertura.xml
+        retention-days: 7

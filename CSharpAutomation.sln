@@ -25,6 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "Common\Helpers\H
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers.Tests", "Common\Helpers.Tests\Helpers.Tests.csproj", "{A0A37AA0-EA7B-44B2-9543-CB4800D6AD8B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{7D7BA844-5C4B-46FE-9890-1B17AFF8E1B3}"
+	ProjectSection(SolutionItems) = preProject
+		Utilities\scripts\serve_coverage.ps1 = Utilities\scripts\serve_coverage.ps1
+		Utilities\scripts\serve_docs.ps1 = Utilities\scripts\serve_docs.ps1
+		Utilities\scripts\serve_report.ps1 = Utilities\scripts\serve_report.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +61,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E12F0CD0-48D2-4343-A592-6EEA23B7DEE2} = {C9E4088A-B9E3-4A6C-86CC-16F3C80FF65F}
 		{A0A37AA0-EA7B-44B2-9543-CB4800D6AD8B} = {C9E4088A-B9E3-4A6C-86CC-16F3C80FF65F}
+		{7D7BA844-5C4B-46FE-9890-1B17AFF8E1B3} = {4D8EE525-9413-4004-96F3-35520371C681}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89E9FA5B-5FBF-4973-BD85-27E268667EE0}

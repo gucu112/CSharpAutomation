@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Gucu112.CSharp.Automation.PlaywrightXunit</RootNamespace>
+    <AssemblyName>Gucu112.CSharp.Automation.PlaywrightXunit</AssemblyName>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>

@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>Gucu112.CSharp.Automation.PlaywrightXunitParallel</RootNamespace>
+    <AssemblyName>Gucu112.CSharp.Automation.PlaywrightXunitParallel</AssemblyName>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <Configurations>ChromiumDebug;ChromiumRelease;FirefoxDebug;FirefoxRelease;WebkitDebug;WebkitRelease</Configurations>
