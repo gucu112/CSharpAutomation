@@ -25,6 +25,11 @@ jobs:
             - PlaywrightXunitParallel
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: dist
+
       - name: Set artifact prefix
         id: artifact_prefix
         run: |
