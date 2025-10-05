@@ -1,0 +1,632 @@
+{
+  "source_base_path": "/home/runner/work/CSharpAutomation/CSharpAutomation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Extensions.StringExtensions.yml\" sourcestartlinenumber=\"1\">Provides extension methods for string manipulation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Models.IFileSystem",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Models.IFileSystem.yml\" sourcestartlinenumber=\"1\">Represents a file system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Models.IJsonParse",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Models.IJsonParse.yml\" sourcestartlinenumber=\"1\">Provides methods for parsing JSON data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Models.JsonSettings",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Models.JsonSettings.yml\" sourcestartlinenumber=\"1\">Represents the settings for JSON serialization and deserialization.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParse.yml\" sourcestartlinenumber=\"1\">Supports all classes in the .NET class hierarchy and provides low-level services to derived classes. This is the ultimate base class of all .NET classes; it is the root of the type hierarchy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Parsers.JsonParseSettings.yml\" sourcestartlinenumber=\"1\">Represents a class that provides JSON parsing settings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Parsers.Parse",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Parsers.Parse.yml\" sourcestartlinenumber=\"1\">Represents a class that provides parsing methods.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Parsers.ParseSettings.yml\" sourcestartlinenumber=\"1\">Represents a class that provides parsing settings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Parsers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Parsers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Parsers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Providers.FileSystemProvider.yml\" sourcestartlinenumber=\"1\">Represents an implementation of file system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.Helpers.Providers.RegexProvider.yml\" sourcestartlinenumber=\"1\">Provides a collection of regular expressions for common string operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.Helpers.Providers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.Helpers.Providers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.Helpers.Providers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.PlaywrightFixture.yml\" sourcestartlinenumber=\"1\">Represents a controller for working with Playwright.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsCollection",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsCollection.yml\" sourcestartlinenumber=\"1\">Represents a collection definition for the SettingsFixture.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.SettingsFixture.yml\" sourcestartlinenumber=\"1\">Represents a controller that provides configuration settings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.CategoryAttribute.yml\" sourcestartlinenumber=\"1\">Represents an attribute that specifies the category of a test.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.PriorityAttribute.yml\" sourcestartlinenumber=\"1\">Represents an attribute that specifies the priority of a test.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Attribute",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.EntryPoint.yml\" sourcestartlinenumber=\"1\">Represents the entry point for an application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestCategory.yml\" sourcestartlinenumber=\"1\">Represents the test categories.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.TestPriority.yml\" sourcestartlinenumber=\"1\">Represents the test priorities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Enum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.ISettings.yml\" sourcestartlinenumber=\"1\">Represents the configuration settings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.Interface",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.NameOrderer.yml\" sourcestartlinenumber=\"1\">Represents an orderer that orders test cases by their display name.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.PriorityOrderer.yml\" sourcestartlinenumber=\"1\">Represents an orderer that orders test cases by their priority.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Orderers.TestCase",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePage.yml\" sourcestartlinenumber=\"1\">Represents a synchronous base page.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.BasePageAsync.yml\" sourcestartlinenumber=\"1\">Represents an asynchronous base page.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer",
+      "Summary": "<p sourcefile=\".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.TraitDiscoverer.yml\" sourcestartlinenumber=\"1\">Represents class for discovering traits used for categorizing tests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": ".api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gucu112.CSharp.Automation.PlaywrightXunitParallel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gucu112.CSharp.Automation.PlaywrightXunitParallel",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": ".api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Documentation/content/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Documentation/content/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Documentation/content/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "content/toc.html"
+        },
+        ".json": {
+          "relative_path": "content/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Documentation/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Documentation/overwrite/ParseOverwrite.md",
+      "output": {
+        ".html": {
+          "relative_path": "overwrite/ParseOverwrite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Documentation/overwrite/ParseSettingsOverwrite.md",
+      "output": {
+        ".html": {
+          "relative_path": "overwrite/ParseSettingsOverwrite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Documentation/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "LICENSE.txt",
+      "output": {
+        "resource": {
+          "relative_path": "LICENSE.txt"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
