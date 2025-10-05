@@ -79,7 +79,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: ${{steps.artifact_prefix.outputs.lowercase}}-results
+        name: ${{ steps.artifact_prefix.outputs.lowercase }}-results
         path: |
           ./dist/${{ matrix.project }}/allure-results
           ./dist/${{ matrix.project }}/TestResults/test.results.*
