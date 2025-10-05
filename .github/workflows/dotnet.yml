@@ -62,6 +62,6 @@ jobs:
     - name: Test solution
       run: >
         dotnet test ./dist/${{ matrix.project }}
-          --configuration Release
-          --verbosity normal
-          --filter "Category\!=Google"
+        --configuration Release
+        --verbosity normal
+        --filter "Category\!=Google"
