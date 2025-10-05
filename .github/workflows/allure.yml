@@ -1,0 +1,70 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: test-report-deploy
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+
+jobs:
+
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project:
+            - Common/Helpers.Tests
+            - PlaywrightXunitParallel
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set artifact prefix
+        id: artifact_prefix
+        run: |
+          PROJECT_NAME=${{ matrix.project }}
+          ARTIFACT_PREFIX=${PROJECT_NAME//[^A-Za-z0-9\-]/-}
+          echo "::set-output name=lowercase::${ARTIFACT_PREFIX,,}"
+
+      - name: Download artifact
+        id: download-artifact
+        uses: dawidd6/action-download-artifact@v11
+        with:
+          workflow: dotnet.yml
+          name: ${{steps.artifact_prefix.outputs.lowercase}}-results
+          path: artifact
+
+      - name: Load test report history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.13
+        if: always()
+        with:
+          gh_pages: gh-pages
+          allure_history: allure-history
+          allure_results: artifact/allure-results
+
+      - name: Set destination path prefix
+        id: destination_prefix
+        run: |
+          PROJECT_NAME=${{ matrix.project }}
+          DESTINATION_PREFIX=${PROJECT_NAME//\\//}
+          echo "::set-output name=lowercase::${ARTIFACT_PREFIX,,}"
+
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v4
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
+          destination_dir: ${{steps.destination_prefix.outputs.lowercase}}/allure
