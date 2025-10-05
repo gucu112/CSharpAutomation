@@ -64,6 +64,12 @@ jobs:
           gh_pages: gh-pages
           allure_history: allure-history
           allure_results: artifact/allure-results
+          subfolder: allure_${{steps.destination_prefix.outputs.lowercase}}
+
+      - name: Show directory structure
+        if: always()
+        run: |
+          ls -la ${GITHUB_WORKSPACE}
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v4
