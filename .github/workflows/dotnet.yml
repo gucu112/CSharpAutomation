@@ -80,6 +80,6 @@ jobs:
         name: ${{steps.artifact_prefix.outputs.lowercase}}-results
         path: |
           ./dist/${{ matrix.project }}/allure-results
-          ./dist/${{ matrix.project }}/TestResults/test.results.{xml,html}
+          ./dist/${{ matrix.project }}/TestResults/test.results.*
           ./dist/${{ matrix.project }}/TestResults/*/coverage.cobertura.xml
         retention-days: 7
