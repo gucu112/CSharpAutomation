@@ -7,18 +7,18 @@ namespace Gucu112.CSharp.Automation.Helpers.Parsers;
 /// </summary>
 public static class JsonParseSettings
 {
-    private static Func<JsonSettings> jsonSettings = new(() => new());
+    private static Func<JsonSettings> jsonSettingsResolver = new(() => new());
 
     /// <summary>
     /// Gets or sets the JSON parsing settings.
     /// </summary>
     public static JsonSettings Json
     {
-        get => jsonSettings();
+        get => jsonSettingsResolver();
         set
         {
-            jsonSettings = () => value;
-            JsonConvert.DefaultSettings = jsonSettings;
+            jsonSettingsResolver = () => value;
+            JsonConvert.DefaultSettings = jsonSettingsResolver;
         }
     }
 }

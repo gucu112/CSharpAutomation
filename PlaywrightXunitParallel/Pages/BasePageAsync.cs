@@ -3,7 +3,7 @@ using Gucu112.CSharp.Automation.PlaywrightXunitParallel.Fixtures;
 namespace Gucu112.CSharp.Automation.PlaywrightXunitParallel.Pages;
 
 /// <summary>
-/// Represents an asynchronous base page.
+/// Represents an asynchronous page.
 /// </summary>
 /// <param name="playwright">The Playwright controller.</param>
 public abstract class BasePageAsync(PlaywrightFixture playwright)

@@ -8,48 +8,47 @@ public class JsonParse : IJsonParse
     private static IFileSystem FileSystem => ParseSettings.FileSystem;
 
     /// <inheritdoc/>
-    public T? FromJson<T>(string content, JsonSettings? settings = null)
+    public TOutput? FromJson<TOutput>(string content, JsonSettings? settings = null)
     {
-        return FromJson<T>(new StringReader(content), settings);
+        return FromJson<TOutput>(new StringReader(content), settings);
     }
 
     /// <inheritdoc/>
-    public T? FromJson<T>(TextReader textReader, JsonSettings? settings = null)
+    public TOutput? FromJson<TOutput>(TextReader textReader, JsonSettings? settings = null)
     {
         settings ??= ParseSettings.Json;
         using var jsonReader = JsonSettings.CreateReader(textReader);
         var serializer = JsonSerializer.Create(settings);
-        return serializer.Deserialize<T>(jsonReader);
+        return serializer.Deserialize<TOutput>(jsonReader);
     }
 
     /// <inheritdoc/>
-    public T? FromJson<T>(Stream stream, JsonSettings? settings = null)
+    public TOutput? FromJson<TOutput>(Stream stream, JsonSettings? settings = null)
     {
-        return FromJson<T>(new StreamReader(stream), settings);
+        return FromJson<TOutput>(new StreamReader(stream, settings?.Encoding ?? ParseSettings.DefaultEncoding), settings);
     }
 
     /// <inheritdoc/>
-    public T? FromJsonFile<T>(string path, JsonSettings? settings = null)
+    public TOutput? FromJsonFile<TOutput>(string path, JsonSettings? settings = null)
     {
         using var fileStream = FileSystem.ReadStream(path);
-        return FromJson<T>(fileStream, settings);
+        return FromJson<TOutput>(fileStream, settings);
     }
 
     /// <inheritdoc/>
     public string ToJsonString(object? value, JsonSettings? settings = null)
     {
-        ArgumentNullException.ThrowIfNull(value, nameof(value));
         return ToJsonWriter<StringWriter>(value, settings).GetStringBuilder().ToString();
     }
 
     /// <inheritdoc/>
-    public T ToJsonWriter<T>(object? value, JsonSettings? settings = null, T? textWriter = null)
-        where T : TextWriter
+    public TWriter ToJsonWriter<TWriter>(object? value, JsonSettings? settings = null, TWriter? textWriter = null)
+        where TWriter : TextWriter
     {
         settings ??= ParseSettings.Json;
         ArgumentNullException.ThrowIfNull(value, nameof(value));
 
-        textWriter ??= (T)(TextWriter)new StringWriter(settings.Encoding);
+        textWriter ??= (TWriter)(TextWriter)new StringWriter(settings.Encoding);
         using (var jsonWriter = settings.CreateWriter(textWriter))
         {
             var serializer = JsonSerializer.Create(settings);
@@ -60,12 +59,12 @@ public class JsonParse : IJsonParse
     }
 
     /// <inheritdoc/>
-    public T ToJsonStream<T>(object? value, JsonSettings? settings = null, T? stream = null)
-        where T : Stream
+    public TStream ToJsonStream<TStream>(object? value, JsonSettings? settings = null, TStream? stream = null)
+        where TStream : Stream
     {
-        stream ??= (T)(Stream)new MemoryStream();
+        stream ??= (TStream)(Stream)new MemoryStream();
         var streamWriter = new StreamWriter(stream, settings?.Encoding, leaveOpen: true);
-        return (T)ToJsonWriter(value, settings, streamWriter).BaseStream;
+        return (TStream)ToJsonWriter(value, settings, streamWriter).BaseStream;
     }
 
     /// <inheritdoc/>
