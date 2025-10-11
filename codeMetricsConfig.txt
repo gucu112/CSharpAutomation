@@ -1,0 +1,16 @@
+# Avoid excessive inheritance
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1501
+CA1501: 5
+
+# Avoid excessive complexity
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1502
+CA1502: 25
+
+# Avoid unmaintainable code
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1505
+CA1505: 10
+
+# Avoid excessive class coupling
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1506
+CA1506(Method): 40
+CA1506(Type): 80

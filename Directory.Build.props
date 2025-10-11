@@ -16,12 +16,6 @@
     <EditorConfigFiles Remove="$(MSBuildThisFileDirectory)\.editorconfig" />
   </ItemGroup>
 
-  <!-- https://learn.microsoft.com/en-us/nuget/consume-packages/Central-Package-Management -->
-  <PropertyGroup>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="all" />
     <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" PrivateAssets="all" />
