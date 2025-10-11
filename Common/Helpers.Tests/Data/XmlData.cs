@@ -20,7 +20,7 @@ public class XmlData
     public static readonly string RootObjectDocumentString = GetXmlDocumentString();
 
     public static readonly string RootObjectSpaceDocumentString = GetXmlDocumentString()
-        .Replace("><", $">{Enumerable.Range(0, new Random().Next(20)).Select(_ => " ")}<");
+        .Replace("><", $">{Enumerable.Range(0, Random.Shared.Next(20)).Select(_ => " ")}<");
 
     public static IEnumerable EmptyContent
     {

@@ -6,6 +6,7 @@ using XmlReaderSettings = Gucu112.CSharp.Automation.Helpers.Models.XmlReaderSett
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Xml;
 
+[TestFixture]
 public class XmlReaderSettingsTest : BaseXmlTest
 {
     private static readonly string ReadStreamData = XmlData.RootObjectDocumentString;

@@ -1,10 +1,12 @@
 using System.Diagnostics;
+using Allure.NUnit;
 
 namespace Gucu112.CSharp.Automation.Helpers.Tests;
 
 /// <summary>
 /// Base class for unit tests.
 /// </summary>
+[AllureNUnit]
 public class BaseTest
 {
     private readonly Stopwatch stopwatch = new();

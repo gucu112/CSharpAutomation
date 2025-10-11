@@ -7,7 +7,7 @@ using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Xml;
 
 [TestFixture]
-public class ParseFromXmlFileTest
+public class ParseFromXmlFileTest : BaseXmlTest
 {
     private static readonly Mock<IFileSystem> Mock = new();
 

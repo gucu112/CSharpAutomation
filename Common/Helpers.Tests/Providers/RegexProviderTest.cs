@@ -5,7 +5,7 @@ using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 namespace Gucu112.CSharp.Automation.Helpers.Tests.Providers;
 
 [TestFixture]
-public class RegexProviderTest
+public class RegexProviderTest : BaseTest
 {
     private static readonly Regex AnyWhitespaceRegex = RegexProvider.AnyWhitespaceRegex();
 
