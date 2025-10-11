@@ -41,4 +41,8 @@
     <PackageReference Include="Xunit.SkippableFact" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Helpers\Helpers.csproj" />
+  </ItemGroup>
+
 </Project>

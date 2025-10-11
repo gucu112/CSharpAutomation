@@ -9,7 +9,7 @@ public static class StringExtensions
 {
     /// <summary>
     /// Converts the string to a byte array using the specified encoding.
-    /// If no encoding is provided, UTF-8 encoding is used by default.
+    /// If no encoding is provided, <see cref="Encoding.UTF8"/> is used by default.
     /// </summary>
     /// <param name="text">The string to convert.</param>
     /// <param name="encoding">The encoding to use (optional).</param>

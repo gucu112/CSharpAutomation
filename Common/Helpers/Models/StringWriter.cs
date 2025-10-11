@@ -3,9 +3,9 @@ using BaseStringWriter = System.IO.StringWriter;
 namespace Gucu112.CSharp.Automation.Helpers.Models;
 
 /// <summary>
-/// Initializes a new instance of the StringWriter class.
+/// Initializes a new instance of the <see cref="StringWriter"/> class.
 /// </summary>
-/// <param name="builder">The StringBuilder to write to. If null, a new StringBuilder will be created.</param>
+/// <param name="builder">The <see cref="StringBuilder"/> to write to. If null, a new one will be created.</param>
 /// <param name="encoding">The encoding to use. If null, <see cref="Encoding.UTF8"/> will be used.</param>
 /// <param name="formatProvider">The format provider to use. If null, the default format provider will be used.</param>
 internal class StringWriter(
@@ -15,7 +15,7 @@ internal class StringWriter(
     : BaseStringWriter(builder ?? new StringBuilder(), formatProvider)
 {
     /// <summary>
-    /// Initializes a new instance of the StringWriter class with the specified encoding.
+    /// Initializes a new instance of the <see cref="StringWriter"/> class with the specified encoding.
     /// </summary>
     /// <param name="encoding">The encoding to use.</param>
     public StringWriter(Encoding encoding)
@@ -24,7 +24,7 @@ internal class StringWriter(
     }
 
     /// <summary>
-    /// Gets the encoding used by this StringWriter. If no encoding was specified, <see cref="Encoding.UTF8"/> is used.
+    /// Gets the encoding used by this <see cref="StringWriter"/>. If no encoding was specified, <see cref="Encoding.UTF8"/> is used.
     /// </summary>
     public override Encoding Encoding => encoding ?? Encoding.UTF8;
 }

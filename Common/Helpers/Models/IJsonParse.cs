@@ -6,40 +6,40 @@ namespace Gucu112.CSharp.Automation.Helpers.Models;
 public interface IJsonParse
 {
     /// <summary>
-    /// Deserializes the JSON content into an object of type T.
+    /// Deserializes the JSON content into an object of specific type.
     /// </summary>
-    /// <typeparam name="T">The type of the object to deserialize.</typeparam>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="content">The JSON content to deserialize.</param>
     /// <param name="settings">The JSON settings to use for deserialization.</param>
-    /// <returns>The deserialized object of type T.</returns>
-    T? FromJson<T>(string content, JsonSettings? settings = null);
+    /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
+    TOutput? FromJson<TOutput>(string content, JsonSettings? settings = null);
 
     /// <summary>
-    /// Deserializes the JSON content from a TextReader into an object of type T.
+    /// Deserializes the JSON content from a <see cref="TextReader"/> into an object of specific type.
     /// </summary>
-    /// <typeparam name="T">The type of the object to deserialize.</typeparam>
-    /// <param name="textReader">The TextReader containing the JSON content to deserialize.</param>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
+    /// <param name="textReader">The <see cref="TextReader"/> containing the JSON content to deserialize.</param>
     /// <param name="settings">The JSON settings to use for deserialization.</param>
-    /// <returns>The deserialized object of type T.</returns>
-    T? FromJson<T>(TextReader textReader, JsonSettings? settings = null);
+    /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
+    TOutput? FromJson<TOutput>(TextReader textReader, JsonSettings? settings = null);
 
     /// <summary>
-    /// Deserializes the JSON content from a Stream into an object of type T.
+    /// Deserializes the JSON content from a <see cref="Stream"/> into an object of specific type.
     /// </summary>
-    /// <typeparam name="T">The type of the object to deserialize.</typeparam>
-    /// <param name="stream">The Stream containing the JSON content to deserialize.</param>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
+    /// <param name="stream">The <see cref="Stream"/> containing the JSON content to deserialize.</param>
     /// <param name="settings">The JSON settings to use for deserialization.</param>
-    /// <returns>The deserialized object of type T.</returns>
-    T? FromJson<T>(Stream stream, JsonSettings? settings = null);
+    /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
+    TOutput? FromJson<TOutput>(Stream stream, JsonSettings? settings = null);
 
     /// <summary>
-    /// Deserializes the JSON content from a file at the specified path into an object of type T.
+    /// Deserializes the JSON content from a file at the specified path into an object of specific type.
     /// </summary>
-    /// <typeparam name="T">The type of the object to deserialize.</typeparam>
+    /// <typeparam name="TOutput">The type of object to deserialize into.</typeparam>
     /// <param name="path">The path to the JSON file.</param>
     /// <param name="settings">The JSON settings to use for deserialization.</param>
-    /// <returns>The deserialized object of type T.</returns>
-    T? FromJsonFile<T>(string path, JsonSettings? settings = null);
+    /// <returns>The deserialized object of type <typeparamref name="TOutput"/>.</returns>
+    TOutput? FromJsonFile<TOutput>(string path, JsonSettings? settings = null);
 
     /// <summary>
     /// Serializes an object into a JSON string.
@@ -50,26 +50,28 @@ public interface IJsonParse
     string ToJsonString(object? value, JsonSettings? settings = null);
 
     /// <summary>
-    /// Serializes an object into a TextWriter using JSON format.
+    /// Serializes an object into a <see cref="TextWriter"/> using JSON format.
     /// </summary>
-    /// <typeparam name="T">The type of the TextWriter to use.</typeparam>
+    /// <typeparam name="TWriter">The type of the <see cref="TextWriter"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
     /// <param name="settings">The JSON settings to use for serialization.</param>
-    /// <param name="textWriter">The TextWriter to write the JSON content to.</param>
-    /// <returns>The TextWriter containing the serialized JSON content.</returns>
-    T ToJsonWriter<T>(object? value, JsonSettings? settings = null, T? textWriter = null)
-        where T : TextWriter;
+    /// <param name="textWriter">The <typeparamref name="TWriter"/> to write the JSON content to.
+    /// If null, <see cref="StringWriter"/> will be used.</param>
+    /// <returns>The <typeparamref name="TWriter"/> containing the serialized JSON string.</returns>
+    TWriter ToJsonWriter<TWriter>(object? value, JsonSettings? settings = null, TWriter? textWriter = null)
+        where TWriter : TextWriter;
 
     /// <summary>
-    /// Serializes an object into a Stream using JSON format.
+    /// Serializes an object into a <see cref="Stream"/> using JSON format.
     /// </summary>
-    /// <typeparam name="T">The type of the Stream to use.</typeparam>
+    /// <typeparam name="TStream">The type of the <see cref="Stream"/> to use.</typeparam>
     /// <param name="value">The object to serialize.</param>
     /// <param name="settings">The JSON settings to use for serialization.</param>
-    /// <param name="stream">The Stream to write the JSON content to.</param>
-    /// <returns>The Stream containing the serialized JSON content.</returns>
-    T ToJsonStream<T>(object? value, JsonSettings? settings = null, T? stream = null)
-        where T : Stream;
+    /// <param name="stream">The <typeparamref name="TStream"/> to write the JSON content to.
+    /// If null, <see cref="MemoryStream"/> will be used.</param>
+    /// <returns>The <typeparamref name="TStream"/> containing the serialized JSON content.</returns>
+    TStream ToJsonStream<TStream>(object? value, JsonSettings? settings = null, TStream? stream = null)
+        where TStream : Stream;
 
     /// <summary>
     /// Serializes an object into a file at the specified path using JSON format.

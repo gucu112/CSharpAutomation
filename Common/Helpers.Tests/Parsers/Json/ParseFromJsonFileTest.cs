@@ -1,9 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
 using Gucu112.CSharp.Automation.Helpers.Extensions;
 using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
-namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
+namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Json;
 
 [TestFixture]
 public class ParseFromJsonFileTest : BaseJsonTest
@@ -29,7 +30,7 @@ public class ParseFromJsonFileTest : BaseJsonTest
             .Returns(new MemoryStream(JsonData.InvalidObjectString.GetBytes()));
 
         Mock.SetupSequence(fs => fs.ReadStream(It.IsRegex("validString")))
-            .Returns(new MemoryStream(JsonData.EmptyJsonString.GetBytes()))
+            .Returns(new MemoryStream(JsonData.HelloJsonString.GetBytes()))
             .Returns(new MemoryStream(JsonData.EmptyJsonString.GetBytes()));
 
         Mock.Setup(fs => fs.ReadStream(It.IsRegex("validArray")))
@@ -42,6 +43,7 @@ public class ParseFromJsonFileTest : BaseJsonTest
     }
 
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void ThrowsOnNullPath()
     {
         Assert.Throws<ArgumentNullException>(() => Parse.FromJsonFile<object>(null!));
@@ -74,7 +76,7 @@ public class ParseFromJsonFileTest : BaseJsonTest
     [Test]
     public void ThrowsOnInvalidSyntax()
     {
-        Assert.Throws<JsonReaderException>(() => Parse.FromJsonFile<JValue>("notValid.json"));
+        Assert.Throws<JsonReaderException>(() => Parse.FromJsonFile<JContainer>("notValid.json"));
     }
 
     [Test]
@@ -84,20 +86,32 @@ public class ParseFromJsonFileTest : BaseJsonTest
     }
 
     [Test]
-    public void CorrectPath_ReadsEmptyString()
+    public void CorrectPath_ReadsString()
     {
-        Assert.That(Parse.FromJsonFile<JValue>("validString.json"), Has.Property("Value").TypeOf<string>().And.Empty);
+        var jsonValue = Parse.FromJsonFile<JValue>("validString.json");
+
+        TestContext.Out.WriteLine(jsonValue);
+
+        Assert.That(jsonValue, Has.Property("Value").TypeOf<string>().And.Empty);
     }
 
     [Test]
     public void CorrectPath_ReadsArray()
     {
-        Assert.That(Parse.FromJsonFile<JArray>("validArray.json"), Has.ItemAt(0).Property("Value").EqualTo(true));
+        var jsonArray = Parse.FromJsonFile<JArray>("validArray.json");
+
+        TestContext.Out.WriteLine(jsonArray);
+
+        Assert.That(jsonArray, Has.ItemAt(0).Property("Value").EqualTo(true));
     }
 
     [Test]
     public void CorrectPath_ReadsObject()
     {
-        Assert.That(Parse.FromJsonFile<JObject>("validObject.json"), Has.Exactly(3).Items.And.ItemAt("First").Property("Value").EqualTo(1));
+        var jsonObject = Parse.FromJsonFile<JObject>("validObject.json");
+
+        TestContext.Out.WriteLine(jsonObject);
+
+        Assert.That(jsonObject, Has.Exactly(3).Items.And.ItemAt("First").Property("Value").EqualTo(1));
     }
 }

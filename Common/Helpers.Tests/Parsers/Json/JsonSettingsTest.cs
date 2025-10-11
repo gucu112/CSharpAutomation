@@ -3,7 +3,7 @@ using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
-namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Settings;
+namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Json;
 
 [TestFixture]
 public class JsonSettingsTest : BaseJsonTest
@@ -14,7 +14,7 @@ public class JsonSettingsTest : BaseJsonTest
 
     private static readonly Mock<IFileSystem> Mock = new();
 
-    [SetUp]
+    [OneTimeSetUp]
     public void MockFileSystem()
     {
         Mock.SetupSequence(fs => fs.ReadStream(It.IsAny<string>()))
@@ -26,12 +26,22 @@ public class JsonSettingsTest : BaseJsonTest
            .Returns(GetMemoryStreamMock().Object);
 
         ParseSettings.FileSystem = Mock.Object;
+    }
 
+    [OneTimeSetUp]
+    public void SetupSettings()
+    {
         ParseSettings.Json = new JsonSettings()
         {
             Indentation = 4,
             NullValueHandling = NullValueHandling.Include,
         };
+    }
+
+    [OneTimeTearDown]
+    public void ResetSettings()
+    {
+        ParseSettings.Json = new JsonSettings();
     }
 
     [Test]
@@ -55,8 +65,8 @@ public class JsonSettingsTest : BaseJsonTest
 
         using (Assert.EnterMultipleScope())
         {
-            Assert.That(settings.Encoding, Is.EqualTo(Encoding.UTF8));
-            Assert.That(settings.Formatting, Is.EqualTo(Formatting.Indented));
+            Assert.That(settings.Encoding, Is.EqualTo(ParseSettings.DefaultEncoding));
+            Assert.That(settings.Formatting, Is.EqualTo(JsonFormatting.Indented));
             Assert.That(settings.MaxDepth, Is.EqualTo(16));
             Assert.That(settings.Indentation, Is.EqualTo(4));
             Assert.That(settings.IndentChar, Is.EqualTo(' '));
@@ -72,7 +82,7 @@ public class JsonSettingsTest : BaseJsonTest
         ParseSettings.Json = new JsonSettings
         {
             Encoding = Encoding.Unicode,
-            Formatting = Formatting.None,
+            Formatting = JsonFormatting.None,
             MaxDepth = 128,
             Indentation = 1,
             IndentChar = '\t',
@@ -85,7 +95,7 @@ public class JsonSettingsTest : BaseJsonTest
         using (Assert.EnterMultipleScope())
         {
             Assert.That(settings.Encoding, Is.EqualTo(Encoding.Unicode));
-            Assert.That(settings.Formatting, Is.EqualTo(Formatting.None));
+            Assert.That(settings.Formatting, Is.EqualTo(JsonFormatting.None));
             Assert.That(settings.MaxDepth, Is.EqualTo(128));
             Assert.That(settings.Indentation, Is.EqualTo(1));
             Assert.That(settings.IndentChar, Is.EqualTo('\t'));
@@ -139,11 +149,17 @@ public class JsonSettingsTest : BaseJsonTest
 
         var globalObject = Parse.FromJsonFile<JsonData.SimpleObjectModel>("global.json");
         Assert.That(globalObject?.ListOfNumbers, Has.Count.EqualTo(6).And.Contains(0));
+
+        Mock.Verify(fs => fs.ReadStream(It.IsAny<string>()), Times.Exactly(2));
     }
 
-    [TestCaseSource(typeof(ObjectData), nameof(ObjectData.SimpleObject))]
-    public string ToJson_UsingSettingsCorrectly<T>(object value)
+    [TestCase(TypeArgs = [typeof(string)])]
+    [TestCase(TypeArgs = [typeof(TextWriter)])]
+    [TestCase(TypeArgs = [typeof(Stream)])]
+    public void ToJson_UsingSettingsCorrectly<T>()
     {
+        var value = (object)ObjectData.SimpleObjectValue;
+
         var globalSettings = ParseSettings.Json;
 
         var localSettings = new JsonSettings
@@ -162,8 +178,6 @@ public class JsonSettingsTest : BaseJsonTest
 
         var globalContent = ParseToJson<T>(value);
         Assert.That(globalContent, Does.Not.Match(@"CurrentYearStart.+Date.?173568"));
-
-        return globalContent;
     }
 
     [Test]
@@ -189,5 +203,7 @@ public class JsonSettingsTest : BaseJsonTest
         Parse.ToJsonFile(WriteStreamData, "global.json");
         var globalData = GetMemoryStreamData();
         Assert.That(globalData, Does.Contain("<").And.Contain('&').And.Contain('>'));
+
+        Mock.Verify(fs => fs.WriteStream(It.IsAny<string>()), Times.Exactly(2));
     }
 }

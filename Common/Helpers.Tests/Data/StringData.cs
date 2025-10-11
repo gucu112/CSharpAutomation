@@ -6,6 +6,8 @@ public static class StringData
 
     public const string HelloString = "hello";
 
+    public const string LoremIpsumString = "Lorem ipsum dolor sit amet";
+
     public static IEnumerable ShortWordsWithoutSpaces
     {
         get

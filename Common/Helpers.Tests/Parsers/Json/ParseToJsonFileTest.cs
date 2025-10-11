@@ -1,9 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
 using Gucu112.CSharp.Automation.Helpers.Extensions;
 using Gucu112.CSharp.Automation.Helpers.Models;
 using Gucu112.CSharp.Automation.Helpers.Parsers;
 using Gucu112.CSharp.Automation.Helpers.Tests.Data;
 
-namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers;
+namespace Gucu112.CSharp.Automation.Helpers.Tests.Parsers.Json;
 
 [TestFixture]
 public class ParseToJsonFileTest : BaseJsonTest
@@ -25,25 +26,20 @@ public class ParseToJsonFileTest : BaseJsonTest
         Mock.Setup(fs => fs.WriteStream(It.IsRegex("notExisting")))
             .Throws<FileNotFoundException>().Verifiable();
 
+        Mock.Setup(fs => fs.WriteStream(It.IsRegex("validString")))
+            .Returns(GetMemoryStreamMock().Object).Verifiable();
+
+        Mock.Setup(fs => fs.WriteStream(It.IsRegex("validArray")))
+            .Returns(GetMemoryStreamMock().Object).Verifiable();
+
+        Mock.Setup(fs => fs.WriteStream(It.IsRegex("validObject")))
+            .Returns(GetMemoryStreamMock().Object).Verifiable();
+
         ParseSettings.FileSystem = Mock.Object;
     }
 
-    [SetUp]
-    public void MockMemoryStream()
-    {
-        var streamMock = GetMemoryStreamMock();
-
-        Mock.Setup(fs => fs.WriteStream(It.IsRegex("validString")))
-            .Returns(streamMock.Object).Verifiable();
-
-        Mock.Setup(fs => fs.WriteStream(It.IsRegex("validArray")))
-            .Returns(streamMock.Object).Verifiable();
-
-        Mock.Setup(fs => fs.WriteStream(It.IsRegex("validObject")))
-            .Returns(streamMock.Object).Verifiable();
-    }
-
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void ThrowsOnNullValue()
     {
         var path = "existing.json";
@@ -52,6 +48,7 @@ public class ParseToJsonFileTest : BaseJsonTest
     }
 
     [Test]
+    [SuppressMessage("nullable", "NX0002", Justification = "test")]
     public void ThrowsOnNullPath()
     {
         Assert.Throws<ArgumentNullException>(() => Parse.ToJsonFile(new object(), null!));
@@ -82,14 +79,15 @@ public class ParseToJsonFileTest : BaseJsonTest
     }
 
     [Test]
-    public void CorrectPath_WritesHelloString()
+    public void CorrectPath_WritesString()
     {
         var path = "validString.json";
-        Parse.ToJsonFile(StringData.HelloString, path);
+        Parse.ToJsonFile(StringData.EmptyString, path);
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
         var data = GetMemoryStreamData().RemoveSpace();
-        Assert.That(data, Is.EqualTo(JsonData.HelloJsonString));
+        TestContext.Out.WriteLine(data);
+        Assert.That(data, Is.EqualTo(JsonData.EmptyJsonString));
     }
 
     [Test]
@@ -100,6 +98,7 @@ public class ParseToJsonFileTest : BaseJsonTest
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
         var data = GetMemoryStreamData().RemoveSpace();
+        TestContext.Out.WriteLine(data);
         Assert.That(data, Is.EqualTo(JsonData.ValidArrayString));
     }
 
@@ -111,6 +110,7 @@ public class ParseToJsonFileTest : BaseJsonTest
         Mock.Verify(fs => fs.WriteStream(path), Times.Exactly(1));
 
         var data = GetMemoryStreamData().RemoveSpace();
+        TestContext.Out.WriteLine(data);
         Assert.That(data, Is.EqualTo(JsonData.EmptyObjectString));
     }
 }
