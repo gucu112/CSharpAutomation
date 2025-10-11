@@ -10,8 +10,6 @@
     <PackageVersion Include="ConfigureAwaitChecker.Analyzer" Version="5.*" />
     <PackageVersion Include="coverlet.collector" Version="6.*" />
     <PackageVersion Include="FluentAssertions" Version="7.*" />
-    <!-- https://trello.com/c/x2KFtz5Z/41-exp-configure-code-metrics -->
-    <!-- <PackageVersion Include="Microsoft.CodeAnalysis.Metrics" Version="4.*" /> -->
     <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="8.*" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="8.*" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.*" />
