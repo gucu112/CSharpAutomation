@@ -54,9 +54,6 @@
         ]
       }
     ],
-    "xref": [
-      "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json"
-    ],
     "globalMetadata": {
       "_appName": "C# Automation",
       "_appTitle": "C# Automation",
