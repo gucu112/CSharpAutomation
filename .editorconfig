@@ -221,14 +221,14 @@ dotnet_naming_rule.non_public_fields_should_be_camel_case.style = camel_case
 dotnet_naming_rule.non_public_fields_should_be_camel_case.symbols = non_public_fields
 dotnet_naming_symbols.non_public_fields.applicable_kinds = field
 dotnet_naming_symbols.non_public_fields.applicable_accessibilities = internal,protected,private,protected_internal,private_protected
-dotnet_naming_symbols.non_public_fields.required_modifiers = 
+dotnet_naming_symbols.non_public_fields.required_modifiers =
 
 dotnet_naming_rule.other_members_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.other_members_should_be_pascal_case.style = pascal_case
 dotnet_naming_rule.other_members_should_be_pascal_case.symbols = other_members
 dotnet_naming_symbols.other_members.applicable_kinds = property,event,method
 dotnet_naming_symbols.other_members.applicable_accessibilities = public,internal,protected,private,protected_internal,private_protected
-dotnet_naming_symbols.other_members.required_modifiers = 
+dotnet_naming_symbols.other_members.required_modifiers =
 
 dotnet_naming_rule.interfaces_should_have_i_prefix.severity = suggestion
 dotnet_naming_rule.interfaces_should_have_i_prefix.style = i_pascal_case
@@ -242,30 +242,32 @@ dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
 dotnet_naming_rule.types_should_be_pascal_case.symbols = types
 dotnet_naming_symbols.types.applicable_kinds = class,struct,enum
 dotnet_naming_symbols.types.applicable_accessibilities = public,internal,protected,private,protected_internal,private_protected
-dotnet_naming_symbols.types.required_modifiers = 
+dotnet_naming_symbols.types.required_modifiers =
 
 # Styles
 
-dotnet_naming_style.camel_case.required_prefix = 
-dotnet_naming_style.camel_case.required_suffix = 
-dotnet_naming_style.camel_case.word_separator = 
+dotnet_naming_style.camel_case.required_prefix =
+dotnet_naming_style.camel_case.required_suffix =
+dotnet_naming_style.camel_case.word_separator =
 dotnet_naming_style.camel_case.capitalization = camel_case
 
-dotnet_naming_style.pascal_case.required_prefix = 
-dotnet_naming_style.pascal_case.required_suffix = 
-dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.required_prefix =
+dotnet_naming_style.pascal_case.required_suffix =
+dotnet_naming_style.pascal_case.word_separator =
 dotnet_naming_style.pascal_case.capitalization = pascal_case
 
 dotnet_naming_style.i_pascal_case.required_prefix = I
-dotnet_naming_style.i_pascal_case.required_suffix = 
-dotnet_naming_style.i_pascal_case.word_separator = 
+dotnet_naming_style.i_pascal_case.required_suffix =
+dotnet_naming_style.i_pascal_case.word_separator =
 dotnet_naming_style.i_pascal_case.capitalization = pascal_case
 
 #### Analyzers ####
 
-# xUnit
-dotnet_diagnostic.xUnit1004.severity = silent
-dotnet_diagnostic.xUnit1042.severity = silent
+# Metrics
+dotnet_diagnostic.CA1501.severity = warning
+dotnet_diagnostic.CA1502.severity = warning
+dotnet_diagnostic.CA1505.severity = warning
+dotnet_diagnostic.CA1506.severity = warning
 
 # StyleCop
 dotnet_diagnostic.SA1000.severity = none
@@ -274,6 +276,10 @@ dotnet_diagnostic.SA1101.severity = none
 dotnet_diagnostic.SA1200.severity = none
 dotnet_diagnostic.SA1633.severity = none
 dotnet_diagnostic.SA1642.severity = none
+
+# xUnit
+dotnet_diagnostic.xUnit1004.severity = silent
+dotnet_diagnostic.xUnit1042.severity = silent
 
 [*.cs]
 dotnet_analyzer_diagnostic.category-StyleCop.CSharp.DocumentationRules.severity = suggestion

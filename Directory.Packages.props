@@ -1,4 +1,9 @@
 <Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
+    <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Allure.NUnit" Version="2.*" />
     <PackageVersion Include="Allure.Xunit" Version="2.*" />
